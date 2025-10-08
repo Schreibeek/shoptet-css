@@ -74,3 +74,20 @@
 .sjx-morefaq a {color:var(--sj-accent); text-decoration:underline; font-weight:600; transition:all .2s ease;}
 .sjx-morefaq a:hover {text-decoration:none; color:var(--sj-brand);}
 
+/* Kategorie */
+.cat-wrap{color:var(--sj-ink);line-height:1.65}
+.cat-wrap a{color:var(--sj-accent);text-decoration:underline}
+.cat-wrap a:hover{text-decoration:none}
+.cat-wrap p{margin:0 0 12px}
+.cat-intro{display:grid;grid-template-columns:1fr;gap:30px;margin-bottom:32px}
+@media(min-width:900px){.cat-intro{grid-template-columns:2fr 1fr;align-items:start}}
+
+/* Vzorek v kategorii */
+.sample-banner{border:1px solid var(--sj-line);background:#fff}
+.sample-banner::before{content:"";display:block;height:6px;background:var(--sj-accent)}
+.sample-banner img{width:100%;height:auto;display:block}
+.sample-caption{padding:12px 14px}
+.sample-caption h3{margin:0 0 6px;font-size:16px;font-weight:700;color:var(--sj-brand)}
+.sample-caption p{margin:0 0 10px;color:var(--sj-ink)}
+.btn-ghost{display:inline-block;border:1px solid var(--sj-accent);color:var(--sj-accent);padding:8px 10px;text-decoration:none}
+.btn-ghost:hover{background:var(--sj-accent);color:#fff}
