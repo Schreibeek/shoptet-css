@@ -88,6 +88,8 @@
 .subcategories li { flex: 0 0 calc((100% - 3 * 10px) / 4); border: 1px solid #e4e4e4; padding: 0 !important; box-sizing: border-box; margin: 0 !important; }
 @media (max-width: 1024px) { .subcategories li { flex: 0 0 calc((100% - 2 * 10px) / 3); } }
 @media (max-width: 768px) { .subcategories li { flex: 0 0 calc((100% - 1 * 10px) / 2); } }
+.category-perex .link-like,.category-perex a {text-decoration:underline;}
+.category-perex .link-like:hover,.category-perex a:hover {text-decoration:none;}
 
 /* Kategorie - special */
 .cat-wrap{color:var(--sj-ink);line-height:1.65}
