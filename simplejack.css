@@ -83,6 +83,7 @@
 .filters-wrapper .filters-unveil-button-wrapper .btn.btn-default.unveil-button:hover {background-color: var(--color-secondary-hover);color:#fff;}
 .category-content-wrapper .btn.btn-primary,.category-content-wrapper a.btn.btn-primary,.category-content-wrapper .btn.btn-cart {background-color: var(--color-secondary);color:#fff;}
 .category-content-wrapper .btn.btn-primary:hover,.category-content-wrapper a.btn.btn-primary:hover,.category-content-wrapper .btn.btn-cart:hover {background-color: var(--color-secondary-hover);color:#fff;}
+.products-block>div .p .p-bottom>div .p-tools .btn.btn-primary {line-height: 24px;}
 
 /* Kategorie - special */
 .cat-wrap{color:var(--sj-ink);line-height:1.65}
