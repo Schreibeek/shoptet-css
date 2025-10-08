@@ -39,6 +39,9 @@
 .badge-12::before{content:"12";display:inline-block;margin-right:6px;background:var(--sj-accent);color:#fff;padding:6px 8px}
 .guarantee-points{margin:10px 0 0 0;padding-left:18px}
 .guarantee-points li{margin:4px 0}
+.sjx-badge{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:20px;color:#fff;background:var(--sj-brand);padding:10px 14px;}
+.sjx-badge-pill{display:inline-block;margin-right:6px;background:var(--sj-accent);color:#fff;padding:6px 8px;line-height:1;}
+.sjx-badge-text{display:inline-block;line-height:1;}
 
 /* Banner */
 .sjx-banner{margin:40px 0}
