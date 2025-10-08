@@ -84,6 +84,11 @@
 .category-content-wrapper .btn.btn-primary,.category-content-wrapper a.btn.btn-primary,.category-content-wrapper .btn.btn-cart {background-color: var(--color-secondary);color:#fff;}
 .category-content-wrapper .btn.btn-primary:hover,.category-content-wrapper a.btn.btn-primary:hover,.category-content-wrapper .btn.btn-cart:hover {background-color: var(--color-secondary-hover);color:#fff;}
 .products-block>div .p .p-bottom>div .p-tools .btn.btn-primary {line-height: 24px;}
+.subcategories { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 22px; padding: 0; list-style: none; justify-content: space-between; }
+.subcategories li { flex: 1 1 calc(25% - 10px); border: 1px solid #e4e4e4; padding: 0 !important; box-sizing: border-box; }
+@media (max-width: 1024px) {.subcategories li {flex: 1 1 calc(33.333% - 10px);}}
+@media (max-width: 768px) {.subcategories li {flex: 1 1 calc(50% - 10px); }}
+@media (max-width: 480px) {.subcategories li {flex: 1 1 100%; }}
 
 /* Kategorie - special */
 .cat-wrap{color:var(--sj-ink);line-height:1.65}
