@@ -45,6 +45,21 @@
 .sjx-banner img{width:100%;height:auto;display:block}
 
 /* Gallery – hard reset proti masonry/absolute */
+/* only inside our custom product detail */
+.sjx p + .plus-gallery-item{clear:both !important;}
+.sjx .plus-gallery-item:first-of-type{clear:both !important;}
+
+/* legacy gallery layout: 2 cols mobile / 4 cols desktop */
+.sjx .plus-gallery-item{display:inline-block !important;vertical-align:top !important;width:calc(50% - 6px) !important;margin:0 8px 8px 0 !important;height:auto !important;border:0 !important;float:none !important;position:static !important;max-width:none !important;}
+.sjx .plus-gallery-item:nth-child(2n){margin-right:0 !important;}
+@media(min-width:781px){.sjx .plus-gallery-item{width:calc(25% - 8px) !important;}
+.sjx .plus-gallery-item:nth-child(2n){margin-right:8px !important;}
+.sjx .plus-gallery-item:nth-child(4n){margin-right:0 !important;}}
+
+/* anchors + imgs full width, bez vlastních rozměrů */
+.sjx .plus-gallery-item > a{display:block !important;width:100% !important;height:auto !important;margin:0 !important;border:0 !important;}
+.sjx .plus-gallery-item img{display:block !important;width:100% !important;height:auto !important;margin:0 !important;border:0 !important;}
+
 
 /* Lists */
 .sjx-list{margin:0;padding-left:18px}
