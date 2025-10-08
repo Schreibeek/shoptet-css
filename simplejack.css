@@ -65,3 +65,9 @@
 .sjx-faq-q svg{transition:transform .2s ease}
 .sjx-faq-q[aria-expanded="true"] svg{transform:rotate(90deg)}
 .sjx-faq-a{display:none;padding:0 14px 14px;color:var(--sj-ink)}
+
+/* Další FAQ odkaz */
+.sjx-morefaq {text-align:center; margin:20px 0 40px;}
+.sjx-morefaq a {color:var(--sj-accent); text-decoration:underline; font-weight:600; transition:all .2s ease;}
+.sjx-morefaq a:hover {text-decoration:none; color:var(--sj-brand);}
+
