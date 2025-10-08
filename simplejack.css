@@ -50,6 +50,16 @@
 .sjx-gallery img{width:100%;height:auto;display:block}
 @media (max-width:780px){.sjx-gallery{grid-template-columns:repeat(2,1fr)}}
 
+/* gallery – only inside our product detail */
+.sjx p + .sjx-gallery{clear:both;}
+.sjx .sjx-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0 24px;overflow:hidden;}
+@media(min-width:781px){.sjx .sjx-gallery{grid-template-columns:repeat(4,minmax(0,1fr));}}
+
+/* reset anything the theme/lightbox přidá */
+.sjx .sjx-gallery .plus-gallery-item{display:block!important;margin:0!important;border:0!important;width:auto!important;height:auto!important;max-width:none!important;float:none!important;position:static!important;transform:none!important;inset:auto!important;}
+.sjx .sjx-gallery .plus-gallery-item>a{display:block!important;position:static!important;float:none!important;transform:none!important;}
+.sjx .sjx-gallery img{display:block!important;width:100%!important;height:auto!important;position:static!important;float:none!important;margin:0!important;border:0!important;transform:none!important;}
+
 /* Lists */
 .sjx-list{margin:0;padding-left:18px}
 .sjx-list li{margin:4px 0}
