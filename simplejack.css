@@ -74,7 +74,17 @@
 .sjx-morefaq a {color:var(--sj-accent); text-decoration:underline; font-weight:600; transition:all .2s ease;}
 .sjx-morefaq a:hover {text-decoration:none; color:var(--sj-brand);}
 
-/* Kategorie */
+/* Kategorie - obecně */
+@media (min-width: 768px) {.aside-indented .breadcrumbs, .aside-indented .category-top {max-width: none;}}
+@media (min-width: 992px) {.aside-indented .breadcrumbs {padding-left: 20px;}}
+#content h1,#content h4 {color:var(--sj-brand);}
+.products-inline>div .p .p-in .p-in-in .name {display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;}
+.filters-wrapper .filters-unveil-button-wrapper .btn.btn-default.unveil-button {background-color: var(--color-secondary);color:#fff;}
+.filters-wrapper .filters-unveil-button-wrapper .btn.btn-default.unveil-button:hover {background-color: var(--color-secondary-hover);}
+.category-content-wrapper .btn.btn-primary,.category-content-wrapper a.btn.btn-primary {background-color: var(--color-secondary);color:#fff;}
+.category-content-wrapper .btn.btn-primary:hover,.category-content-wrapper a.btn.btn-primary:hover {background-color: var(--color-secondary-hover);}
+
+/* Kategorie - special */
 .cat-wrap{color:var(--sj-ink);line-height:1.65}
 .cat-wrap a{color:var(--sj-accent);text-decoration:underline}
 .cat-wrap a:hover{text-decoration:none}
