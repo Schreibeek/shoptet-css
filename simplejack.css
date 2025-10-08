@@ -54,6 +54,9 @@
 .sjx .sjx-gallery .plus-gallery-item>a{display:block!important;margin:0!important;padding:0!important;position:static!important;float:none!important;transform:none!important;}
 .sjx .sjx-gallery img{display:block!important;width:100%!important;height:auto!important;margin:0!important;padding:0!important;border:0!important;position:static!important;float:none!important;transform:none!important;}
 
+/* vypnout šablonové max-height jen v našem bloku */
+@media (max-width:767px){.sjx .plus-gallery-item{max-height:none!important;height:auto!important;}.sjx .plus-gallery-item img{max-height:none!important;height:auto!important;display:block!important;}}
+
 /* Lists */
 .sjx-list{margin:0;padding-left:18px}
 .sjx-list li{margin:4px 0}
