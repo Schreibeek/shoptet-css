@@ -116,4 +116,4 @@
 
 /* Hodnoceni */
 .hodnoceni:before {background:#0b5668;color:#fff;}
-.hodnoceni .votes-wrap {1px solid #e6e6e6!important;}
+.hodnoceni .votes-wrap {border:1px solid #e6e6e6!important;}
