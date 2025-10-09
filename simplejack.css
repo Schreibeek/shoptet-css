@@ -96,6 +96,7 @@
 .category-perex .link-like,.category-perex a {text-decoration:underline;}
 .category-perex .link-like:hover,.category-perex a:hover {text-decoration:none;}
 .responsive-nav .shp-tabs-holder {border-bottom:3px solid var(--sj-line);}
+.active .shp-tab-link, .shp-tab-link:hover {color:var(--sj-brand); background:var(--sj-bg);}
 
 /* Kategorie - special */
 .cat-wrap{color:var(--sj-ink);line-height:1.65}
