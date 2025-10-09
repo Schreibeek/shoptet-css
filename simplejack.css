@@ -115,5 +115,5 @@
 .btn-ghost:hover{background:var(--sj-accent);color:#fff}
 
 /* Hodnoceni */
-.hodnoceni:before {background:#0b5668;}
+.hodnoceni:before {background:#0b5668;color:#fff;}
 .hodnoceni .votes-wrap {1px solid #e6e6e6;}
