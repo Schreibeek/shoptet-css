@@ -6,12 +6,13 @@
 .breadcrumbs {margin-top:14px}}
 @media (min-width: 992px) {.type-product .breadcrumbs {padding-left: 20px;width: auto;}}
 
-/* DROBECKOVKA */
+/* DROBECKOVKA 
 @media (max-width: 768px) {
 .breadcrumbs {padding-bottom: 15px !important; display: flex; align-items: center; gap: .25rem; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .breadcrumbs::-webkit-scrollbar { display: none; }
 .breadcrumbs > span, .breadcrumbs a, .breadcrumbs [itemprop="name"], .breadcrumbs .navigation-bullet { display: inline-flex; align-items: center; white-space: nowrap; flex: 0 0 auto; }
 .breadcrumbs .navigation-bullet { padding: 0 .25rem; }}
+*/
 
 /* PRODUKT */
 .p-to-cart-block,.quantity-discounts,.info-banner {background:var(--sj-bg);}
