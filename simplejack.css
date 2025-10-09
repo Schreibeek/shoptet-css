@@ -81,6 +81,7 @@
 @media (min-width: 992px) {.aside-indented .breadcrumbs {padding-left: 20px;}.subcategories li a:hover .text {text-decoration: none;}}
 #content h1,#content h4 {color:var(--sj-brand);}
 #content h4 {font-size:2rem;}
+.extended-description #content p {font-size:2rem; color:var(--sj-brand);}
 .products-inline>div .p .p-in .p-in-in .name {display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;color:#000;font-weight:600;}
 .products-inline>div .p .p-in .p-in-in .name:hover {color:var(--color-primary);}
 .filters-wrapper .filters-unveil-button-wrapper .btn.btn-default.unveil-button {background-color: var(--color-secondary);color:#fff;line-height:26px;}
@@ -112,3 +113,7 @@
 .sample-caption p{margin:0 0 10px;color:var(--sj-ink)}
 .btn-ghost{display:inline-block;border:1px solid var(--sj-accent);color:var(--sj-accent);padding:8px 10px;text-decoration:none}
 .btn-ghost:hover{background:var(--sj-accent);color:#fff}
+
+/* Hodnoceni */
+.hodnoceni:before {background:#0b5668;}
+.hodnoceni .votes-wrap {1px solid #e6e6e6;}
