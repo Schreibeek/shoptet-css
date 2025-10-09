@@ -92,7 +92,7 @@
 .subcategories { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 22px; padding: 0; list-style: none; justify-content: flex-start; }
 .subcategories li { flex: 0 0 calc((100% - 3 * 10px) / 4); border: 1px solid #e4e4e4; padding: 0 !important; box-sizing: border-box; margin: 0 !important; }
 @media (max-width: 1024px) { .subcategories li { flex: 0 0 calc((100% - 2 * 10px) / 3); } }
-@media (max-width: 768px) { .subcategories li { flex: 0 0 calc((100% - 1 * 10px) / 2); } }
+@media (max-width: 768px) { .subcategories li { flex: 0 0 calc((100% - 1 * 10px) / 2); } .products-block>div .p .p-bottom .p-desc {font-size:14px;line-height:1.5;}}
 .category-perex .link-like,.category-perex a {text-decoration:underline;}
 .category-perex .link-like:hover,.category-perex a:hover {text-decoration:none;}
 
