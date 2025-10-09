@@ -76,7 +76,7 @@
 
 /* Kategorie - obecně */
 .subcategories li a {transition:none;}
-.subcategories li a:hover {color:var(--color-primary);}
+.subcategories li a:hover {color:#e07523;}
 @media (min-width: 768px) {.aside-indented .breadcrumbs, .aside-indented .category-top {max-width: none;}}
 @media (min-width: 992px) {.aside-indented .breadcrumbs {padding-left: 20px;}.subcategories li a:hover .text {text-decoration: none;}}
 #content h1,#content h4 {color:var(--sj-brand);}
