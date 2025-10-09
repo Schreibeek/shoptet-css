@@ -75,7 +75,7 @@
 .sjx-morefaq a:hover {text-decoration:none; color:var(--sj-brand);}
 
 /* Kategorie - obecně */
-.subcategories li a {color:var(--sj-accent);}
+.subcategories li a:hover {color:var(--sj-accent);}
 @media (min-width: 768px) {.aside-indented .breadcrumbs, .aside-indented .category-top {max-width: none;}}
 @media (min-width: 992px) {.aside-indented .breadcrumbs {padding-left: 20px;}.subcategories li a:hover .text {text-decoration: none;}}
 #content h1,#content h4 {color:var(--sj-brand);}
