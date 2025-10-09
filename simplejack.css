@@ -8,6 +8,7 @@
 
 /* PRODUKT */
 .p-to-cart-block,.quantity-discounts,.info-banner {background:var(--sj-bg);}
+@media (min-width: 992px) {.wide .p-detail-inner .p-image-wrapper {margin-bottom: 40px;}}
 
 /* BENEFITY */
 .benefitBanner__picture {margin-right:15px;}
@@ -17,6 +18,7 @@
 .benefitBanner__title a {color:var(--sj-brand);}
 .benefitBanner__data,.benefitBanner__data a {color:#1a1937!important;}
 .position--benefitHomepage {margin-top:35px;}
+@media (min-width: 768px) {position--benefitProduct {margin:30px 0 30px;}}
 
 /* Base */
 .sjx{max-width:1100px;margin:0 auto;line-height:1.65;color:var(--sj-ink)}
