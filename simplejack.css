@@ -82,7 +82,7 @@
 .filters-wrapper .filters-unveil-button-wrapper .btn.btn-default.unveil-button:hover {background-color: var(--color-secondary-hover);color:#fff;}}
 @media (min-width: 992px) {.aside-indented .breadcrumbs {padding-left: 20px;}.subcategories li a:hover .text {text-decoration: none;}}
 #content h1,#content h4,.shp-tab-link {color:var(--sj-brand);}
-#content h4 {font-size:2rem;}
+.category-top #content h4 {font-size:2rem;}
 .extended-description p {font-size:2rem; color:var(--sj-brand);}
 .products-inline>div .p .p-in .p-in-in .name {display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;color:#000;font-weight:600;}
 .products-inline>div .p .p-in .p-in-in .name:hover {color:var(--color-primary);}
