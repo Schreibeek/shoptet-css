@@ -101,6 +101,7 @@
 
 /* Filtry */
 #filters .slider-wrapper {display:none;}
+#category-filter-hover .filter-section:first-child {border-top:none;margin-top:-20px;}
 
 /* Kategorie - special */
 .cat-wrap{color:var(--sj-ink);line-height:1.65}
