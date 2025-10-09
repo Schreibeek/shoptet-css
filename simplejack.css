@@ -4,6 +4,7 @@
 .header-bottom,#navigation {background:var(--sj-bg);}
 @media (min-width: 768px) {.navigation-in>ul>li.exp>a, .navigation-in>ul>li>a, .navigation-in>ul>li>a:hover,.menu-helper>span,#navigation .navigation-in ul li:hover>a>b {color: var(--sj-brand);}
 .breadcrumbs {margin-top:14px}}
+@media (min-width: 992px) {.type-product .breadcrumbs {padding-left: 20px;width: auto;}}
     
 
 /* Base */
