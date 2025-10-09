@@ -6,10 +6,19 @@
 .breadcrumbs {margin-top:14px}}
 @media (min-width: 992px) {.type-product .breadcrumbs {padding-left: 20px;width: auto;}}
 
+/* DROBECKOVKA */
+@media (max-width: 768px) {
+.breadcrumbs { display: flex; align-items: center; gap: .25rem; overflow-x: auto; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.breadcrumbs::-webkit-scrollbar { display: none; }
+.breadcrumbs > span, .breadcrumbs a, .breadcrumbs [itemprop="name"], .breadcrumbs .navigation-bullet { display: inline-flex; align-items: center; white-space: nowrap; flex: 0 0 auto; }
+.breadcrumbs .navigation-bullet { padding: 0 .25rem; }}
+
 /* PRODUKT */
 .p-to-cart-block,.quantity-discounts,.info-banner {background:var(--sj-bg);}
 @media (min-width: 992px) {.wide .p-detail-inner .p-image-wrapper {margin-bottom: 40px;}}
 .p-detail-inner .social-buttons-wrapper {display:none;}
+#accordion-content .shp-accordion .shp-accordion-link {color:var(--sj-brand);border-bottom:3px solid var(--sj-line);padding-bottom:3px;}
+.p-detail-inner-header-mobile .h1 {color: var(--sj-brand);font-size: 2.7rem;}
 
 /* BENEFITY */
 .benefitBanner__picture {margin-right:15px;}
