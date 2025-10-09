@@ -13,7 +13,7 @@
 
 /* BENEFITY */
 .benefitBanner__picture {margin-right:15px;}
-@media (max-width: 768px) {.benefitBanner__picture {padding:5px;}.position--benefitProduct {margin:50px 0 20px;}}
+@media (max-width: 768px) {.benefitBanner__picture {padding:5px;}.position--benefitProduct {margin:40px 0 20px;}}
 .benefitBanner__title {display:block;font-size:1.4em;color:var(--sj-brand);line-height:1.2;margin-bottom:5px;}
 .benefitBanner__content {line-height:1.5;}
 .benefitBanner__title a {color:var(--sj-brand);}
