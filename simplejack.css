@@ -36,7 +36,7 @@
 .navigation-in>ul>li {border-bottom:1px solid var(--sj-line);}
 .menu-level-1 {background:var(--sj-bg);}
 .menu-level-1 .navigation-in>ul>li {border-bottom:1px solid var(--sj-line);background:var(--sj-bg);}
-#navigation .navigation-in ul li:hover>a>b {text-decoration:none;}
+#navigation .navigation-in ul li>a>b, #navigation .navigation-in ul li:hover>a>b {text-decoration:none;}
 
 /* BTN */
 .btn.btn-primary, a.btn.btn-primary,.btn.btn-cart {background-color: var(--color-secondary);color:#fff;}
