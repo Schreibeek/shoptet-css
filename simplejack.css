@@ -32,6 +32,11 @@
 .position--benefitCategory {margin:40px 0;}
 .benefitBanner__link:hover {opacity:1;}
 
+/* MENU */
+.navigation-in>ul>li {border-bottom:1px solid var(--sj-line);}
+.menu-level-1 .navigation-in>ul>li {border-bottom:1px solid var(--sj-line);background:var(--sj-bg);}
+#navigation .navigation-in ul li:hover>a>b {text-decoration:none;}
+
 /* BTN */
 .btn.btn-primary, a.btn.btn-primary,.btn.btn-cart {background-color: var(--color-secondary);color:#fff;}
 .btn.btn-primary:hover, a.btn.btn-primary:hover,.btn.btn-cart:hover {background-color: var(--color-secondary-hover);color:#fff;}
