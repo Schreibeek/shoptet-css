@@ -30,6 +30,7 @@
 .benefitBanner__data,.benefitBanner__data a {color:#1a1937!important;}
 .position--benefitHomepage {margin-top:35px;}
 .position--benefitCategory {margin:40px 0;}
+.benefitBanner__link:hover {opacity:1;}
 
 /* BTN */
 .btn.btn-primary, a.btn.btn-primary,.btn.btn-cart {background-color: var(--color-secondary);color:#fff;}
