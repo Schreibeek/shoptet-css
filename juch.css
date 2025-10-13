@@ -97,6 +97,7 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 .category-perex {margin-top: 0px;padding-top:20px;padding-bottom:10px;}.breadcrumbs {margin-top:0;padding-top:10px;}.category-title {margin-bottom:0;}
 @media (max-width: 767px) {.container.breadcrumbs-wrapper {margin-bottom: 0px;padding-bottom:20px;}}
 @media (min-width: 768px) {.breadcrumbs.navigation-home-icon-wrapper:before {top: 14px;}}
+.welcome {margin-bottom:60px;}
 
 /* produkt */
 .product-benefits{display:grid;grid-template-columns:1fr 1fr;gap:10px 10px;margin:20px 0 25px;}
