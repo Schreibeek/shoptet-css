@@ -1,0 +1,105 @@
+/* Načtení fontu OCPickllle */
+@font-face {font-family: 'OCPickllle';src: url('https://davidsch.cz/projekty/juch/OCPickllleVARVF.woff2?v=3') format('woff2');font-style: normal;font-weight: 100 900;font-display: swap;}
+
+/* PURPLE */
+:root {
+--template-headings-font: "OCPickllle", sans-serif;
+--sec1: #5D5399;
+--sec2: #5d5399a8;
+--sec3: #5d539969;
+--sec4: #5d53990f;
+--trd1:#C75D35;
+--col1:;
+--col2:#58A8B0;
+--col3:#C85E36;
+--col4:;
+--col5:;
+--color-primary:var(--col3);
+}
+h1,h2,h3,h4,h5,h6,.p .name,.homepage-group-title {color:var(--col2)!important;}
+.breadcrumbs,.breadcrumbs a {color:var(--sec2);}
+.type-detail .position--benefitProduct {background:var(--sec4);border-radius:15px;margin-bottom:30px!important;padding-top:30px;}
+body {background:#fff;}
+body:not(.type-product){background-image:linear-gradient(rgba(255,255,255,0.94),rgba(255,255,255,0.94)),url("https://738272.myshoptet.com/user/documents/upload/fonty/bgs3.png")!important;background-size:2500px auto;background-repeat:repeat;background-position:center top;overflow-x:hidden;}
+/* HOMEPAGE */
+.welcome {background:#fff;}
+@media (min-width: 992px) {
+.is-carousel-classic-layout:not(.is-carousel-full-width).one-column-body .homepage-box .carousel .carousel-control.left:before {left:-25px;}
+.is-carousel-classic-layout:not(.is-carousel-full-width).one-column-body .homepage-box .carousel .carousel-control.right:before {right:-25px;}}
+.welcome {border:2px solid var(--sec4);}
+.siteCookies--center .siteCookies__button {border-radius:12px;background:#E3B43E;}
+.siteCookies__form {padding:30px;}
+.siteCookies__link {border-radius:12px;}
+
+/* HEAD */
+#header {background:#faf0d0!important;}
+#header .site-name a img {max-height:50px;}
+.search input[type="search"].form-control {border:0px solid var(--sec2);background:#fff;}
+.search input[type="search"].form-control:focus {border:3px solid var(--sec1);}
+.search .btn.btn-default, .search a.btn.btn-default {background:var(--col3);color:transparent;transform:scale(0.95);}
+.search .btn.btn-default, .search a.btn.btn-default:focus {background:var(--col3);color:transparent;}
+.search .btn.btn-default:before,.search .btn.btn-default:hover:before {color:#fff;}
+#header {box-shadow:0 .0625rem 1.25rem 0 rgba(0,0,0,.08);}
+#header .container {isolation: isolate;z-index:1;}
+#header .container:after {position: absolute;content: "";background:#faf0d0;width: 200%;height: 60px;bottom: 0;left: -50%;z-index: -1;}
+@media (min-width: 992px) {.header-top {padding-top: 20px;padding-bottom:20px;}}
+@media (min-width: 768px) {.navigation-in>ul>li>a,.navigation-in>ul>li.ext>a:after,.navigation-in a {color: #C85E36;}
+.navigation-in>ul>li>a:hover,.navigation-in>ul>li.ext>a:hover:after,.navigation-in>ul>li.exp>a {color:#EDCC20;}
+.navigation-in ul {justify-content: center;}
+.navigation-in {position: static;width: 100%;}
+.benefitBanner__title {font-size:21px;}
+}
+.navigation-in ul li a {text-transform:none;font-size:20px;}
+.navigation-buttons>a,.navigation-buttons>a:after,.navigation-buttons a[data-target="cart"],.navigation-buttons>a[data-target="login"]:before,.navigation-buttons .click-cart a:after {color:var(--col2);}
+@media (max-width: 767px) {body {background-size:initial;} .container.breadcrumbs-wrapper {background:none; border-bottom:2px solid var(--sec4);}.carousel {margin: 20px 0px 50px;}.carousel-inner{border-radius:20px;}.benefitBanner__title {font-size:15px;}}
+.navigation-in a,.p-info-headline .h1 {color:var(--sec1);}
+#footer.is-white {border-top:2px solid var(--sec4);}
+.top-navigation-bar a,.responsive-tools>a[data-target="navigation"]:after {color:var(--sec1);}
+
+/* SEARCH */
+@media (max-width:767px){.navigation-window-visible .responsive-tools{/*margin-right: 30px;*/}.overall-wrapper{padding-top:50px}.in-index .overall-wrapper{padding-top:50px}.responsive-tools .click-cart{padding-left:5px}.responsive-tools > a{width:40px}.responsive-tools>a[data-target="navigation"]{width:50px}.responsive-tools > a[data-target="search"]{display:flex;width:30px}.responsive-tools .click-cart{padding-right:0}.search-window-visible:not(.navigation-window-visible) #header{top:50px}.search-window-visible #header .search-form{margin:0}#header{top:-10px}}
+
+/* MENU POSUN */
+@media (min-width: 992px) {.admin-logged.not-exist-menu .popup-widget.cart-widget,.admin-logged.not-exist-menu .popup-widget.login-widget {top: 96px;}
+body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget.cart-widget {top: 71px;}}
+
+/* Nadpisy MIX 2 */
+#navigation, h1, h2, h3, h4, h5, h6, .p-detail-tabs,.blank-mode .h4,.blank-mode h1,.category-header input[type="radio"]+label,.external-fonts-loaded .btn,.external-fonts-loaded .products .name,.p-info-headline .h1,.detail-tab-item {font-family: var(--template-headings-font)!important;font-variation-settings: "COUT" 180, "JMBL" 180, "STGR" 180;}
+.top-nav-button-login {font-family:"OCPickllle";text-transform:none!important;}
+.benefitBanner__title {color:var(--col3);font-family:"OCPickllle";text-transform:none;}
+
+/* Náhledy produktů */
+.product .p {box-shadow:none;border:2px solid var(--sec4);}
+.product .p:hover {border:2px solid var(--sec3);transition: all 400ms ease-out!important;}
+.products-block .product-btn a, .products-block .product-btn .pr-action {padding:0 30px;max-width:none;}
+.btn, a.btn,.btn.btn-conversion {border-radius:12px;}
+.flag {border-radius:8px;}
+.category-header input[type="radio"]+label {background:transparent;}
+.category-header input[type="radio"]:checked+label {background:var(--col3);}
+.filters-visible #content .filters-unveil-button-wrapper .btn.unveil-button {background:#A85595;}
+.category-header {border-top: 2px solid var(--sec4);}
+.products-block {margin: 0 -5px;}
+.products-block.products>div {padding: 5px;}
+@media (max-width: 767px) {.columns-mobile-2 .products-block .p-bottom .availability {justify-content: flex-start;}.products-block .product-btn a, .products-block .product-btn .pr-action {padding:0;}.position--benefitCategory{margin-top:0;}#footer.no-newsletter{margin-top:0;}}
+@media (min-width: 768px) {#content .filters-unveil-button-wrapper .btn.unveil-button {width:fit-content;}}
+#content .filters-unveil-button-wrapper .btn.unveil-button {min-height:50px;}
+
+/* produkt */
+.product-benefits{display:grid;grid-template-columns:1fr 1fr;gap:10px 10px;margin:20px 0 25px;}
+.product-benefits__item{display:flex;align-items:center;gap:12px;padding:7px 12px;line-height:1.3;color:var(--sec1);background:var(--sec4);border-radius:10px;font-size:15px;font-family:var(--template-headings-font);}
+.product-benefits__item img{width:30px;height:30px;object-fit:contain;}
+.type-detail .position--benefitProduct {margin-bottom:0;}
+.p-thumbnail.highlighted img {border:2px solid #223f99;border-radius:15px;}
+.p-info-headline .h1 {text-align:center;margin-bottom:0;}
+.shp-tabs-wrapper .tab-pane {border:2px solid var(--sec4);}
+.shp-tabs-holder ul.shp-tabs li a {border-width:2px 2px 0 2px;}
+.active .shp-tab-link {border-color:var(--sec4);}
+.detail-tab-item,.shp-tabs-holder ul.shp-tabs li a,.extended-description h3 {font-size:2.3rem;}
+.p-info-headline h1 {color:var(--sec1);}
+.shp-tabs-holder ul.shp-tabs li.active::after {bottom:inherit;}
+.p-info-wrapper .quantity input {border:2px solid var(--sec3);}
+.products-block.products .p .price strong,.p-info-wrapper .p-final-price-wrapper .price-final {color:#C75D35;}
+
+/* FOOTER */
+#footer h4 {color:var(--col3)!important;}
+#footer.is-white .footer-bottom-bg:before {background:var(--col3);}
