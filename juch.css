@@ -75,7 +75,7 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 .flag {border-radius:8px;}
 .category-header input[type="radio"]+label {background:transparent;}
 .category-header input[type="radio"]:checked+label {background:var(--col3);}
-.filters-visible #content .filters-unveil-button-wrapper .btn.unveil-button {background:#A85595;}
+.filters-visible #content .filters-unveil-button-wrapper .btn.unveil-button {background:var(--col3);}
 .category-header {border-top: 2px solid var(--sec4);}
 .products-block {margin: 0 -5px;}
 .products-block.products>div {padding: 5px;}
