@@ -41,7 +41,7 @@ body {background:#fff;}
 .search .btn.btn-default, .search a.btn.btn-default:focus {background:var(--col3);color:transparent;}
 .search .btn.btn-default:before,.search .btn.btn-default:hover:before {color:#fff;}
 #header .container {isolation: isolate;z-index:1;}
-#header .container:after {position: absolute;content: "";background:#faf0d0;width: 200%;height: 60px;bottom: 0;left: -50%;z-index: -1;}
+#header .container:after {position: absolute;content: "";background:#faf0d0;width: 100%;height: 60px;bottom: 0;left: -50%;z-index: -1;}
 @media (min-width: 992px) {.header-top {padding-top: 20px;padding-bottom:20px;}}
 @media (min-width: 768px) {.navigation-in>ul>li>a,.navigation-in>ul>li.ext>a:after,.navigation-in a {color: #C85E36;}
 .navigation-in>ul>li>a:hover,.navigation-in>ul>li.ext>a:hover:after,.navigation-in>ul>li.exp>a {color:var(--col1);}
