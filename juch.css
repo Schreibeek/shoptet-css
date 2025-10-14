@@ -69,7 +69,7 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 
 /* CATEGORY a nahledy */
 .product .p {box-shadow:none;border:2px solid var(--sec4);}
-.product .p:hover {border:2px solid var(--sec3);transition: all 400ms ease-out!important;}
+.product .p:hover {border:2px solid var(--col2);transition: all 400ms ease-out!important;}
 .products-block .product-btn a, .products-block .product-btn .pr-action {padding:0 30px;max-width:none;}
 .btn, a.btn,.btn.btn-conversion {border-radius:12px;}
 .flag {border-radius:8px;}
@@ -119,3 +119,4 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 #footer h4 {color:var(--col3)!important;}
 #footer.is-white .footer-bottom-bg:before {background:var(--col3);}
 #footer.no-newsletter {margin-top:0;}
+@media (min-width: 1200px) {.custom-footer .custom-footer-left-panel .footer-item {width: 25%;flex: 0 0 25%;}}
