@@ -9,7 +9,7 @@
 --sec3: #5d539969;
 --sec4: #5d53990f;
 --trd1:#C75D35;
---col1:;
+--col1:#a95695;
 --col2:#58A8B0;
 --col3:#C85E36;
 --col4:#FBF0D0;
@@ -44,7 +44,7 @@ body {background:#fff;}
 #header .container:after {position: absolute;content: "";background:#faf0d0;width: 200%;height: 60px;bottom: 0;left: -50%;z-index: -1;}
 @media (min-width: 992px) {.header-top {padding-top: 20px;padding-bottom:20px;}}
 @media (min-width: 768px) {.navigation-in>ul>li>a,.navigation-in>ul>li.ext>a:after,.navigation-in a {color: #C85E36;}
-.navigation-in>ul>li>a:hover,.navigation-in>ul>li.ext>a:hover:after,.navigation-in>ul>li.exp>a {color:#EDCC20;}
+.navigation-in>ul>li>a:hover,.navigation-in>ul>li.ext>a:hover:after,.navigation-in>ul>li.exp>a {color:var(--col1);}
 .navigation-in ul {justify-content: center;}
 .navigation-in {position: static;width: 100%;}
 .benefitBanner__title {font-size:21px;}
