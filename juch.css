@@ -105,9 +105,9 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 
 /* CAT - sloupce */
 .duo-layout { display:flex; gap:30px; align-items:center; justify-content:space-between; margin:0 auto; }
-.duo-text { flex:3; font-family:"Inter", Arial, sans-serif; font-size:1rem; line-height:1.6; color:#333; }
-.duo-image { flex:2; text-align:right; }
-.duo-image img { width:auto; height:280px; object-fit:contain; border-radius:12px; }
+.duo-text { flex:3; font-size:1rem; line-height:1.6; color:#333; }
+.duo-image { flex:2; display:flex; justify-content:center; }
+.duo-image img { height:260px; width:auto; object-fit:contain; border-radius:12px; }
 @media (max-width:768px) { .duo-layout { display:block; } .duo-image { display:none; } }
 
 /* PROD - podbarveni */
