@@ -101,7 +101,6 @@ body.type-category #footer.no-newsletter { margin-top:0; }
 .category-perex {margin-top: 0px;padding-top:20px;padding-bottom:10px;}.breadcrumbs {margin-top:0;padding-top:10px;}.category-title {margin-bottom:0;}
 @media (max-width: 767px) {.container.breadcrumbs-wrapper {margin-bottom: 0px;padding-bottom:7px;}}
 @media (min-width: 768px) {.breadcrumbs.navigation-home-icon-wrapper:before {top: 14px;}}
-.welcome {margin-bottom:60px;}
 
 .duo-layout { display:flex; gap:30px; align-items:center; justify-content:space-between; margin:0 auto; }
 .duo-text { flex:3; }
