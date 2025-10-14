@@ -80,11 +80,12 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 .products-block {margin: 0 -5px;}
 .products-block.products>div {padding: 5px;}
 @media (max-width: 767px) {.columns-mobile-2 .products-block .p-bottom .availability {justify-content: flex-start;}.products-block .product-btn a, .products-block .product-btn .pr-action {padding:0;}.position--benefitCategory{margin-top:0;}.type-category#footer.no-newsletter{margin-top:0;}}
-@media (min-width: 768px) {#content .filters-unveil-button-wrapper .btn.unveil-button {width:fit-content;}}
+@media (min-width: 768px) {#content .filters-unveil-button-wrapper .btn.unveil-button {width:fit-content;}.products-block .availability {font-size: 14px;font-weight: 700;}}
 #content .filters-unveil-button-wrapper .btn.unveil-button {min-height:50px;}
 .benefitBanner.position--benefitCategory { position: relative; z-index: 1; padding-top:40px;}
 .benefitBanner.position--benefitCategory::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; height: 100%; transform: translateX(-50%); background-color: #FBF0D0; z-index: -1; }
 .category-header input[type="radio"]+label {color:var(--col2);}
+
 
 /* CAT - podbarvení */
 .type-category { --catStripeBg: #FBF4E2; }
@@ -113,7 +114,7 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 .p-info-headline h1 {color:var(--sec1);}
 .shp-tabs-holder ul.shp-tabs li.active::after {bottom:inherit;}
 .p-info-wrapper .quantity input {border:2px solid var(--sec3);}
-.products-block.products .p .price strong,.p-info-wrapper .p-final-price-wrapper .price-final {color:#C75D35;}
+.products-block.products .p .price strong,.p-info-wrapper .p-final-price-wrapper .price-final {color:#C75D35;font-size:22px;}
 
 /* FOOTER */
 #footer h4 {color:var(--col3)!important;}
