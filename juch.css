@@ -54,7 +54,7 @@ body {background:#fff;}
 @media (max-width: 767px) {body {background-size:initial;} .container.breadcrumbs-wrapper {background:none; border-bottom:0px solid var(--sec4);}.carousel {margin: 20px 0px 50px;}.carousel-inner{border-radius:20px;}.benefitBanner__title {font-size:15px;}}
 .navigation-in a,.p-info-headline .h1 {color:var(--col3);}
 #footer.is-white {border-top:2px solid var(--sec4);}
-.top-navigation-bar a,.responsive-tools>a[data-target="navigation"]:after {color:var(--sec1);}
+.top-navigation-bar a,.responsive-tools>a[data-target="navigation"]:after {color:var(--col3);}
 
 /* SEARCH */
 @media (max-width:767px){.navigation-window-visible .responsive-tools{/*margin-right: 30px;*/}.overall-wrapper{padding-top:50px}.in-index .overall-wrapper{padding-top:50px}.responsive-tools .click-cart{padding-left:5px}.responsive-tools > a{width:40px}.responsive-tools>a[data-target="navigation"]{width:50px}.responsive-tools > a[data-target="search"]{display:flex;width:30px}.responsive-tools .click-cart{padding-right:0}.search-window-visible:not(.navigation-window-visible) #header{top:50px}.search-window-visible #header .search-form{margin:0}#header{top:-10px}}
