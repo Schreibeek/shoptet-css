@@ -130,3 +130,6 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 #footer.is-white .footer-bottom-bg:before {background:var(--col3);}
 #footer.no-newsletter {margin-top:0;}
 @media (min-width: 1200px) {.custom-footer .custom-footer-left-panel .footer-item {width: 25%;flex: 0 0 25%;}}
+
+/* KOSIK */
+body.ordering-process {background-color: #fbf4e257;}
