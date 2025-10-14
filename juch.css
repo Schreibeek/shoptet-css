@@ -88,7 +88,7 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 .category-header input[type="radio"]+label {color:var(--col2);}
 .subcategories li a {border:2px solid var(--sec4);box-shadow:none;}
 .subcategories li a:hover {border:2px solid var(--col2);}
-
+type-category#footer.no-newsletter {margin-top:0;}
 
 /* CAT - podbarvení */
 .type-category { --catStripeBg: #FBF4E2; }
