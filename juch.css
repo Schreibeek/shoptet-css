@@ -138,6 +138,7 @@ body.type-category #footer.no-newsletter { margin-top:0; }
 .p-info-wrapper .quantity input {border:2px solid var(--sec3);}
 .products-block.products .p .price strong,.p-info-wrapper .p-final-price-wrapper .price-final {color:#C75D35;font-size:22px;}
 .p-info-grid .detail-grid-title {color:var(--col2);}
+.social-buttons-wrapper {border-top:1px solid #ebe9e2;}
 
 /* FOOTER */
 #footer h4 {color:var(--col3)!important;}
