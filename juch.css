@@ -103,12 +103,12 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 @media (min-width: 768px) {.breadcrumbs.navigation-home-icon-wrapper:before {top: 14px;}}
 .welcome {margin-bottom:60px;}
 
-/* CAT - sloupce */
 .duo-layout { display:flex; gap:30px; align-items:center; justify-content:space-between; margin:0 auto; }
 .duo-text { flex:3; }
-.duo-image { flex:2; display:flex; justify-content:center; align-items:center; }
-.duo-image img { height:260px; width:auto; object-fit:contain; transform:translateY(-50px); }
-@media (max-width:767px) { .duo-layout { display:block; } .duo-image { display:none; } }
+.duo-image { flex:2; display:flex; justify-content:center; }
+.duo-image img { height:260px; width:auto; object-fit:contain; margin-top:-150px; }
+@media (max-width:768px) { .duo-layout { display:block; } .duo-image { display:none; } }
+
 
 /* PROD - podbarveni */
 @media (min-width: 992px) {.type-product  .breadcrumbs {margin-bottom:0;padding-bottom:10px;}}
