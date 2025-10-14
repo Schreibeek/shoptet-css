@@ -106,7 +106,7 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 .duo-layout { display:flex; gap:30px; align-items:center; justify-content:space-between; margin:0 auto; }
 .duo-text { flex:3; }
 .duo-image { flex:2; display:flex; justify-content:center; }
-.duo-image img { height:260px; width:auto; object-fit:contain; margin-top:-150px; }
+.duo-image img { height:260px; width:auto; object-fit:contain; margin-top:-120px; }
 @media (max-width:768px) { .duo-layout { display:block; } .duo-image { display:none; } }
 
 
