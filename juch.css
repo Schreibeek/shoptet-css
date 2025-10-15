@@ -56,7 +56,8 @@ body:not(.navigation-window-visible) .top-navigation-bar {box-shadow:none;}
 .navigation-in ul li a {text-transform:none;font-size:20px;}
 .navigation-buttons>a,.navigation-buttons>a:after,.navigation-buttons a[data-target="cart"],.navigation-buttons>a[data-target="login"]:before,.navigation-buttons .click-cart a:after {color:var(--col2);}
 @media (max-width: 767px) {body {background-size:initial;} .container.breadcrumbs-wrapper {background:none; border-bottom:0px solid var(--sec4);}.benefitBanner__title {font-size:15px;}}
-.navigation-in a,.p-info-headline .h1 {color:var(--col3);}
+.navigation-in a {color:var(--col3);}
+.p-info-headline .h1 {color:var(--col2);}
 #footer.is-white {border-top:2px solid var(--sec4);}
 .top-navigation-bar a,.responsive-tools>a[data-target="navigation"]:after {color:var(--col3);}
 .navigation-in-bottom {background:#fff;}
