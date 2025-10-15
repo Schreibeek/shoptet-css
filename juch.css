@@ -88,7 +88,7 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 .products-block {margin: 0 -5px;}
 .products-block.products>div {padding: 5px;}
 @media (max-width: 767px) {.columns-mobile-2 .products-block .p-bottom .availability {justify-content: flex-start;}.products-block .product-btn a, .products-block .product-btn .pr-action {padding:0;}.position--benefitCategory{margin-top:0;}}
-@media (min-width: 768px) {#content .filters-unveil-button-wrapper .btn.unveil-button {width:fit-content;}.products-block .availability {font-size: 14px;font-weight: 700;}}
+@media (min-width: 768px) {#content .filters-unveil-button-wrapper .btn.unveil-button {width:fit-content;}.products-block .availability {font-size: 14px;font-weight: 700;}.products-block:not(.products-additional) .p .image img {margin-top: -30px;}}
 #content .filters-unveil-button-wrapper .btn.unveil-button {min-height:50px;}
 .benefitBanner.position--benefitCategory { position: relative; z-index: 1; padding-top:40px;}
 .benefitBanner.position--benefitCategory::before { content: ""; position: absolute; top: 0; left: 50%; width: 100vw; height: 100%; transform: translateX(-50%); background-color: #FBF0D0; z-index: -1; }
