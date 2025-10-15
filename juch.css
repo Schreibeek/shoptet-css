@@ -141,6 +141,9 @@ body.type-category #footer.no-newsletter { margin-top:0; }
 .p-info-grid .detail-grid-title {color:var(--col2);}
 .social-buttons-wrapper {border-top:1px solid #ebe9e2;}
 
+/* ZAOBLENI 5px */
+.products-inline.products-top>div .p .image img {border-radius:5px;}
+
 /* ZAOBLENÍ 10px */
 .product .p,.body-banners img,.welcome,.contact-address__content {border-radius:10px;}
 .shp-tabs-holder ul.shp-tabs li a {border-radius: 10px 10px 0 0;}
