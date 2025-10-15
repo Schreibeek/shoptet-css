@@ -148,6 +148,7 @@ body.type-category #footer.no-newsletter { margin-top:0; }
 .product .p,.body-banners img,.welcome,.contact-address__content {border-radius:10px;}
 .shp-tabs-holder ul.shp-tabs li a {border-radius: 10px 10px 0 0;}
 @media (min-width: 768px) {.shp-tabs-wrapper .tab-pane.active:first-child {border-radius: 0 10px 10px 10px;}}
+@media (max-width: 767px) {.detail-tab-item {border-radius:10px;}}
 
 /* ZAOBLENÍ 50px */
 .btn, a.btn, .btn.btn-conversion,.search input[type="search"].form-control {border-radius:50px;}
