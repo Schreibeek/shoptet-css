@@ -142,10 +142,13 @@ body.type-category #footer.no-newsletter { margin-top:0; }
 .social-buttons-wrapper {border-top:1px solid #ebe9e2;}
 
 /* ZAOBLENÍ 10px */
-.product .p,.body-banners img {border-radius:10px;}
+.product .p,.body-banners img,.welcome,.contact-address__content {border-radius:10px;}
+.shp-tabs-holder ul.shp-tabs li a {border-radius: 10px 10px 0 0;}
+@media (min-width: 768px) {.shp-tabs-wrapper .tab-pane.active:first-child {border-radius: 0 10px 10px 10px;}}
 
 /* ZAOBLENÍ 50px */
-.btn, a.btn, .btn.btn-conversion {border-radius:50px;}
+.btn, a.btn, .btn.btn-conversion,.search input[type="search"].form-control {border-radius:50px;}
+.search .btn.btn-default, .search a.btn.btn-default {border-radius: 0 50px 50px 0;}
 
 /* FOOTER */
 #footer h4 {color:var(--col3)!important;}
