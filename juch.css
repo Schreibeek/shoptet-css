@@ -145,7 +145,7 @@ body.type-category #footer.no-newsletter { margin-top:0; }
 .products-inline.products-top>div .p .image img {border-radius:5px;}
 
 /* ZAOBLENÍ 10px */
-.product .p,.body-banners img,.welcome,.contact-address__content,.summary-wrapper,.checkout-box-wrapper {border-radius:10px;}
+.product .p,.body-banners img,.welcome,.contact-address__content,.summary-wrapper,.checkout-box-wrapper,.body-banners a, .body-banners .banner-wrapper {border-radius:10px;}
 .shp-tabs-holder ul.shp-tabs li a,ol.cart-header li.active {border-radius: 10px 10px 0 0;}
 .cart-inner {border-radius:0 0 10px 10px;}
 @media (min-width: 768px) {.shp-tabs-wrapper .tab-pane.active:first-child {border-radius: 0 10px 10px 10px;}}
