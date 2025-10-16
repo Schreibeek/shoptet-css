@@ -167,6 +167,7 @@ body.type-category #footer.no-newsletter { margin-top:0; }
 #footer.is-white .footer-bottom-bg:before {background:var(--col3);}
 @media (min-width: 1200px) {.custom-footer .custom-footer-left-panel .footer-item {width: 25%;flex: 0 0 25%;}}
 @media (max-width:767px) {.custom-footer__banner16 {display:none;}}
+.type-index #footer.is-white { border-top: none !important; }
 
 /* KOSIK */
 body.ordering-process {background-color: #fbf4e257;}
