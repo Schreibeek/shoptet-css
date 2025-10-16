@@ -35,7 +35,7 @@ body {background:#fff;}
 /* HP bannery */
 .content-wrapper.homepage-box.middle-banners-wrapper { position: relative; background-image: url("https://www.juch.store/user/documents/upload/bgs/bg1.png"); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 40px 0; }
 @media (max-width: 767px) { .row.banners-content.body-banners { position: relative; background-image: url("https://www.juch.store/user/documents/upload/bgs/bg1.png"); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 40px 20px; margin-left: -20px !important; margin-right: -20px !important; width: calc(100% + 40px); } }
-.welcome-wrapper { position: relative; background-image: url("https://www.juch.store/user/documents/upload/bgs/bg2.png"); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 40px 0; }
+.welcome-wrapper:has(> .welcome) { position: relative; background-image: url("https://www.juch.store/user/documents/upload/bgs/bg2.png"); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 40px 0; }
 
 /* HEAD */
 #header {background:#faf0d0!important;}
