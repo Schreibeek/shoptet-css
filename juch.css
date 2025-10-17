@@ -35,9 +35,10 @@ body {background:#fff;}
 /* HP bannery */
 .content-wrapper.homepage-box.middle-banners-wrapper { position: relative; background-image: url("https://www.juch.store/user/documents/upload/bgs/bg1.png"); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 40px 0; }
 @media (max-width: 767px) { .row.banners-content.body-banners { position: relative; background-image: url("https://www.juch.store/user/documents/upload/bgs/bg1.png"); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 40px 20px; margin-left: -20px !important; margin-right: -20px !important; width: calc(100% + 40px); } }
-.welcome-wrapper:has(.welcome__content) { position: relative; background-image: url("https://www.juch.store/user/documents/upload/bgs/bg2.png"); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 20px; }
-@media (max-width: 767px) { .welcome-wrapper:has(.welcome__content) { margin-left: -20px !important; margin-right: -20px !important; width: calc(100% + 40px); } }
-.welcome-wrapper .welcome-wrapper { background: none !important; }
+.content-wrapper.homepage-box.welcome-wrapper { position: relative; background-image: url("https://www.juch.store/user/documents/upload/bgs/bg2.png"); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 20px 0; }
+.content-wrapper.homepage-box.welcome-wrapper .welcome-wrapper { background: none !important; }
+@media (max-width: 767px) { .content-wrapper.homepage-box.welcome-wrapper .container { padding-left: 0; padding-right: 0; } }
+@media (max-width: 767px) { .content-wrapper.homepage-box.welcome-wrapper .welcome { box-sizing: border-box; padding-left: 20px; padding-right: 20px; } }
 
 /* HEAD */
 #header {background:#faf0d0!important;}
