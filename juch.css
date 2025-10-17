@@ -104,7 +104,7 @@ body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget
 .subcategories li a {border:2px solid var(--sec4);box-shadow:none;}
 .subcategories li a:hover {border:2px solid var(--col2);}
 body.type-category #footer.no-newsletter { margin-top:0; }
-.products-block:not(.products-additional) .p .image img {margin-top:-20px;}
+@media (max-width: 767px) {.products-block:not(.products-additional) .p .image img {margin-top:-20px;}}
 
 /* CAT - podbarvení */
 .type-category { --catStripeBg: #FBF4E2; }
