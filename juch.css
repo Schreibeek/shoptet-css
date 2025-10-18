@@ -78,10 +78,13 @@ body:not(.navigation-window-visible) .top-navigation-bar {box-shadow:none;}
 @media (min-width: 992px) {.admin-logged.not-exist-menu .popup-widget.cart-widget,.admin-logged.not-exist-menu .popup-widget.login-widget {top: 96px;}
 body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget.cart-widget {top: 71px;}}
 
-/* Nadpisy MIX 2 */
-#navigation, h1, h2, h3, h4, h5, h6, .p-detail-tabs,.blank-mode .h4,.blank-mode h1,.category-header input[type="radio"]+label,.external-fonts-loaded .btn,.external-fonts-loaded .products .name,.p-info-headline .h1,.detail-tab-item {font-family: var(--template-headings-font)!important;font-variation-settings: "COUT" 250, "JMBL" 100, "STGR" 100;}
+/* NADPISY CUTOUT 3 */
+h1, h2, h3, h4, h5, h6, .p-detail-tabs,.blank-mode .h4,.blank-mode h1,.category-header input[type="radio"]+label,.external-fonts-loaded .btn,.p-info-headline .h1,.detail-tab-item {font-family: var(--template-headings-font)!important;font-variation-settings: "COUT" 250, "JMBL" 100, "STGR" 100;}
 .top-nav-button-login {font-family:"OCPickllle";text-transform:none!important;}
 .benefitBanner__title {color:var(--col3);font-family:"OCPickllle";text-transform:none;}
+
+/* TEXTY REGULAR */
+#navigation,.external-fonts-loaded .products .name {font-family: var(--template-headings-font)!important;font-variation-settings: "COUT" 100, "JMBL" 100, "STGR" 100;}
 
 /* CATEGORY a nahledy */
 .product .p {box-shadow:none;border:2px solid var(--sec4);}
