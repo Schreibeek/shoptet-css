@@ -41,7 +41,7 @@ body {background:#fff;}
 @media (max-width: 767px) { .content-wrapper.homepage-box.welcome-wrapper > .content-wrapper-in > .container > .welcome-wrapper { box-sizing: border-box; padding-left: 20px; padding-right: 20px; } }
 
 /* HEAD */
-#header {background:#faf0d0!important;}
+#header {background:#f9efcf!important;}
 #header .site-name a img {max-height:50px;}
 .search input[type="search"].form-control {border:0px solid var(--sec2);background:#fff;}
 .search input[type="search"].form-control:focus {border:3px solid var(--sec1);}
