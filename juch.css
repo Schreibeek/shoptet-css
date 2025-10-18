@@ -79,7 +79,7 @@ body:not(.navigation-window-visible) .top-navigation-bar {box-shadow:none;}
 body.not-exist-menu .popup-widget.login-widget,body.not-exist-menu .popup-widget.cart-widget {top: 71px;}}
 
 /* Nadpisy MIX 2 */
-#navigation, h1, h2, h3, h4, h5, h6, .p-detail-tabs,.blank-mode .h4,.blank-mode h1,.category-header input[type="radio"]+label,.external-fonts-loaded .btn,.external-fonts-loaded .products .name,.p-info-headline .h1,.detail-tab-item {font-family: var(--template-headings-font)!important;font-variation-settings: "COUT" 180, "JMBL" 180, "STGR" 180;}
+#navigation, h1, h2, h3, h4, h5, h6, .p-detail-tabs,.blank-mode .h4,.blank-mode h1,.category-header input[type="radio"]+label,.external-fonts-loaded .btn,.external-fonts-loaded .products .name,.p-info-headline .h1,.detail-tab-item {font-family: var(--template-headings-font)!important;font-variation-settings: "COUT" 250, "JMBL" 100, "STGR" 100;}
 .top-nav-button-login {font-family:"OCPickllle";text-transform:none!important;}
 .benefitBanner__title {color:var(--col3);font-family:"OCPickllle";text-transform:none;}
 
