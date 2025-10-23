@@ -21,6 +21,7 @@ h1,h2,h3,h4,h5,h6,.p .name,.homepage-group-title {color:var(--col2)!important;}
 .breadcrumbs,.breadcrumbs a,.breadcrumbs>span>a:after {color:var(--col3);}
 .type-detail .position--benefitProduct {background:transparent;border-radius:15px;margin-bottom:30px!important;padding-top:30px;}
 body {background:#fff;}
+html, body {overflow-x: hidden;}
 
 /* HOMEPAGE */
 .welcome {background:#fff;}
