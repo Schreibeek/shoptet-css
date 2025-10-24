@@ -178,3 +178,6 @@ body.type-category #footer.no-newsletter { margin-top:0; }
 
 /* KOSIK */
 body.ordering-process {background-color: #fbf4e257;}
+
+/* BORDERS */
+.contact-address__content {2px solid var(--sec4);}
