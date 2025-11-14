@@ -5,8 +5,8 @@
 .type-detail .add-to-cart-button:hover::before {background:#404793;}
 
 /* DETAIL - nadpis */
-.type-detail .p-detail-inner-header h1::before,.type-detail .p-detail-inner-header-mobile .h1::before {clip-path: polygon(3% 0,100% 0,97% 100%,0% 100%);}
-.type-detail .p-detail-inner-header h1 {text-align:center;}
+.type-detail .p-detail-inner-header h1::before,.type-detail .p-detail-inner-header-mobile .h1::before {clip-path: polygon(0% 0,100% 0,90% 100%,0% 100%);}
+.type-detail .p-detail-inner-header h1 {}
 
 /* CATEGORY */
 .product .btn {padding:0px 26px!important;}
