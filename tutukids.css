@@ -19,6 +19,7 @@
 .filters-wrapper .filters-unveil-button-wrapper .unveil-button:before {margin-right:0;}
 .products-inline>div .p .p-in .p-in-in .name {color:#000;font-weight:600;}
 #productsTopHeading {color:#1b237e;}
+:where(body.ums_a11y_category_page--on) .toggle-top-products {color:#1b237e;}
 
 /* CATEGORY - btn sude liche */
 .product:nth-child(odd) .btn::before {clip-path:polygon(0% 0,100% 0,94% 100%,0% 100%);}
