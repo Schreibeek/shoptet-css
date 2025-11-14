@@ -7,3 +7,7 @@
 /* DETAIL - nadpis */
 .type-detail .p-detail-inner-header h1::before,.type-detail .p-detail-inner-header-mobile .h1::before {clip-path: polygon(3% 0,100% 0,97% 100%,0% 100%);}
 .type-detail .p-detail-inner-header h1 {text-align:center;}
+
+/* CATEGORY */
+.product .btn {0px 26px;}
+.product .btn::before {clip-path:none;}
