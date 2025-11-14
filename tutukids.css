@@ -2,7 +2,7 @@
 .type-detail .add-to-cart-button {padding: initial;height: auto;}
 .type-detail .add-to-cart-button::before {clip-path: none;}
 .btn.btn-conversion:hover {color:#fff;}
-.type-detail .add-to-cart-button:hover::before {background:#4751ba;}
+.type-detail .add-to-cart-button:hover::before {background:#404793;}
 
 /* DETAIL - nadpis */
 .type-detail .p-detail-inner-header h1::before,.type-detail .p-detail-inner-header-mobile .h1::before {clip-path: polygon(3% 0,100% 0,97% 100%,0% 100%);}
