@@ -38,3 +38,6 @@
 .id-1 .homepage-group-title {left: -45px;}
 .id-1 .homepage-group-title::before {clip-path:polygon(0px 0,100% 0,92% 85%,0% 85%);}
 }
+
+/* SIPKY */
+@media (min-width: 768px) {.id-1 main .product-slider-holder.has-navigation .navigation-prev {border-left: 40px solid transparent;border-right: 40px solid transparent;border-bottom: 90px solid #fcd000;transform: rotate(275deg);}}
