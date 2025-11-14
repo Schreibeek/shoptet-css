@@ -1,3 +1,6 @@
 /* DETAIL */
 .type-detail .add-to-cart-button {padding: initial;height: auto;}
 .type-detail .add-to-cart-button::before {clip-path: none;}
+.btn.btn-conversion:hover {color:#fff;}
+.type-detail .add-to-cart-button:hover::before {background:#4751ba;}
+
