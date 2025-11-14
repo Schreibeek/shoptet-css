@@ -17,7 +17,7 @@
 .type-detail .p-detail-inner-header-mobile .h1 {left:-30px;padding:4rem;}
 
 /* DETAIL */
-.brand-wrapper-manufacturer-name {color:#1b237e;}
+.brand-wrapper-manufacturer-name a,.ratings-and-brand a {color:#1b237e;}
 
 /* CATEGORY */
 .product .btn {padding:0px 26px!important;font-size:19px!important;}
