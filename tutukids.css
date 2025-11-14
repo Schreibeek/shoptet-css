@@ -9,5 +9,7 @@
 .type-detail .p-detail-inner-header h1 {text-align:center;}
 
 /* CATEGORY */
-.product .btn {0px 26px;}
+.product .btn {padding:0px 26px!important;}
 .product .btn::before {clip-path:none;}
+
+.type-category .container.content-wrapper #content h1::before {
