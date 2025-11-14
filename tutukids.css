@@ -37,8 +37,8 @@
 @media (max-width: 767px) {:where(body.ums_a11y_category_page--on) .sortingToggle {border: 1px solid #666;}}
 
 /* CATEGORY - btn sude liche */
-.product:nth-child(odd) .btn::before {clip-path:polygon(0% 0,100% 0,94% 100%,0% 100%);}
-.product:nth-child(even) .btn::before {clip-path:polygon(6% 0,100% 0,100% 100%,0% 100%);}
+.product:nth-child(odd) .btn::before {clip-path:polygon(0% 0,100% 7%,95% 95%,3% 100%);}
+.product:nth-child(even) .btn::before {clip-path:polygon(0% 0,100% 7%,95% 95%,3% 100%);}
 
 /* HOMEPAGE */
 @media (max-width: 767px) {
