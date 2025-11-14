@@ -1,0 +1,3 @@
+/* DETAIL */
+.type-detail .add-to-cart-button {padding: initial;height: auto;}
+.type-detail .add-to-cart-button::before {clip-path: none;}
