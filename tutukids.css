@@ -6,3 +6,4 @@
 
 /* DETAIL - nadpis */
 .type-detail .p-detail-inner-header h1::before {clip-path: polygon(3% 0,100% 0,97% 100%,0% 100%);}
+.type-detail .p-detail-inner-header h1 {text-align:center;}
