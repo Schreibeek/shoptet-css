@@ -1,7 +1,7 @@
 /* BODY color 
-#header,.header-bottom,header .header-nav .my-nav #navigation {background:#E4E1F0;}
-#header .header-bottom {background-color:#E4E1F0;}
-@media (min-width: 992px) {body {background-color:#E4E1F0;}
+#header,.header-bottom,header .header-nav .my-nav #navigation {background:#E4E1F0!important;}
+#header .header-bottom {background-color:#E4E1F0!important;}
+@media (min-width: 992px) {body {background-color:#E4E1F0!important;}
 */
 
 /* DETAIL - btn */
@@ -12,7 +12,8 @@
 
 /* DETAIL - nadpis */
 .type-detail .p-detail-inner-header h1::before,.type-detail .p-detail-inner-header-mobile .h1::before {clip-path: polygon(0% 0,100% 0,95% 100%,0% 100%);}
-.type-detail .p-detail-inner-header h1 {}
+.type-detail .p-detail-inner-header h1::before {clip-path:polygon(0% 0,100% 0,100% 100%,5% 100%);}
+.type-detail .p-detail-inner-header h1 {text-aling:center;}
 .type-detail .p-detail-inner-header-mobile .h1 {left:-30px;padding:4rem;}
 
 /* CATEGORY */
