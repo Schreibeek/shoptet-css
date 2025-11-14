@@ -7,6 +7,7 @@
 /* DETAIL - nadpis */
 .type-detail .p-detail-inner-header h1::before,.type-detail .p-detail-inner-header-mobile .h1::before {clip-path: polygon(0% 0,100% 0,95% 100%,0% 100%);}
 .type-detail .p-detail-inner-header h1 {}
+.type-detail .p-detail-inner-header-mobile .h1 {left:-30px;}
 
 /* CATEGORY */
 .product .btn {padding:0px 26px!important;}
