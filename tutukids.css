@@ -11,5 +11,10 @@
 /* CATEGORY */
 .product .btn {padding:0px 26px!important;}
 .product .btn::before {clip-path:none;}
-
 .type-category .container.content-wrapper #content h1::before {clip-path:polygon(30px 0,100% 0,92% 85%,15% 85%);}
+
+/* HOMEPAGE */
+@media (max-width: 768px) {
+.id-1 .homepage-group-title {left: -45px;}
+.id-1 .homepage-group-title::before {clip-path:polygon(0px 0,100% 0,92% 85%,0% 85%);}
+}
