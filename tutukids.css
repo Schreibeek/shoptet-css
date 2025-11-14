@@ -33,6 +33,7 @@
 :where(body.ums_a11y_category_page--on) .toggle-top-products:hover {color:#404793;}
 :where(body.ums_a11y_pagination--on) .btn.loadMore__button, :where(body.ums_a11y_pagination--on) .pagination .pagination__list .pagination__link, :where(body.ums_a11y_pagination--on) a.btn.goToTop__button {color:#1b237e;border-color:#1b237e;}
 .subcategories.with-image li a .text,.products-inline>div .p .p-in .p-in-in .name {color:#1b237e;}
+:where(body.ums_a11y_category_page--on) .sortingToggle {border: 1px solid #333;}
 
 /* CATEGORY - btn sude liche */
 .product:nth-child(odd) .btn::before {clip-path:polygon(0% 0,100% 0,94% 100%,0% 100%);}
