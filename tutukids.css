@@ -12,8 +12,9 @@
 .product .btn {padding:0px 26px!important;}
 .product .btn::before {clip-path:none;}
 .type-category .container.content-wrapper #content h1::before {clip-path:polygon(30px 0,100% 0,92% 85%,15% 85%);}
+.products-block>div .p .p-bottom>div .p-tools .btn.btn-primary {line-height:50px;
 
-/* CATEGORY - pokus */
+/* CATEGORY - btn sude liche */
 .product:nth-child(odd) .btn::before {clip-path:polygon(0% 0,100% 0,94% 100%,0% 100%);}
 .product:nth-child(even) .btn::before {clip-path:polygon(6% 0,100% 0,100% 100%,0% 100%);}
 
