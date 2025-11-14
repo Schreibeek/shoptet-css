@@ -41,7 +41,8 @@
 /* HOMEPAGE */
 @media (max-width: 768px) {
 .id-1 .homepage-group-title {left: -45px;}
-.id-1 .homepage-group-title::before {clip-path:polygon(0px 0,100% 0,92% 85%,0% 85%);}
+.id-1 .homepage-group-title::before {clip-path:polygon(15% 0,100% 0,94% 85%,15% 85%);}
+.id-1 .homepage-products-heading-::before {clip-path:polygon(5% 0,100% 0,94% 85%,5% 85%);}
 }
 
 /* SIPKY */
