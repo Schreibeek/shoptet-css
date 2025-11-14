@@ -1,3 +1,9 @@
+/* BODY color 
+#header,.header-bottom,header .header-nav .my-nav #navigation {background:#E4E1F0;}
+#header .header-bottom {background-color:#E4E1F0;}
+@media (min-width: 992px) {body {background-color:#E4E1F0;}
+*/
+
 /* DETAIL - btn */
 .type-detail .add-to-cart-button {padding: initial;height: auto;}
 .type-detail .add-to-cart-button::before {clip-path: none;}
