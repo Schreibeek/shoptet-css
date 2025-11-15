@@ -54,7 +54,7 @@
 /* MENU - mobil */
 @media (max-width: 767px) {
 #navigation .navigation-in ul li>a>b,#navigation .navigation-in ul li:hover>a>b {text-decoration: none;}
-.navigation-in>ul>li {border-top:1px solid #ccc;}
+.navigation-in>ul>li {border-top:1px solid #e4e4e4;}
 }
 
 /* SIPKY */
