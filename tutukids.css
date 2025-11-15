@@ -51,6 +51,9 @@
 .id-1 .homepage-products-heading-9::before {clip-path:polygon(8% 0,100% 0,97% 85%,8% 85%);}
 }
 
+/* MENU - mobil */
+.navigation-in>ul>li {border:1px solid #ccc;}
+@media (max-width: 767px) {#navigation .navigation-in ul li>a>b,#navigation .navigation-in ul li:hover>a>b {text-decoration: none;}
 
 /* SIPKY */
 .product-slider-holder .product-slider-navigation {top:40%;transform:none;}
