@@ -10,7 +10,7 @@ a.social-icon {color:#fff!important;}
 */
 
 /* HEAD */
-.icons img.btn {filter: invert(100%);}
+.icons img.btn,header .header-nav .navigation-buttons a[data-target=cart]:before {filter: invert(100%);}
 
 /* DETAIL - btn */
 .type-detail .add-to-cart-button {padding: initial;height: auto;}
