@@ -40,6 +40,9 @@
 .product:nth-child(odd) .btn::before {clip-path:polygon(0% 0,100% 7%,95% 95%,3% 100%);}
 .product:nth-child(even) .btn::before {clip-path:polygon(0% 0,100% 7%,95% 95%,3% 100%);}
 
+/* FLAGS */
+.flag {clip-path:polygon(0% 0,100% 7%,95% 95%,3% 100%);}
+
 /* HOMEPAGE */
 @media (max-width: 767px) {
 .id-1 .homepage-group-title {left: -45px;}
