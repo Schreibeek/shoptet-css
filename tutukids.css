@@ -52,7 +52,8 @@
 }
 
 /* MENU - mobil */
-@media (max-width: 767px) {#navigation .navigation-in ul li>a>b,#navigation .navigation-in ul li:hover>a>b {text-decoration: none;}
+@media (max-width: 767px) {
+#navigation .navigation-in ul li>a>b,#navigation .navigation-in ul li:hover>a>b {text-decoration: none;}
 .navigation-in>ul>li {border:1px solid #ccc;}
 }
 
