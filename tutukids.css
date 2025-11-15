@@ -57,6 +57,10 @@
 .navigation-in>ul>li {border-top:1px solid #e4e4e4;}
 #navigation .menu-level-1>li>a, #navigation .navigationActions>li>a {font-weight: 700;}
 }
+/* MENU - PC */
+.navigation-in .has-third-level div>ul a {color: #000;}
+.navigation-in .has-third-level div>ul a:hover {color:#ff9800;}
+@media (min-width: 768px) {.navigation-in ul.menu-level-2 a, .navigation-in ul.menu-level-2 a:hover {color: #1a237e;}}
 
 /* SIPKY */
 .product-slider-holder .product-slider-navigation {top:40%;transform:none;}
