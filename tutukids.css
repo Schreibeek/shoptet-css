@@ -44,11 +44,13 @@
 @media (max-width: 767px) {
 .id-1 .homepage-group-title {left: -45px;}
 .id-1 .homepage-group-title::before {clip-path:polygon(0px 0,100% 0,92% 85%,0% 85%);}
+.welcome-wrapper.container-narrow .welcome .left-small-character,.welcome-wrapper.container-narrow .welcome .right-small-character {z-index: 10;}
 }
 @media (min-width: 768px) {
 .id-1 .homepage-group-title::before {clip-path:polygon(15% 0,100% 0,94% 85%,15% 85%);}
 .id-1 .homepage-products-heading-9::before {clip-path:polygon(8% 0,100% 0,97% 85%,8% 85%);}
 }
+
 
 /* SIPKY */
 .product-slider-holder .product-slider-navigation {top:40%;transform:none;}
