@@ -9,6 +9,9 @@ a.social-icon {color:#fff!important;}
 #footer a {color:#fff;}
 */
 
+/* HEAD */
+.icons img.btn {filter: invert(100%);}
+
 /* DETAIL - btn */
 .type-detail .add-to-cart-button {padding: initial;height: auto;}
 .btn.btn-conversion:hover {color:#fff;}
