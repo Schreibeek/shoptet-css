@@ -52,8 +52,9 @@
 }
 
 /* MENU - mobil */
-.navigation-in>ul>li {border:1px solid #ccc;}
 @media (max-width: 767px) {#navigation .navigation-in ul li>a>b,#navigation .navigation-in ul li:hover>a>b {text-decoration: none;}
+.navigation-in>ul>li {border:1px solid #ccc;}
+}
 
 /* SIPKY */
 .product-slider-holder .product-slider-navigation {top:40%;transform:none;}
