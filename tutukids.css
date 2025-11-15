@@ -18,6 +18,8 @@
 
 /* DETAIL */
 .brand-wrapper-manufacturer-name a,.ratings-and-brand a {color:#1b237e;}
+#accordion-content .shp-accordion .shp-accordion-link,.products-header {color: #1b237e;}
+.extended-description p {font-size:24px;color:#1b237e;}
 
 /* CATEGORY */
 .product .btn {padding:0px 26px!important;font-size:19px!important;}
