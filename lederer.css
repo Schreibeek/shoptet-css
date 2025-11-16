@@ -70,7 +70,7 @@ body.id-1921 header[itemprop="headline"] {display: none !important;}
 .id--7 .content-inner form, .in-login .content-inner form, .in-registration-login.in-affiliate-login .content-inner form, .in-registration-login:not(.is-logged) .content-inner form {margin: 0;}
 
 /* IKONA */
-.sidebar-inner .banner {padding:0;border:0;}
+.sidebar-inner .banner {border:0;}
 @media (min-width: 768px) {#navigation {height: 39px;}}
 
 /* Stránky a blog */
