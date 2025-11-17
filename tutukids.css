@@ -14,6 +14,7 @@ a.social-icon:hover {background:#cd3382;}
 /* HEAD */
 .icons img.btn,header .header-nav .navigation-buttons a[data-target=cart]:before {filter: invert(100%);}
 .navigation-buttons a[data-target=cart]:hover {color:#cd3382;}
+.navigation-buttons>a[data-target=cart] i {background:#ac1c66;}
 
 /* DETAIL - btn */
 .type-detail .add-to-cart-button {padding: initial;height: auto;}
