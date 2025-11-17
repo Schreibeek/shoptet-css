@@ -79,6 +79,7 @@ a.social-icon:hover {background:#cd3382;}
 .navigation-in .has-third-level div>ul a:hover {color:#ff9800;}
 @media (min-width: 768px) {.navigation-in ul.menu-level-2 a, .navigation-in ul.menu-level-2 a:hover {color: #1a237e;}}
 
-/* SIPKY */
+/* SLIDER */
 .product-slider-holder .product-slider-navigation {top:40%;transform:none;}
 @media (min-width: 768px) {.id-1 main .product-slider-holder.has-navigation .navigation-prev {border-left: 40px solid transparent;border-right: 40px solid transparent;border-bottom: 90px solid #fcd000;transform: rotate(270deg);margin-top:-5px;}}
+.product-slider-holder .product-slider-pagination .pagination-button.active {background:#ac1c66;}
