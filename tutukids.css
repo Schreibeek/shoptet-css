@@ -1,4 +1,4 @@
-/* BODY recolor 
+/* BODY recolor */
 #header,.header-bottom,header .header-nav .my-nav #navigation {background:#E4E1F0!important;}
 #header .header-bottom {background-color:#E4E1F0!important;}
 @media (min-width: 992px) {body {background-color:#E4E1F0!important;}
@@ -7,7 +7,7 @@
 a.social-icon {color:#fff!important;}
 .footer-bottom {background:#ac1c66;color:#f5cbe1;}
 #footer a {color:#fff;}
-*/
+
 
 /* HEAD */
 .icons img.btn,header .header-nav .navigation-buttons a[data-target=cart]:before {filter: invert(100%);}
