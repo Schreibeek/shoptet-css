@@ -3,7 +3,7 @@
 #header .header-bottom {background-color:#E4E1F0!important;}
 .header-bottom {border-color:#E4E1F0;}
 .top-navigation-bar {background-color: #E4E1F0;border-color: #E4E1F0;}
-@media (min-width: 992px) {body {background-color:#E4E1F0!important;}
+@media (min-width: 992px) {body {background-color:#E4E1F0!important;}}
 #footer h4,#footer ul li,#footer ul li a {color:#1a1937;}
 a.social-icon {color:#fff!important;}
 .footer-bottom {background:#ac1c66;color:#f5cbe1;}
@@ -79,4 +79,4 @@ a.social-icon:hover {background:#cd3382;}
 
 /* SIPKY */
 .product-slider-holder .product-slider-navigation {top:40%;transform:none;}
-@media (min-width: 768px) {.id-1 main .product-slider-holder.has-navigation .navigation-prev {border-left: 40px solid transparent;border-right: 40px solid transparent;border-bottom: 90px solid #fcd000;transform: rotate(270deg);}}
+@media (min-width: 768px) {.id-1 main .product-slider-holder.has-navigation .navigation-prev {border-left: 40px solid transparent;border-right: 40px solid transparent;border-bottom: 90px solid #fcd000;transform: rotate(270deg);margin-top:-5px;}}
