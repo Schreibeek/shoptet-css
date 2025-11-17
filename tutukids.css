@@ -4,11 +4,11 @@
 .header-bottom {border-color:#E4E1F0;}
 .top-navigation-bar {background-color: #E4E1F0;border-color: #E4E1F0;}
 @media (min-width: 992px) {body {background-color:#E4E1F0!important;}
-
 #footer h4,#footer ul li,#footer ul li a {color:#1a1937;}
 a.social-icon {color:#fff!important;}
 .footer-bottom {background:#ac1c66;color:#f5cbe1;}
 #footer a {color:#fff;}
+a.social-icon:hover {background:#cd3382;}
 
 
 /* HEAD */
