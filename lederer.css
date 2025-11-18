@@ -109,6 +109,27 @@ body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 .advanced-order .products .product-btn {margin-bottom:10px;}
 }
 
+.brand-banners{display:flex;flex-direction:column;gap:2.5rem;margin-bottom:4rem;}
+.brand-banner{border-radius:20px;overflow:hidden;}
+.brand-banner--lerdee .brand-banner__inner{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);align-items:stretch;background:#f7f3ee;max-height:420px;}
+.brand-banner__image{position:relative;width:100%;height:100%;}
+.brand-banner__image img{width:100%;height:100%;object-fit:cover;display:block;}
+.brand-banner__content{padding:2.5rem 2.75rem;display:flex;flex-direction:column;justify-content:center;gap:.75rem;}
+.brand-banner__eyebrow{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:#b59a6b;margin:0;}
+.brand-banner__title{font-size:2.1rem;line-height:1.1;margin:0;font-weight:500;}
+.brand-banner__text{font-size:.95rem;line-height:1.5;color:#555;margin:0;}
+.brand-banner__btn{margin-top:1.2rem;align-self:flex-start;padding:.7rem 1.6rem;border-radius:999px;border:1px solid:#b59a6b;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#b59a6b;background:#fff;transition:background .2s ease,color .2s ease;}
+.brand-banner__btn:hover{background:#b59a6b;color:#fff;}
+.brand-banner-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;}
+.brand-banner--small{background:#f7f3ee;display:flex;flex-direction:column;}
+.brand-banner--small .brand-banner__image{aspect-ratio:4/3;height:auto;}
+.brand-banner__content--small{padding:1.2rem 1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.brand-banner__title-small{font-size:1rem;letter-spacing:.18em;text-transform:uppercase;margin:0;}
+.brand-banner__link{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:#b59a6b;white-space:nowrap;}
+@media(max-width:900px){.brand-banner--lerdee .brand-banner__inner{grid-template-columns:1fr;max-height:none;}.brand-banner__image{height:auto;aspect-ratio:16/10;}}
+@media(max-width:767px){.brand-banner-grid{grid-template-columns:1fr;}.brand-banner__content{padding:1.8rem 1.6rem;}.brand-banner__title{font-size:1.7rem;}}
+
+
 /* CART 
 @media (max-width:768px) {.shipping-billing-table.radio-wrapper input[type="radio"]+label {padding: 8px 20px 8px 50px;}}
 */
