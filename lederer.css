@@ -152,7 +152,7 @@ body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 .ak-brand-text{font-size:14px;margin:0;text-align:justify;}
 .ak-brand-img{width:100%;height:auto;margin:0 0 1.5rem;display:block;border-radius:10px;}
 .ak-brand-btn{margin-top:1.5rem;display:inline-block;}
-@media (max-width:767px){.description-inner.ak-two-cols{display:block;padding-right:0;}.ak-brand-box{max-width:none;border-left:0;border-top:1px solid #e0e0e0;padding-left:0;padding-top:2rem;margin-top:2rem;}}
+@media (max-width:767px){.description-inner.ak-two-cols{display:block;padding-right:0;}.ak-brand-box{max-width:none;border-left:0;border-top:1px solid #e0e0e0;padding-left:0;padding-top:3rem;margin-top:3rem;}}
 
 /* CART 
 @media (max-width:768px) {.shipping-billing-table.radio-wrapper input[type="radio"]+label {padding: 8px 20px 8px 50px;}}
