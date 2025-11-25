@@ -113,7 +113,7 @@ body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 .list-banner-2{display:block;text-align:left;margin-bottom:4rem;}
 .list-banner-3{display:block;text-align:left;margin-bottom:4rem;}
 .brand-banner{border-radius:20px;overflow:hidden;}
-.brand-banner--lerdee{border:1px solid #c99c61;background:#f4efe9;}
+.brand-banner--lerdee{border:1px solid #c99c615c;background:#f4efe9;}
 .brand-banner--lerdee .brand-banner__inner{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);align-items:stretch;background:#f4efe9;}
 .brand-banner__image{position:relative;width:100%;height:auto;aspect-ratio:2000/1166;display:block;overflow:hidden;}
 .brand-banner__image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 250ms ease-out;will-change:transform;}
@@ -131,14 +131,14 @@ body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 .brand-banner__content--small{padding:1.6rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
 .brand-banner__title-small{font-size:2rem;letter-spacing:1px;margin:0;font-weight:600;}
 .brand-banner__link{font-size:1.4rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:#c99c61;white-space:nowrap;}
-@media(min-width:768px){.brand-banner--lerdee .brand-banner__image{border-right:1px solid #c99c61;}}
+@media(min-width:768px){.brand-banner--lerdee .brand-banner__image{border-right:1px solid #c99c615c;}}
 @media(max-width:767px){
 .list-banner-2{margin-bottom:2rem;}
 .brand-banner--lerdee .brand-banner__inner{grid-template-columns:1fr;}
 .brand-banner-grid{grid-template-columns:1fr;}
 .brand-banner__content{padding:2rem 1.6rem;gap:1rem;}
 .brand-banner--lerdee .brand-banner__content{padding:2.5rem 1.8rem;align-items:center;text-align:center;background:#f4efe9;}
-.brand-banner--lerdee .brand-banner__image{border-right:0;border-bottom:1px solid #c99c61;}
+.brand-banner--lerdee .brand-banner__image{border-right:0;border-bottom:1px solid #c99c615c;}
 .brand-banner__title{font-size:2rem;}
 .brand-banner__text{font-size:1.4rem;}
 .brand-banner__title-small{font-size:1.8rem;}
