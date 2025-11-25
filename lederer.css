@@ -144,6 +144,14 @@ body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 .brand-banner__title-small{font-size:1.8rem;}
 }
 
+/* ACCA KAPPA */
+.description-inner.ak-two-cols{display:flex;flex-wrap:nowrap;align-items:flex-start;gap:2rem;}
+.description-inner.ak-two-cols .basic-description{flex:1 1 auto;min-width:0;}
+.ak-brand-box{flex:0 0 260px;max-width:280px;font-size:.95em;line-height:1.5;border-left:1px solid #e0e0e0;padding-left:1.5rem;}
+.ak-brand-title{font-size:1.05em;font-weight:600;margin:0 0 .5rem;}
+.ak-brand-text{margin:0;}
+@media (max-width:767px){.description-inner.ak-two-cols{display:block;}.ak-brand-box{max-width:none;border-left:0;border-top:1px solid #e0e0e0;padding-left:0;padding-top:1rem;margin-top:1.5rem;}}
+
 /* CART 
 @media (max-width:768px) {.shipping-billing-table.radio-wrapper input[type="radio"]+label {padding: 8px 20px 8px 50px;}}
 */
