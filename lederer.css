@@ -27,6 +27,7 @@ body.id-1921 header[itemprop="headline"] {display: none !important;}
 @media (min-width: 1200px) {.col-xl-3 {width: 33.3%;}}
 .subcategories.with-image li a .image img,.navigation-in>ul>li.ext>ul>li>a img {border-radius:6px;}
 #content .filters-unveil-button-wrapper .btn.unveil-button {background:#f2edefa6;}
+.pagination-appendix {display:none;}
 
 @media (min-width: 768px) {.products-block.products .p .name {font-size: 16px;}}
 .columns-mobile-2 .products-block .flag {font-size: 11px;}
