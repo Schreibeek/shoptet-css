@@ -11,6 +11,7 @@ body.id-1921 header[itemprop="headline"] {display: none !important;}
 @media (max-width: 767px) {.navigation-in > ul > li.ext > ul > li > a.menu-image {height: auto;display: block;}.in-kosik .overall-wrapper{padding-top:60px;}}
 @media (min-width: 768px) {.navigation-in .menu-level-1 > li > a {letter-spacing:1px;}.navigation-in > ul > li > a {padding-left:20px;}.navigation-in>ul>li.ext>a:after {right:2px;}}
 .social-login-buttons .form-group, .register-soc .form-group {padding:10px;width:180px;border:1px solid #ccc;border-radius:10px;}
+@media (max-width: 767px) {.overall-wrapper {padding-top: 50px;}}
 
 /* FLAG */
 .flag {letter-spacing:0;font-weight:600;max-width:17em;font-size:12px;}
