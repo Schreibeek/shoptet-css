@@ -156,7 +156,7 @@
 @media(min-width:900px){.cat-intro{grid-template-columns:2fr 1fr;align-items:start}}
 
 /* Vzorek v kategorii */
-.sample-banner{border-left:6px solid var(--sj-accent);border-top:0;border-right:0;border-bottom:0;background:#fff;padding-left:14px}
+.sample-banner{background:#fff;}
 .sample-banner::before{display:none}
 .sample-banner img{width:100%;height:auto;display:block}
 .sample-caption{padding:12px 14px}
