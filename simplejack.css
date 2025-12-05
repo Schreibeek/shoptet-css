@@ -156,14 +156,15 @@
 @media(min-width:900px){.cat-intro{grid-template-columns:2fr 1fr;align-items:start}}
 
 /* Vzorek v kategorii */
-.sample-banner{border-left:6px solid var(--sj-accent);background:#fff;padding-left:14px;display:flex;flex-direction:column}
-.sample-banner img{width:100%;height:auto;aspect-ratio:5/3;object-fit:cover;display:block}
+.sample-banner{background:#fff;padding-left:0;display:flex;flex-direction:column}
+.sample-banner img{width:100%;height:auto;aspect-ratio:5/3;object-fit:cover;display:block;border-radius:8px}
 @media(max-width:767px){.sample-banner img{display:none}}
 .sample-caption{padding:12px 0}
 .sample-caption h3{margin:0 0 6px;font-size:16px;font-weight:700;color:var(--sj-brand)}
 .sample-caption p{margin:0 0 10px;color:var(--sj-ink)}
 .btn-ghost{display:inline-block;border:1px solid var(--sj-accent);color:var(--sj-accent);padding:8px 10px;text-decoration:none}
 .btn-ghost:hover{background:var(--sj-accent);color:#fff}
+
 
 /* Hodnoceni */
 .hodnoceni:before {background:#0b5668;color:#fff;}
