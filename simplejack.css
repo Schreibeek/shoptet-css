@@ -158,7 +158,7 @@
 /* Vzorek v kategorii */
 .sample-banner{background:#fff;}
 .sample-banner::before{display:none}
-.sample-banner img{width:100%;height:auto;display:block}
+.sample-banner img{width:100%;height:auto;display:block;border-radius:8px;}
 .sample-caption{padding:12px 14px}
 .sample-caption h3{margin:0 0 6px;font-size:16px;font-weight:700;color:var(--sj-brand)}
 .sample-caption p{margin:0 0 10px;color:var(--sj-ink)}
