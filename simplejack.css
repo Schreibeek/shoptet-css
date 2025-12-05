@@ -151,7 +151,7 @@
 .cat-wrap a{color:var(--sj-accent);text-decoration:underline}
 .cat-wrap a:hover{text-decoration:none}
 .cat-wrap p{margin:0 0 12px}
-.cat-intro{display:grid;grid-template-columns:1fr;gap:30px;margin-bottom:32px}
+.cat-intro{display:grid;grid-template-columns:1fr;gap:50px;margin-bottom:32px}
 @media(max-width:767px){.cat-intro{gap:0}}
 @media(min-width:900px){.cat-intro{grid-template-columns:2fr 1fr;align-items:start}}
 
