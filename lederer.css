@@ -39,7 +39,8 @@ body.id-1921 header[itemprop="headline"] {display: none !important;}
 
 /* PROD */
 .product .p {box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);}
-.delivery-time-block {text-align:right;margin-top:10px;}
+.delivery-time-block {text-align:right;margin-top:0px;}
+.delivery-time-block th {display:block;width:300px;}
 @media (max-width: 767px) {.benefitBanner__content {margin-top:0;padding:0 5px;}.benefitBanner__picture{height:auto;}.benefitBanner__item{margin-bottom:25px;}.type-detail .position--benefitProduct{margin-bottom:20px;}
 .shp-tabs-wrapper .tab-pane.active .detail-tab-item+.detail-tab-content {padding:20px;} .p-image #wrap {width:initial;left:initial;}.container.breadcrumbs-wrapper{background:#f1eced85;border:0;}}
 .p-info-grid .detail-availability-block .delivery-time-label {text-transform:none;font-weight:600;}
