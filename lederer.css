@@ -44,7 +44,7 @@ body.id-1921 header[itemprop="headline"] {display: none !important;}
 @media (max-width: 767px) {.benefitBanner__content {margin-top:0;padding:0 5px;}.benefitBanner__picture{height:auto;}.benefitBanner__item{margin-bottom:25px;}.type-detail .position--benefitProduct{margin-bottom:20px;}
 .shp-tabs-wrapper .tab-pane.active .detail-tab-item+.detail-tab-content {padding:20px;} .p-image #wrap {width:initial;left:initial;}.container.breadcrumbs-wrapper{background:#f1eced85;border:0;}}
 .p-info-grid .detail-availability-block .delivery-time-label {text-transform:none;font-weight:600;}
-.p-info-grid .detail-availability-block .delivery-time {font-weight:500;padding:3px 8px 2px;border-radius:6px;}
+.p-info-grid .detail-availability-block .delivery-time {font-weight:600;padding:3px 8px 2px;border-radius:6px;}
 
 /* 2 SLOUP */
 @media (max-width: 767px) {.product .p{padding:20px 10px 65px;}.products-block.products>div {padding:5px;}.products-block {margin: 0 -5px;}.products-block.products .p .name {font-size:14px;font-weight:600;letter-spacing:-0.2px;-webkit-line-clamp:4;}.products-block .p .flags-default{left:-4px;}}
