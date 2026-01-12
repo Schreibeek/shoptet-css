@@ -148,13 +148,15 @@ body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 .brand-banner__title-small{font-size:1.8rem;}
 }
 
-/* PRIRODNI BADGE */
+/* === DETAIL PRODUKTU – badge přes hlavní fotku === */
 .gallery-new #main-slider{position:relative;}
 .gallery-new #main-slider img.js-product-badge--detail{position:absolute;right:12px;bottom:12px;z-index:50;width:110px;max-width:none;height:auto;pointer-events:none;user-select:none;}
 @media (max-width:768px){.gallery-new #main-slider img.js-product-badge--detail{right:10px;bottom:10px;width:84px;}}
-.p a.image{position:relative;}
-.p a.image img.js-product-badge--cat{position:absolute!important;right:10px!important;bottom:10px!important;z-index:50!important;width:72px!important;max-width:none!important;height:auto!important;pointer-events:none;user-select:none;}
-@media (max-width:768px){.p a.image img.js-product-badge--cat{right:8px!important;bottom:8px!important;width:58px!important;}}
+
+/* === KATEGORIE – badge přes fotku, korekce paddingu obrázku === */
+.p a.image{position:relative;display:block;--imgPad:16px;}
+.p a.image img.js-product-badge--cat{position:absolute!important;right:calc(10px - var(--imgPad))!important;bottom:calc(10px - var(--imgPad))!important;z-index:50!important;width:72px!important;max-width:none!important;height:auto!important;pointer-events:none;user-select:none;}
+@media (max-width:768px){.p a.image{--imgPad:14px;}.p a.image img.js-product-badge--cat{right:calc(8px - var(--imgPad))!important;bottom:calc(8px - var(--imgPad))!important;width:58px!important;}}
 
 /* ACCA KAPPA */
 .description-inner.ak-two-cols{display:flex;flex-wrap:nowrap;align-items:flex-start;gap:0;padding-right:60px;}
