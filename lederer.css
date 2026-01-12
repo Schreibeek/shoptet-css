@@ -149,9 +149,12 @@ body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 }
 
 /* PRIRODNI BADGE */
-.gallery-new #main-slider .js-product-badge{position:absolute;right:12px;bottom:12px;z-index:50;width:110px;max-width:28%;height:auto;pointer-events:none;user-select:none;}
-@media (max-width:768px){.gallery-new #main-slider .js-product-badge{right:10px;bottom:10px;width:84px;max-width:34%;}}
-.p a.image .js-product-badge{width:64px;}
+.gallery-new #main-slider{position:relative;}
+.gallery-new #main-slider .js-product-badge--detail{position:absolute;right:12px;bottom:12px;z-index:50;width:110px;max-width:28%;height:auto;pointer-events:none;user-select:none;}
+@media (max-width:768px){.gallery-new #main-slider .js-product-badge--detail{right:10px;bottom:10px;width:84px;max-width:34%;}}
+.p a.image{position:relative;display:block;}
+.p a.image .js-product-badge--cat{position:absolute;right:10px;bottom:10px;z-index:50;width:72px;max-width:35%;height:auto;pointer-events:none;user-select:none;}
+@media (max-width:768px){.p a.image .js-product-badge--cat{right:8px;bottom:8px;width:58px;max-width:40%;}}
 
 /* ACCA KAPPA */
 .description-inner.ak-two-cols{display:flex;flex-wrap:nowrap;align-items:flex-start;gap:0;padding-right:60px;}
