@@ -150,7 +150,7 @@ body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 
 /* === DETAIL PRODUKTU – badge přes hlavní fotku === */
 .gallery-new #main-slider{position:relative;}
-.gallery-new #main-slider img.js-product-badge--detail{position:absolute;right:12px;bottom:12px;z-index:50;width:110px;max-width:none;height:auto;pointer-events:none;user-select:none;}
+.gallery-new #main-slider img.js-product-badge--detail{position:absolute;right:12px;bottom:12px;z-index:4;width:110px;max-width:none;height:auto;pointer-events:none;user-select:none;}
 @media (max-width:768px){.gallery-new #main-slider img.js-product-badge--detail{right:10px;bottom:10px;width:84px;}}
 
 /* === KATEGORIE – badge přes fotku, korekce jen vpravo === */
