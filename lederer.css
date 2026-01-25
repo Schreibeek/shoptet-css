@@ -34,6 +34,7 @@ body.id-1921 header[itemprop="headline"] {display: none !important;}
 @media (min-width: 768px) {.products-block.products .p .name {font-size: 16px;}}
 .columns-mobile-2 .products-block .flag {font-size: 11px;}
 .related-sm-screen-show .product .p {border-radius:0;}
+.advanced-order .products .product .p a.image img {border-radius:8px;}
 
 /* TEST */
 .custom-discount-info {font-size: 16px;color: #fff;margin-top: -10px;margin-bottom:20px;padding: 12px 20px;background: linear-gradient(136deg, #3F2B96 0%, #A8C0FF 100%); border-radius: 10px;text-align:center;}
