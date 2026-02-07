@@ -77,6 +77,7 @@ a.btn.cart-count i {background:var(--col2a);}
 /* CAT */
 .product .p.p {box-shadow: 0 4px 20px -4px rgba(68, 58, 120, 0.1);}
 .products-block.products .p .name,.price-final strong {font-weight:600;}
+.category__secondDescription p, .category-perex p {color:var(--col1b);}
 
 /* Štítky */
 .flag {text-transform:none;}
