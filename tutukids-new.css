@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {color:var(--col1a);}
 @media (min-width: 992px) {.type-detail .breadcrumbs {margin-bottom: 10px;}}
 @media (min-width: 768px) {.type-detail .breadcrumbs {margin-bottom: 10px;}}
 .p-info-headline .h1, .p-info-headline h1,.p-info-grid .detail-grid-title,.p-info-wrapper .p-final-price-wrapper .price-final,.quantity input {color:var(--col1a);}
-.p-short-description,.p-detail-info a {color:var(--col1b);}
+.p-short-description,.p-detail-info a,a.link-icon {color:var(--col1b);}
 @media (min-width: 768px) {.social-buttons-wrapper {padding-top: 25px;}}
 .social-buttons-wrapper {border-top: 1px solid #e2e0eb;}
 
