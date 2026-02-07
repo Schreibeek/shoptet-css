@@ -82,7 +82,7 @@ a.btn.cart-count i {background:var(--col2a);}
 .products-block.products .p .name,.price-final strong {font-weight:600;}
 .category__secondDescription p, .category-perex p {color:var(--col1b);}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {color:var(--col1a);}
-.breadcrumbs,.category-header div {color:var(--col1b);}
+.breadcrumbs,.category-header div,.breadcrumbs a {color:var(--col1b);}
 
 /* FILTRY A RAZENI */
 .category-header .listSorting__controls button.listSorting__control { border-radius: 50px !important; text-transform: none !important; background-color: transparent !important; border: 1px solid var(--col1a) !important; color: var(--col1a) !important; opacity: 0.6 !important; transition: all 0.3s ease !important; }
