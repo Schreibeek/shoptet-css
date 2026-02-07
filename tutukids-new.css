@@ -76,6 +76,9 @@ a.btn.cart-count i {background:var(--col2a);}
 
 /* CAT */
 .product .p.p {box-shadow: 0 4px 20px -4px rgba(68, 58, 120, 0.1);}
+.product .p { transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important; }
+.product .p:hover { transform: translateY(-4px) !important; }
+.products-block .p:hover .image > img { transform: none !important; }
 .products-block.products .p .name,.price-final strong {font-weight:600;}
 .category__secondDescription p, .category-perex p {color:var(--col1b);}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {color:var(--col1a);}
