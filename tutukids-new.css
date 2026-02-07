@@ -28,6 +28,23 @@
 .header-top .btn.cart-count:before { font-size: 18px !important; margin-right: 6px !important; vertical-align: middle !important; }
 .navigation-buttons button.top-nav-button, .header-top .btn.cart-count, a.btn.cart-count.full { font-size: 16px !important; font-weight: 600 !important; }
 
+/* --- MENU (PC) --- */
+@media (min-width: 768px) { .navigation-in > ul > li > a { color: #fff !important; border-radius: 50px !important; padding: 7px 20px !important; margin: 11px 8px 11px 4px!important; line-height: normal !important; height: auto !important; transition: all 0.3s ease !important; } }
+@media (min-width: 768px) { .navigation-in > ul > li:first-child > a { padding-left: 20px !important; } }
+@media (min-width: 768px) { .navigation-in > ul > li > a:hover { opacity: 0.8 !important; } }
+
+/* --- BARVY POLOŽEK --- */
+@media (min-width: 768px) { .menu-level-1 > li:nth-child(1) > a { background-color: #283583 !important; } }
+@media (min-width: 768px) { .menu-level-1 > li:nth-child(2) > a { background-color: #f78b1e !important; } }
+@media (min-width: 768px) { .menu-level-1 > li:nth-child(3) > a { background-color: #aa2570 !important; } }
+@media (min-width: 768px) { .menu-level-1 > li:nth-child(4) > a { background-color: #edc10d !important; } }
+@media (min-width: 768px) { .menu-level-1 > li:nth-child(5) > a { background-color: #283583 !important; } }
+@media (min-width: 768px) { .menu-level-1 > li:nth-child(6) > a { background-color: #f78b1e !important; } }
+@media (min-width: 768px) { .menu-level-1 > li:nth-child(7) > a { background-color: #aa2570 !important; } }
+@media (min-width: 768px) { .navigation-in > ul > li.ext > a { padding-right: 34px !important; } }
+@media (min-width: 768px) { .navigation-in > ul > li.ext > a:after { color: #fff !important; right: 14px !important; } }
+@media (min-width: 768px) { .navigation-in > ul > li > a:hover { transform: translateY(-2px) !important; opacity: 0.9 !important; } }
+
 /* LOGIN KOSIK */
 .navigation-buttons button.top-nav-button[data-target="login"]:before, .header-top .btn.cart-count:before { font-size: 18px !important; vertical-align: middle !important; color: var(--col1a) !important; }
 .navigation-buttons button.top-nav-button, .header-top .btn.cart-count, a.btn.cart-count.full { font-size: 16px !important; font-weight: 600 !important; color: var(--col1a) !important; }
