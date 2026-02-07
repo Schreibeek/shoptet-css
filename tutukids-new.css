@@ -79,7 +79,7 @@ a.btn.cart-count i {background:var(--col2a);}
 .products-block.products .p .name,.price-final strong {font-weight:600;}
 .category__secondDescription p, .category-perex p {color:var(--col1b);}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {color:var(--col1a);}
-.breadcrumbs {color:var(--col1b);}
+.breadcrumbs,.category-header div {color:var(--col1b);}
 
 /* Štítky */
 .flag {text-transform:none;}
