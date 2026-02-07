@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {color:var(--col1a);}
 @media (min-width: 992px) {.type-detail .breadcrumbs {margin-bottom: 10px;}}
 @media (min-width: 768px) {.type-detail .breadcrumbs {margin-bottom: 10px;}}
 .p-info-headline .h1, .p-info-headline h1,.p-info-grid .detail-grid-title,.p-info-wrapper .p-final-price-wrapper .price-final,.quantity input {color:var(--col1a);}
-.p-short-description p {color:var(--col1b);}
+.p-short-description {color:var(--col1b);}
 
 /* Homepage */
 body.is-loaded h4.homepage-group-title, body.is-loaded .h4.homepage-group-title {color:var(--col1a);}
