@@ -81,6 +81,16 @@ a.btn.cart-count i {background:var(--col2a);}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {color:var(--col1a);}
 .breadcrumbs,.category-header div {color:var(--col1b);}
 
+/* FILTRY A RAZENI */
+.category-header .listSorting__controls button.listSorting__control { border-radius: 50px !important; text-transform: none !important; background-color: transparent !important; border: 1px solid var(--col1a) !important; color: var(--col1a) !important; opacity: 0.6 !important; transition: all 0.3s ease !important; }
+.category-header .listSorting__controls button.listSorting__control:hover { opacity: 1 !important; }
+.category-header .listSorting__controls button.listSorting__control.listSorting__control--current { background-color: var(--col1a) !important; color: #fff !important; opacity: 1 !important; }
+#content .filters-unveil-button-wrapper .btn.unveil-button { width: 150px !important; display: inline-flex !important; justify-content: center !important; background: transparent !important; border: 1px solid var(--col1a) !important; color: var(--col1a) !important; border-radius: 50px !important; text-transform: none !important; opacity: 0.6 !important; transition: all 0.3s ease !important; box-shadow: none !important; min-height: 40px !important; padding: 10px 30px 10px 10px !important;}
+#content .filters-unveil-button-wrapper .btn.unveil-button:hover { opacity: 1 !important; }
+.filters-visible #content .filters-unveil-button-wrapper .btn.unveil-button { background-color: var(--col1a) !important; color: #fff !important; opacity: 1 !important; border-color: var(--col1a) !important; }
+#content .filters-unveil-button-wrapper .btn.unveil-button:before { color: inherit !important; right: 15px !important; }
+.filters-wrapper .slider-wrapper, #filters { background-color: transparent !important; box-shadow: none !important; border: none !important; }
+
 /* Štítky */
 .flag {text-transform:none;}
 @media (min-width: 768px) {.flag {margin-bottom: 5px;padding: 6px 12px;font-size: 12px;}}
