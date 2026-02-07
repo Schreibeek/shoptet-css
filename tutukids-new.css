@@ -115,6 +115,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,.subcategories li a .text {
 @media (min-width: 768px) {.social-buttons-wrapper {padding-top: 25px;}}
 .social-buttons-wrapper {border-top: 1px solid #e2e0eb;}
 
+/* PRODUKT - BUTTON */
+.p-info-wrapper .add-to-cart { display: flex !important; flex-wrap: nowrap; align-items: center; width: 100%; gap: 15px; margin-bottom: 25px; }
+.p-info-wrapper .quantity { flex: 0 0 140px; width: 140px; height: 50px; background-color: transparent; border-radius: 50px; border: 1px solid var(--col1b) !important; display: flex; align-items: center; position: relative; overflow: hidden; margin: 0; }
+.p-info-wrapper .quantity input.amount { background: transparent; border: 0; height: 50px; width: 100%; padding: 0 40px; text-align: center; font-weight: 700; color: var(--col1b); }
+.p-info-wrapper .quantity .increase, .p-info-wrapper .quantity .decrease { height: 100%; width: 40px; background: transparent; border: 0; position: absolute; top: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 2; color: var(--col1b); }
+.p-info-wrapper .quantity .decrease { left: 0; } .p-info-wrapper .quantity .increase { right: 0; }
+.p-info-wrapper .btn.btn-conversion { flex: 1; width: auto; height: 50px; min-height: 50px; border-radius: 50px; margin: 0; padding: 0 10px; display: flex; justify-content: center; align-items: center; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
 /* Homepage */
 body.is-loaded h4.homepage-group-title, body.is-loaded .h4.homepage-group-title {color:var(--col1a);}
 .welcome {background:#fff;}
