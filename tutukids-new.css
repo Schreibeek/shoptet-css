@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,.subcategories li a .text {
 .btn.btn-conversion:hover, a.btn.btn-conversion:hover, .btn.btn-cart:hover, a.btn.btn-cart:hover, .btn.btn-primary:hover, a.btn.btn-primary:hover { background-color: #d92680e6 !important; border-color: #d92680e6 !important; }
 
 /* PRODUKT */
-.image360 .mousetrap, .p-image .mousetrap, .image360 .cloud-zoom-big, .p-image .cloud-zoom-big, .image360 img, .p-image img {border-radius: 25px;}
+.image360 .mousetrap, .p-image .mousetrap, .image360 .cloud-zoom-big, .p-image .cloud-zoom-big, .image360 img, .p-image img {border-radius: 25px;border: 1px solid #e2e0eb;}
 @media (min-width: 992px) {.type-detail .breadcrumbs {margin-bottom: 10px;}}
 @media (min-width: 768px) {.type-detail .breadcrumbs {margin-bottom: 10px;}}
 .p-info-headline .h1, .p-info-headline h1,.p-info-grid .detail-grid-title,.p-info-wrapper .p-final-price-wrapper .price-final,.quantity input,.detail-parameters th {color:var(--col1a);}
