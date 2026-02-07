@@ -105,6 +105,11 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {color:var(--col1a);}
 .btn.btn-conversion, a.btn.btn-conversion, .btn.btn-cart, a.btn.btn-cart, .btn.btn-primary, a.btn.btn-primary { color: #fff; border-color: var(--col2a); background-color: var(--col2a); }
 .btn.btn-conversion:hover, a.btn.btn-conversion:hover, .btn.btn-cart:hover, a.btn.btn-cart:hover, .btn.btn-primary:hover, a.btn.btn-primary:hover { background-color: #d92680e6 !important; border-color: #d92680e6 !important; }
 
+/* PRODUKT */
+.image360 .mousetrap, .p-image .mousetrap, .image360 .cloud-zoom-big, .p-image .cloud-zoom-big, .image360 img, .p-image img {border-radius: 25px;}
+@media (min-width: 992px) {.type-detail .breadcrumbs {margin-bottom: 10px;}}
+@media (min-width: 768px) {.type-detail .breadcrumbs {margin-bottom: 10px;}}
+
 /* Homepage */
 body.is-loaded h4.homepage-group-title, body.is-loaded .h4.homepage-group-title {color:var(--col1a);}
 .welcome {background:#fff;}
