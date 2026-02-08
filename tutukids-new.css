@@ -146,3 +146,8 @@ body:not(.is-carousel-full-width) .carousel .item, .multiple-columns-body .carou
 .custom-footer {border-bottom:1px solid #ffffff1a;}
 .footer-bottom {padding:20px 20px 40px 20px;}
 
+/* KOSIK */
+body.ordering-process {background:#f5f6f8;}
+.cart-inner,ol.cart-header li.active {border:1px solid #e2e0eb;}
+@media (min-width: 768px) {.cart-table tr>td {border-bottom: 1px solid #e2e0eb;}}
+
