@@ -81,7 +81,7 @@ a.btn.cart-count i {background:var(--col2a);}
 .products-block .p:hover .image > img { transform: none !important; }
 .products-block.products .p .name,.price-final strong {font-weight:600;}
 .category__secondDescription p, .category-perex p {color:var(--col1b);}
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,.subcategories li a .text {color:var(--col1a);}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,.subcategories li a .text,.p .name,.price-final {color:var(--col1a);}
 .breadcrumbs,.category-header div,.breadcrumbs a {color:var(--col1b);}
 .category-header {border-top:1px solid #e2e0eb;}
 
