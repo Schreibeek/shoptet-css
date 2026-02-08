@@ -116,6 +116,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,.subcategories li a .text,.
 .social-buttons-wrapper {border-top: 1px solid #e2e0eb;}
 .p-thumbnail.highlighted img, .show360image.highlighted img {border: 2px solid var(--col2a);}
 .p-thumbnails a img {border-radius:20px;border: 1px solid #e2e0eb;}
+.p-info-wrapper .availability-value {text-transform:none;}
 
 /* PRODUKT - BUTTON */
 .p-info-wrapper .add-to-cart { display: flex !important; flex-wrap: nowrap; align-items: center; width: 100%; gap: 15px; margin-bottom: 25px; }
