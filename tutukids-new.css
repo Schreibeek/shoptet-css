@@ -129,6 +129,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,.subcategories li a .text,.
 body.is-loaded h4.homepage-group-title, body.is-loaded .h4.homepage-group-title {color:var(--col1a);}
 .welcome {background:#fff;}
 .custom-cats__subtitle {display:none!important;}
+.welcome p {color:var(--col1b);}
 
 /* SLIDER */
 @media (min-width: 768px) {
