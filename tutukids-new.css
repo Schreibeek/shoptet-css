@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,.subcategories li a .text,.
 .p-info-wrapper .btn.btn-conversion { flex: 1; width: auto; height: 50px; min-height: 50px; border-radius: 50px; margin: 0; padding: 0 10px; display: flex; justify-content: center; align-items: center; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
 
 /* Homepage */
-body.is-loaded h4.homepage-group-title, body.is-loaded .h4.homepage-group-title {color:var(--col1a);}
+body.is-loaded h4.homepage-group-title, body.is-loaded .h4.homepage-group-title,.welcome h1 {color:var(--col1a);}
 .welcome {background:#fff;}
 .custom-cats__subtitle {display:none!important;}
 .welcome p {color:var(--col1b);}
