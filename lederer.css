@@ -157,14 +157,14 @@ body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 @media (max-width:768px){.gallery-new #main-slider img.js-product-badge--detail{right:10px;bottom:10px;width:84px;}}
 
 /* DETAIL BLOG */
-.blog-card-lite { display: flex; align-items: flex-start; gap: 16px; margin: 24px 0; }
-.blog-card-lite__icon { font-size: 32px; line-height: 1; flex-shrink: 0; margin-top: 2px; }
-.blog-card-lite__content { display: flex; flex-direction: column; gap: 6px; }
-.blog-card-lite__label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #2e7d32; }
-.blog-card-lite__title { font-size: 17px; font-weight: 700; margin: 0; line-height: 1.3; }
-.blog-card-lite__text { font-size: 14px; color: #4a4a4a; margin: 0; line-height: 1.5; }
-.blog-card-lite__btn { display: inline-block; margin-top: 6px; padding: 8px 18px; background: #2e7d32; color: #fff; font-size: 14px; font-weight: 600; border-radius: 6px; text-decoration: none; transition: background 0.2s ease; width: fit-content; }
-.blog-card-lite__btn:hover { background: #1b5e20; }
+.blog-card { display: flex; align-items: flex-start; gap: 16px; background: rgba(62, 181, 111, 0.2); border: 1px solid #3eb56f; border-radius: 10px; padding: 20px 24px; margin: 24px 0; }
+.blog-card__icon { font-size: 32px; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+.blog-card__content { display: flex; flex-direction: column; gap: 6px; }
+.blog-card__label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #3eb56f; }
+.blog-card__title { font-size: 17px; font-weight: 700; margin: 0; line-height: 1.3; }
+.blog-card__text { font-size: 14px; color: #4a4a4a; margin: 0; line-height: 1.5; }
+.blog-card__btn { display: inline-block; margin-top: 6px; padding: 8px 18px; background: #3eb56f; color: #fff; font-size: 14px; font-weight: 600; border-radius: 6px; text-decoration: none; transition: background 0.2s ease; width: fit-content; }
+.blog-card__btn:hover { background: #2a8f55; }
 
 /* === KATEGORIE – badge přes fotku, korekce jen vpravo === */
 .p a.image{position:relative;display:block;--imgPadX:30px;}
