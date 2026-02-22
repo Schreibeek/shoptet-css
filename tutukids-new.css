@@ -74,6 +74,9 @@ a.btn.cart-count i {background:var(--col2a);}
 .benefitBanner__item:nth-child(4) .benefitBanner__img { background: #f5d6e6;}
 .benefitBanner__item:hover .benefitBanner__img { transform: scale(1.1); }
 
+/* BREAD */
+@media (max-width: 767px) {.container.breadcrumbs-wrapper {background-color: #f5f6f8;}}
+
 /* CAT */
 .product .p.p {box-shadow: 0 4px 20px -4px rgba(68, 58, 120, 0.1);}
 .product .p { transition: all 0.3s ease !important; }
@@ -84,6 +87,7 @@ a.btn.cart-count i {background:var(--col2a);}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,.subcategories li a .text,.p .name,.price-final {color:var(--col1a);}
 .breadcrumbs,.category-header div,.breadcrumbs a {color:var(--col1b);}
 .category-header {border-top:1px solid #e2e0eb;}
+@media (max-width: 767px) {.products-block .product-btn .pr-action {margin:0;}}
 
 /* FILTRY A RAZENI */
 .category-header .listSorting__controls button.listSorting__control { border-radius: 50px !important; text-transform: none !important; background-color: transparent !important; border: 1px solid var(--col1a) !important; color: var(--col1a) !important; opacity: 0.6 !important; transition: all 0.3s ease !important; }
