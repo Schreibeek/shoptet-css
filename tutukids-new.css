@@ -132,6 +132,10 @@ body.is-loaded h4.homepage-group-title, body.is-loaded .h4.homepage-group-title,
 .custom-cats__subtitle {display:none!important;}
 .welcome p {color:var(--col1b);}
 
+/* KONTAKTY */
+@media (min-width: 1200px) {.in-contacts .content-inner>article {width: 100%;}}
+@media (min-width: 992px) {.in-contacts .content-inner>article {width: 100%;}}
+
 /* SLIDER */
 @media (min-width: 768px) {
 body:not(.is-carousel-full-width).one-column-body .homepage-box .carousel {margin-top: 0px;}
