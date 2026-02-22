@@ -33,6 +33,10 @@
 @media (min-width: 768px) { .navigation-in > ul > li:first-child > a { padding-left: 20px !important; } }
 @media (min-width: 768px) { .navigation-in > ul > li > a:hover { opacity: 0.8 !important; } }
 
+/* --- MENU (MO) --- */
+.navigation-in a {color: var(--col1a);}
+.navigation-in-bottom {background:none;}
+
 /* --- BARVY POLOŽEK --- */
 @media (min-width: 768px) { .menu-level-1 > li:nth-child(1) > a { background-color: #283583 !important; } }
 @media (min-width: 768px) { .menu-level-1 > li:nth-child(2) > a { background-color: #f78b1e !important; } }
