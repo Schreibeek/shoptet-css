@@ -109,7 +109,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,.subcategories li a .text,.
 @media (min-width: 768px) {.flag {margin-bottom: 5px;padding: 6px 12px;font-size: 12px;}}
 
 /* BUTTONS */
-.products-block .product-btn .pr-action { max-width: none !important; width: auto !important; margin: 0 30px !important; display: block !important; }
+.products-block .product-btn .pr-action { max-width: none !important; width: auto !important; display: block !important; }
+@media (min-width: 768px) {.products-block .product-btn .pr-action {margin: 0 30px}}
 .products-block .product-btn .pr-action .btn { width: 100% !important; min-height: 40px !important; height: 40px !important; padding: 0 !important; }
 .products-block .product-btn a.btn { max-width: none !important; width: calc(100% - 60px) !important; margin: 0 auto !important; min-height: 40px !important; height: 40px !important; padding: 0 !important; }
 .btn.btn-conversion, a.btn.btn-conversion, .btn.btn-cart, a.btn.btn-cart, .btn.btn-primary, a.btn.btn-primary { color: #fff; border-color: var(--col2a); background-color: var(--col2a); }
