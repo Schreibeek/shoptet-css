@@ -36,6 +36,7 @@
 /* --- MENU (MO) --- */
 .navigation-in a {color: var(--col1a);}
 .navigation-in-bottom {background:none;}
+@media (max-width: 767px) {.navigation-in>ul>li {border-bottom: 1px solid var(--col1d);}}
 
 /* --- BARVY POLOŽEK --- */
 @media (min-width: 768px) { .menu-level-1 > li:nth-child(1) > a { background-color: #283583 !important; } }
