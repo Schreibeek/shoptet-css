@@ -3,7 +3,7 @@
 
    Poppins: nadpisy, menu, buttony, ceny, nazvy produktu
    Nunito: telo textu
-   FUNKY ROTACE – ostré hrany, pootočené prvky, hover přetočení
+   FUNKY ROTACE – 3px zaoblení, pootočené prvky, hover přetočení
    ============================================================ */
 
 /* GOOGLE FONTS */
@@ -73,8 +73,13 @@ body.blank-mode {
 
 
 /* ============================================================
-   BADGE: kosik pocet – zustava kulaty
+   GLOBALNI ZAOBLENI 3px
    ============================================================ */
+*, *::before, *::after {
+  border-radius: 3px !important;
+}
+
+/* BADGE: kosik pocet – zustava kulaty */
 a.btn.cart-count i,
 .cart-count i {
   border-radius: 50% !important;
@@ -396,17 +401,11 @@ a.btn.cart-count i {
   overflow: hidden;
 }
 
-/* Střídavé rotace karet */
-.product .p:nth-child(4n+1) { transform: rotate(-0.5deg); }
-.product .p:nth-child(4n+2) { transform: rotate(0.4deg); }
-.product .p:nth-child(4n+3) { transform: rotate(-0.3deg); }
-.product .p:nth-child(4n+4) { transform: rotate(0.6deg); }
-
-/* Hover – narovnání + nadskočení */
-.product .p:nth-child(4n+1):hover { transform: rotate(0.3deg) translateY(-6px) !important; box-shadow: 0 8px 30px -6px rgba(68, 58, 120, 0.15) !important; }
-.product .p:nth-child(4n+2):hover { transform: rotate(-0.3deg) translateY(-6px) !important; box-shadow: 0 8px 30px -6px rgba(68, 58, 120, 0.15) !important; }
-.product .p:nth-child(4n+3):hover { transform: rotate(0.4deg) translateY(-6px) !important; box-shadow: 0 8px 30px -6px rgba(68, 58, 120, 0.15) !important; }
-.product .p:nth-child(4n+4):hover { transform: rotate(-0.4deg) translateY(-6px) !important; box-shadow: 0 8px 30px -6px rgba(68, 58, 120, 0.15) !important; }
+/* Hover – lehká rotace (bez defaultního natočení) */
+.product .p:nth-child(4n+1):hover { transform: rotate(-0.4deg) !important; box-shadow: 0 6px 24px -4px rgba(68, 58, 120, 0.13) !important; }
+.product .p:nth-child(4n+2):hover { transform: rotate(0.3deg) !important; box-shadow: 0 6px 24px -4px rgba(68, 58, 120, 0.13) !important; }
+.product .p:nth-child(4n+3):hover { transform: rotate(-0.3deg) !important; box-shadow: 0 6px 24px -4px rgba(68, 58, 120, 0.13) !important; }
+.product .p:nth-child(4n+4):hover { transform: rotate(0.4deg) !important; box-shadow: 0 6px 24px -4px rgba(68, 58, 120, 0.13) !important; }
 
 .products-block .p:hover .image > img {
   transform: none !important;
@@ -565,6 +564,10 @@ h1, h2, h3, h4, h5, h6,
   padding: 0 !important;
   font-weight: 700 !important;
   transition: all 0.25s ease !important;
+  transform: rotate(-0.5deg);
+}
+.products-block .product-btn .pr-action .btn:hover {
+  transform: rotate(0.4deg) scale(1.02) !important;
 }
 
 .products-block .product-btn a.btn {
@@ -576,6 +579,10 @@ h1, h2, h3, h4, h5, h6,
   padding: 0 !important;
   font-weight: 700 !important;
   transition: all 0.25s ease !important;
+  transform: rotate(-0.5deg);
+}
+.products-block .product-btn a.btn:hover {
+  transform: rotate(0.4deg) scale(1.02) !important;
 }
 
 .btn.btn-conversion, a.btn.btn-conversion,
@@ -825,14 +832,7 @@ h4.homepage-group-title::after {
   }
 }
 
-/* Slider lehce pootočený */
-.carousel-inner {
-  transform: rotate(-0.2deg);
-  transition: transform 0.3s ease;
-}
-.carousel-inner:hover {
-  transform: rotate(0.1deg) !important;
-}
+/* Slider – rovně, bez rotace */
 
 
 /* ============================================================
