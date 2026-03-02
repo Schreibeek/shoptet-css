@@ -593,7 +593,6 @@ h1, h2, h3, h4, h5, h6,
   background-color: var(--col2a);
   font-weight: 700 !important;
   transition: all 0.25s ease !important;
-  transform: rotate(-0.4deg);
 }
 
 .btn.btn-conversion:hover, a.btn.btn-conversion:hover,
@@ -601,7 +600,7 @@ h1, h2, h3, h4, h5, h6,
 .btn.btn-primary:hover, a.btn.btn-primary:hover {
   background-color: #d92680e6 !important;
   border-color: #d92680e6 !important;
-  transform: rotate(0.5deg) translateY(-2px) scale(1.03) !important;
+  transform: rotate(0.5deg) scale(1.03) !important;
 }
 
 
@@ -758,10 +757,9 @@ a.link-icon,
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transform: rotate(-0.5deg);
 }
 .p-info-wrapper .btn.btn-conversion:hover {
-  transform: rotate(0.4deg) translateY(-2px) scale(1.02) !important;
+  transform: rotate(0.4deg) scale(1.02) !important;
 }
 
 
