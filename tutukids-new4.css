@@ -604,7 +604,8 @@ h1, h2, h3, h4, h5, h6,
 
 .btn.btn-conversion, a.btn.btn-conversion,
 .btn.btn-cart, a.btn.btn-cart,
-.btn.btn-primary, a.btn.btn-primary {
+.btn.btn-primary, a.btn.btn-primary,
+.welcome__left-panel .btn.btn-secondary {
   color: #fff;
   border-color: var(--col2a);
   background-color: var(--col2a);
@@ -614,7 +615,8 @@ h1, h2, h3, h4, h5, h6,
 
 .btn.btn-conversion:hover, a.btn.btn-conversion:hover,
 .btn.btn-cart:hover, a.btn.btn-cart:hover,
-.btn.btn-primary:hover, a.btn.btn-primary:hover {
+.btn.btn-primary:hover, a.btn.btn-primary:hover,
+.welcome__left-panel .btn.btn-secondary:hover {
   background-color: #d92680e6 !important;
   border-color: #d92680e6 !important;
   transform: rotate(0.5deg) scale(1.03) !important;
