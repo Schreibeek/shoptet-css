@@ -416,6 +416,11 @@ a.btn.cart-count i {
   font-weight: 700;
 }
 
+/* Akční cena v kategoriích – oranžová */
+.products-block .p .price-final .price-standard + strong {
+  color: #f99e1f !important;
+}
+
 .category__secondDescription p,
 .category-perex p {
   color: var(--col1b);
@@ -673,10 +678,17 @@ body.type-detail #description.tab-pane {
 .p-info-headline .h1,
 .p-info-headline h1,
 .p-info-grid .detail-grid-title,
-.p-info-wrapper .p-final-price-wrapper .price-final,
 .quantity input,
 .detail-parameters th {
   color: var(--col1a);
+}
+
+/* Detail – cena defaultně col1a, akční cena oranžová */
+.p-info-wrapper .p-final-price-wrapper .price-final {
+  color: var(--col1a);
+}
+.p-info-wrapper .p-final-price-wrapper .price-final .price-standard + strong {
+  color: #f99e1f !important;
 }
 
 .p-short-description,
