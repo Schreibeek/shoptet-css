@@ -619,10 +619,12 @@ body.type-detail {
   background-color: #fff !important;
 }
 
-/* Popis produktu – jemně šedé pozadí (celý tabs wrapper + obsah) */
+/* Popis produktu – jemně šedé pozadí (záložky + obsah) */
 .type-detail .shp-tabs-wrapper,
 .type-detail .shp-tabs-wrapper #description,
-.type-detail .shp-tabs-wrapper .tab-pane {
+.type-detail .shp-tabs-wrapper .tab-pane,
+.type-detail .shp-tab a,
+.type-detail .shp-tab.active a {
   background-color: #fafafa !important;
   border-color: #f0f0f0 !important;
 }
