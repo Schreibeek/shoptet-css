@@ -458,7 +458,19 @@ h1, h2, h3, h4, h5, h6,
   transition: all 0.3s ease !important;
 }
 
-.category-header .listSorting__controls button.listSorting__control:hover {
+/* Střídavé pootočení tlačítek řazení */
+.category-header .listSorting__controls button.listSorting__control:nth-child(odd) {
+  transform: rotate(-0.6deg);
+}
+.category-header .listSorting__controls button.listSorting__control:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+.category-header .listSorting__controls button.listSorting__control:nth-child(odd):hover {
+  opacity: 1 !important;
+  transform: rotate(0.4deg) scale(1.03) !important;
+}
+.category-header .listSorting__controls button.listSorting__control:nth-child(even):hover {
   opacity: 1 !important;
   transform: rotate(-0.5deg) scale(1.03) !important;
 }
