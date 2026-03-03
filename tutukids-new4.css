@@ -629,6 +629,27 @@ body.type-detail {
   border-color: #f0f0f0 !important;
 }
 
+/* Odstranit dělící linku mezi záložkou a obsahem */
+body.type-detail .shp-tabs-wrapper .tab-content #description,
+body.type-detail .shp-tabs-wrapper .tab-content .tab-pane,
+body.type-detail #description.tab-pane {
+  border: none !important;
+}
+
+/* Přebít bílý ::after na aktivní záložce (z main.css šablony) */
+.shp-tabs-holder ul.shp-tabs li.active::after {
+  background-color: #fafafa !important;
+}
+
+/* Záložka "Popis produktu" – větší, Poppins (jen PC) */
+@media (min-width: 768px) {
+  .type-detail .shp-tab a {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+  }
+}
+
 @media (min-width: 992px) {
   .type-detail .breadcrumbs { margin-bottom: 10px; }
 }
