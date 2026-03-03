@@ -619,8 +619,8 @@ body.type-detail {
   background-color: #fff !important;
 }
 
-/* Popis produktu – jemně šedé pozadí */
-.type-detail #description {
+/* Popis produktu – jemně šedé pozadí (celý tabs wrapper) */
+.type-detail .shp-tabs-wrapper {
   background-color: #fafafa !important;
 }
 
