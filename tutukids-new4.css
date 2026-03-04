@@ -71,6 +71,13 @@ body.blank-mode {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Mobil – zrušit border v podmenu */
+@media (max-width: 767px) {
+  .navigation-in > ul ul.menu-level-2 > li {
+    border-top: none !important;
+  }
+}
+
 
 /* ============================================================
    GLOBALNI ZAOBLENI 3px
