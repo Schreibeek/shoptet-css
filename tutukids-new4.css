@@ -415,6 +415,7 @@ a.btn.cart-count i {
   font-weight: bold;
   text-transform: none;
   text-align: center !important;
+  font-family: 'Poppins', sans-serif;
 }
 
 .benefitBanner__data {
