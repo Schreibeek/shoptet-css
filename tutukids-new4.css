@@ -144,6 +144,23 @@ body:not(.after-load) .order-summary-inner,
   border-radius: 0 0 3px 3px !important;
 }
 
+/* 20px → 3px: welcome box, carousel items */
+.welcome {
+  border-radius: 3px !important;
+}
+
+@media (min-width: 768px) {
+  body:not(.is-carousel-full-width) .carousel .item,
+  .multiple-columns-body .carousel .item {
+    border-radius: 3px !important;
+  }
+}
+
+/* Benefit banner obrázek – chyběl úplně */
+.benefitBanner__picture img {
+  border-radius: 3px !important;
+}
+
 /* 15px → 3px: produktové karty, obrázky, inputy, dropdown */
 .product .p,
 .product-image, .product-image img,
@@ -234,6 +251,27 @@ a.btn.cart-count i,
   .navigation-in > ul > li > a {
     border-radius: 3px !important;
   }
+}
+
+/* Checkout / objednávka → 3px */
+.checkout-box-wrapper,
+.summary-wrapper,
+.extras-wrap .extra-content,
+.radio-wrapper input[type="radio"] + label,
+.order-summary-top {
+  border-radius: 3px !important;
+}
+
+/* Košík – barvy: zelená → neutrální šedá */
+:root {
+  --basket-bg: #f5f6f8 !important;
+  --basket-choose-box-bg: #f5f6f8 !important;
+  --basket-choose-box-border: #979faf !important;
+}
+
+/* Košík – nadpis kroků */
+.cart-header__headline .h4 {
+  color: var(--col1a) !important;
 }
 
 
