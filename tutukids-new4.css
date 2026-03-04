@@ -318,6 +318,7 @@ a.btn.cart-count i,
 @media (min-width: 768px) {
   .top-navigation-bar {
     background-color: var(--col1d) !important;
+    border-bottom: 1px solid #e2e0eb;
   }
 
   .top-navigation-bar .site-name {
