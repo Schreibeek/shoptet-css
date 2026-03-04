@@ -89,62 +89,73 @@ a.btn.cart-count i,
 /* ============================================================
    TOP NAVIGATION BAR – kompaktní, zarovnání doprava
    ============================================================ */
-.top-navigation-bar {
-  background-color: var(--col1d) !important;
+
+/* Mobil – schovat celou lištu (odkazy jsou v hamburger menu) */
+@media (max-width: 767px) {
+  .top-navigation-bar {
+    display: none !important;
+  }
 }
 
-.top-navigation-bar .site-name {
-  display: none !important;
-}
+/* Desktop */
+@media (min-width: 768px) {
+  .top-navigation-bar {
+    background-color: var(--col1d) !important;
+  }
 
-.top-navigation-contacts {
-  display: none !important;
-}
+  .top-navigation-bar .site-name {
+    display: none !important;
+  }
 
-.top-navigation-tools {
-  display: none !important;
-}
+  .top-navigation-contacts {
+    display: none !important;
+  }
 
-.top-navigation-menu {
-  flex: 1 1 100% !important;
-  display: flex !important;
-  justify-content: flex-end !important;
-  padding-right: 0 !important;
-}
+  .top-navigation-tools {
+    display: none !important;
+  }
 
-.top-navigation-bar .container {
-  min-height: 0 !important;
-}
+  .top-navigation-menu {
+    flex: 1 1 100% !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding-right: 0 !important;
+  }
 
-.top-navigation-bar-menu {
-  display: flex !important;
-  align-items: center !important;
-}
+  .top-navigation-bar .container {
+    min-height: 0 !important;
+  }
 
-.top-navigation-bar-menu > li::before {
-  background-color: var(--col2a) !important;
-}
+  .top-navigation-bar-menu {
+    display: flex !important;
+    align-items: center !important;
+  }
 
-.top-navigation-bar-menu > li:first-child::before {
-  display: none !important;
-}
+  .top-navigation-bar-menu > li::before {
+    background-color: var(--col2a) !important;
+  }
 
-.top-navigation-bar-menu > li:last-child::after {
-  display: none !important;
-}
+  .top-navigation-bar-menu > li:first-child::before {
+    display: none !important;
+  }
 
-.top-navigation-bar-menu > li > a {
-  color: var(--col1a) !important;
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
-  padding: 6px 12px !important;
-  line-height: 1 !important;
-  transition: color 0.2s ease !important;
-}
+  .top-navigation-bar-menu > li:last-child::after {
+    display: none !important;
+  }
 
-.top-navigation-bar-menu > li > a:hover {
-  color: var(--col2a) !important;
+  .top-navigation-bar-menu > li > a {
+    color: var(--col1a) !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    padding: 6px 12px !important;
+    line-height: 1 !important;
+    transition: color 0.2s ease !important;
+  }
+
+  .top-navigation-bar-menu > li > a:hover {
+    color: var(--col2a) !important;
+  }
 }
 
 
