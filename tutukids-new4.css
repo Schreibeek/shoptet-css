@@ -280,6 +280,23 @@ a.btn.cart-count i,
   color: var(--col1a) !important;
 }
 
+/* Login – tlačítko registrace v hlavní barvě */
+.login-wrapper .btn-secondary {
+  background-color: var(--col1a) !important;
+  border-color: var(--col1a) !important;
+}
+
+/* Mobil – produkty: užší mezery, zarovnání s okolím */
+@media (max-width: 767px) {
+  .products-block.products > div {
+    padding: 5px !important;
+  }
+  .products-block.products {
+    margin: -5px !important;
+    padding: 0 5px !important;
+  }
+}
+
 
 /* ============================================================
    TOP NAVIGATION BAR – kompaktní, zarovnání doprava
