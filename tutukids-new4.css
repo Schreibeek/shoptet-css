@@ -90,9 +90,9 @@ a.btn.cart-count i,
    TOP NAVIGATION BAR – kompaktní, zarovnání doprava
    ============================================================ */
 
-/* Mobil – schovat celou lištu (odkazy jsou v hamburger menu) */
+/* Mobil – schovat textové odkazy (jsou v hamburger menu), nechat tools */
 @media (max-width: 767px) {
-  .top-navigation-bar {
+  .top-navigation-menu {
     display: none !important;
   }
 }
