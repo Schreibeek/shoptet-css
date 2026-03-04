@@ -151,6 +151,19 @@ a.btn.cart-count i,
 /* ============================================================
    HEADER
    ============================================================ */
+
+/* POPUP WIDGETY – oprava pozice (login, košík) */
+@media (min-width: 992px) {
+  .popup-widget.login-widget,
+  .popup-widget.cart-widget {
+    top: 98px !important;
+  }
+
+  .admin-logged .popup-widget.login-widget,
+  .admin-logged .popup-widget.cart-widget {
+    top: 123px !important;
+  }
+}
 @media (min-width: 768px) {
   #header .site-name a img {
     max-height: 50px;
