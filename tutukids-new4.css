@@ -268,6 +268,12 @@ a.btn.cart-count i,
   border-radius: 3px !important;
 }
 
+/* Podkategorie – jemnější stín */
+.subcategories li a {
+  box-shadow: 0 4px 8px -4px rgba(68, 58, 120, 0.1) !important;
+  border-radius: 3px !important;
+}
+
 /* Košík – barvy: zelená → neutrální šedá */
 :root {
   --basket-bg: #f5f6f8 !important;
