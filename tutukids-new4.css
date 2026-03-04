@@ -156,12 +156,12 @@ a.btn.cart-count i,
 @media (min-width: 992px) {
   .popup-widget.login-widget,
   .popup-widget.cart-widget {
-    top: 98px !important;
+    top: 95px !important;
   }
 
   .admin-logged .popup-widget.login-widget,
   .admin-logged .popup-widget.cart-widget {
-    top: 123px !important;
+    top: 120px !important;
   }
 }
 @media (min-width: 768px) {
