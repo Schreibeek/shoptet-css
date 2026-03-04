@@ -132,14 +132,20 @@ body:not(.after-load) .order-summary-inner,
 .table-responsive,
 .menu-helper > ul,
 .popup-widget, .popup-widget-inner,
-.carousel-inner,
 .homepage-box .content-wrapper-in,
 .product-detail-wrapper,
 .content-inner {
   border-radius: 3px !important;
 }
 
+/* 20px → 0 0 3px 3px: homepage carousel – zaoblení jen dole */
+.carousel-inner,
+.before-carousel .content-wrapper-in {
+  border-radius: 0 0 3px 3px !important;
+}
+
 /* 15px → 3px: produktové karty, obrázky, inputy, dropdown */
+.product .p,
 .product-image, .product-image img,
 .product-image-wrap,
 .products-block .p-image,
@@ -155,7 +161,25 @@ body:not(.after-load) .order-summary-inner,
 .product-detail-image,
 a.btn.cart-count, .cart-count,
 .navigation-buttons .btn,
-.top-nav-button {
+.top-nav-button,
+.form-control,
+.select2-dropdown,
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple,
+.select2-container--default .select2-selection--multiple .select2-selection__choice,
+.flag,
+.sidebar-inner .box-rating, .sidebar-inner .box-sale, .sidebar-inner > div,
+.cart-related-product, .cart-related-img,
+.entrance-protection .entrance-protection-inner,
+.latest-contribution-wrapper .latest-contribution-inner,
+.latest-contribution-box .latest-contribution-inner,
+.widget-parameter-wrapper .widget-parameter-value span,
+.widget-parameter-wrapper .widget-parameter-value a,
+.contact-address__content,
+.iframe-responsive,
+.recapitulation-wrapper-box,
+.colorbox--order #cboxLoadedContent,
+#cboxClose.cboxClose--shipping {
   border-radius: 3px !important;
 }
 
@@ -203,6 +227,13 @@ a.btn.cart-count i,
 .swiper-arrow-content,
 .swiper-pagination-bullet::after {
   border-radius: 3px !important;
+}
+
+/* Navigační menu tlačítka – jen desktop */
+@media (min-width: 768px) {
+  .navigation-in > ul > li > a {
+    border-radius: 3px !important;
+  }
 }
 
 
