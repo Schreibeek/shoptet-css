@@ -154,6 +154,11 @@ body:not(.after-load) .order-summary-inner,
   .multiple-columns-body .carousel .item {
     border-radius: 3px !important;
   }
+  body:not(.is-carousel-full-width) .carousel-inner,
+  body:not(.is-carousel-full-width) .carousel .item img,
+  body:not(.is-carousel-full-width).multiple-columns-body .carousel .item img {
+    border-radius: 0 0 3px 3px !important;
+  }
 }
 
 /* Benefit banner obrázek – chyběl úplně */
@@ -209,7 +214,8 @@ a.btn.cart-count, .cart-count,
 .box.box-filters > h4,
 ol.cart-header li.active,
 .languagesMenu__header--actual,
-.search.is-searching .search-form {
+.search.is-searching .search-form,
+.category-header .listSorting__controls button.listSorting__control {
   border-radius: 3px !important;
 }
 
@@ -922,13 +928,6 @@ body.type-detail {
 .type-detail .shp-tab.active a {
   background-color: #fafafa !important;
   border-color: #f0f0f0 !important;
-}
-
-/* Odstranit dělící linku mezi záložkou a obsahem */
-body.type-detail .shp-tabs-wrapper .tab-content #description,
-body.type-detail .shp-tabs-wrapper .tab-content .tab-pane,
-body.type-detail #description.tab-pane {
-  border: none !important;
 }
 
 /* Přebít bílý ::after na aktivní záložce (z main.css šablony) */
