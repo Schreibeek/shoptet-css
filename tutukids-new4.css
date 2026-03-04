@@ -75,14 +75,127 @@ body.blank-mode {
 /* ============================================================
    GLOBALNI ZAOBLENI 3px
    ============================================================ */
-*, *::before, *::after {
+/* ============================================================
+   GLOBÁLNÍ ZAOBLENÍ – selektivní přepis na 3px
+   ============================================================
+   Šablona používá 76px, 25px, 20px, 15px, 10px, 8px, 5px, 4px.
+   Vše přepisujeme na 3px, kromě 50%/100% (kulaté prvky).
+   ============================================================ */
+
+/* 76px → 3px: CTA tlačítko */
+.btn.btn-conversion,
+a.btn.btn-conversion {
   border-radius: 3px !important;
 }
 
-/* BADGE: kosik pocet – zustava kulaty */
+/* 25px → 3px: tlačítka, bannery, boxy, formuláře, tabs */
+.btn, a.btn,
+.footer-item.footer-item-newsletter .compact-form .btn,
+#colorbox .free-gift-info,
+.faq-content .tabs-content,
+.rate-wrapper.unveil-wrapper .rate-average-inner + .add-comment,
+.middle-banners-wrapper .extended-banner-link:not(:empty),
+.body-banners .extended-banner-link:not(:empty),
+.banners-top-block .extended-banner-link:not(:empty),
+.instagram-follow-btn span a,
+.search-whisperer-btn .btn,
+.goToTop > a, .pagination-top-btn,
+.discount-coupon form .btn,
+.cart-content .next-step-back, .next-step-back.back-to-shop,
+.login-wrapper .password-helper a:first-child,
+.cart-related-button .btn,
+.shipping-options-popup .next-step-back.colorbox-close,
+.advanced-order .next-step-back.colorbox-close,
+.support-btn, .support-btn__header, .support-btn-list,
+.body-banners a, .body-banners .banner-wrapper, .body-banners img,
+.banner-category img, .banner-category a,
+.next-step,
+body:not(.after-load) .order-summary-inner,
+.banners-top-block .banner-wrapper,
+.banners-top-block .banner-wrapper a,
+.order-summary-bottom {
+  border-radius: 3px !important;
+}
+
+/* 20px → 3px: content boxy, taby, košík, karty */
+.shp-tabs-wrapper .tab-pane,
+.in-404 .content-inner, .id-404 .content-inner,
+.in-rate-shop .content-inner,
+.cart-inner,
+.table-responsive,
+.menu-helper > ul,
+.popup-widget, .popup-widget-inner,
+.carousel-inner,
+.homepage-box .content-wrapper-in,
+.product-detail-wrapper,
+.content-inner {
+  border-radius: 3px !important;
+}
+
+/* 15px → 3px: produktové karty, obrázky, inputy, dropdown */
+.product-image, .product-image img,
+.product-image-wrap,
+.products-block .p-image,
+.product-wrapper,
+.search-form input, .search-form,
+.search-whisperer,
+.dropdown-menu,
+.popup-widget h2,
+.footer-newsletter-form input,
+.compact-form input,
+.compact-form .btn,
+.image-detail,
+.product-detail-image,
+a.btn.cart-count, .cart-count,
+.navigation-buttons .btn,
+.top-nav-button {
+  border-radius: 3px !important;
+}
+
+/* 10px → 3px: filtry, taby, kategorie, formuláře */
+.filter-section,
+.shp-tabs-holder ul.shp-tabs li a,
+.service__image-block,
+.news-item .image,
+.box.box-categories > h4,
+.box.box-filters > h4,
+ol.cart-header li.active,
+.languagesMenu__header--actual,
+.search.is-searching .search-form {
+  border-radius: 3px !important;
+}
+
+/* 8px → 3px: filtry s border-radius variantami */
+.row-filter .filters-wrapper .filters .filter-sections .filter-section .param-filter-top,
+.row-filter .filters-wrapper .filters .slider-wrapper .price-filter {
+  border-radius: 3px !important;
+}
+
+/* 5px → 3px */
+.search-whisperer-image,
+.products-block .p-code,
+.ui-slider-horizontal:after {
+  border-radius: 3px !important;
+}
+
+/* 4px → 3px */
+.siteCookies__link, .siteCookies__button,
+.cookiesSetting__data, .cookiesSetting__button,
+.quantity input,
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before,
+.quantity .decrease, .quantity .increase,
+.discount-coupon-checkbox:before,
+.ao-image img {
+  border-radius: 3px !important;
+}
+
+/* Dříve kulaté prvky – taky na 3px */
 a.btn.cart-count i,
-.cart-count i {
-  border-radius: 50% !important;
+.cart-count i,
+.swiper-arrow-content,
+.swiper-pagination-bullet::after {
+  border-radius: 3px !important;
 }
 
 
