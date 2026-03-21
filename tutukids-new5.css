@@ -1,30 +1,48 @@
 /* ============================================================
-   TUTU KIDS - CUSTOM CSS v4.0
-
-   Poppins: nadpisy, menu, buttony, ceny, nazvy produktu
-   Nunito: telo textu
-   FUNKY ROTACE – 3px zaoblení, pootočené prvky, hover přetočení
+   TUTU KIDS - CUSTOM CSS v5.0
+   Font: Avenir (CDNFonts) + fallback Nunito Sans
+   HRANATÉ tvary (border-radius: 0)
+   SÝTÉ barvy z originálu tutukids.cz
+   Barevné obdélníky za nadpisy kategorií
+   Postavičky u kategorií
+   Vertikální logo v patičce
    ============================================================ */
 
-/* GOOGLE FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=Nunito:wght@400;500;600&display=swap');
+/* FONTY – Avenir z CDNFonts + fallback Nunito Sans z Google Fonts */
+@import url('https://fonts.cdnfonts.com/css/avenir');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
 
-/* BARVY */
+/* ============================================================
+   BARVY – plné, syté, přímo z originálu tutukids.cz
+   ============================================================ */
 :root {
-  --col1a: #283583;
-  --col1b: #212c6fc2;
-  --col1c: #1e2966;
+  /* Hlavní tmavě modrá */
+  --col1a: #1A237E;
+  /* Modrá s průhledností pro tělo textu */
+  --col1b: #1A237Ec2;
+  /* Tmavší modrá pro footer */
+  --col1c: #151b5e;
+  /* Světlé pozadí */
   --col1d: #f0eef6;
-  --col2a: #aa2570;
+  /* Magenta / růžová */
+  --col2a: #AC1C66;
+  /* Oranžová */
+  --col-orange: #FF9800;
+  /* Žlutá */
+  --col-yellow: #FFD600;
+  /* Zelená pro "Skladem" */
+  --col-green: #2e7d32;
 }
 
-/* FONT: telo textu - Nunito */
+/* ============================================================
+   FONT: tělo textu – Avenir, fallback Nunito Sans
+   ============================================================ */
 .external-fonts-loaded body,
 body.blank-mode {
-  font-family: Nunito, sans-serif;
+  font-family: 'Avenir', 'Nunito Sans', sans-serif;
 }
 
-/* FONT: nadpisy - Poppins */
+/* FONT: nadpisy – Avenir Heavy/Black */
 .external-fonts-loaded h1,
 .external-fonts-loaded h2,
 .external-fonts-loaded h3,
@@ -39,24 +57,16 @@ body.blank-mode {
 .external-fonts-loaded .h6,
 .external-fonts-loaded .cart-table .main-link,
 .external-fonts-loaded .cart-related-name,
-.blank-mode h1,
-.blank-mode h2,
-.blank-mode h3,
-.blank-mode h4,
-.blank-mode h5,
-.blank-mode h6,
-.blank-mode .h1,
-.blank-mode .h2,
-.blank-mode .h3,
-.blank-mode .h4,
-.blank-mode .h5,
-.blank-mode .h6,
+.blank-mode h1, .blank-mode h2, .blank-mode h3,
+.blank-mode h4, .blank-mode h5, .blank-mode h6,
+.blank-mode .h1, .blank-mode .h2, .blank-mode .h3,
+.blank-mode .h4, .blank-mode .h5, .blank-mode .h6,
 .blank-mode .cart-table .main-link,
 .blank-mode .cart-related-name {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Avenir', 'Nunito Sans', sans-serif;
 }
 
-/* FONT: tlacitka, ceny, menu, nazvy produktu - Poppins */
+/* FONT: tlačítka, ceny, menu, názvy produktů */
 .external-fonts-loaded ol.cart-header,
 .external-fonts-loaded .next-step,
 .external-fonts-loaded .price-wrapper,
@@ -68,7 +78,7 @@ body.blank-mode {
 .external-fonts-loaded .btn,
 .external-fonts-loaded .products .name,
 .navigation-in ul li a {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Avenir', 'Nunito Sans', sans-serif;
 }
 
 /* Mobil – zrušit border v podmenu */
@@ -78,24 +88,17 @@ body.blank-mode {
   }
 }
 
-
 /* ============================================================
-   GLOBALNI ZAOBLENI 3px
-   ============================================================ */
-/* ============================================================
-   GLOBÁLNÍ ZAOBLENÍ – selektivní přepis na 3px
-   ============================================================
-   Šablona používá 76px, 25px, 20px, 15px, 10px, 8px, 5px, 4px.
-   Vše přepisujeme na 3px, kromě 50%/100% (kulaté prvky).
+   GLOBÁLNÍ ZAOBLENÍ → 0px (HRANATÉ)
+   Vše na ostré hrany. Žádné border-radius.
    ============================================================ */
 
-/* 76px → 3px: CTA tlačítko */
-.btn.btn-conversion,
-a.btn.btn-conversion {
-  border-radius: 3px !important;
+/* CTA tlačítko */
+.btn.btn-conversion, a.btn.btn-conversion {
+  border-radius: 0 !important;
 }
 
-/* 25px → 3px: tlačítka, bannery, boxy, formuláře, tabs */
+/* Tlačítka, bannery, boxy, formuláře, tabs */
 .btn, a.btn,
 .footer-item.footer-item-newsletter .compact-form .btn,
 #colorbox .free-gift-info,
@@ -106,9 +109,11 @@ a.btn.btn-conversion {
 .banners-top-block .extended-banner-link:not(:empty),
 .instagram-follow-btn span a,
 .search-whisperer-btn .btn,
-.goToTop > a, .pagination-top-btn,
+.goToTop > a,
+.pagination-top-btn,
 .discount-coupon form .btn,
-.cart-content .next-step-back, .next-step-back.back-to-shop,
+.cart-content .next-step-back,
+.next-step-back.back-to-shop,
 .login-wrapper .password-helper a:first-child,
 .cart-related-button .btn,
 .shipping-options-popup .next-step-back.colorbox-close,
@@ -121,54 +126,49 @@ body:not(.after-load) .order-summary-inner,
 .banners-top-block .banner-wrapper,
 .banners-top-block .banner-wrapper a,
 .order-summary-bottom {
-  border-radius: 3px !important;
+  border-radius: 0 !important;
 }
 
-/* 20px → 3px: content boxy, taby, košík, karty */
+/* Content boxy, taby, košík, karty */
 .shp-tabs-wrapper .tab-pane,
-.in-404 .content-inner, .id-404 .content-inner,
+.in-404 .content-inner,
+.id-404 .content-inner,
 .in-rate-shop .content-inner,
-.cart-inner,
-.table-responsive,
+.cart-inner, .table-responsive,
 .menu-helper > ul,
 .popup-widget, .popup-widget-inner,
 .homepage-box .content-wrapper-in,
 .product-detail-wrapper,
 .content-inner {
-  border-radius: 3px !important;
+  border-radius: 0 !important;
 }
 
-/* 20px → 0 0 3px 3px: homepage carousel – zaoblení jen dole */
+/* Homepage carousel */
 .carousel-inner,
 .before-carousel .content-wrapper-in {
-  border-radius: 0 0 3px 3px !important;
+  border-radius: 0 !important;
 }
 
-/* 20px → 3px: welcome box, carousel items */
-.welcome {
-  border-radius: 3px !important;
-}
+/* Welcome box, carousel items */
+.welcome { border-radius: 0 !important; }
 
 @media (min-width: 768px) {
   body:not(.is-carousel-full-width) .carousel .item,
   .multiple-columns-body .carousel .item {
-    border-radius: 3px !important;
+    border-radius: 0 !important;
   }
   body:not(.is-carousel-full-width) .carousel-inner,
   body:not(.is-carousel-full-width) .carousel .item img,
   body:not(.is-carousel-full-width).multiple-columns-body .carousel .item img {
-    border-radius: 0 0 3px 3px !important;
+    border-radius: 0 !important;
   }
 }
 
-/* Benefit banner obrázek – chyběl úplně */
-.benefitBanner__picture img {
-  border-radius: 3px !important;
-}
+/* Benefit banner obrázek */
+.benefitBanner__picture img { border-radius: 0 !important; }
 
-/* 15px → 3px: produktové karty, obrázky, inputy, dropdown */
-.product .p,
-.product-image, .product-image img,
+/* Produktové karty, obrázky, inputy, dropdown */
+.product .p, .product-image, .product-image img,
 .product-image-wrap,
 .products-block .p-image,
 .product-wrapper,
@@ -177,20 +177,19 @@ body:not(.after-load) .order-summary-inner,
 .dropdown-menu,
 .popup-widget h2,
 .footer-newsletter-form input,
-.compact-form input,
-.compact-form .btn,
-.image-detail,
-.product-detail-image,
+.compact-form input, .compact-form .btn,
+.image-detail, .product-detail-image,
 a.btn.cart-count, .cart-count,
-.navigation-buttons .btn,
-.top-nav-button,
+.navigation-buttons .btn, .top-nav-button,
 .form-control,
 .select2-dropdown,
 .select2-container--default .select2-selection--single,
 .select2-container--default .select2-selection--multiple,
 .select2-container--default .select2-selection--multiple .select2-selection__choice,
 .flag,
-.sidebar-inner .box-rating, .sidebar-inner .box-sale, .sidebar-inner > div,
+.sidebar-inner .box-rating,
+.sidebar-inner .box-sale,
+.sidebar-inner > div,
 .cart-related-product, .cart-related-img,
 .entrance-protection .entrance-protection-inner,
 .latest-contribution-wrapper .latest-contribution-inner,
@@ -202,10 +201,10 @@ a.btn.cart-count, .cart-count,
 .recapitulation-wrapper-box,
 .colorbox--order #cboxLoadedContent,
 #cboxClose.cboxClose--shipping {
-  border-radius: 3px !important;
+  border-radius: 0 !important;
 }
 
-/* 10px → 3px: filtry, taby, kategorie, formuláře */
+/* Filtry, taby, kategorie */
 .filter-section,
 .shp-tabs-holder ul.shp-tabs li a,
 .service__image-block,
@@ -216,23 +215,22 @@ ol.cart-header li.active,
 .languagesMenu__header--actual,
 .search.is-searching .search-form,
 .category-header .listSorting__controls button.listSorting__control {
-  border-radius: 3px !important;
+  border-radius: 0 !important;
 }
 
-/* 8px → 3px: filtry s border-radius variantami */
+/* Filtry */
 .row-filter .filters-wrapper .filters .filter-sections .filter-section .param-filter-top,
 .row-filter .filters-wrapper .filters .slider-wrapper .price-filter {
-  border-radius: 3px !important;
+  border-radius: 0 !important;
 }
 
-/* 5px → 3px */
+/* Ostatní */
 .search-whisperer-image,
 .products-block .p-code,
 .ui-slider-horizontal:after {
-  border-radius: 3px !important;
+  border-radius: 0 !important;
 }
 
-/* 4px → 3px */
 .siteCookies__link, .siteCookies__button,
 .cookiesSetting__data, .cookiesSetting__button,
 .quantity input,
@@ -241,229 +239,155 @@ input[type="radio"] + label::before,
 .quantity .decrease, .quantity .increase,
 .discount-coupon-checkbox:before,
 .ao-image img {
-  border-radius: 3px !important;
+  border-radius: 0 !important;
 }
 
-/* Dříve kulaté prvky – taky na 3px */
-a.btn.cart-count i,
-.cart-count i,
+/* Dříve kulaté prvky – také na 0 */
+a.btn.cart-count i, .cart-count i,
 .swiper-arrow-content,
 .swiper-pagination-bullet::after {
-  border-radius: 3px !important;
+  border-radius: 0 !important;
 }
 
-/* Navigační menu tlačítka – jen desktop */
+/* Navigační menu tlačítka */
 @media (min-width: 768px) {
   .navigation-in > ul > li > a {
-    border-radius: 3px !important;
+    border-radius: 0 !important;
   }
 }
 
-/* Checkout / objednávka → 3px */
+/* Checkout / objednávka */
 .checkout-box-wrapper,
 .summary-wrapper,
 .extras-wrap .extra-content,
 .radio-wrapper input[type="radio"] + label,
 .order-summary-top {
-  border-radius: 3px !important;
+  border-radius: 0 !important;
 }
 
-/* Podkategorie – jemnější stín */
+/* Podkategorie */
 .subcategories li a {
   box-shadow: 0 4px 8px -4px rgba(68, 58, 120, 0.1) !important;
-  border-radius: 3px !important;
+  border-radius: 0 !important;
 }
 
-/* Košík – barvy: zelená → neutrální šedá */
+/* Košík – barvy */
 :root {
   --basket-bg: #f5f6f8 !important;
   --basket-choose-box-bg: #f5f6f8 !important;
   --basket-choose-box-border: #979faf !important;
 }
 
-/* Košík – nadpis kroků */
 .cart-header__headline .h4 {
   color: var(--col1a) !important;
 }
 
-/* Login – tlačítko registrace v hlavní barvě */
 .login-wrapper .btn-secondary {
   background-color: var(--col1a) !important;
   border-color: var(--col1a) !important;
 }
 
-/* Mobil – produkty: užší mezery, zarovnání s okolím */
+/* Mobil – produkty: mezery */
 @media (max-width: 767px) {
-  .products-block.products > div {
-    padding: 5px !important;
-  }
-  .products-block.products {
-    padding: 0 5px !important;
-  }
+  .products-block.products > div { padding: 5px !important; }
+  .products-block.products { padding: 0 5px !important; }
 }
-
 
 /* ============================================================
-   TOP NAVIGATION BAR – kompaktní, zarovnání doprava
+   TOP NAVIGATION BAR
    ============================================================ */
-
-/* Mobil – schovat textové odkazy (jsou v hamburger menu), nechat tools */
 @media (max-width: 767px) {
-  .top-navigation-menu {
-    display: none !important;
-  }
+  .top-navigation-menu { display: none !important; }
 }
 
-/* Desktop */
 @media (min-width: 768px) {
   .top-navigation-bar {
     background-color: var(--col1d) !important;
     border-bottom: 1px solid #e2e0eb;
   }
-
-  .top-navigation-bar .site-name {
-    display: none !important;
-  }
-
-  .top-navigation-contacts {
-    display: none !important;
-  }
-
-  .top-navigation-tools {
-    display: none !important;
-  }
-
+  .top-navigation-bar .site-name { display: none !important; }
+  .top-navigation-contacts { display: none !important; }
+  .top-navigation-tools { display: none !important; }
   .top-navigation-menu {
     flex: 1 1 100% !important;
     display: flex !important;
     justify-content: flex-end !important;
     padding-right: 0 !important;
   }
-
-  .top-navigation-bar .container {
-    min-height: 0 !important;
-  }
-
+  .top-navigation-bar .container { min-height: 0 !important; }
   .top-navigation-bar-menu {
     display: flex !important;
     align-items: center !important;
   }
-
   .top-navigation-bar-menu > li::before {
     background-color: var(--col2a) !important;
   }
-
-  .top-navigation-bar-menu > li:first-child::before {
-    display: none !important;
-  }
-
-  .top-navigation-bar-menu > li:last-child::after {
-    display: none !important;
-  }
-
+  .top-navigation-bar-menu > li:first-child::before { display: none !important; }
+  .top-navigation-bar-menu > li:last-child::after { display: none !important; }
   .top-navigation-bar-menu > li > a {
     color: var(--col1a) !important;
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Avenir', 'Nunito Sans', sans-serif !important;
     font-size: 12px !important;
     font-weight: 600 !important;
     padding: 6px 12px !important;
     line-height: 1 !important;
     transition: color 0.2s ease !important;
   }
-
   .top-navigation-bar-menu > li > a:hover {
     color: var(--col2a) !important;
   }
 }
 
-
 /* ============================================================
    HEADER
    ============================================================ */
-
-/* POPUP WIDGETY – oprava pozice (login, košík) */
 @media (min-width: 992px) {
   .popup-widget.login-widget,
-  .popup-widget.cart-widget {
-    top: 95px !important;
-  }
-
+  .popup-widget.cart-widget { top: 95px !important; }
   .admin-logged .popup-widget.login-widget,
-  .admin-logged .popup-widget.cart-widget {
-    top: 120px !important;
-  }
+  .admin-logged .popup-widget.cart-widget { top: 120px !important; }
 }
+
 @media (min-width: 768px) {
-  #header .site-name a img {
-    max-height: 50px;
-  }
+  #header .site-name a img { max-height: 50px; }
 }
 
-#header {
-  border-bottom: 1px solid #e2e0eb;
-}
+#header { border-bottom: 1px solid #e2e0eb; }
 
-.navigation-in ul li a {
-  text-transform: none;
-}
-
+.navigation-in ul li a { text-transform: none; }
 .navigation-buttons button.top-nav-button,
-.navigation-buttons > a {
-  text-transform: none;
-}
+.navigation-buttons > a { text-transform: none; }
 
 @media (min-width: 992px) {
-  .header-top {
-    padding-top: 20px;
-  }
+  .header-top { padding-top: 20px; }
 }
+@media (min-width: 768px) {
+  .header-top { padding-top: 20px; padding-bottom: 0; flex-wrap: nowrap; }
+}
+
+.navigation-in ul li a b { font-weight: 800; }
 
 @media (min-width: 768px) {
-  .header-top {
-    padding-top: 20px;
-    padding-bottom: 0;
-    flex-wrap: nowrap;
-  }
-}
-
-.navigation-in ul li a b {
-  font-weight: 800;
-}
-
-@media (min-width: 768px) {
-  .navigation-in > ul > li > a {
-    color: var(--col1a);
-  }
+  .navigation-in > ul > li > a { color: var(--col1a); }
 }
 
 .navigation-buttons button.top-nav-button[data-target="login"]:before {
-  font-size: 18px !important;
-  margin-right: 6px !important;
-  vertical-align: middle !important;
+  font-size: 18px !important; margin-right: 6px !important; vertical-align: middle !important;
 }
-
 .header-top .btn.cart-count:before {
-  font-size: 18px !important;
-  margin-right: 6px !important;
-  vertical-align: middle !important;
+  font-size: 18px !important; margin-right: 6px !important; vertical-align: middle !important;
 }
-
 .navigation-buttons button.top-nav-button,
 .header-top .btn.cart-count,
 a.btn.cart-count.full {
-  font-size: 16px !important;
-  font-weight: 600 !important;
+  font-size: 16px !important; font-weight: 600 !important;
 }
 
-
 /* ============================================================
-   MENU PC – pootočené lístečky (ostré hrany)
+   MENU PC – hranaté sýté bloky
    ============================================================ */
 @media (min-width: 768px) {
-  .navigation-in > ul {
-    gap: 6px !important;
-  }
-
+  .navigation-in > ul { gap: 6px !important; }
   .navigation-in > ul > li > a {
     color: #fff !important;
     padding: 8px 20px !important;
@@ -476,12 +400,11 @@ a.btn.cart-count.full {
     letter-spacing: 0.3px !important;
     transition: all 0.25s ease !important;
   }
-
   .navigation-in > ul > li:first-child > a {
     padding-left: 20px !important;
   }
 
-  /* Individuální rotace – jako rozházené lístečky */
+  /* Lehká rotace – rozházené lístečky */
   .navigation-in > ul > li:nth-child(1) > a { transform: rotate(-1.2deg); }
   .navigation-in > ul > li:nth-child(2) > a { transform: rotate(0.8deg); }
   .navigation-in > ul > li:nth-child(3) > a { transform: rotate(-0.6deg); }
@@ -490,7 +413,7 @@ a.btn.cart-count.full {
   .navigation-in > ul > li:nth-child(6) > a { transform: rotate(0.5deg); }
   .navigation-in > ul > li:nth-child(7) > a { transform: rotate(-0.7deg); }
 
-  /* Hover – přetočení opačným směrem + nadskočení */
+  /* Hover */
   .navigation-in > ul > li:nth-child(1) > a:hover { transform: rotate(1deg) translateY(-2px) scale(1.04) !important; }
   .navigation-in > ul > li:nth-child(2) > a:hover { transform: rotate(-0.6deg) translateY(-2px) scale(1.04) !important; }
   .navigation-in > ul > li:nth-child(3) > a:hover { transform: rotate(0.8deg) translateY(-2px) scale(1.04) !important; }
@@ -500,73 +423,53 @@ a.btn.cart-count.full {
   .navigation-in > ul > li:nth-child(7) > a:hover { transform: rotate(0.5deg) translateY(-2px) scale(1.04) !important; }
 }
 
-
 /* MENU MOBILE */
-.navigation-in a {
-  color: var(--col1a);
-}
-
-.navigation-in-bottom {
-  background: none;
-}
-
+.navigation-in a { color: var(--col1a); }
+.navigation-in-bottom { background: none; }
 @media (max-width: 767px) {
-  .navigation-in > ul > li {
-    border-bottom: 1px solid var(--col1d);
-  }
+  .navigation-in > ul > li { border-bottom: 1px solid var(--col1d); }
 }
 
-
-/* BARVY POLOZEK MENU */
+/* ============================================================
+   BARVY POLOŽEK MENU – syté barvy z originálu
+   ============================================================ */
 @media (min-width: 768px) {
-  .menu-level-1 > li:nth-child(1) > a { background-color: #283583 !important; }
-  .menu-level-1 > li:nth-child(2) > a { background-color: #f78b1e !important; }
-  .menu-level-1 > li:nth-child(3) > a { background-color: #aa2570 !important; }
-  .menu-level-1 > li:nth-child(4) > a { background-color: #edc10d !important; }
-  .menu-level-1 > li:nth-child(5) > a { background-color: #283583 !important; }
-  .menu-level-1 > li:nth-child(6) > a { background-color: #f78b1e !important; }
-  .menu-level-1 > li:nth-child(7) > a { background-color: #aa2570 !important; }
+  /* Oranžová */
+  .menu-level-1 > li:nth-child(1) > a { background-color: #FF9800 !important; }
+  /* Tmavě modrá */
+  .menu-level-1 > li:nth-child(2) > a { background-color: #1A237E !important; }
+  /* Magenta */
+  .menu-level-1 > li:nth-child(3) > a { background-color: #AC1C66 !important; }
+  /* Žlutá */
+  .menu-level-1 > li:nth-child(4) > a { background-color: #FFD600 !important; }
+  /* Oranžová */
+  .menu-level-1 > li:nth-child(5) > a { background-color: #FF9800 !important; }
+  /* Tmavě modrá */
+  .menu-level-1 > li:nth-child(6) > a { background-color: #1A237E !important; }
+  /* Magenta */
+  .menu-level-1 > li:nth-child(7) > a { background-color: #AC1C66 !important; }
 
-  .navigation-in > ul > li.ext > a {
-    padding-right: 34px !important;
-  }
-  .navigation-in > ul > li.ext > a:after {
-    color: #fff !important;
-    right: 14px !important;
-  }
+  .navigation-in > ul > li.ext > a { padding-right: 34px !important; }
+  .navigation-in > ul > li.ext > a:after { color: #fff !important; right: 14px !important; }
 }
 
-
-/* LOGIN / KOSIK */
+/* LOGIN / KOŠÍK */
 .navigation-buttons button.top-nav-button[data-target="login"]:before,
 .header-top .btn.cart-count:before {
-  font-size: 18px !important;
-  vertical-align: middle !important;
+  font-size: 18px !important; vertical-align: middle !important;
   color: var(--col1a) !important;
 }
-
 .navigation-buttons button.top-nav-button,
 .header-top .btn.cart-count,
 a.btn.cart-count.full {
-  font-size: 16px !important;
-  font-weight: 600 !important;
+  font-size: 16px !important; font-weight: 600 !important;
   color: var(--col1a) !important;
 }
-
 .navigation-buttons button.top-nav-button:hover:before,
-.header-top .btn.cart-count:hover:before {
-  color: var(--col2a) !important;
-}
-
+.header-top .btn.cart-count:hover:before { color: var(--col2a) !important; }
 .navigation-buttons button.top-nav-button:hover,
-.header-top .btn.cart-count:hover {
-  color: var(--col2a) !important;
-}
-
-a.btn.cart-count i {
-  background: var(--col2a);
-}
-
+.header-top .btn.cart-count:hover { color: var(--col2a) !important; }
+a.btn.cart-count i { background: var(--col2a); }
 
 /* ============================================================
    SEARCH
@@ -576,30 +479,23 @@ a.btn.cart-count i {
   border: 1px solid var(--col1d) !important;
   color: #000 !important;
 }
-
 .search input[type="search"].form-control:focus {
   border-color: var(--col1c) !important;
   outline: none !important;
 }
-
 .search .btn.btn-default {
   background-color: var(--col1d) !important;
 }
-
 .search .btn.btn-default,
 .search a.btn.btn-default {
   color: var(--col1d);
 }
 
-
 /* ============================================================
-   BENEFITY – pootočené ikony
+   BENEFITY – ikony se sýtým pozadím (ne pastelem)
    ============================================================ */
 @media (min-width: 480px) {
-  .benefitBanner__item {
-    flex: 0 0 70%;
-    width: 70%;
-  }
+  .benefitBanner__item { flex: 0 0 70%; width: 70%; }
 }
 
 .benefitBanner {
@@ -608,71 +504,47 @@ a.btn.cart-count i {
   gap: 20px;
   justify-items: center;
 }
-
 @media (min-width: 768px) {
-  .benefitBanner {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+  .benefitBanner { grid-template-columns: 1fr 1fr 1fr 1fr; }
 }
 
 .benefitBanner__item {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  text-align: center !important;
-  min-width: 0;
+  display: flex !important; flex-direction: column !important;
+  align-items: center !important; text-align: center !important; min-width: 0;
 }
-
 .benefitBanner__picture {
-  flex: 0 0 auto !important;
-  width: auto !important;
-  height: auto !important;
-  margin: 0 0 15px 0 !important;
-  padding: 0 !important;
-  display: block !important;
+  flex: 0 0 auto !important; width: auto !important; height: auto !important;
+  margin: 0 0 15px 0 !important; padding: 0 !important; display: block !important;
 }
-
 .benefitBanner__img {
-  padding: 25px !important;
-  width: 35px !important;
-  height: 35px !important;
-  box-sizing: content-box !important;
-  max-width: none !important;
-  max-height: none !important;
-  margin: 0 auto !important;
-  transition: transform 0.3s ease;
+  padding: 25px !important; width: 35px !important; height: 35px !important;
+  box-sizing: content-box !important; max-width: none !important; max-height: none !important;
+  margin: 0 auto !important; transition: transform 0.3s ease;
+  border-radius: 0 !important;
 }
-
 .benefitBanner__content {
-  width: 100% !important;
-  padding: 0 !important;
-  text-align: center !important;
+  width: 100% !important; padding: 0 !important; text-align: center !important;
 }
-
 .benefitBanner__title {
   color: var(--col1a);
-  display: block;
-  margin-bottom: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: none;
-  text-align: center !important;
-  font-family: 'Poppins', sans-serif;
+  display: block; margin-bottom: 5px;
+  font-size: 16px; font-weight: bold;
+  text-transform: none; text-align: center !important;
+  font-family: 'Avenir', 'Nunito Sans', sans-serif;
 }
-
 .benefitBanner__data {
   color: var(--col1b);
-  display: block;
-  width: 100%;
-  font-size: 14px;
-  margin-top: 0;
-  text-align: center !important;
+  display: block; width: 100%; font-size: 14px;
+  margin-top: 0; text-align: center !important;
 }
 
-.benefitBanner__item:nth-child(1) .benefitBanner__img { background: #ffcc3380; }
-.benefitBanner__item:nth-child(2) .benefitBanner__img { background: #bae3f7; }
-.benefitBanner__item:nth-child(3) .benefitBanner__img { background: #dcfce7; }
-.benefitBanner__item:nth-child(4) .benefitBanner__img { background: #f5d6e6; }
+/* Syté barvy pozadí ikon – NE pastel */
+.benefitBanner__item:nth-child(1) .benefitBanner__img { background: #FF9800; }
+.benefitBanner__item:nth-child(2) .benefitBanner__img { background: #1A237E; }
+.benefitBanner__item:nth-child(3) .benefitBanner__img { background: #FFD600; }
+.benefitBanner__item:nth-child(4) .benefitBanner__img { background: #AC1C66; }
+
+/* Ikony na sytém pozadí – SVGs jsou tmavé, nepotřebují invert */
 
 /* Individuální rotace ikon */
 .benefitBanner__item:nth-child(1) .benefitBanner__img { transform: rotate(-2deg); }
@@ -680,84 +552,61 @@ a.btn.cart-count i {
 .benefitBanner__item:nth-child(3) .benefitBanner__img { transform: rotate(-1deg); }
 .benefitBanner__item:nth-child(4) .benefitBanner__img { transform: rotate(2.5deg); }
 
-/* Hover – přetočení + zvětšení */
+/* Hover */
 .benefitBanner__item:nth-child(1):hover .benefitBanner__img { transform: rotate(2deg) scale(1.1) !important; }
 .benefitBanner__item:nth-child(2):hover .benefitBanner__img { transform: rotate(-1.5deg) scale(1.1) !important; }
 .benefitBanner__item:nth-child(3):hover .benefitBanner__img { transform: rotate(2deg) scale(1.1) !important; }
 .benefitBanner__item:nth-child(4):hover .benefitBanner__img { transform: rotate(-2deg) scale(1.1) !important; }
 
-
 /* ============================================================
-   PRODUKTOVE KARTY – pootočené + hover přetočení
+   PRODUKTOVÉ KARTY
    ============================================================ */
 @media (max-width: 767px) {
-  .container.breadcrumbs-wrapper {
-    background-color: #f5f6f8;
-  }
+  .container.breadcrumbs-wrapper { background-color: #f5f6f8; }
 }
 
 .product .p.p {
   box-shadow: 0 4px 20px -4px rgba(68, 58, 120, 0.1);
   overflow: hidden;
 }
-
 .product .p {
   transition: all 0.3s ease !important;
   overflow: hidden;
 }
 
-/* Hover – lehká rotace (bez defaultního natočení) */
+/* Hover – lehká rotace */
 .product .p:nth-child(4n+1):hover { transform: rotate(-0.4deg) !important; box-shadow: 0 6px 24px -4px rgba(68, 58, 120, 0.13) !important; }
 .product .p:nth-child(4n+2):hover { transform: rotate(0.3deg) !important; box-shadow: 0 6px 24px -4px rgba(68, 58, 120, 0.13) !important; }
 .product .p:nth-child(4n+3):hover { transform: rotate(-0.3deg) !important; box-shadow: 0 6px 24px -4px rgba(68, 58, 120, 0.13) !important; }
 .product .p:nth-child(4n+4):hover { transform: rotate(0.4deg) !important; box-shadow: 0 6px 24px -4px rgba(68, 58, 120, 0.13) !important; }
 
-.products-block .p:hover .image > img {
-  transform: none !important;
-}
+.products-block .p:hover .image > img { transform: none !important; }
 
 .products-block.products .p .name,
-.price-final strong {
-  font-weight: 700;
-}
+.price-final strong { font-weight: 700; }
 
-/* Akční cena v kategoriích – oranžová */
-.products-block .p .price-final .price-standard + strong {
-  color: #f99e1f !important;
-}
+/* Akční cena – oranžová */
+.products-block .p .price-final .price-standard + strong { color: #FF9800 !important; }
 
 .category__secondDescription p,
-.category-perex p {
-  color: var(--col1b);
-}
+.category-perex p { color: var(--col1b); }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 .subcategories li a .text,
-.p .name,
-.price-final {
-  color: var(--col1a);
-}
+.p .name, .price-final { color: var(--col1a); }
 
-.breadcrumbs,
-.category-header div,
-.breadcrumbs a {
-  color: var(--col1b);
-}
+.breadcrumbs, .category-header div,
+.breadcrumbs a { color: var(--col1b); }
 
-.category-header {
-  border-top: 1px solid #e2e0eb;
-}
+.category-header { border-top: 1px solid #e2e0eb; }
 
 @media (max-width: 767px) {
-  .products-block .product-btn .pr-action {
-    margin: 0;
-  }
+  .products-block .product-btn .pr-action { margin: 0; }
 }
 
-
 /* ============================================================
-   FILTRY A RAZENI
+   FILTRY A ŘAZENÍ
    ============================================================ */
 .category-header .listSorting__controls button.listSorting__control {
   text-transform: none !important;
@@ -768,22 +617,10 @@ h1, h2, h3, h4, h5, h6,
   transition: all 0.3s ease !important;
 }
 
-/* Střídavé pootočení tlačítek řazení */
-.category-header .listSorting__controls button.listSorting__control:nth-child(odd) {
-  transform: rotate(-0.6deg);
-}
-.category-header .listSorting__controls button.listSorting__control:nth-child(even) {
-  transform: rotate(0.5deg);
-}
-
-.category-header .listSorting__controls button.listSorting__control:nth-child(odd):hover {
-  opacity: 1 !important;
-  transform: rotate(0.4deg) scale(1.03) !important;
-}
-.category-header .listSorting__controls button.listSorting__control:nth-child(even):hover {
-  opacity: 1 !important;
-  transform: rotate(-0.5deg) scale(1.03) !important;
-}
+.category-header .listSorting__controls button.listSorting__control:nth-child(odd) { transform: rotate(-0.6deg); }
+.category-header .listSorting__controls button.listSorting__control:nth-child(even) { transform: rotate(0.5deg); }
+.category-header .listSorting__controls button.listSorting__control:nth-child(odd):hover { opacity: 1 !important; transform: rotate(0.4deg) scale(1.03) !important; }
+.category-header .listSorting__controls button.listSorting__control:nth-child(even):hover { opacity: 1 !important; transform: rotate(-0.5deg) scale(1.03) !important; }
 
 .category-header .listSorting__controls button.listSorting__control.listSorting__control--current {
   background-color: var(--col1a) !important;
@@ -805,86 +642,51 @@ h1, h2, h3, h4, h5, h6,
   min-height: 40px !important;
   padding: 10px 30px 10px 10px !important;
 }
-
-#content .filters-unveil-button-wrapper .btn.unveil-button:hover {
-  opacity: 1 !important;
-}
-
+#content .filters-unveil-button-wrapper .btn.unveil-button:hover { opacity: 1 !important; }
 .filters-visible #content .filters-unveil-button-wrapper .btn.unveil-button {
   background-color: var(--col1a) !important;
   color: #fff !important;
   opacity: 1 !important;
   border-color: var(--col1a) !important;
 }
+#content .filters-unveil-button-wrapper .btn.unveil-button:before { color: inherit !important; right: 15px !important; }
 
-#content .filters-unveil-button-wrapper .btn.unveil-button:before {
-  color: inherit !important;
-  right: 15px !important;
-}
-
-.filters-wrapper .slider-wrapper,
-#filters {
+.filters-wrapper .slider-wrapper, #filters {
   background-color: transparent !important;
   box-shadow: none !important;
   border: none !important;
 }
 
-
 /* ============================================================
-   STITKY – jako ručně nalepené samolepky
+   ŠTÍTKY – nalepené samolepky
    ============================================================ */
 .flag {
   text-transform: none;
   display: inline-block;
   transition: transform 0.2s ease;
 }
-
-.flag:nth-child(odd) {
-  transform: rotate(-1.8deg);
-}
-
-.flag:nth-child(even) {
-  transform: rotate(1.3deg);
-}
-
-.flag:hover {
-  transform: rotate(1deg) scale(1.05) !important;
-}
-
-.flag:nth-child(even):hover {
-  transform: rotate(-1deg) scale(1.05) !important;
-}
+.flag:nth-child(odd) { transform: rotate(-1.8deg); }
+.flag:nth-child(even) { transform: rotate(1.3deg); }
+.flag:hover { transform: rotate(1deg) scale(1.05) !important; }
+.flag:nth-child(even):hover { transform: rotate(-1deg) scale(1.05) !important; }
 
 @media (min-width: 768px) {
-  .flag {
-    margin-bottom: 5px;
-    padding: 6px 12px;
-    font-size: 12px;
-  }
+  .flag { margin-bottom: 5px; padding: 6px 12px; font-size: 12px; }
 }
-
 
 /* ============================================================
-   TLACITKA – ostré hrany, lehce pootočené + hover přetočení
+   TLAČÍTKA – ostré hrany + hover efekt
    ============================================================ */
 .products-block .product-btn .pr-action {
-  max-width: none !important;
-  width: auto !important;
-  display: block !important;
+  max-width: none !important; width: auto !important; display: block !important;
 }
-
 @media (min-width: 768px) {
-  .products-block .product-btn .pr-action {
-    margin: 0 30px;
-  }
+  .products-block .product-btn .pr-action { margin: 0 30px; }
 }
 
 .products-block .product-btn .pr-action .btn {
-  width: 100% !important;
-  min-height: 40px !important;
-  height: 40px !important;
-  padding: 0 !important;
-  font-weight: 700 !important;
+  width: 100% !important; min-height: 40px !important; height: 40px !important;
+  padding: 0 !important; font-weight: 700 !important;
   transition: all 0.25s ease !important;
   transform: rotate(-0.5deg);
 }
@@ -893,13 +695,9 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .products-block .product-btn a.btn {
-  max-width: none !important;
-  width: calc(100% - 60px) !important;
-  margin: 0 auto !important;
-  min-height: 40px !important;
-  height: 40px !important;
-  padding: 0 !important;
-  font-weight: 700 !important;
+  max-width: none !important; width: calc(100% - 60px) !important;
+  margin: 0 auto !important; min-height: 40px !important; height: 40px !important;
+  padding: 0 !important; font-weight: 700 !important;
   transition: all 0.25s ease !important;
   transform: rotate(-0.5deg);
 }
@@ -917,7 +715,6 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700 !important;
   transition: all 0.25s ease !important;
 }
-
 .btn.btn-conversion:hover, a.btn.btn-conversion:hover,
 .btn.btn-cart:hover, a.btn.btn-cart:hover,
 .btn.btn-primary:hover, a.btn.btn-primary:hover,
@@ -927,23 +724,15 @@ h1, h2, h3, h4, h5, h6,
   transform: rotate(0.5deg) scale(1.03) !important;
 }
 
-
 /* ============================================================
    DETAIL PRODUKTU
    ============================================================ */
-/* Fotka produktu – bez borderu, bez rotace */
 .image360 .mousetrap, .p-image .mousetrap,
 .image360 .cloud-zoom-big, .p-image .cloud-zoom-big,
-.image360 img, .p-image img {
-  border: none !important;
-}
+.image360 img, .p-image img { border: none !important; }
 
-/* Bílé pozadí na detailu – celá stránka */
-body.type-detail {
-  background-color: #fff !important;
-}
+body.type-detail { background-color: #fff !important; }
 
-/* Popis produktu – jemně šedé pozadí (záložky + obsah) */
 .type-detail .shp-tabs-wrapper,
 .type-detail .shp-tabs-wrapper #description,
 .type-detail .shp-tabs-wrapper .tab-pane,
@@ -952,189 +741,157 @@ body.type-detail {
   background-color: #f0eef61f !important;
   border-color: #f0f0f0 !important;
 }
-
-/* Přebít bílý ::after na aktivní záložce (z main.css šablony) */
 .shp-tabs-holder ul.shp-tabs li.active::after {
   background-color: #f0eef61f !important;
 }
 
-/* Záložka "Popis produktu" – větší, Poppins (jen PC) */
 @media (min-width: 768px) {
   .type-detail .shp-tab a {
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Avenir', 'Nunito Sans', sans-serif !important;
     font-size: 22px !important;
     font-weight: 700 !important;
   }
 }
 
-@media (min-width: 992px) {
-  .type-detail .breadcrumbs { margin-bottom: 10px; }
-}
+@media (min-width: 992px) { .type-detail .breadcrumbs { margin-bottom: 10px; } }
+@media (min-width: 768px) { .type-detail .breadcrumbs { margin-bottom: 10px; } }
 
-@media (min-width: 768px) {
-  .type-detail .breadcrumbs { margin-bottom: 10px; }
-}
-
-.p-info-headline .h1,
-.p-info-headline h1,
+.p-info-headline .h1, .p-info-headline h1,
 .p-info-grid .detail-grid-title,
-.quantity input,
-.detail-parameters th {
-  color: var(--col1a);
+.quantity input, .detail-parameters th { color: var(--col1a); }
+
+/* ============================================
+   DETAIL – barevný obdélník za názvem produktu
+   ============================================ */
+.p-info-headline .h1,
+.p-info-headline h1 {
+  display: inline;
+  background-color: var(--col1a);
+  color: #fff !important;
+  padding: 6px 16px;
+  line-height: 1.6;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
-/* Detail – cena defaultně col1a, akční cena oranžová */
-.p-info-wrapper .p-final-price-wrapper .price-final {
-  color: var(--col1a);
-}
-.p-info-wrapper .p-final-price-wrapper .price-final .price-standard + strong {
-  color: #f99e1f !important;
-}
+/* Cena */
+.p-info-wrapper .p-final-price-wrapper .price-final { color: var(--col1a); }
+.p-info-wrapper .p-final-price-wrapper .price-final .price-standard + strong { color: #FF9800 !important; }
 
-.p-short-description,
-.p-detail-info a,
-a.link-icon,
-.p-short-description p {
-  color: var(--col1b);
-}
+.p-short-description, .p-detail-info a,
+a.link-icon, .p-short-description p { color: var(--col1b); }
 
-@media (min-width: 768px) {
-  .social-buttons-wrapper { padding-top: 25px; }
-}
-
-.social-buttons-wrapper {
-  border-top: 1px solid #e2e0eb;
-}
+@media (min-width: 768px) { .social-buttons-wrapper { padding-top: 25px; } }
+.social-buttons-wrapper { border-top: 1px solid #e2e0eb; }
 
 .p-thumbnail.highlighted img,
-.show360image.highlighted img {
-  border: 2px solid var(--col2a);
-}
-
-.p-thumbnails a img {
-  border: 1px solid #e2e0eb;
-}
+.show360image.highlighted img { border: 2px solid var(--col2a); }
+.p-thumbnails a img { border: 1px solid #e2e0eb; }
 
 /* Thumbnail rotace */
-.p-thumbnails a:nth-child(odd) img {
-  transform: rotate(-0.8deg);
-  transition: transform 0.2s ease;
-}
-.p-thumbnails a:nth-child(even) img {
-  transform: rotate(0.6deg);
-  transition: transform 0.2s ease;
-}
+.p-thumbnails a:nth-child(odd) img { transform: rotate(-0.8deg); transition: transform 0.2s ease; }
+.p-thumbnails a:nth-child(even) img { transform: rotate(0.6deg); transition: transform 0.2s ease; }
 
-.p-info-wrapper .availability-value {
-  text-transform: none;
-}
+.p-info-wrapper .availability-value { text-transform: none; }
+.p-image-wrapper .flags-default { left: 8px; top: 8px; }
+.category-link__icon span { background: #fff; }
 
-.p-image-wrapper .flags-default {
-  left: 8px;
-  top: 8px;
-}
-
-.category-link__icon span {
-  background: #fff;
-}
-
-
-/* PRIDAT DO KOSIKU */
+/* PŘIDAT DO KOŠÍKU */
 .p-info-wrapper .add-to-cart {
-  display: flex !important;
-  flex-wrap: nowrap;
-  align-items: center;
-  width: 100%;
-  gap: 15px;
-  margin-bottom: 25px;
+  display: flex !important; flex-wrap: nowrap;
+  align-items: center; width: 100%; gap: 15px; margin-bottom: 25px;
 }
-
 .p-info-wrapper .quantity {
-  flex: 0 0 140px;
-  width: 140px;
-  height: 50px;
+  flex: 0 0 140px; width: 140px; height: 50px;
   background-color: transparent;
   border: 1px solid var(--col1b) !important;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  margin: 0;
+  display: flex; align-items: center;
+  position: relative; overflow: hidden; margin: 0;
 }
-
 .p-info-wrapper .quantity input.amount {
-  background: transparent;
-  border: 0;
-  height: 50px;
-  width: 100%;
-  padding: 0 40px;
-  text-align: center;
-  font-weight: 700;
-  color: var(--col1b);
+  background: transparent; border: 0; height: 50px;
+  width: 100%; padding: 0 40px; text-align: center;
+  font-weight: 700; color: var(--col1b);
 }
-
 .p-info-wrapper .quantity .increase,
 .p-info-wrapper .quantity .decrease {
-  height: 100%;
-  width: 40px;
-  background: transparent;
-  border: 0;
-  position: absolute;
-  top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 2;
-  color: var(--col1b);
+  height: 100%; width: 40px; background: transparent;
+  border: 0; position: absolute; top: 0;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 2; color: var(--col1b);
 }
-
 .p-info-wrapper .quantity .decrease { left: 0; }
 .p-info-wrapper .quantity .increase { right: 0; }
-
 .p-info-wrapper .btn.btn-conversion {
-  flex: 1;
-  width: auto;
-  height: 50px;
-  min-height: 50px;
-  margin: 0;
-  padding: 0 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  flex: 1; width: auto; height: 50px; min-height: 50px;
+  margin: 0; padding: 0 10px;
+  display: flex; justify-content: center; align-items: center;
+  font-size: 14px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
 }
 .p-info-wrapper .btn.btn-conversion:hover {
   transform: rotate(0.4deg) scale(1.02) !important;
 }
-
 
 /* ============================================================
    HOMEPAGE
    ============================================================ */
 body.is-loaded h4.homepage-group-title,
 body.is-loaded .h4.homepage-group-title,
-.welcome h1 {
-  color: var(--col1a);
+.welcome h1 { color: var(--col1a); }
+
+.welcome { background: #fff; }
+.custom-cats__subtitle { display: none !important; }
+.welcome p { color: var(--col1b); }
+
+/* ============================================
+   NADPISY SEKCÍ – sytý barevný obdélník za textem
+   (jako na originálu tutukids.cz)
+   ============================================ */
+h2.homepage-group-title,
+.h4.homepage-group-title,
+h4.homepage-group-title {
+  position: relative;
+  display: inline-block;
+  background-color: var(--col1a);
+  color: #fff !important;
+  padding: 8px 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.welcome {
-  background: #fff;
-}
-
-.custom-cats__subtitle {
+/* Zrušit hravé podtržítko – nahrazeno barevným obdélníkem */
+h2.homepage-group-title::after,
+.h4.homepage-group-title::after,
+h4.homepage-group-title::after {
   display: none !important;
 }
 
-.welcome p {
-  color: var(--col1b);
+/* Střídání barev obdélníků pro různé sekce */
+.homepage-products:nth-of-type(1) h2.homepage-group-title,
+.homepage-products:nth-of-type(1) h4.homepage-group-title,
+.homepage-products:nth-of-type(1) .h4.homepage-group-title {
+  background-color: var(--col1a) !important;
+}
+.homepage-products:nth-of-type(2) h2.homepage-group-title,
+.homepage-products:nth-of-type(2) h4.homepage-group-title,
+.homepage-products:nth-of-type(2) .h4.homepage-group-title {
+  background-color: #AC1C66 !important;
+}
+.homepage-products:nth-of-type(3) h2.homepage-group-title,
+.homepage-products:nth-of-type(3) h4.homepage-group-title,
+.homepage-products:nth-of-type(3) .h4.homepage-group-title {
+  background-color: #FF9800 !important;
 }
 
-
 /* KATEGORIE BOXY – každý jinak pootočený */
+.custom-card,
+.custom-card img,
+.custom-card__dot,
+.custom-card__arrow {
+  border-radius: 0 !important;
+}
 .custom-card {
   overflow: hidden;
   transition: all 0.3s ease !important;
@@ -1144,55 +901,44 @@ body.is-loaded .h4.homepage-group-title,
 .custom-card:nth-child(3) { transform: rotate(-0.4deg); }
 .custom-card:nth-child(4) { transform: rotate(0.8deg); }
 
-/* Hover – přetočení opačným směrem + nadskočení */
 .custom-card:nth-child(1):hover { transform: rotate(0.5deg) translateY(-4px) !important; box-shadow: 0 8px 25px -5px rgba(68, 58, 120, 0.15) !important; }
 .custom-card:nth-child(2):hover { transform: rotate(-0.4deg) translateY(-4px) !important; box-shadow: 0 8px 25px -5px rgba(68, 58, 120, 0.15) !important; }
 .custom-card:nth-child(3):hover { transform: rotate(0.6deg) translateY(-4px) !important; box-shadow: 0 8px 25px -5px rgba(68, 58, 120, 0.15) !important; }
 .custom-card:nth-child(4):hover { transform: rotate(-0.6deg) translateY(-4px) !important; box-shadow: 0 8px 25px -5px rgba(68, 58, 120, 0.15) !important; }
 
+/* ============================================
+   KATEGORIE KARTY – sýté barvy pozadí místo pastelu
+   ============================================ */
+.custom-card:nth-child(1) { background-color: #FFD600 !important; }
+.custom-card:nth-child(2) { background-color: #1A237E !important; }
+.custom-card:nth-child(3) { background-color: #AC1C66 !important; }
+.custom-card:nth-child(4) { background-color: #FF9800 !important; }
 
-/* NADPISY – hravé podtržítko */
-h2.homepage-group-title,
-.h4.homepage-group-title,
-h4.homepage-group-title {
-  position: relative;
-  display: inline-block;
+/* Text v kartách na bílou kde je tmavé pozadí */
+.custom-card:nth-child(2) .custom-card__title,
+.custom-card:nth-child(2) .custom-card__subtitle,
+.custom-card:nth-child(3) .custom-card__title,
+.custom-card:nth-child(3) .custom-card__subtitle {
+  color: #fff !important;
 }
-h2.homepage-group-title::after,
-.h4.homepage-group-title::after,
-h4.homepage-group-title::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  left: 10%;
-  width: 80%;
-  height: 4px;
-  background: var(--col2a);
-  transform: rotate(-0.8deg);
+/* Tmavý text na žluté a oranžové */
+.custom-card:nth-child(1) .custom-card__title,
+.custom-card:nth-child(1) .custom-card__subtitle,
+.custom-card:nth-child(4) .custom-card__title,
+.custom-card:nth-child(4) .custom-card__subtitle {
+  color: var(--col1a) !important;
 }
-
 
 /* SLIDER */
 @media (min-width: 768px) {
-  body:not(.is-carousel-full-width).one-column-body .homepage-box .carousel {
-    margin-top: 0;
-  }
+  body:not(.is-carousel-full-width).one-column-body .homepage-box .carousel { margin-top: 0; }
 }
-
-/* Slider – rovně, bez rotace */
-
 
 /* ============================================================
    KONTAKTY
    ============================================================ */
-@media (min-width: 1200px) {
-  .in-contacts .content-inner > article { width: 100%; }
-}
-
-@media (min-width: 992px) {
-  .in-contacts .content-inner > article { width: 100%; }
-}
-
+@media (min-width: 1200px) { .in-contacts .content-inner > article { width: 100%; } }
+@media (min-width: 992px) { .in-contacts .content-inner > article { width: 100%; } }
 
 /* ============================================================
    FOOTER
@@ -1201,95 +947,108 @@ h4.homepage-group-title::after {
   background-color: var(--col1c);
   margin-top: 50px;
 }
-
 #footer h4 {
   color: #fff;
   text-transform: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Avenir', 'Nunito Sans', sans-serif;
 }
-
-#footer ul a {
-  color: #ffffffb3;
-}
+#footer ul a { color: #ffffffb3; }
 
 @media (min-width: 768px) {
   #footer h4 { font-size: 17px; }
 }
 
-.footer-bottom-bg:before {
-  background: var(--col1c);
-}
+.footer-bottom-bg:before { background: var(--col1c); }
+.custom-footer { border-bottom: 1px solid #ffffff1a; }
+.footer-bottom { padding: 20px 20px 40px 20px; }
 
-.custom-footer {
-  border-bottom: 1px solid #ffffff1a;
+/* ============================================
+   FOOTER – vertikální logo
+   ============================================ */
+.footer .site-name,
+.footer-rows .site-name,
+#footer .site-name {
+  display: block !important;
+  text-align: center !important;
+  margin-bottom: 30px !important;
+  padding-top: 30px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
 }
-
-.footer-bottom {
-  padding: 20px 20px 40px 20px;
+.footer .site-name img,
+.footer-rows .site-name img,
+#footer .site-name img {
+  display: none !important;
 }
-
+/* Přepíšeme logo v patičce na vertikální verzi */
+.footer .site-name a,
+.footer-rows .site-name a,
+#footer .site-name a {
+  display: block !important;
+  text-align: center !important;
+}
+.footer .site-name a::after,
+.footer-rows .site-name a::after,
+#footer .site-name a::after {
+  content: '' !important;
+  display: block !important;
+  width: 100px;
+  height: 140px;
+  margin: 0 auto;
+  background-image: url('https://777863.myshoptet.com/user/documents/upload/logo-vyska.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 /* ============================================================
-   KOSIK
+   KOŠÍK
    ============================================================ */
-body.ordering-process {
-  background: #f5f6f8;
-}
-
-.cart-inner, ol.cart-header li.active {
-  border: 1px solid #e2e0eb;
-}
-
+body.ordering-process { background: #f5f6f8; }
+.cart-inner, ol.cart-header li.active { border: 1px solid #e2e0eb; }
 @media (min-width: 768px) {
-  .cart-table tr > td {
-    border-bottom: 1px solid #e2e0eb;
-  }
+  .cart-table tr > td { border-bottom: 1px solid #e2e0eb; }
 }
-
 .checkout-box-wrapper {
   background-color: #fff;
   border: 1px solid #e2e0eb;
-}
-
-/* Cart box lehce pootočený */
-.checkout-box-wrapper {
   transform: rotate(-0.15deg);
   transition: transform 0.3s ease;
 }
-.checkout-box-wrapper:hover {
-  transform: rotate(0.1deg) !important;
-}
-
+.checkout-box-wrapper:hover { transform: rotate(0.1deg) !important; }
 
 /* ============================================================
    404
    ============================================================ */
 .in-404 .content-inner,
-.id-404 .content-inner {
-  background-color: #8857931a;
-}
-
+.id-404 .content-inner { background-color: #8857931a; }
 
 /* ============================================================
-   BADGE AKCE
+   BADGE AKCE – oranžový
    ============================================================ */
 .flag.flag-discount::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23f78b1e' d='M93.71 42.777l-3.374-5.121a3.181 3.181 0 0 1-.507-1.844l.333-6.193a9.472 9.472 0 0 0-5.197-8.995l-5.49-2.777a2.987 2.987 0 0 1-1.327-1.328l-2.774-5.485a9.424 9.424 0 0 0-8.993-5.199l-6.195.334c-.65.034-1.29-.14-1.833-.5l-5.131-3.38A9.46 9.46 0 0 0 48 .722a9.457 9.457 0 0 0-5.22 1.566l-5.122 3.373a3.21 3.21 0 0 1-1.843.508l-6.193-.334a9.425 9.425 0 0 0-8.995 5.197l-2.778 5.491a2.986 2.986 0 0 1-1.327 1.326l-5.486 2.774a9.472 9.472 0 0 0-5.198 8.993l.334 6.198a3.013 3.013 0 0 1-.501 1.83l-3.38 5.132a9.474 9.474 0 0 0 0 10.443l3.372 5.12c.358.557.533 1.2.509 1.843l-.334 6.194a9.471 9.471 0 0 0 5.196 8.995l5.492 2.777a2.989 2.989 0 0 1 1.325 1.328l2.774 5.485a9.426 9.426 0 0 0 8.994 5.198l6.196-.333c.65-.036 1.287.14 1.832.5l5.132 3.38A9.46 9.46 0 0 0 48 95.274a9.463 9.463 0 0 0 5.221-1.566l5.121-3.373a3.2 3.2 0 0 1 1.843-.508l6.193.333a9.424 9.424 0 0 0 8.995-5.197l2.777-5.49a2.99 2.99 0 0 1 1.328-1.328l5.485-2.774a9.47 9.47 0 0 0 5.199-8.993l-.334-6.196c-.035-.65.14-1.288.5-1.833l3.38-5.131a9.466 9.466 0 0 0 1.566-5.22 9.459 9.459 0 0 0-1.566-5.224z'%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg%3E%3Cg%3E%3Cpath fill='%23FF9800' d='M93.71 42.777l-3.374-5.121a3.181 3.181 0 0 1-.507-1.844l.333-6.193a9.472 9.472 0 0 0-5.197-8.995l-5.49-2.777a2.987 2.987 0 0 1-1.327-1.328l-2.774-5.485a9.424 9.424 0 0 0-8.993-5.199l-6.195.334c-.65.034-1.29-.14-1.833-.5l-5.131-3.38A9.46 9.46 0 0 0 48 .722a9.457 9.457 0 0 0-5.22 1.566l-5.122 3.373a3.21 3.21 0 0 1-1.843.508l-6.193-.334a9.425 9.425 0 0 0-8.995 5.197l-2.778 5.491a2.986 2.986 0 0 1-1.327 1.326l-5.486 2.774a9.472 9.472 0 0 0-5.198 8.993l.334 6.198a3.013 3.013 0 0 1-.501 1.83l-3.38 5.132a9.474 9.474 0 0 0 0 10.443l3.372 5.12c.358.557.533 1.2.509 1.843l-.334 6.194a9.471 9.471 0 0 0 5.196 8.995l5.492 2.777a2.989 2.989 0 0 1 1.325 1.328l2.774 5.485a9.426 9.426 0 0 0 8.994 5.198l6.196-.333c.65-.036 1.287.14 1.832.5l5.132 3.38A9.46 9.46 0 0 0 48 95.274a9.463 9.463 0 0 0 5.221-1.566l5.121-3.373a3.2 3.2 0 0 1 1.843-.508l6.193.333a9.424 9.424 0 0 0 8.995-5.197l2.777-5.49a2.99 2.99 0 0 1 1.328-1.328l5.485-2.774a9.47 9.47 0 0 0 5.199-8.993l-.334-6.196c-.035-.65.14-1.288.5-1.833l3.38-5.131a9.466 9.466 0 0 0 1.566-5.22 9.459 9.459 0 0 0-1.566-5.224z'%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") !important;
 }
-
 
 /* ============================================================
-   SCROLLBAR (bonus)
+   KATEGORIE STRÁNKA – barevný obdélník za H1
    ============================================================ */
-::-webkit-scrollbar {
-  width: 8px;
+.type-category h1,
+.type-category .h1 {
+  display: inline;
+  background-color: var(--col1a);
+  color: #fff !important;
+  padding: 6px 16px;
+  line-height: 1.6;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
-::-webkit-scrollbar-track {
-  background: var(--col1d);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--col1b);
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--col2a);
-}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--col1d); }
+::-webkit-scrollbar-thumb { background: var(--col1b); }
+::-webkit-scrollbar-thumb:hover { background: var(--col2a); }
