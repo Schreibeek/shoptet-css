@@ -1214,6 +1214,46 @@ h4.homepage-group-title::after {
   transform: scale(1.03);
 }
 
+/* FOOTER – mobilní layout */
+@media (max-width: 767px) {
+  /* Oddělení sloupce 1 (logo+socials) od sloupce 2 */
+  .custom-footer__banner1 {
+    margin-bottom: 25px !important;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid #ffffff1a;
+  }
+
+  /* Oddělení sloupce 3 od sloupce 4 (panduláci) */
+  .custom-footer__banner3 {
+    margin-bottom: 25px !important;
+    padding-bottom: 20px !important;
+    border-bottom: 1px solid #ffffff1a;
+  }
+
+  /* Vystředění sloupců 2 a 3 (textové menu) */
+  .custom-footer__banner2,
+  .custom-footer__banner3 {
+    text-align: center !important;
+  }
+
+  .custom-footer__banner2 .banner-wrapper,
+  .custom-footer__banner3 .banner-wrapper {
+    text-align: center !important;
+  }
+
+  .custom-footer__banner2 h4,
+  .custom-footer__banner3 h4 {
+    text-align: center !important;
+  }
+
+  .custom-footer__banner2 ul,
+  .custom-footer__banner3 ul {
+    list-style: none;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+}
+
 /* ============================================================
    KOSIK
    ============================================================ */
