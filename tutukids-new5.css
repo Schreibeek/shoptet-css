@@ -798,8 +798,8 @@ h1, h2, h3, h4, h5, h6,
 .btn.btn-cart:hover, a.btn.btn-cart:hover,
 .btn.btn-primary:hover, a.btn.btn-primary:hover,
 .welcome__left-panel .btn.btn-secondary:hover {
-  background-color: #d92680e6 !important;
-  border-color: #d92680e6 !important;
+  background-color: #c42d7a !important;
+  border-color: #c42d7a !important;
   transform: rotate(0.5deg) scale(1.03) !important;
 }
 
