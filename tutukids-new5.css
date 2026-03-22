@@ -579,33 +579,18 @@ a.btn.cart-count i { background: var(--col2a); }
   text-align: center !important;
 }
 
-/* PLNÉ BRAND BARVY – pozadí na picture, bílé SVG ikony nahrané v adminu */
-.benefitBanner__item:nth-child(1) .benefitBanner__picture {
+/* PLNÉ BRAND BARVY – pozadí přímo na img (bílé SVG musí mít opaque bg na sobě) */
+.benefitBanner__item:nth-child(1) .benefitBanner__img {
   background: #283583 !important;
-  padding: 15px !important;
 }
-.benefitBanner__item:nth-child(2) .benefitBanner__picture {
+.benefitBanner__item:nth-child(2) .benefitBanner__img {
   background: #f78b1e !important;
-  padding: 15px !important;
 }
-.benefitBanner__item:nth-child(3) .benefitBanner__picture {
+.benefitBanner__item:nth-child(3) .benefitBanner__img {
   background: #edc10d !important;
-  padding: 15px !important;
 }
-.benefitBanner__item:nth-child(4) .benefitBanner__picture {
-  background: #aa2570 !important;
-  padding: 15px !important;
-}
-
-/* Ikona: průhledné pozadí, velikost */
-.benefitBanner__item:nth-child(1) .benefitBanner__img,
-.benefitBanner__item:nth-child(2) .benefitBanner__img,
-.benefitBanner__item:nth-child(3) .benefitBanner__img,
 .benefitBanner__item:nth-child(4) .benefitBanner__img {
-  background: transparent !important;
-  padding: 0 !important;
-  width: 50px !important;
-  height: 50px !important;
+  background: #aa2570 !important;
 }
 
 /* Individuální rotace ikon */
