@@ -1218,9 +1218,12 @@ h4.homepage-group-title::after {
 @media (max-width: 767px) {
   /* Oddělení sloupce 1 (logo+socials) od sloupce 2 */
   .custom-footer__banner1 {
+    margin-bottom: 30px !important;
+  }
+
+  /* Oddělení sloupce 2 od sloupce 3 */
+  .custom-footer__banner2 {
     margin-bottom: 25px !important;
-    padding-bottom: 20px !important;
-    border-bottom: 1px solid #ffffff1a;
   }
 
   /* Oddělení sloupce 3 od sloupce 4 (panduláci) */
