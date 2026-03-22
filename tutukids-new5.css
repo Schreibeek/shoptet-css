@@ -579,21 +579,32 @@ a.btn.cart-count i { background: var(--col2a); }
   text-align: center !important;
 }
 
-/* PLNÉ BRAND BARVY místo pastelových */
-.benefitBanner__item:nth-child(1) .benefitBanner__img {
+/* PLNÉ BRAND BARVY – pozadí na picture (rodič), bílé ikony přes filter na img */
+.benefitBanner__item:nth-child(1) .benefitBanner__picture {
   background: #283583 !important;
+  padding: 22px !important;
 }
-
-.benefitBanner__item:nth-child(2) .benefitBanner__img {
+.benefitBanner__item:nth-child(2) .benefitBanner__picture {
   background: #f78b1e !important;
+  padding: 22px !important;
 }
-
-.benefitBanner__item:nth-child(3) .benefitBanner__img {
+.benefitBanner__item:nth-child(3) .benefitBanner__picture {
   background: #edc10d !important;
+  padding: 22px !important;
+}
+.benefitBanner__item:nth-child(4) .benefitBanner__picture {
+  background: #aa2570 !important;
+  padding: 22px !important;
 }
 
+/* Ikona: průhledné pozadí (stejná specificita!), bílá přes filter */
+.benefitBanner__item:nth-child(1) .benefitBanner__img,
+.benefitBanner__item:nth-child(2) .benefitBanner__img,
+.benefitBanner__item:nth-child(3) .benefitBanner__img,
 .benefitBanner__item:nth-child(4) .benefitBanner__img {
-  background: #aa2570 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  filter: brightness(0) invert(1);
 }
 
 /* Individuální rotace ikon */
