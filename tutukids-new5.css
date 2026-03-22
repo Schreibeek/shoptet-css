@@ -145,7 +145,10 @@ body:not(.after-load) .order-summary-inner,
 }
 
 /* Benefit banner obrázek */
-.benefitBanner__picture img { border-radius: 0 !important; }
+.benefitBanner__picture img {
+  border-radius: 0 !important;
+  mix-blend-mode: normal !important;
+}
 
 /* 15px → 0: produktové karty, obrázky, inputy, dropdown */
 .product .p, .product-image, .product-image img,
@@ -854,6 +857,8 @@ body.type-detail { background-color: #fff !important; }
 /* Detail – cena defaultně col1a, akční cena oranžová */
 .p-info-wrapper .p-final-price-wrapper .price-final { color: var(--col1a); }
 .p-info-wrapper .p-final-price-wrapper .price-final .price-standard + strong { color: #f99e1f !important; }
+
+.p-detail-info { margin-top: 10px; }
 
 .p-short-description, .p-detail-info a, a.link-icon,
 .p-short-description p { color: var(--col1b); }
