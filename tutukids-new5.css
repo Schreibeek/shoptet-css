@@ -959,27 +959,18 @@ body.type-detail { background-color: #fff !important; }
 
 .p-info-headline .h1,
 .p-info-headline h1 {
-  position: relative;
   display: inline;
   padding: 6px 14px 6px 10px;
   color: #fff !important;
-  z-index: 1;
-  line-height: 1.5;
+  background: var(--col1a);
+  line-height: 1.6;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
 .p-info-headline .h1::before,
 .p-info-headline h1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -6px;
-  width: calc(100% + 12px);
-  height: 100%;
-  background: var(--col1a);
-  transform: rotate(-0.8deg);
-  z-index: -1;
+  content: none;
 }
 
 /* ============================================================
