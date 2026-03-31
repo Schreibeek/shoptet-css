@@ -659,6 +659,64 @@ h1, h2, h3, h4, h5, h6,
   .products-block .product-btn .pr-action { margin: 0; }
 }
 
+/* COLORBOX POPUP – přidáno do košíku (mobilní oprava) */
+#colorbox .advanced-order .product {
+  margin-bottom: 12px !important;
+  padding-bottom: 12px !important;
+  border-bottom: 1px solid #eee;
+}
+
+#colorbox .advanced-order .product .p {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 8px;
+}
+
+#colorbox .advanced-order .product .p .image {
+  flex: 0 0 50px !important;
+}
+
+#colorbox .advanced-order .product .p .p-in {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0;
+}
+
+#colorbox .advanced-order .product .product-btn {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  margin-left: auto;
+}
+
+#colorbox .advanced-order .product .product-btn .btn {
+  width: auto !important;
+  min-width: 90px !important;
+  max-width: 120px !important;
+  height: 34px !important;
+  min-height: 34px !important;
+  font-size: 12px !important;
+  padding: 0 12px !important;
+  white-space: nowrap !important;
+}
+
+#colorbox .advanced-order .advancedOrder__buttons {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#colorbox .advanced-order .advancedOrder__buttons .btn-conversion {
+  width: 100% !important;
+  text-align: center;
+}
+
+#colorbox .advanced-order .advancedOrder__buttons .next-step-back {
+  width: 100% !important;
+  text-align: center;
+}
+
 /* ============================================================
    FILTRY A RAZENI
    ============================================================ */
