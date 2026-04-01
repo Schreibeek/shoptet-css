@@ -1329,6 +1329,11 @@ body.ordering-process { background: #f5f6f8; }
   border: 1px solid #e2e0eb;
 }
 
+.discount-coupon {
+  border-radius: 0 !important;
+  background-color: #aa257021 !important;
+}
+
 @media (min-width: 768px) {
   .cart-table tr > td { border-bottom: 1px solid #e2e0eb; }
 }
