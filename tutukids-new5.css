@@ -757,9 +757,21 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .filters-wrapper .slider-wrapper, #filters {
-  background-color: transparent !important;
+  background-color: #fff !important;
   box-shadow: none !important;
   border: none !important;
+}
+
+.mobile.one-column-body .filter-section:not(.filter-section-count),
+.desktop.one-column-body .filter-section:not(.filter-section-count),
+.mobile.multiple-columns-body .filter-section:not(.filter-section-count) {
+  background: #fff !important;
+}
+
+@media (min-width: 768px) {
+  .desktop.one-column-body #category-filter-hover {
+    background: #fff !important;
+  }
 }
 
 /* ============================================================
