@@ -180,7 +180,8 @@ a.btn.cart-count, .cart-count,
 .iframe-responsive,
 .recapitulation-wrapper-box,
 .colorbox--order #cboxLoadedContent,
-#cboxClose.cboxClose--shipping {
+#cboxClose.cboxClose--shipping,
+#cboxContent {
   border-radius: 0 !important;
 }
 
@@ -339,6 +340,9 @@ a.btn.cart-count i, .cart-count i,
   .admin-logged .popup-widget.login-widget,
   .admin-logged .popup-widget.cart-widget {
     top: 120px !important;
+  }
+  .cart-widget-button {
+    background-color: #88579321 !important;
   }
 }
 
@@ -849,6 +853,7 @@ h1, h2, h3, h4, h5, h6,
 .image360 .cloud-zoom-big, .p-image .cloud-zoom-big,
 .image360 img, .p-image img {
   border: none !important;
+  border-radius: 0 !important;
 }
 
 body.type-detail { background-color: #fff !important; }
