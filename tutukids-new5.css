@@ -659,32 +659,39 @@ h1, h2, h3, h4, h5, h6,
   .products-block .product-btn .pr-action { margin: 0; }
 }
 
-/* COLORBOX POPUP – related produkty fix */
-#colorbox .advanced-order .product .product-btn {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-  gap: 4px !important;
-}
+/* COLORBOX POPUP – related produkty fix (jen mobil) */
+@media (max-width: 767px) {
+  #colorbox .advanced-order .product .product-btn {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    gap: 4px !important;
+    text-align: right !important;
+  }
 
-#colorbox .advanced-order .product .product-btn .pr-action {
-  width: auto !important;
-  max-width: none !important;
-  margin: 0 !important;
-}
+  #colorbox .advanced-order .product .product-btn .price-final {
+    text-align: right !important;
+  }
 
-#colorbox .advanced-order .product .product-btn .pr-action .btn,
-#colorbox .advanced-order .product .product-btn a.btn,
-#colorbox .advanced-order .product .product-btn .btn {
-  width: auto !important;
-  min-width: 80px !important;
-  max-width: none !important;
-  height: 30px !important;
-  min-height: 30px !important;
-  font-size: 11px !important;
-  padding: 0 12px !important;
-  margin: 0 !important;
-  transform: none !important;
+  #colorbox .advanced-order .product .product-btn .pr-action {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  #colorbox .advanced-order .product .product-btn .pr-action .btn,
+  #colorbox .advanced-order .product .product-btn a.btn,
+  #colorbox .advanced-order .product .product-btn .btn {
+    width: auto !important;
+    min-width: 80px !important;
+    max-width: none !important;
+    height: 30px !important;
+    min-height: 30px !important;
+    font-size: 11px !important;
+    padding: 0 12px !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
 }
 
 /* ============================================================
