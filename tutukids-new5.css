@@ -661,22 +661,59 @@ h1, h2, h3, h4, h5, h6,
 
 /* COLORBOX POPUP – related produkty fix (jen mobil) */
 @media (max-width: 767px) {
+  #colorbox .advanced-order .product .p {
+    display: grid !important;
+    grid-template-columns: 50px 1fr auto !important;
+    grid-template-rows: auto auto auto !important;
+    gap: 2px 10px !important;
+    align-items: center !important;
+  }
+
+  #colorbox .advanced-order .product .p .image {
+    grid-column: 1 !important;
+    grid-row: 1 / 4 !important;
+    align-self: start !important;
+  }
+
+  /* rozbal .p-in aby děti šly do gridu */
+  #colorbox .advanced-order .product .p .p-in {
+    display: contents !important;
+  }
+
+  /* název – celá šířka */
+  #colorbox .advanced-order .product .p .p-in .p-in-in {
+    grid-column: 2 / 4 !important;
+    grid-row: 1 !important;
+    display: block !important;
+  }
+
+  /* dostupnost – vlevo */
+  #colorbox .advanced-order .product .p .p-in .p-bottom {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+  }
+
+  /* rozbal .product-btn aby děti šly do gridu */
   #colorbox .advanced-order .product .product-btn {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-end !important;
-    gap: 4px !important;
-    text-align: right !important;
+    display: contents !important;
   }
 
+  /* cena – vpravo, stejný řádek jako dostupnost */
   #colorbox .advanced-order .product .product-btn .price-final {
+    grid-column: 3 !important;
+    grid-row: 2 !important;
     text-align: right !important;
+    white-space: nowrap !important;
   }
 
+  /* tlačítko – vpravo, pod cenou */
   #colorbox .advanced-order .product .product-btn .pr-action {
+    grid-column: 3 !important;
+    grid-row: 3 !important;
     width: auto !important;
     max-width: none !important;
     margin: 0 !important;
+    justify-self: end !important;
   }
 
   #colorbox .advanced-order .product .product-btn .pr-action .btn,
