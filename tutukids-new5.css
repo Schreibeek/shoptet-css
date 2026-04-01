@@ -1017,6 +1017,9 @@ select.hidden-split-parameter,
 }
 
 /* Související produkty – nadpis jako v kategorii */
+.products-related-block {
+  text-align: center;
+}
 .products-related-header {
   position: relative;
   display: inline-block !important;
@@ -1025,6 +1028,11 @@ select.hidden-split-parameter,
   z-index: 1;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
+}
+@media (max-width: 767px) {
+  .products-related-block {
+    text-align: left;
+  }
 }
 .products-related-header::before {
   content: "";
