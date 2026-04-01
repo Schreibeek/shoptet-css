@@ -1019,7 +1019,7 @@ select.hidden-split-parameter,
 /* Související produkty – nadpis jako v kategorii */
 .products-related-header {
   position: relative;
-  display: inline-block;
+  display: inline-block !important;
   color: #fff !important;
   padding: 8px 20px 8px 16px;
   z-index: 1;
