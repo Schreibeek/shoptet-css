@@ -466,6 +466,7 @@ a.btn.cart-count.full {
   .menu-level-1 > li:nth-child(9) > a { background-color: #283583 !important; }
   .menu-level-1 > li:nth-child(10) > a { background-color: #f78b1e !important; }
   .menu-level-1 > li:nth-child(11) > a { background-color: #aa2570 !important; }
+  .menu-level-1 > #nav-manufacturers > a { background-color: #aa2570 !important; }
   .navigation-in > ul > li.ext > a { padding-right: 34px !important; }
   .navigation-in > ul > li.ext > a:after {
     color: #fff !important;
