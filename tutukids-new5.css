@@ -424,6 +424,10 @@ a.btn.cart-count.full {
   .navigation-in > ul > li:nth-child(5) > a { transform: rotate(-0.9deg); }
   .navigation-in > ul > li:nth-child(6) > a { transform: rotate(0.5deg); }
   .navigation-in > ul > li:nth-child(7) > a { transform: rotate(-0.7deg); }
+  .navigation-in > ul > li:nth-child(8) > a { transform: rotate(0.9deg); }
+  .navigation-in > ul > li:nth-child(9) > a { transform: rotate(-1.1deg); }
+  .navigation-in > ul > li:nth-child(10) > a { transform: rotate(0.7deg); }
+  .navigation-in > ul > li:nth-child(11) > a { transform: rotate(-0.8deg); }
 
   /* Hover – přetočení opačným směrem + nadskočení */
   .navigation-in > ul > li:nth-child(1) > a:hover { transform: rotate(1deg) translateY(-2px) scale(1.04) !important; }
@@ -433,6 +437,10 @@ a.btn.cart-count.full {
   .navigation-in > ul > li:nth-child(5) > a:hover { transform: rotate(0.7deg) translateY(-2px) scale(1.04) !important; }
   .navigation-in > ul > li:nth-child(6) > a:hover { transform: rotate(-0.8deg) translateY(-2px) scale(1.04) !important; }
   .navigation-in > ul > li:nth-child(7) > a:hover { transform: rotate(0.5deg) translateY(-2px) scale(1.04) !important; }
+  .navigation-in > ul > li:nth-child(8) > a:hover { transform: rotate(-0.7deg) translateY(-2px) scale(1.04) !important; }
+  .navigation-in > ul > li:nth-child(9) > a:hover { transform: rotate(0.9deg) translateY(-2px) scale(1.04) !important; }
+  .navigation-in > ul > li:nth-child(10) > a:hover { transform: rotate(-0.5deg) translateY(-2px) scale(1.04) !important; }
+  .navigation-in > ul > li:nth-child(11) > a:hover { transform: rotate(0.6deg) translateY(-2px) scale(1.04) !important; }
 }
 
 /* MENU MOBILE */
@@ -454,6 +462,10 @@ a.btn.cart-count.full {
   .menu-level-1 > li:nth-child(5) > a { background-color: #283583 !important; }
   .menu-level-1 > li:nth-child(6) > a { background-color: #f78b1e !important; }
   .menu-level-1 > li:nth-child(7) > a { background-color: #aa2570 !important; }
+  .menu-level-1 > li:nth-child(8) > a { background-color: #edc10d !important; }
+  .menu-level-1 > li:nth-child(9) > a { background-color: #283583 !important; }
+  .menu-level-1 > li:nth-child(10) > a { background-color: #f78b1e !important; }
+  .menu-level-1 > li:nth-child(11) > a { background-color: #aa2570 !important; }
   .navigation-in > ul > li.ext > a { padding-right: 34px !important; }
   .navigation-in > ul > li.ext > a:after {
     color: #fff !important;
