@@ -84,7 +84,7 @@ body.id-1921 header[itemprop="headline"] {display: none !important;}
 body.type-page:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 .type-page h1,.type-post h1{text-align:center}
-.type-page img,.type-post img{border-radius:15px}
+.type-page .content-inner img,.type-post .content-inner img{border-radius:15px}
 @media (max-width: 768px) {.type-page .content-inner article p {font-size:15px;}}
 
 /* FOOTER */
