@@ -49,6 +49,14 @@ body.id-1921 header[itemprop="headline"] {display: none !important;}
 .coupon-banner .cdi-price-old {font-size:13px;opacity:.75;}
 .coupon-banner .cdi-price-new {font-size:19px;font-weight:700;white-space:nowrap;}
 @media (max-width: 575px) {.coupon-banner {flex-direction:column;gap:8px;}.coupon-banner .cdi-price-new {font-size:18px;}}
+.coupon-banner--clickable {cursor:pointer;transition:filter .15s ease, transform .15s ease;}
+.coupon-banner--clickable:hover {filter:brightness(1.06);}
+.coupon-banner--clickable:active {transform:translateY(1px);}
+.coupon-banner--clickable:focus-visible {outline:2px solid #fff;outline-offset:2px;}
+.coupon-banner .cdi-hint {font-size:13px;font-weight:600;padding:4px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.55);white-space:nowrap;}
+.custom-discount-black .cdi-hint {border-color:rgba(233,215,174,.5);}
+.coupon-banner.is-applied {cursor:default;}
+.coupon-banner.is-applied .cdi-hint {background:rgba(255,255,255,.22);border-color:transparent;}
 
 /* PROD */
 .product .p {box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);}
