@@ -55,6 +55,10 @@ body.id-1921 header[itemprop="headline"] {display: none !important;}
 .coupon-banner--clickable:focus-visible {outline:2px solid #fff;outline-offset:2px;}
 .coupon-banner.is-applied {cursor:default;}
 
+/* Cena po kuponu na karte ve vypisu (JS pridava .p-coupon-price a barvu z flagu) */
+.p-coupon-price {display:inline-block;width:fit-content;align-self:flex-start;margin-top:5px;padding:3px 9px;border-radius:7px;font-size:12.5px;font-weight:600;line-height:1.35;color:#444;background:rgba(0,0,0,.06);}
+.products-block .p-coupon-price, .products .p-coupon-price {max-width:100%;}
+
 /* PROD */
 .product .p {box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);}
 .delivery-time-block {text-align:right;margin-top:0px;}
