@@ -40,6 +40,16 @@ body.id-1921 header[itemprop="headline"] {display: none !important;}
 .custom-discount-info {font-size: 16px;color: #fff;margin-top: -10px;margin-bottom:20px;padding: 12px 20px;background: linear-gradient(136deg, #3F2B96 0%, #A8C0FF 100%); border-radius: 10px;text-align:center;}
 .custom-discount-black {font-size: 16px;color: #e9d7ae;margin-top: -10px;margin-bottom:20px;padding: 12px 20px;background: linear-gradient(136deg, #383838 0%, #18181a 100%); border-radius: 10px;text-align:center;border: 3px dashed #caab71;}
 
+/* Kuponovy stitek s cenou po slevě (JS pridava .coupon-banner) – barvy zamerne pruhledne,
+   aby stitek fungoval na kazdem gradientu, ktery mu prave nastavuje kampanove CSS v adminu */
+.coupon-banner {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;line-height:1.35;}
+.coupon-banner .cdi-price {display:inline-flex;align-items:baseline;flex-wrap:wrap;justify-content:center;gap:4px 8px;padding:5px 12px;border-radius:8px;background:rgba(255,255,255,.2);}
+.custom-discount-black.coupon-banner .cdi-price {background:rgba(233,215,174,.12);}
+.coupon-banner .cdi-price-label {font-size:13px;opacity:.85;}
+.coupon-banner .cdi-price-old {font-size:13px;opacity:.75;}
+.coupon-banner .cdi-price-new {font-size:19px;font-weight:700;white-space:nowrap;}
+@media (max-width: 575px) {.coupon-banner {flex-direction:column;gap:8px;}.coupon-banner .cdi-price-new {font-size:18px;}}
+
 /* PROD */
 .product .p {box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);}
 .delivery-time-block {text-align:right;margin-top:0px;}
