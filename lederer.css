@@ -104,6 +104,7 @@ body.type-page:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 .type-page h1,.type-post h1{text-align:center}
 .type-page .content-inner img,.type-post .content-inner img{border-radius:15px}
+.type-post .content-inner .text h2{margin-top:30px}
 @media (max-width: 768px) {.type-page .content-inner article p {font-size:15px;}}
 
 /* FOOTER */
