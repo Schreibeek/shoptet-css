@@ -407,3 +407,10 @@ html.ll-test #footer .custom-footer__newsletter .newsletter-header p { margin: 1
   html.ll-test #footer .custom-footer__newsletter { grid-template-columns: minmax(0, 1fr); }
   html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-test #footer .custom-footer__newsletter .pageElement__heading span { font-size: 24px !important; }
 }
+/* Recenze: tlačítko pod rozložením hodnocení, hvězdička v tlačítku */
+html.ll-test .ratings-block .rate-wrap { display: flex !important; flex-direction: column; align-items: stretch; }
+html.ll-test .ratings-block .rate-average-wrap { display: contents !important; }
+html.ll-test .ratings-block .rate-average-inner { order: 0; }
+html.ll-test .ratings-block .votes { order: 1; margin-top: 20px !important; }
+html.ll-test .ratings-block .add-comment { order: 2; align-self: flex-start; position: relative !important; padding-right: 44px !important; }
+html.ll-test .ratings-block .add-comment .rating-icon::before { top: 50% !important; right: 16px !important; color: var(--ll-gold) !important; border-color: transparent !important; }
