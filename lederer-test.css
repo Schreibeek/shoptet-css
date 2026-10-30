@@ -1,0 +1,209 @@
+/* Lukáš Lederer - testovací vzhled podle design systému v2 (světlá profesionální verze).
+   Načítá se jen v prohlížeči, kde je zapnutý test: ?lltest=1 v adrese (přepínač je na začátku shoptet-js/lederer.js),
+   ?lltest=0 nebo tlačítko Vypnout ve štítku vlevo dole ho vypne. Pro zákazníky je web beze změny.
+   Všechna pravidla jsou pod html.ll-test; tlačítko Porovnat třídu dočasně odebere a ukáže původní vzhled.
+   Zásady: bílý podklad, inkoust pro text a hlavní akce, zlatá jen jako akcent, malé rohy,
+   produktové fotky na béžové dlaždici s mix-blend-mode: multiply (bílé pozadí fotky se propíše do dlaždice). */
+
+/* ---------- Tokeny design systému + přemapování proměnných šablony Apollo ---------- */
+html.ll-test {
+  --ll-ink: #201f1f; --ll-ink-hover: #383532; --ll-ink-soft: #514c46; --ll-ink-muted: #706b64;
+  --ll-gold: #d9ad4c; --ll-gold-hover: #c8942d; --ll-gold-deep: #b58127; --ll-gold-text: #8d631b; --ll-gold-soft: #f9ecce; --ll-gold-line: #e6d3a8;
+  --ll-paper: #ffffff; --ll-ivory: #fbf9f6; --ll-tile: #f5f2ee; --ll-champagne: #f8f2e5;
+  --ll-line: #e9e6e1; --ll-line-strong: #d8d4ce; --ll-line-control: #8e8a84;
+  --ll-sale: #c92e3b; --ll-success: #187c49;
+  --ll-r-xs: 2px; --ll-r-sm: 4px; --ll-r-md: 6px; --ll-r-lg: 10px;
+  --ll-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  --color-primary: #201f1f; --color-primary-h: 0; --color-primary-s: 2%; --color-primary-l: 12%;
+  --color-primary-hover: #383532; --color-primary-hover-h: 30; --color-primary-hover-s: 6%; --color-primary-hover-l: 21%;
+  --color-secondary: #d9ad4c; --color-secondary-h: 41; --color-secondary-s: 64%; --color-secondary-l: 57%;
+  --color-secondary-hover: #c8942d; --color-secondary-hover-h: 39; --color-secondary-hover-s: 63%; --color-secondary-hover-l: 48%;
+  --colors-foregrounds-content-primary: #201f1f; --colors-foregrounds-content-secondary: #514c46; --colors-foregrounds-content-tertiary: #706b64;
+  --colors-foregrounds-headlines-primary: #201f1f; --colors-foregrounds-icons-primary: #514c46;
+  --colors-foregrounds-borders-primary: #8e8a84; --colors-foregrounds-borders-secondary: #e9e6e1;
+  --colors-surface-secondary: #fbf9f6; --colors-surface-tertiary: #d8d4ce; --colors-surface-rating: #d9ad4c;
+  --colors-focus-primary: #8d631b; --colors-forms-border: #8e8a84; --colors-forms-activated: #201f1f;
+  --colors-state-success: #187c49; --colors-state-danger: #b42318; --colors-tags-red: #c92e3b; --colors-tags-green: #187c49;
+  --header-bg: #ffffff; --header-color: #514c46; --header-color-hover: #201f1f; --header-secondary-navigation-color: #514c46;
+  --footer-bg: #fbf9f6; --footer-color: #514c46; --footer-color-hover: #201f1f; --footer-highlighted-color: #201f1f;
+  --footer-bottom-bg: #fbf9f6; --footer-bottom-color: #706b64;
+  --side-panel-header-bg: #fbf9f6; --side-panel-header-color: #201f1f;
+  --apollo-zaoblenie: 4px; --gallery-radius: 6px; --gallery-thumbnail-border-color-active: #201f1f; --gallery-play-background: #201f1f;
+  --basket-bg: #fbf9f6; --basket-discount-bg: #fbf9f6; --basket-free-delivery-bg: #f9ecce; --basket-free-delivery-top-bg: #f8f2e5;
+  --basket-choose-box-bg: #f8f2e5; --basket-choose-box-border: #d9ad4c;
+}
+html.ll-test body { color: var(--ll-ink); background: var(--ll-paper); -webkit-font-smoothing: antialiased; }
+html.ll-test ::selection { background: var(--ll-gold-soft); color: var(--ll-ink); }
+
+/* ---------- Typografie ---------- */
+html.ll-test h1, html.ll-test .h1, html.ll-test h2, html.ll-test .h2, html.ll-test h3, html.ll-test .h3 { color: var(--ll-ink); font-weight: 500; letter-spacing: -0.015em; }
+html.ll-test h1, html.ll-test .h1 { letter-spacing: -0.02em; }
+html.ll-test h4, html.ll-test h5 { color: var(--ll-ink); font-weight: 500; }
+html.ll-test body strong, html.ll-test body b { font-weight: 600; }
+html.ll-test .category-perex a, html.ll-test .p-short-description a, html.ll-test .text a:not(.btn) { color: var(--ll-gold-text); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+html.ll-test .category-perex a:hover, html.ll-test .p-short-description a:hover, html.ll-test .text a:not(.btn):hover { color: var(--ll-ink); }
+
+/* ---------- Tlačítka ---------- */
+html.ll-test .btn, html.ll-test a.btn, html.ll-test button.btn { border-radius: var(--ll-r-sm); box-shadow: none; font-weight: 500; letter-spacing: 0.01em; text-transform: none; }
+html.ll-test .btn-primary, html.ll-test .btn.btn-primary, html.ll-test .btn-conversion, html.ll-test .btn.btn-conversion, html.ll-test .btn-cart, html.ll-test .btn.btn-cart {
+  color: #fff; background: var(--ll-ink); border: 1px solid var(--ll-ink); border-radius: var(--ll-r-sm); box-shadow: none;
+}
+html.ll-test .btn-primary:hover, html.ll-test .btn-conversion:hover, html.ll-test .btn-cart:hover { color: #fff; background: var(--ll-ink-hover); border-color: var(--ll-ink-hover); }
+html.ll-test .btn-default, html.ll-test .btn.btn-default, html.ll-test .btn-secondary { color: var(--ll-ink); background: transparent; border: 1px solid var(--ll-ink); border-radius: var(--ll-r-sm); }
+html.ll-test .btn-default:hover, html.ll-test .btn-secondary:hover { color: #fff; background: var(--ll-ink); border-color: var(--ll-ink); }
+html.ll-test .btn-conversion, html.ll-test .btn.btn-lg.btn-conversion { min-height: 54px; font-size: 16px; }
+
+/* ---------- Formulářová pole ---------- */
+html.ll-test input.form-control, html.ll-test select.form-control, html.ll-test textarea.form-control,
+html.ll-test input[type="text"], html.ll-test input[type="email"], html.ll-test input[type="search"], html.ll-test input[type="tel"], html.ll-test input[type="password"], html.ll-test input[type="number"] {
+  border-color: var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none;
+}
+html.ll-test input:focus, html.ll-test select:focus, html.ll-test textarea:focus { border-color: var(--ll-ink); }
+
+/* ---------- Horní lišta a hlavička ---------- */
+html.ll-test .top-navigation-bar { background: var(--ll-ivory); border-bottom: 1px solid var(--ll-line); }
+html.ll-test .top-navigation-bar a, html.ll-test .top-navigation-bar .top-navigation-menu a { color: var(--ll-ink-soft); }
+html.ll-test .top-navigation-bar a:hover { color: var(--ll-ink); }
+html.ll-test #header { background: var(--ll-paper); border-bottom: 1px solid var(--ll-line); box-shadow: none; }
+html.ll-test #header .search input, html.ll-test #header .search .form-control { height: 46px; background: var(--ll-paper); border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none; }
+html.ll-test #header .search button, html.ll-test #header .search .btn { background: transparent; border: 0; color: var(--ll-ink-soft); box-shadow: none; }
+html.ll-test #header .navigation-buttons .top-nav-button, html.ll-test #header .navigation-buttons .top-nav-button span { color: var(--ll-ink); }
+html.ll-test #header .click-cart .btn, html.ll-test #header .navigation-buttons .cart-count {
+  color: var(--ll-ink); background: transparent; border: 0; border-radius: var(--ll-r-sm); box-shadow: none; font-weight: 600;
+}
+html.ll-test #header .click-cart .btn:hover, html.ll-test #header .navigation-buttons .cart-count:hover { background: var(--ll-tile); color: var(--ll-ink); }
+html.ll-test #header .click-cart .btn *, html.ll-test #header .navigation-buttons .cart-count * { color: inherit; }
+html.ll-test #navigation .menu-level-1 > li > a, html.ll-test #navigation .menu-level-1 > li > a b {
+  color: var(--ll-ink); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+}
+html.ll-test #navigation .menu-level-1 > li > a { box-shadow: inset 0 -2px 0 transparent; transition: box-shadow 150ms var(--ll-ease); }
+html.ll-test #navigation .menu-level-1 > li:hover > a, html.ll-test #navigation .menu-level-1 > li.active > a { box-shadow: inset 0 -2px 0 var(--ll-gold); color: var(--ll-ink); }
+
+/* ---------- Drobečky ---------- */
+html.ll-test .breadcrumbs, html.ll-test .breadcrumbs a, html.ll-test .breadcrumbs span { color: var(--ll-ink-soft); font-weight: 400; }
+html.ll-test .breadcrumbs a:hover { color: var(--ll-ink); text-decoration: underline; text-underline-offset: 3px; }
+html.ll-test .breadcrumbs > span:last-child, html.ll-test .breadcrumbs [itemprop="name"]:last-child { color: var(--ll-ink); }
+
+/* ---------- Produktová karta (výpis, homepage, související) ---------- */
+html.ll-test .products .product .p { background: transparent; border: 0; border-radius: 0; box-shadow: none; padding: 0 0 8px; }
+html.ll-test .products .product .p:hover { box-shadow: none; }
+html.ll-test .products .product .p .image {
+  position: relative; display: block; overflow: hidden; isolation: isolate;
+  background: var(--ll-tile); border-radius: var(--ll-r-md);
+}
+html.ll-test .products .product .p .image img {
+  mix-blend-mode: multiply; filter: brightness(1.03);
+  transition: transform 420ms var(--ll-ease);
+}
+html.ll-test .products .product:hover .p .image img { transform: scale(1.035); }
+html.ll-test .products .product .p .flags-default { top: 12px; left: 12px; right: auto; z-index: 2; gap: 4px; }
+html.ll-test .products .product .p .flags-extra { top: 12px; right: 12px; left: auto; z-index: 2; }
+html.ll-test .products .product .p-in { padding: 14px 2px 0; }
+html.ll-test .products .product .p .name, html.ll-test .products .product .p .name span {
+  color: var(--ll-ink); font-size: 15px; line-height: 22px; font-weight: 400; letter-spacing: 0; text-transform: none;
+}
+html.ll-test .products .product .p .name:hover span { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+html.ll-test .products .product .p .p-desc { color: var(--ll-ink-soft); font-size: 13px; line-height: 20px; }
+html.ll-test .products .product .p .price-final, html.ll-test .products .product .p .price-final strong { color: var(--ll-ink); font-size: 17px; font-weight: 600; font-variant-numeric: tabular-nums; }
+html.ll-test .products .product .p .price-standard, html.ll-test .products .product .p .price-standard span { color: var(--ll-ink-muted); font-weight: 400; }
+html.ll-test .products .product .p .btn-cart, html.ll-test .products .product .p .btn.btn-cart {
+  color: var(--ll-ink); background: transparent; border: 1px solid var(--ll-ink); border-radius: var(--ll-r-sm);
+  min-height: 40px; font-size: 14px; font-weight: 500; box-shadow: none;
+}
+html.ll-test .products .product .p .btn-cart:hover { color: #fff; background: var(--ll-ink); }
+html.ll-test .products .product .p .btn-cart:hover * , html.ll-test .products .product .p .btn-cart:hover::before, html.ll-test .products .product .p .btn-cart:hover::after { color: #fff; }
+
+/* ---------- Štítky (flagy Shoptetu) ---------- */
+html.ll-test .flag, html.ll-test .flags .flag {
+  display: inline-flex; align-items: center; height: 22px; padding: 0 8px; margin: 0;
+  font-size: 10.5px; line-height: 22px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ll-ink); background: var(--ll-gold); border: 0; border-radius: var(--ll-r-xs); box-shadow: none;
+}
+html.ll-test .flag.flag-action, html.ll-test .flag.flag-discount, html.ll-test .flag.flag-akce { color: #fff; background: var(--ll-sale); }
+html.ll-test .flag.flag-new, html.ll-test .flag.flag-novinka { color: #fff; background: var(--ll-ink); box-shadow: none; }
+html.ll-test .flag.flag-bestseller, html.ll-test .flag.flag-tip { color: var(--ll-ink); background: var(--ll-gold); }
+html.ll-test .flag.flag-gift, html.ll-test .flag.flag-darek { color: var(--ll-gold-text); background: var(--ll-gold-soft); }
+html.ll-test .flags-extra .flag.flag-discount { width: auto; min-width: 0; height: 22px; padding: 0 8px; border-radius: var(--ll-r-xs); font-size: 10.5px; }
+html.ll-test .flags-extra .flag.flag-discount .price-save { font-size: inherit; font-weight: 600; letter-spacing: 0.04em; color: #fff; }
+
+/* ---------- Hvězdičky ---------- */
+html.ll-test .stars .star.star-on, html.ll-test .stars .star.star-on::before, html.ll-test .star-on::before { color: var(--ll-gold); }
+
+/* ---------- Kategorie ---------- */
+html.ll-test .category-title { font-size: 40px; line-height: 1.12; font-weight: 500; letter-spacing: -0.02em; color: var(--ll-ink); }
+html.ll-test .category-perex, html.ll-test .category-perex p { color: var(--ll-ink-soft); }
+html.ll-test .subcategories li a { background: var(--ll-paper); border: 1px solid var(--ll-line); border-radius: var(--ll-r-sm); box-shadow: none; color: var(--ll-ink); font-weight: 500; }
+html.ll-test .subcategories li a:hover { border-color: var(--ll-ink); box-shadow: none; }
+html.ll-test .subcategories.with-image li a .image img { border-radius: var(--ll-r-xs); }
+html.ll-test .products-top-header, html.ll-test .products-related-header, html.ll-test .homepage-group-title, html.ll-test .h4.homepage-group-title { font-weight: 500; letter-spacing: -0.015em; color: var(--ll-ink); }
+html.ll-test .listSorting button, html.ll-test .listSorting .listSorting__control {
+  color: var(--ll-ink-soft); background: transparent; border: 1px solid transparent; border-radius: var(--ll-r-sm); box-shadow: none; font-weight: 500; text-transform: none; letter-spacing: 0;
+}
+html.ll-test .listSorting button:hover, html.ll-test .listSorting .listSorting__control:hover { color: var(--ll-ink); background: var(--ll-tile); }
+html.ll-test .listSorting .listSorting__control--current, html.ll-test .listSorting button.active, html.ll-test .listSorting .active {
+  color: var(--ll-ink); background: transparent; border-color: var(--ll-ink);
+}
+html.ll-test .listItemsTotal, html.ll-test .itemsTotal { color: var(--ll-ink-muted); }
+html.ll-test .pagination a, html.ll-test .pagination strong, html.ll-test .pagination span { border-radius: var(--ll-r-sm); box-shadow: none; color: var(--ll-ink); }
+html.ll-test .pagination .current, html.ll-test .pagination strong.current { background: var(--ll-ink); border-color: var(--ll-ink); color: #fff; }
+
+/* ---------- Postranní panel a filtr ---------- */
+html.ll-test .sidebar .box, html.ll-test .sidebar .box.box-bg-variant { background: var(--ll-paper); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); box-shadow: none; }
+html.ll-test .sidebar .box .box { border: 0; }
+html.ll-test .sidebar .box > h4, html.ll-test .sidebar h4 { color: var(--ll-ink); background: transparent; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+html.ll-test #filters .filter-section h4, html.ll-test #filters h4 { color: var(--ll-ink); font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+html.ll-test #filters .filter-section { border-color: var(--ll-line); }
+html.ll-test .ui-slider .ui-slider-range, html.ll-test .noUi-connect { background: var(--ll-ink); }
+html.ll-test .ui-slider .ui-slider-handle, html.ll-test .noUi-handle { border-color: var(--ll-ink); box-shadow: none; }
+html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button { color: var(--ll-ink); background: transparent; border: 1px solid var(--ll-line-strong); }
+
+/* ---------- Detail produktu ---------- */
+html.ll-test .gallery-new #main-slider .splide__slide, html.ll-test .gallery-new #main-slider .splide__slide a {
+  background: var(--ll-tile); border-radius: var(--ll-r-md); overflow: hidden; isolation: isolate;
+}
+html.ll-test .gallery-new #main-slider .splide__slide img { mix-blend-mode: multiply; filter: brightness(1.03); }
+html.ll-test .gallery-new #main-slider .flags { top: 16px; left: 16px; z-index: 3; }
+html.ll-test .gallery-new #thumbnail-slider .splide__slide { background: var(--ll-tile); border: 1px solid transparent; border-radius: var(--ll-r-sm); overflow: hidden; isolation: isolate; }
+html.ll-test .gallery-new #thumbnail-slider .splide__slide.is-active { border-color: var(--ll-ink); }
+html.ll-test .gallery-new #thumbnail-slider .splide__slide img { mix-blend-mode: multiply; filter: brightness(1.03); }
+html.ll-test .gallery-new .splide__arrow { background: var(--ll-paper); border: 0; border-radius: 50%; box-shadow: 0 1px 2px rgba(32, 31, 31, 0.08); opacity: 1; }
+html.ll-test .p-image-wrapper .p-image, html.ll-test .p-image-wrapper .p-thumbnail { background: var(--ll-tile); isolation: isolate; border-radius: var(--ll-r-md); }
+html.ll-test .p-image-wrapper .p-image img, html.ll-test .p-image-wrapper .p-thumbnail img { mix-blend-mode: multiply; filter: brightness(1.03); }
+html.ll-test .p-info-headline h1, html.ll-test .p-detail-inner-header .h1 { font-size: 32px; line-height: 1.2; font-weight: 500; letter-spacing: -0.015em; color: var(--ll-ink); }
+html.ll-test .p-short-description, html.ll-test .p-short-description p { color: var(--ll-ink-soft); }
+html.ll-test .p-info-grid { border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); background: var(--ll-paper); box-shadow: none; }
+html.ll-test .detail-grid-title { color: var(--ll-ink-muted); font-weight: 500; }
+html.ll-test .p-final-price-wrapper .price-final, html.ll-test .p-final-price-wrapper .price-final * { color: var(--ll-ink); font-size: 28px; line-height: 34px; font-weight: 600; font-variant-numeric: tabular-nums; }
+html.ll-test .p-final-price-wrapper .price-measure { color: var(--ll-ink-muted); }
+html.ll-test .loyalty-box-wrapper, html.ll-test .loyalty-box-content { background: var(--ll-gold-soft); border: 0; border-radius: var(--ll-r-sm); color: var(--ll-ink); box-shadow: none; }
+html.ll-test .loyalty-box-wrapper a { color: var(--ll-ink); text-decoration: underline; text-underline-offset: 3px; }
+html.ll-test .add-to-cart .quantity { border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); background: var(--ll-paper); box-shadow: none; }
+html.ll-test .add-to-cart .quantity input { border: 0; }
+html.ll-test .add-to-cart .quantity button { color: var(--ll-ink); background: transparent; }
+html.ll-test .add-to-cart .btn-conversion { color: #fff; background: var(--ll-ink); border-color: var(--ll-ink); border-radius: var(--ll-r-sm); }
+html.ll-test .add-to-cart .btn-conversion:hover { background: var(--ll-ink-hover); border-color: var(--ll-ink-hover); }
+html.ll-test .benefitBanner__item { background: transparent; border: 0; box-shadow: none; }
+html.ll-test .benefitBanner__title { color: var(--ll-ink); font-weight: 500; }
+html.ll-test .benefitBanner__data { color: var(--ll-ink-soft); }
+html.ll-test .shp-tabs { border-bottom: 1px solid var(--ll-line); }
+html.ll-test .shp-tabs > li > a, html.ll-test .shp-tabs .shp-tab-link {
+  color: var(--ll-ink-soft); background: transparent; border: 0; border-bottom: 2px solid transparent; border-radius: 0; font-weight: 500; text-transform: none; letter-spacing: 0; box-shadow: none;
+}
+html.ll-test .shp-tabs > li.active > a, html.ll-test .shp-tabs > li > a.active, html.ll-test .shp-tabs .shp-tab-link.active { color: var(--ll-ink); border-bottom-color: var(--ll-gold); background: transparent; }
+
+/* ---------- Bannery na homepage ---------- */
+html.ll-test .carousel, html.ll-test .carousel-inner, html.ll-test .banner-wrapper img, html.ll-test .banners-top-block img { border-radius: var(--ll-r-lg); }
+
+/* ---------- Patička ---------- */
+html.ll-test #footer, html.ll-test #footer.is-white { background: var(--ll-ivory); color: var(--ll-ink-soft); border-top: 1px solid var(--ll-line); }
+html.ll-test #footer h3, html.ll-test #footer .pageElement__heading, html.ll-test #footer .pageElement__heading span {
+  color: var(--ll-ink); font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
+}
+html.ll-test #footer a { color: var(--ll-ink-soft); }
+html.ll-test #footer a:hover { color: var(--ll-ink); text-decoration: underline; text-underline-offset: 3px; }
+html.ll-test #footer .custom-footer__newsletter { background: var(--ll-champagne); border-radius: var(--ll-r-lg); }
+html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-test #footer .custom-footer__newsletter .pageElement__heading span { font-size: 22px; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; text-transform: none; }
+html.ll-test #footer .footer-bottom, html.ll-test #footer .footer-bottom * { color: var(--ll-ink-muted); }
+html.ll-test #footer .footer-bottom { background: var(--ll-ivory); border-top: 1px solid var(--ll-line); }
+html.ll-test #footer .footer-bottom-bg { background: var(--ll-ivory); }
