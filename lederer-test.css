@@ -50,8 +50,8 @@ html.ll-test .btn-primary, html.ll-test .btn.btn-primary, html.ll-test .btn-conv
   color: #fff; background: var(--ll-ink); border: 1px solid var(--ll-ink); border-radius: var(--ll-r-sm); box-shadow: none;
 }
 html.ll-test .btn-primary:hover, html.ll-test .btn-conversion:hover, html.ll-test .btn-cart:hover { color: #fff; background: var(--ll-ink-hover); border-color: var(--ll-ink-hover); }
-html.ll-test .btn-default, html.ll-test .btn.btn-default, html.ll-test .btn-secondary { color: var(--ll-ink); background: transparent; border: 1px solid var(--ll-ink); border-radius: var(--ll-r-sm); }
-html.ll-test .btn-default:hover, html.ll-test .btn-secondary:hover { color: #fff; background: var(--ll-ink); border-color: var(--ll-ink); }
+html.ll-test #content .btn-default, html.ll-test #content .btn-secondary, html.ll-test #footer .btn-default, html.ll-test .content-wrapper .btn-default { color: var(--ll-ink); background: transparent; border: 1px solid var(--ll-ink); border-radius: var(--ll-r-sm); }
+html.ll-test #content .btn-default:hover, html.ll-test #content .btn-secondary:hover, html.ll-test #footer .btn-default:hover, html.ll-test .content-wrapper .btn-default:hover { color: #fff; background: var(--ll-ink); border-color: var(--ll-ink); }
 html.ll-test .btn-conversion, html.ll-test .btn.btn-lg.btn-conversion { min-height: 54px; font-size: 16px; }
 
 /* ---------- Formulářová pole ---------- */
@@ -67,8 +67,9 @@ html.ll-test .top-navigation-bar a, html.ll-test .top-navigation-bar .top-naviga
 html.ll-test .top-navigation-bar a:hover { color: var(--ll-ink); }
 html.ll-test #header { background: var(--ll-paper); border-bottom: 1px solid var(--ll-line); box-shadow: none; }
 html.ll-test #header .search input, html.ll-test #header .search .form-control { height: 46px; background: var(--ll-paper); border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none; }
-html.ll-test #header .search button, html.ll-test #header .search .btn { background: transparent; border: 0; color: var(--ll-ink-soft); box-shadow: none; }
+html.ll-test #header .search button, html.ll-test #header .search .btn { background-color: transparent; border-color: transparent; box-shadow: none; }
 html.ll-test #header .navigation-buttons .top-nav-button, html.ll-test #header .navigation-buttons .top-nav-button span { color: var(--ll-ink); }
+html.ll-test #header .click-cart { background: transparent; border-radius: var(--ll-r-sm); }
 html.ll-test #header .click-cart .btn, html.ll-test #header .navigation-buttons .cart-count {
   color: var(--ll-ink); background: transparent; border: 0; border-radius: var(--ll-r-sm); box-shadow: none; font-weight: 600;
 }
@@ -86,7 +87,11 @@ html.ll-test .breadcrumbs a:hover { color: var(--ll-ink); text-decoration: under
 html.ll-test .breadcrumbs > span:last-child, html.ll-test .breadcrumbs [itemprop="name"]:last-child { color: var(--ll-ink); }
 
 /* ---------- Produktová karta (výpis, homepage, související) ---------- */
-html.ll-test .products .product .p { background: transparent; border: 0; border-radius: 0; box-shadow: none; padding: 0 0 8px; }
+html.ll-test .products .product .p { background: transparent; border: 0; border-radius: 0; box-shadow: none; padding: 0 0 4px; }
+html.ll-test .products .product .p-in { flex: 1 1 auto; }
+html.ll-test .products .product .p .p-desc { display: none; }
+html.ll-test .products .product .product-btn { position: static; display: block; width: 100%; margin-top: 14px; }
+html.ll-test .products .product .product-btn form, html.ll-test .products .product .product-btn .btn-cart { width: 100%; }
 html.ll-test .products .product .p:hover { box-shadow: none; }
 html.ll-test .products .product .p .image {
   position: relative; display: block; overflow: hidden; isolation: isolate;
@@ -114,18 +119,18 @@ html.ll-test .products .product .p .btn-cart, html.ll-test .products .product .p
 html.ll-test .products .product .p .btn-cart:hover { color: #fff; background: var(--ll-ink); }
 html.ll-test .products .product .p .btn-cart:hover * , html.ll-test .products .product .p .btn-cart:hover::before, html.ll-test .products .product .p .btn-cart:hover::after { color: #fff; }
 
-/* ---------- Štítky (flagy Shoptetu) ---------- */
+/* ---------- Štítky (flagy Shoptetu) ----------
+   Barvy flagů zapisuje Shoptet jako inline styl (nastavení v adminu), proto !important. */
 html.ll-test .flag, html.ll-test .flags .flag {
-  display: inline-flex; align-items: center; height: 22px; padding: 0 8px; margin: 0;
-  font-size: 10.5px; line-height: 22px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-  color: var(--ll-ink); background: var(--ll-gold); border: 0; border-radius: var(--ll-r-xs); box-shadow: none;
+  display: inline-flex !important; align-items: center; height: 22px !important; padding: 0 8px !important; margin: 0 !important;
+  font-size: 10.5px !important; line-height: 22px !important; font-weight: 600 !important; letter-spacing: 0.1em !important; text-transform: uppercase;
+  color: var(--ll-ink) !important; background: var(--ll-gold) !important; border: 0 !important; border-radius: var(--ll-r-xs) !important; box-shadow: none !important;
 }
-html.ll-test .flag.flag-action, html.ll-test .flag.flag-discount, html.ll-test .flag.flag-akce { color: #fff; background: var(--ll-sale); }
-html.ll-test .flag.flag-new, html.ll-test .flag.flag-novinka { color: #fff; background: var(--ll-ink); box-shadow: none; }
-html.ll-test .flag.flag-bestseller, html.ll-test .flag.flag-tip { color: var(--ll-ink); background: var(--ll-gold); }
-html.ll-test .flag.flag-gift, html.ll-test .flag.flag-darek { color: var(--ll-gold-text); background: var(--ll-gold-soft); }
-html.ll-test .flags-extra .flag.flag-discount { width: auto; min-width: 0; height: 22px; padding: 0 8px; border-radius: var(--ll-r-xs); font-size: 10.5px; }
-html.ll-test .flags-extra .flag.flag-discount .price-save { font-size: inherit; font-weight: 600; letter-spacing: 0.04em; color: #fff; }
+html.ll-test .flag.flag-action, html.ll-test .flag.flag-discount, html.ll-test .flag.flag-akce { color: #fff !important; background: var(--ll-sale) !important; }
+html.ll-test .flag.flag-new, html.ll-test .flag.flag-novinka { color: #fff !important; background: var(--ll-ink) !important; }
+html.ll-test .flag.flag-gift, html.ll-test .flag.flag-darek { color: var(--ll-gold-text) !important; background: var(--ll-gold-soft) !important; }
+html.ll-test .flags-extra .flag.flag-discount { width: auto !important; min-width: 0 !important; }
+html.ll-test .flags-extra .flag.flag-discount .price-save { font-size: inherit !important; font-weight: 600 !important; letter-spacing: 0.04em; color: #fff !important; }
 
 /* ---------- Hvězdičky ---------- */
 html.ll-test .stars .star.star-on, html.ll-test .stars .star.star-on::before, html.ll-test .star-on::before { color: var(--ll-gold); }
