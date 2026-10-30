@@ -473,3 +473,4 @@ html.ll-test .slider-group-products .swiper-arrow-prev { left: 12px !important; 
 html.ll-test .slider-group-products .swiper-arrow-next { right: 12px !important; }
 html.ll-test .carousel-control.left { left: 20px !important; }
 html.ll-test .carousel-control.right { right: 20px !important; }
+html.ll-test .brand-banner--lerdee .brand-banner__content, html.ll-test .brand-banner--lerdee .brand-banner__image { border: 0 !important; }
