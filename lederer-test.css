@@ -372,3 +372,38 @@ html.ll-test #navigation .menu-level-1 > li > a[href*="blackfriday"], html.ll-te
 /* ---------- Homepage: mobil ---------- */
 html.ll-test .partners-block { max-width: 100%; overflow: hidden; }
 html.ll-test .overall-wrapper { overflow-x: clip; }
+
+/* ---------- Homepage: druhé kolo oprav ---------- */
+/* Lupa ve vyhledávání: uvnitř pole, průhledná, nepřekrývá okraj */
+html.ll-test #header .search .btn { top: 1px !important; right: 1px !important; height: 44px !important; min-height: 0 !important; color: transparent !important; background: transparent !important; border: 0 !important; border-radius: 0 3px 3px 0 !important; box-shadow: none !important; }
+html.ll-test #header .search .btn:hover { background: var(--ll-tile) !important; }
+
+/* Úvodní karusel: odstup od hlavičky jako v šabloně PageHome */
+html.ll-test .homepage-box.before-carousel { padding-top: 32px; }
+html.ll-test .banners-row .carousel { margin-top: 0 !important; }
+
+/* Tečky pod karusely produktů: malé tečky, aktivní protáhlá, bez kroužků se stínem */
+html.ll-test .swiper-pagination-bullet::before, html.ll-test .swiper-pagination-bullet::after { display: none !important; content: none !important; }
+html.ll-test .swiper-pagination-bullets { display: flex !important; justify-content: center; align-items: center; gap: 6px; height: auto !important; }
+html.ll-test .swiper-pagination-bullet { width: 8px !important; height: 8px !important; margin: 0 !important; background: var(--ll-line-strong) !important; border: 0 !important; border-radius: 4px !important; box-shadow: none !important; opacity: 1 !important; }
+html.ll-test .swiper-pagination-bullet-active { width: 24px !important; background: var(--ll-ink) !important; }
+
+/* Pilíře: bez pevné výšky */
+html.ll-test .list-icon.top, html.ll-test .list-icon.top .list-icon-detail { min-height: 0 !important; height: auto !important; }
+
+/* Recenze: Přidat hodnocení uvnitř boxu, ne přes jeho okraj; Zobrazit všechna hodnocení pod recenzemi */
+html.ll-test .ratings-block .rate-wrap { padding: 28px !important; }
+html.ll-test .ratings-block .add-comment { position: static !important; left: auto !important; bottom: auto !important; transform: none !important; margin: 24px 0 0 !important; background: var(--ll-paper) !important; }
+html.ll-test .ratings-block .add-comment:hover { background: var(--ll-ink) !important; }
+html.ll-test .ratings-block .rating-more-btn { position: static !important; left: auto !important; bottom: auto !important; transform: none !important; display: inline-block; margin: 24px 0 0 4px; }
+
+/* Newsletter: dva vyvážené sloupce přes celou šířku, větší titulek a text */
+html.ll-test #footer .custom-footer__newsletter { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; gap: 24px 64px; }
+html.ll-test #footer .custom-footer__newsletter .newsletter-header, html.ll-test #footer .custom-footer__newsletter form { width: auto !important; max-width: none !important; height: auto !important; margin: 0 !important; flex: none !important; }
+html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-test #footer .custom-footer__newsletter .pageElement__heading span { margin: 0 !important; font-size: 30px !important; line-height: 1.2 !important; }
+html.ll-test #footer .custom-footer__newsletter .newsletter-header p { margin: 12px 0 0 !important; max-width: 440px; font-size: 16px !important; line-height: 26px !important; }
+@media (max-width: 767px) {
+  html.ll-test .homepage-box.before-carousel { padding-top: 16px; }
+  html.ll-test #footer .custom-footer__newsletter { grid-template-columns: minmax(0, 1fr); }
+  html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-test #footer .custom-footer__newsletter .pageElement__heading span { font-size: 24px !important; }
+}
