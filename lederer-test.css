@@ -254,9 +254,9 @@ html.ll-test .list-icon.top { display: grid !important; grid-template-columns: r
 html.ll-test .list-icon.top .list-icon-detail { display: grid !important; grid-template-columns: 44px minmax(0, 1fr); column-gap: 16px; row-gap: 2px; align-content: start; width: auto !important; max-width: none !important; margin: 0 !important; padding: 24px 32px !important; text-align: left !important; }
 html.ll-test .list-icon.top .list-icon-detail + .list-icon-detail { border-left: 1px solid var(--ll-line); }
 html.ll-test .list-icon.top .list-icon-detail > img { display: none !important; }
-html.ll-test .ll-trust-icon { grid-row: span 2; display: grid; place-items: center; width: 44px; height: 44px; box-sizing: border-box; color: var(--ll-gold-deep); background: var(--ll-paper); border: 1px solid var(--ll-gold-line); border-radius: 50%; }
+html.ll-test .list-icon.top .ll-trust-icon { grid-row: span 2; display: grid !important; margin: 0 !important; padding: 0 !important; font-size: 0 !important; line-height: 0 !important; place-items: center; width: 44px; height: 44px; box-sizing: border-box; color: var(--ll-gold-deep); background: var(--ll-paper); border: 1px solid var(--ll-gold-line); border-radius: 50%; }
 html.ll-test .ll-trust-icon svg { width: 20px; height: 20px; }
-html.ll-test .list-icon.top .list-icon-detail > span { display: block; margin: 0 !important; font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important; color: var(--ll-ink) !important; text-align: left; }
+html.ll-test .list-icon.top .list-icon-detail > span:not(.ll-trust-icon) { display: block; margin: 0 !important; font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important; color: var(--ll-ink) !important; text-align: left; }
 html.ll-test .ll-trust-text { margin: 0; font-size: 14px; line-height: 22px; color: var(--ll-ink-soft); }
 
 /* ---------- Lerdee (světlý banner s panelem) ---------- */
@@ -368,3 +368,6 @@ html.ll-test #navigation .menu-level-2 a:hover, html.ll-test #navigation .menu-l
 html.ll-test #header .top-nav-button-login, html.ll-test #header .top-nav-button-login span { text-transform: none !important; font-size: 14px !important; font-weight: 500 !important; letter-spacing: 0 !important; color: var(--ll-ink) !important; }
 html.ll-test #navigation .menu-level-1 > li > a[href*="akcni-nabidka"], html.ll-test #navigation .menu-level-1 > li > a[href*="akcni-nabidka"] b,
 html.ll-test #navigation .menu-level-1 > li > a[href*="blackfriday"], html.ll-test #navigation .menu-level-1 > li > a[href*="blackfriday"] b { color: var(--ll-sale) !important; }
+
+/* ---------- Homepage: mobil ---------- */
+html.ll-test .partners-block { overflow: hidden; }
