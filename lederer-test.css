@@ -423,3 +423,37 @@ html.ll-test .products .product .p .prices { flex-direction: row !important; fle
 html.ll-test #footer { margin-top: 80px !important; }
 html.ll-test #footer .custom-footer__newsletter { margin-top: 48px !important; }
 @media (max-width: 767px) { html.ll-test #footer { margin-top: 56px !important; } html.ll-test #footer .custom-footer__newsletter { margin-top: 24px !important; } }
+
+/* ---------- Produktové fotky v kartě: celá fotka ve čtvercové dlaždici, bez přiblížení ----------
+   Šablona fotce dávala pevných 380 px v dlaždici 320 px, proto byla oříznutá a přiblížená. */
+html.ll-test .products .product .p .image { width: 100% !important; height: auto !important; aspect-ratio: 1 / 1; margin: 0 !important; padding: 0 !important; display: flex !important; align-items: center; justify-content: center; }
+html.ll-test .products .product .p .image img { width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; margin: 0 !important; object-fit: contain !important; }
+
+/* ---------- Lerdee: jedno zaoblení 10 px, bez rámečku kolem ---------- */
+html.ll-test .brand-banner--lerdee { border: 0 !important; border-radius: var(--ll-r-lg) !important; background: transparent !important; overflow: hidden; box-shadow: none !important; }
+html.ll-test .brand-banner--lerdee .brand-banner__content { background: var(--ll-champagne) !important; }
+
+/* ---------- Značky: klidný pruh mezi linkami místo plovoucího karuselu (sestavuje lederer-test.js) ---------- */
+html.ll-test.ll-has-brands .partners-block { display: none !important; }
+html.ll-test .ll-brands { margin: 40px 0 0; }
+html.ll-test .ll-brands__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 0 0 16px; }
+html.ll-test .ll-brands__eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ll-gold-text); }
+html.ll-test .ll-brands__eyebrow::before { content: ""; flex: none; width: 20px; height: 1px; background: var(--ll-gold-deep); }
+html.ll-test .ll-brands__all { padding-bottom: 3px; font-size: 14px; line-height: 20px; font-weight: 500; color: var(--ll-ink); text-decoration: none; border-bottom: 1px solid var(--ll-gold-deep); white-space: nowrap; }
+html.ll-test .ll-brands__all:hover { color: var(--ll-gold-text); border-bottom-color: var(--ll-gold-text); }
+html.ll-test .ll-brands__list { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ll-line); border-bottom: 1px solid var(--ll-line); }
+html.ll-test .ll-brands__list li { display: flex; margin: 0; padding: 0; }
+html.ll-test .ll-brands__list li + li { border-left: 1px solid var(--ll-line); }
+html.ll-test .ll-brands__list a { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 100%; height: 92px; padding: 14px 16px; }
+html.ll-test .ll-brands__list img { display: block; width: auto; height: auto; max-width: 100%; max-height: 46px; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(1) brightness(1.06) contrast(1.05); opacity: 0.7; transition: filter 220ms var(--ll-ease), opacity 220ms var(--ll-ease); }
+html.ll-test .ll-brands__list a:hover img, html.ll-test .ll-brands__list a:focus-visible img { filter: none; opacity: 1; }
+@media (max-width: 1100px) {
+  html.ll-test .ll-brands__list { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  html.ll-test .ll-brands__list li:nth-child(5n + 1) { border-left: 0; }
+  html.ll-test .ll-brands__list li:nth-child(n + 6) { border-top: 1px solid var(--ll-line); }
+}
+@media (max-width: 600px) {
+  html.ll-test .ll-brands { margin-top: 24px; }
+  html.ll-test .ll-brands__list a { height: 64px; padding: 10px 8px; }
+  html.ll-test .ll-brands__list img { max-height: 30px; }
+}
