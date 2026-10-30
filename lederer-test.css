@@ -419,3 +419,7 @@ html.ll-test .products .product .p .name { display: -webkit-box !important; -web
 html.ll-test .products .product .p .flags-default { flex-direction: row !important; flex-wrap: wrap; align-items: flex-start; }
 html.ll-test .products .product .p .price-standard, html.ll-test .products .product .p .price-standard span { font-size: 14px !important; line-height: 20px; }
 html.ll-test .products .product .p .prices { flex-direction: row !important; flex-wrap: wrap; align-items: baseline; column-gap: 8px; }
+/* Patička: newsletter celý uvnitř patičky, ne přes její hranu */
+html.ll-test #footer { margin-top: 80px !important; }
+html.ll-test #footer .custom-footer__newsletter { margin-top: 48px !important; }
+@media (max-width: 767px) { html.ll-test #footer { margin-top: 56px !important; } html.ll-test #footer .custom-footer__newsletter { margin-top: 24px !important; } }
