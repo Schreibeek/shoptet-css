@@ -370,4 +370,5 @@ html.ll-test #navigation .menu-level-1 > li > a[href*="akcni-nabidka"], html.ll-
 html.ll-test #navigation .menu-level-1 > li > a[href*="blackfriday"], html.ll-test #navigation .menu-level-1 > li > a[href*="blackfriday"] b { color: var(--ll-sale) !important; }
 
 /* ---------- Homepage: mobil ---------- */
-html.ll-test .partners-block { overflow: hidden; }
+html.ll-test .partners-block { max-width: 100%; overflow: hidden; }
+html.ll-test .overall-wrapper { overflow-x: clip; }
