@@ -67,7 +67,6 @@ html.ll-test .top-navigation-bar a, html.ll-test .top-navigation-bar .top-naviga
 html.ll-test .top-navigation-bar a:hover { color: var(--ll-ink); }
 html.ll-test #header { background: var(--ll-paper); border-bottom: 1px solid var(--ll-line); box-shadow: none; }
 html.ll-test #header .search input, html.ll-test #header .search .form-control { height: 46px; background: var(--ll-paper); border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none; }
-html.ll-test #header .search button, html.ll-test #header .search .btn { background-color: transparent; border-color: transparent; box-shadow: none; }
 html.ll-test #header .navigation-buttons .top-nav-button, html.ll-test #header .navigation-buttons .top-nav-button span { color: var(--ll-ink); }
 html.ll-test #header .click-cart { background: transparent; border-radius: var(--ll-r-sm); }
 html.ll-test #header .click-cart .btn, html.ll-test #header .navigation-buttons .cart-count {
@@ -75,6 +74,7 @@ html.ll-test #header .click-cart .btn, html.ll-test #header .navigation-buttons 
 }
 html.ll-test #header .click-cart .btn:hover, html.ll-test #header .navigation-buttons .cart-count:hover { background: var(--ll-tile); color: var(--ll-ink); }
 html.ll-test #header .click-cart .btn *, html.ll-test #header .navigation-buttons .cart-count * { color: inherit; }
+html.ll-test #header .click-cart .btn::before, html.ll-test #header .click-cart .btn::after { color: var(--ll-ink); }
 html.ll-test #navigation .menu-level-1 > li > a, html.ll-test #navigation .menu-level-1 > li > a b {
   color: var(--ll-ink); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
 }
@@ -91,7 +91,7 @@ html.ll-test .products .product .p { background: transparent; border: 0; border-
 html.ll-test .products .product .p-in { flex: 1 1 auto; }
 html.ll-test .products .product .p .p-desc { display: none; }
 html.ll-test .products .product .product-btn { position: static; display: block; width: 100%; margin-top: 14px; }
-html.ll-test .products .product .product-btn form, html.ll-test .products .product .product-btn .btn-cart { width: 100%; }
+html.ll-test .products .product .product-btn form, html.ll-test .products .product .product-btn .btn-cart { width: 100% !important; max-width: none; justify-content: center; }
 html.ll-test .products .product .p:hover { box-shadow: none; }
 html.ll-test .products .product .p .image {
   position: relative; display: block; overflow: hidden; isolation: isolate;
@@ -130,6 +130,7 @@ html.ll-test .flag.flag-action, html.ll-test .flag.flag-discount, html.ll-test .
 html.ll-test .flag.flag-new, html.ll-test .flag.flag-novinka { color: #fff !important; background: var(--ll-ink) !important; }
 html.ll-test .flag.flag-gift, html.ll-test .flag.flag-darek { color: var(--ll-gold-text) !important; background: var(--ll-gold-soft) !important; }
 html.ll-test .flags-extra .flag.flag-discount { width: auto !important; min-width: 0 !important; }
+html.ll-test .flags-extra .flag.flag-discount::before, html.ll-test .flags-extra .flag.flag-discount::after { display: none !important; }
 html.ll-test .flags-extra .flag.flag-discount .price-save { font-size: inherit !important; font-weight: 600 !important; letter-spacing: 0.04em; color: #fff !important; }
 
 /* ---------- Hvězdičky ---------- */
