@@ -203,9 +203,10 @@ html.ll-test .carousel, html.ll-test .carousel-inner, html.ll-test .banner-wrapp
 
 /* ---------- Patička ---------- */
 html.ll-test #footer, html.ll-test #footer.is-white { background: var(--ll-ivory); color: var(--ll-ink-soft); border-top: 1px solid var(--ll-line); }
-html.ll-test #footer h3, html.ll-test #footer .pageElement__heading, html.ll-test #footer .pageElement__heading span {
-  color: var(--ll-ink); font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase;
-}
+html.ll-test #footer h3, html.ll-test #footer .pageElement__heading, html.ll-test #footer .pageElement__heading span { color: var(--ll-ink); font-weight: 500; }
+html.ll-test #footer .subscribe-form .btn, html.ll-test #footer .subscribe-form .btn-primary { color: #fff; background: var(--ll-ink); border: 1px solid var(--ll-ink); border-radius: var(--ll-r-sm); box-shadow: none; }
+html.ll-test #footer .subscribe-form .btn:hover { background: var(--ll-ink-hover); border-color: var(--ll-ink-hover); }
+html.ll-test #footer .subscribe-form input { border-radius: var(--ll-r-sm); }
 html.ll-test #footer a { color: var(--ll-ink-soft); }
 html.ll-test #footer a:hover { color: var(--ll-ink); text-decoration: underline; text-underline-offset: 3px; }
 html.ll-test #footer .custom-footer__newsletter { background: var(--ll-champagne); border-radius: var(--ll-r-lg); }
