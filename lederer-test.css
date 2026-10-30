@@ -363,3 +363,8 @@ html.ll-test #navigation .menu-level-2 a, html.ll-test #navigation .menu-level-2
 html.ll-test #navigation .menu-level-2 > li > a, html.ll-test #navigation .menu-level-2 > li > div > a, html.ll-test #navigation .menu-level-2 > li > a span { font-weight: 500 !important; }
 html.ll-test #navigation .menu-level-3 a { font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
 html.ll-test #navigation .menu-level-2 a:hover, html.ll-test #navigation .menu-level-2 a:hover span, html.ll-test #navigation .menu-level-3 a:hover { color: var(--ll-gold-text) !important; }
+
+/* ---------- Hlavička: Přihlášení větou, Akce v menu karmínově ---------- */
+html.ll-test #header .top-nav-button-login, html.ll-test #header .top-nav-button-login span { text-transform: none !important; font-size: 14px !important; font-weight: 500 !important; letter-spacing: 0 !important; color: var(--ll-ink) !important; }
+html.ll-test #navigation .menu-level-1 > li > a[href*="akcni-nabidka"], html.ll-test #navigation .menu-level-1 > li > a[href*="akcni-nabidka"] b,
+html.ll-test #navigation .menu-level-1 > li > a[href*="blackfriday"], html.ll-test #navigation .menu-level-1 > li > a[href*="blackfriday"] b { color: var(--ll-sale) !important; }
