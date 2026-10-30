@@ -344,3 +344,22 @@ html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-t
   html.ll-test .brand-banner__title { font-size: 28px !important; }
   html.ll-test #footer .custom-footer__newsletter { padding: 24px 20px !important; }
 }
+
+/* ---------- Homepage: opravy po kontrole ---------- */
+html.ll-test .top-navigation-bar .top-navigation-contacts { background: transparent !important; border-radius: 0 !important; }
+html.ll-test .list-icon.top { box-sizing: border-box; width: 100% !important; max-width: none !important; justify-content: stretch !important; }
+html.ll-test .brand-banner--small img { filter: brightness(1.1); }
+html.ll-test .ratings-block .add-comment, html.ll-test .ratings-block .add-comment * { color: var(--ll-ink) !important; }
+html.ll-test .ratings-block .add-comment:hover, html.ll-test .ratings-block .add-comment:hover * { color: #fff !important; }
+html.ll-test #footer .custom-footer__newsletter .required-asterisk { color: var(--ll-ink) !important; }
+html.ll-test #footer .custom-footer__newsletter .required-asterisk::after, html.ll-test #footer .custom-footer__newsletter .required-asterisk::before { color: var(--ll-sale) !important; }
+html.ll-test .price-measure, html.ll-test .products .p .price-measure { color: var(--ll-ink-muted) !important; }
+html.ll-test #footer .banner a, html.ll-test #footer .banner p { color: var(--ll-ink-soft) !important; }
+html.ll-test #footer .banner a:hover { color: var(--ll-ink) !important; }
+
+/* ---------- Rozbalovací menu (mega menu) ---------- */
+html.ll-test #navigation .menu-level-2, html.ll-test #navigation .menu-level-3 { color: var(--ll-ink); }
+html.ll-test #navigation .menu-level-2 a, html.ll-test #navigation .menu-level-2 a span, html.ll-test #navigation .menu-level-3 a { color: var(--ll-ink) !important; }
+html.ll-test #navigation .menu-level-2 > li > a, html.ll-test #navigation .menu-level-2 > li > div > a, html.ll-test #navigation .menu-level-2 > li > a span { font-weight: 500 !important; }
+html.ll-test #navigation .menu-level-3 a { font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
+html.ll-test #navigation .menu-level-2 a:hover, html.ll-test #navigation .menu-level-2 a:hover span, html.ll-test #navigation .menu-level-3 a:hover { color: var(--ll-gold-text) !important; }
