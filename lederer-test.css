@@ -348,7 +348,7 @@ html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-t
 /* ---------- Homepage: opravy po kontrole ---------- */
 html.ll-test .top-navigation-bar .top-navigation-contacts { background: transparent !important; border-radius: 0 !important; }
 html.ll-test .list-icon.top { box-sizing: border-box; width: 100% !important; max-width: none !important; justify-content: stretch !important; }
-html.ll-test .brand-banner--small img { filter: brightness(1.1); }
+html.ll-test .brand-banner--small img { filter: brightness(1.18); }
 html.ll-test .ratings-block .add-comment, html.ll-test .ratings-block .add-comment * { color: var(--ll-ink) !important; }
 html.ll-test .ratings-block .add-comment:hover, html.ll-test .ratings-block .add-comment:hover * { color: #fff !important; }
 html.ll-test #footer .custom-footer__newsletter .required-asterisk { color: var(--ll-ink) !important; }
