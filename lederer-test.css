@@ -414,3 +414,8 @@ html.ll-test .ratings-block .rate-average-inner { order: 0; }
 html.ll-test .ratings-block .votes { order: 1; margin-top: 20px !important; }
 html.ll-test .ratings-block .add-comment { order: 2; align-self: flex-start; position: relative !important; padding-right: 44px !important; }
 html.ll-test .ratings-block .add-comment .rating-icon::before { top: 50% !important; right: 16px !important; color: var(--ll-gold) !important; border-color: transparent !important; }
+/* Produktová karta: název nejvýš na dva řádky, štítky vedle sebe, stará cena menší */
+html.ll-test .products .product .p .name { display: -webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 44px; }
+html.ll-test .products .product .p .flags-default { flex-direction: row !important; flex-wrap: wrap; align-items: flex-start; }
+html.ll-test .products .product .p .price-standard, html.ll-test .products .product .p .price-standard span { font-size: 14px !important; line-height: 20px; }
+html.ll-test .products .product .p .prices { flex-direction: row !important; flex-wrap: wrap; align-items: baseline; column-gap: 8px; }
