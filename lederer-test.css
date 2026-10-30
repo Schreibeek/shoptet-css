@@ -215,3 +215,132 @@ html.ll-test #footer .footer-bottom, html.ll-test #footer .footer-bottom * { col
 html.ll-test #footer .footer-bottom { background: var(--ll-ivory); border-top: 1px solid var(--ll-line); }
 html.ll-test #footer .footer-bottom-bg, html.ll-test #footer .footer-bottom-bg::before { background: var(--ll-ivory) !important; }
 html.ll-test #footer .footer-bottom-bg::before { border-top: 1px solid var(--ll-line); }
+
+/* =====================================================================
+   HOMEPAGE (podle šablony PageHome v design systému)
+   ===================================================================== */
+
+/* ---------- Horní lišta a vyhledávání: bez šedých ploch ---------- */
+html.ll-test .top-navigation-contacts { background: transparent; border-radius: 0; box-shadow: none; }
+html.ll-test .top-navigation-contacts a, html.ll-test .top-navigation-contacts span, html.ll-test .top-navigation-contacts strong { color: var(--ll-ink-soft); }
+html.ll-test .top-navigation-contacts a:hover, html.ll-test .top-navigation-contacts a:hover span { color: var(--ll-ink); }
+html.ll-test .top-navigation-contacts a::before { color: var(--ll-gold-deep) !important; }
+html.ll-test #header .search .btn { color: var(--ll-paper); background: var(--ll-paper); border: 0; border-radius: 0 var(--ll-r-sm) var(--ll-r-sm) 0; box-shadow: none; }
+html.ll-test #header .search .btn::before { color: var(--ll-ink-soft) !important; }
+html.ll-test #header .search .btn:hover::before { color: var(--ll-ink) !important; }
+
+/* ---------- Úvodní karusel ---------- */
+html.ll-test .banners-row .carousel, html.ll-test .banners-row .carousel-inner { border-radius: var(--ll-r-lg); overflow: hidden; }
+html.ll-test .carousel-indicators li { width: 8px; height: 8px; margin: 0 3px; background: rgba(255, 255, 255, 0.65); border: 0; border-radius: 4px; transition: width 220ms var(--ll-ease); }
+html.ll-test .carousel-indicators li.active { width: 24px; height: 8px; margin: 0 3px; background: #fff; }
+
+/* ---------- Nadpisy sekcí: popisek se zlatými linkami + h2 30 px ---------- */
+html.ll-test .homepage-group-title, html.ll-test .h4.homepage-group-title { margin-top: 0 !important; font-size: 30px !important; line-height: 1.2 !important; font-weight: 500 !important; letter-spacing: -0.015em; color: var(--ll-ink); text-transform: none; }
+html.ll-test .ll-eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 80px 0 10px; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ll-gold-text); }
+html.ll-test .ll-eyebrow::before, html.ll-test .ll-eyebrow::after { content: ""; flex: none; width: 20px; height: 1px; background: var(--ll-gold-deep); }
+html.ll-test .partners-block + .products-group .ll-eyebrow:first-child { margin-top: 56px; }
+
+/* ---------- Karusely produktů: šipky a tečky ---------- */
+html.ll-test .swiper-arrow-content { background: var(--ll-paper) !important; border: 0 !important; box-shadow: 0 1px 2px rgba(32, 31, 31, 0.08), 0 6px 18px -8px rgba(32, 31, 31, 0.25) !important; color: var(--ll-ink) !important; }
+html.ll-test .swiper-arrow-content::before, html.ll-test .swiper-arrow-content::after { color: var(--ll-ink) !important; }
+html.ll-test .swiper-pagination-bullet { width: 8px; height: 8px; background: var(--ll-line-strong) !important; border: 0 !important; opacity: 1; border-radius: 4px; transition: width 220ms var(--ll-ease); }
+html.ll-test .swiper-pagination-bullet-active { width: 24px; background: var(--ll-ink) !important; }
+
+/* ---------- Bannery Pro ni / Pro něj (text je v obrázku) ---------- */
+html.ll-test .HpBanners a, html.ll-test .HpBanners img { border-radius: var(--ll-r-lg); overflow: hidden; }
+
+/* ---------- Pilíře (TrustBar): pruh mezi linkami, ikona v kruhu, titulek a text (doplňuje lederer-test.js) ---------- */
+html.ll-test .list-icon.top { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin: 80px 0 0; padding: 0; border-top: 1px solid var(--ll-line); border-bottom: 1px solid var(--ll-line); }
+html.ll-test .list-icon.top .list-icon-detail { display: grid !important; grid-template-columns: 44px minmax(0, 1fr); column-gap: 16px; row-gap: 2px; align-content: start; width: auto !important; max-width: none !important; margin: 0 !important; padding: 24px 32px !important; text-align: left !important; }
+html.ll-test .list-icon.top .list-icon-detail + .list-icon-detail { border-left: 1px solid var(--ll-line); }
+html.ll-test .list-icon.top .list-icon-detail > img { display: none !important; }
+html.ll-test .ll-trust-icon { grid-row: span 2; display: grid; place-items: center; width: 44px; height: 44px; box-sizing: border-box; color: var(--ll-gold-deep); background: var(--ll-paper); border: 1px solid var(--ll-gold-line); border-radius: 50%; }
+html.ll-test .ll-trust-icon svg { width: 20px; height: 20px; }
+html.ll-test .list-icon.top .list-icon-detail > span { display: block; margin: 0 !important; font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important; color: var(--ll-ink) !important; text-align: left; }
+html.ll-test .ll-trust-text { margin: 0; font-size: 14px; line-height: 22px; color: var(--ll-ink-soft); }
+
+/* ---------- Lerdee (světlý banner s panelem) ---------- */
+html.ll-test .brand-banner--lerdee { margin-top: 80px; }
+html.ll-test .brand-banner--lerdee .brand-banner__inner { background: var(--ll-champagne) !important; border: 0 !important; border-radius: var(--ll-r-lg); overflow: hidden; box-shadow: none; }
+html.ll-test .brand-banner--lerdee .brand-banner__image img { border-radius: 0; }
+html.ll-test .brand-banner--lerdee .brand-banner__content { align-items: flex-start !important; justify-content: center; padding: 48px 56px !important; text-align: left !important; }
+html.ll-test .brand-banner__eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 12px !important; font-size: 11px !important; line-height: 16px !important; font-weight: 600 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: var(--ll-gold-text) !important; }
+html.ll-test .brand-banner__eyebrow::before { content: ""; flex: none; width: 20px; height: 1px; background: var(--ll-gold-deep); }
+html.ll-test .brand-banner__title { margin: 0 0 12px !important; font-size: 38px !important; line-height: 1.15 !important; font-weight: 500 !important; letter-spacing: -0.02em; color: var(--ll-ink) !important; text-align: left; }
+html.ll-test .brand-banner__text { margin: 0 0 24px !important; max-width: 460px; font-size: 16px !important; line-height: 26px !important; color: var(--ll-ink-soft) !important; text-align: left; }
+html.ll-test .brand-banner__btn { display: inline-flex !important; align-items: center; justify-content: center; min-height: 54px; padding: 0 30px !important; font-size: 16px !important; line-height: 20px; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test .brand-banner__btn:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
+
+/* ---------- Značky K18 a ABC (malé bannery): fotka na dlaždici ---------- */
+html.ll-test .brand-banner-grid { gap: 24px; margin-top: 24px; }
+html.ll-test .brand-banner--small { background: var(--ll-tile) !important; border: 0 !important; border-radius: var(--ll-r-md) !important; box-shadow: none !important; overflow: hidden; isolation: isolate; }
+html.ll-test .brand-banner--small .brand-banner__image, html.ll-test .brand-banner--small .brand-banner__content--small { background: transparent !important; }
+html.ll-test .brand-banner--small img { mix-blend-mode: multiply; filter: brightness(1.03); transition: transform 420ms var(--ll-ease); }
+html.ll-test .brand-banner--small:hover img { transform: scale(1.03); }
+html.ll-test .brand-banner__title-small { margin: 0 0 6px !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; color: var(--ll-ink) !important; }
+html.ll-test .brand-banner__link { display: inline-block; padding-bottom: 3px; font-size: 14px !important; line-height: 20px; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; border-bottom: 1px solid var(--ll-gold-deep); text-decoration: none !important; }
+html.ll-test .brand-banner__link:hover { color: var(--ll-gold-text) !important; border-bottom-color: var(--ll-gold-text); }
+
+/* ---------- Blog (BlogCard): bez rámečku a stínu, titulek 18/500, odkaz Číst článek ---------- */
+html.ll-test .news-wrapper .news-item { background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test .news-wrapper .news-item .image { overflow: hidden; aspect-ratio: 3 / 2; background: var(--ll-tile); border-radius: var(--ll-r-md) !important; }
+html.ll-test .news-wrapper .news-item .image img { width: 100%; height: 100%; object-fit: cover; border-radius: 0 !important; transition: transform 420ms var(--ll-ease); }
+html.ll-test .news-wrapper .news-item:hover .image img { transform: scale(1.035); }
+html.ll-test .news-wrapper .news-item .text { padding: 16px 2px 0 !important; background: transparent !important; }
+html.ll-test .news-wrapper .news-item .title { display: block; margin: 0 0 8px !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; letter-spacing: 0; color: var(--ll-ink) !important; text-transform: none !important; }
+html.ll-test .news-wrapper .news-item:hover .title { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+html.ll-test .news-wrapper .news-item .description, html.ll-test .news-wrapper .news-item .description * { font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
+html.ll-test .news-wrapper .news-item .description { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 10px; }
+html.ll-test .news-wrapper .news-item .text-center { display: none !important; }
+html.ll-test .news-wrapper .news-item .read-article { display: inline-block !important; padding-bottom: 3px; font-size: 14px; line-height: 20px; font-weight: 500; color: var(--ll-ink); border-bottom: 1px solid var(--ll-gold-deep); white-space: nowrap; }
+html.ll-test .homepage-blog-wrapper > .text-center .btn { min-height: 48px; padding: 0 24px; display: inline-flex; align-items: center; color: var(--ll-ink); background: transparent; border: 1px solid var(--ll-ink); border-radius: var(--ll-r-sm); font-size: 15px; font-weight: 500; }
+html.ll-test .homepage-blog-wrapper > .text-center .btn:hover { color: #fff; background: var(--ll-ink); }
+
+/* ---------- Recenze (ReviewSummary) ---------- */
+html.ll-test .ratings-block .rate-wrap { background: var(--ll-ivory) !important; border: 0 !important; border-radius: var(--ll-r-md) !important; box-shadow: none !important; }
+html.ll-test .ratings-block .rate-average { font-size: 56px !important; line-height: 1 !important; font-weight: 500 !important; letter-spacing: -0.025em; color: var(--ll-ink) !important; }
+html.ll-test .ratings-block .rate-star-wrap .stars-label { font-size: 14px !important; line-height: 22px; color: var(--ll-ink-soft) !important; }
+html.ll-test .ratings-block .star, html.ll-test .ratings-block .star::before, html.ll-test .ratings-block .star-on::before, html.ll-test .ratings-block .star-off::before { color: var(--ll-gold) !important; }
+html.ll-test .ratings-block .rate-list .rate-value { font-size: 13px !important; font-weight: 600 !important; color: var(--ll-ink-muted) !important; }
+html.ll-test .ratings-block .rate-block { background: var(--ll-line) !important; border-radius: 4px; }
+html.ll-test .ratings-block .rate-bar { height: 4px !important; background: var(--ll-gold) !important; border-radius: 4px !important; }
+html.ll-test .ratings-block .rate-count, html.ll-test .ratings-block .rate-count.active { font-size: 13px !important; font-weight: 500 !important; color: var(--ll-ink-muted) !important; }
+html.ll-test .ratings-block .add-comment { display: inline-flex !important; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px !important; font-size: 14px !important; font-weight: 500 !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test .ratings-block .add-comment:hover { color: #fff !important; background: var(--ll-ink) !important; }
+html.ll-test .ratings-block .add-comment::before, html.ll-test .ratings-block .add-comment::after { color: inherit !important; }
+html.ll-test .ratings-block .slider-group-reviews, html.ll-test .ratings-block .ratingsList { background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test .ratings-block .vote-wrap { padding: 20px 4px 0 !important; border-top: 1px solid var(--ll-ink) !important; background: transparent !important; box-shadow: none !important; }
+html.ll-test .ratings-block .vote-name, html.ll-test .ratings-block .vote-name span { font-size: 15px !important; line-height: 22px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test .ratings-block .vote-time, html.ll-test .ratings-block .vote-delimeter { font-size: 12px !important; color: var(--ll-ink-muted) !important; }
+html.ll-test .ratings-block .vote-content, html.ll-test .ratings-block .vote-content * { font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; }
+html.ll-test .ratings-block .vote-initials { color: var(--ll-gold-text) !important; background: var(--ll-gold-soft) !important; }
+html.ll-test .ratings-block .rating-more-btn { background: transparent !important; }
+html.ll-test .ratings-block .rating-more-btn .btn { display: inline-flex; align-items: center; min-height: 0; padding: 0 0 3px !important; font-size: 14px !important; font-weight: 500 !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-gold-deep) !important; border-radius: 0 !important; box-shadow: none !important; }
+
+/* ---------- Newsletter v patičce: čitelné texty, bez ikony obálky, přes celou šířku ---------- */
+html.ll-test #footer .custom-footer__newsletter { box-sizing: border-box; width: 100% !important; max-width: none !important; flex: 1 1 100% !important; grid-column: 1 / -1; padding: 36px 44px !important; background: var(--ll-champagne) !important; border-radius: var(--ll-r-lg) !important; }
+html.ll-test #footer .custom-footer__newsletter::before, html.ll-test #footer .custom-footer__newsletter::after { display: none !important; }
+html.ll-test #footer .custom-footer__newsletter p, html.ll-test #footer .custom-footer__newsletter .consents, html.ll-test #footer .custom-footer__newsletter .consents * { color: var(--ll-ink-soft) !important; font-size: 14px; line-height: 22px; }
+html.ll-test #footer .custom-footer__newsletter a { color: var(--ll-ink) !important; text-decoration: underline; text-underline-offset: 3px; }
+html.ll-test #footer .custom-footer__newsletter label, html.ll-test #footer .custom-footer__newsletter label * { color: var(--ll-ink) !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; }
+html.ll-test #footer .custom-footer__newsletter .required-asterisk { color: var(--ll-sale) !important; }
+html.ll-test #footer .custom-footer__newsletter .box, html.ll-test #footer .custom-footer__newsletter fieldset { background: transparent !important; border: 0 !important; }
+html.ll-test #footer .custom-footer__newsletter input { background: var(--ll-paper) !important; border: 1px solid var(--ll-line-control) !important; border-radius: var(--ll-r-sm) !important; color: var(--ll-ink) !important; }
+
+/* ---------- Patička: nadpisy sloupců jednotně (FooterTitle) ---------- */
+html.ll-test #footer .banner h4, html.ll-test #footer .footer-item h3, html.ll-test #footer .footer-item h4, html.ll-test #footer .footer-item--contact .pageElement__heading, html.ll-test #footer .footer-item--contact .pageElement__heading span {
+  margin-bottom: 16px; font-size: 11px !important; line-height: 16px !important; font-weight: 600 !important; letter-spacing: 0.16em !important; text-transform: uppercase !important; color: var(--ll-ink) !important;
+}
+html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-test #footer .custom-footer__newsletter .pageElement__heading span { font-size: 22px !important; line-height: 1.3 !important; font-weight: 500 !important; letter-spacing: -0.01em !important; text-transform: none !important; }
+
+/* ---------- Homepage na mobilu ---------- */
+@media (max-width: 767px) {
+  html.ll-test .homepage-group-title, html.ll-test .h4.homepage-group-title { font-size: 24px !important; }
+  html.ll-test .ll-eyebrow { margin-top: 56px; }
+  html.ll-test .list-icon.top { grid-template-columns: minmax(0, 1fr); margin-top: 56px; }
+  html.ll-test .list-icon.top .list-icon-detail { padding: 18px 4px !important; }
+  html.ll-test .list-icon.top .list-icon-detail + .list-icon-detail { border-left: 0; border-top: 1px solid var(--ll-line); }
+  html.ll-test .brand-banner--lerdee .brand-banner__content { padding: 28px 24px !important; }
+  html.ll-test .brand-banner__title { font-size: 28px !important; }
+  html.ll-test #footer .custom-footer__newsletter { padding: 24px 20px !important; }
+}
