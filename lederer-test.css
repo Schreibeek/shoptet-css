@@ -471,3 +471,5 @@ html.ll-test .swiper-arrow-content { box-sizing: border-box; display: flex !impo
 html.ll-test .swiper-arrow-content:hover { border-color: var(--ll-ink) !important; }
 html.ll-test .slider-group-products .swiper-arrow-prev { left: 12px !important; }
 html.ll-test .slider-group-products .swiper-arrow-next { right: 12px !important; }
+html.ll-test .carousel-control.left { left: 20px !important; }
+html.ll-test .carousel-control.right { right: 20px !important; }
