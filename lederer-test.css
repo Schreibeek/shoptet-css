@@ -444,8 +444,8 @@ html.ll-test .ll-brands__all:hover { color: var(--ll-gold-text); border-bottom-c
 html.ll-test .ll-brands__list { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ll-line); border-bottom: 1px solid var(--ll-line); }
 html.ll-test .ll-brands__list li { display: flex; margin: 0; padding: 0; }
 html.ll-test .ll-brands__list li + li { border-left: 1px solid var(--ll-line); }
-html.ll-test .ll-brands__list a { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 100%; height: 92px; padding: 14px 16px; }
-html.ll-test .ll-brands__list img { display: block; width: auto; height: auto; max-width: 100%; max-height: 46px; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(1) brightness(1.06) contrast(1.05); opacity: 0.7; transition: filter 220ms var(--ll-ease), opacity 220ms var(--ll-ease); }
+html.ll-test .ll-brands__list a { display: flex; align-items: center; justify-content: center; box-sizing: border-box; width: 100%; height: 100px; padding: 12px 14px; }
+html.ll-test .ll-brands__list img { display: block; width: auto; height: auto; max-width: 100%; max-height: 62px; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(1) brightness(1.06) contrast(1.05); opacity: 0.78; transition: filter 220ms var(--ll-ease), opacity 220ms var(--ll-ease); }
 html.ll-test .ll-brands__list a:hover img, html.ll-test .ll-brands__list a:focus-visible img { filter: none; opacity: 1; }
 @media (max-width: 1100px) {
   html.ll-test .ll-brands__list { grid-template-columns: repeat(5, minmax(0, 1fr)); }
