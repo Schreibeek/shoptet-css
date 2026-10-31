@@ -157,12 +157,12 @@ html.ll-test .products-top-header, html.ll-test .products-related-header, html.l
 html.ll-test ul.subcategories { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 8px 0 40px !important; padding: 0 !important; }
 html.ll-test ul.subcategories::before, html.ll-test ul.subcategories::after { display: none !important; }
 html.ll-test ul.subcategories > li { float: none !important; width: auto !important; max-width: none !important; flex: none !important; margin: 0 !important; padding: 0 !important; }
-html.ll-test ul.subcategories > li > a { display: flex !important; flex-direction: row !important; justify-content: flex-start !important; align-items: center; gap: 14px; text-align: left !important; box-sizing: border-box; height: 100%; min-height: 0 !important; padding: 8px 16px 8px 8px !important; color: var(--ll-ink) !important; text-decoration: none; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: border-color 150ms var(--ll-ease); }
+html.ll-test ul.subcategories > li > a { display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; justify-content: flex-start !important; align-items: center; gap: 14px; text-align: left !important; box-sizing: border-box; height: 100%; min-height: 0 !important; padding: 8px 16px 8px 8px !important; color: var(--ll-ink) !important; text-decoration: none; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: border-color 150ms var(--ll-ease); }
 html.ll-test ul.subcategories > li > a:hover { border-color: var(--ll-ink) !important; }
 html.ll-test ul.subcategories > li > a::before, html.ll-test ul.subcategories > li > a::after { display: none !important; }
 html.ll-test ul.subcategories > li > a .image { flex: none !important; width: 52px !important; height: 52px !important; margin: 0 !important; padding: 0 !important; overflow: hidden; background: var(--ll-tile); border-radius: var(--ll-r-xs) !important; }
 html.ll-test ul.subcategories > li > a .image img { display: block; width: 100% !important; height: 100% !important; max-width: none !important; object-fit: cover !important; border-radius: 0 !important; }
-html.ll-test ul.subcategories > li > a .text { margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; color: var(--ll-ink) !important; text-align: left; }
+html.ll-test ul.subcategories > li > a .text { flex: 1 1 auto !important; width: auto !important; min-width: 0; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; color: var(--ll-ink) !important; text-align: left; }
 
 /* ---------- Nejprodávanější v kategorii: malé vodorovné karty (Shoptet tu dává jen 100px fotky) ---------- */
 html.ll-test .products-top-wrapper { margin: 0 0 40px !important; padding: 0 !important; border: 0 !important; }
@@ -687,7 +687,7 @@ html.ll-test .products-top-wrapper .toggle-top-products::after { --ll-icon: var(
 html.ll-test .products-top-wrapper .toggle-top-products[aria-expanded="true"]::after { transform: rotate(180deg) !important; }
 /* Otevřít filtr (mobil): obrysové tlačítko přes celou šířku, šipka vpravo */
 html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button { display: flex !important; align-items: center; justify-content: space-between; box-sizing: border-box; width: 100%; height: 48px !important; min-height: 48px !important; padding: 0 16px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line-strong) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
-html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before { --ll-icon: var(--ll-i-chev-down); position: static !important; order: 2; width: 16px !important; height: 16px !important; margin: 0 !important; transform: none !important; }
+html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before { --ll-icon: var(--ll-i-chev-down); position: static !important; order: 2; width: 16px !important; height: 16px !important; margin: 0 !important; transform: none !important; color: var(--ll-ink) !important; }
 
 /* ---------- Kategorie na tabletu a mobilu ---------- */
 @media (max-width: 991px) {
@@ -700,6 +700,11 @@ html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before 
   html.ll-test .breadcrumbs-wrapper { background: transparent !important; }
   html.ll-test .breadcrumbs a { gap: 6px; margin-left: 0 !important; padding: 12px 0 !important; }
   html.ll-test .breadcrumbs a::after { order: -1; margin: 0 !important; transform: rotate(180deg); }
+  html.ll-test .breadcrumbs a, html.ll-test .breadcrumbs a span { text-decoration: none !important; }
+  html.ll-test .filters-unveil-button-wrapper { margin: 0 0 16px !important; }
+  html.ll-test #filters h4 { position: relative; padding-right: 28px !important; }
+  html.ll-test #filters h4::after { content: '' !important; top: 50% !important; right: 0 !important; width: 16px !important; height: 16px !important; font-size: 0 !important; line-height: 0 !important; transform: translateY(-50%) !important; background-color: var(--ll-ink); -webkit-mask: var(--ll-i-chev-down) center / contain no-repeat; mask: var(--ll-i-chev-down) center / contain no-repeat; transition: transform 150ms var(--ll-ease); }
+  html.ll-test #filters .is-active > h4::after { transform: translateY(-50%) rotate(180deg) !important; }
   html.ll-test .category-title { font-size: 30px; }
   html.ll-test ul.subcategories, html.ll-test #productsTop.products-top { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   html.ll-test ul.subcategories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
