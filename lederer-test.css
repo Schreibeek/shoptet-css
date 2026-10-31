@@ -376,7 +376,8 @@ html.ll-test .p-info-headline .p-detail-info > div:not(.stars-wrapper) a { font-
 html.ll-test .p-info-headline .p-detail-info > div:not(.stars-wrapper) a span { font-size: 11px !important; line-height: 16px !important; font-weight: 600 !important; letter-spacing: 0.16em !important; text-transform: uppercase !important; color: var(--ll-gold-text) !important; }
 html.ll-test .p-info-headline .p-detail-info > div:not(.stars-wrapper) a:hover span { color: var(--ll-ink) !important; }
 html.ll-test .p-info-headline .stars-wrapper { order: 1; display: flex !important; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0 !important; padding: 0 !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
-html.ll-test .p-info-headline .stars-wrapper .stars { display: inline-flex !important; gap: 1px; width: auto !important; margin: 0 !important; }
+/* Apollo dává .stars výšku 12-16 px podle šířky okna, hvězdy 17 px z něj přetékaly dolů a byly níž než text; výška podle hvězd a o 1 px výš kvůli optickému středu hvězdy */
+html.ll-test .p-info-headline .stars-wrapper .stars { position: relative !important; top: -1px !important; display: inline-flex !important; align-items: center; gap: 1px; width: auto !important; height: 17px !important; margin: 0 !important; }
 html.ll-test .p-info-headline .stars-wrapper .star { width: 17px !important; height: 17px !important; margin: 0 !important; }
 html.ll-test .p-info-headline .stars-wrapper .star::before { width: 17px !important; font-size: 17px !important; line-height: 17px !important; }
 html.ll-test .p-info-headline .stars-label, html.ll-test .p-info-headline .stars-label span { margin: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-muted) !important; }
