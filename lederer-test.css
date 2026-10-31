@@ -1228,3 +1228,10 @@ html.ll-test .basic-description ul > li::before { content: '' !important; positi
 html.ll-test .basic-description ol { margin: 0 0 20px !important; padding: 0 0 0 26px !important; }
 html.ll-test .basic-description ol > li { margin: 0 0 8px !important; padding: 0 0 0 4px !important; }
 html.ll-test .basic-description ul > li:last-child, html.ll-test .basic-description ol > li:last-child { margin-bottom: 0 !important; }
+
+/* ---------- Homepage na mobilu podle DS (MobileHome) ----------
+   Velké fotky a bloky (úvodní karusel, bannery Pro ni / Pro něj, Lerdee, newsletter) mají na mobilu zaoblení 6 px jako dlaždice produktů a panely
+   (radius-lg se do 767 px přepne na radius-md); 10 px na úzkém displeji působilo oble proti ostatním prvkům. */
+@media (max-width: 767px) {
+  html.ll-test { --ll-r-lg: 6px; }
+}
