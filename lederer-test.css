@@ -898,7 +898,7 @@ html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before 
   /* Otevřený filtr (MobileFilters): list přes celou obrazovku, hlavička 56 px s křížkem, skupiny jako akordeon po 56 px, dole Zobrazit produkty.
      Jen po kliknutí na Otevřít filtr (třída ll-filters-sheet z lederer-test.js): šablona filtr otevírá sama i při načtení stránky s vybraným filtrem. */
   html.ll-test.ll-filters-sheet body.filters-visible { overflow: hidden !important; }
-  html.ll-test.ll-filters-sheet body.filters-visible .ll-test-badge { display: none !important; }
+  html.ll-test.ll-filters-sheet body.filters-visible .ll-test-badge, html.ll-test.ll-filters-sheet body.filters-visible #back-to-top { display: none !important; }
   html.ll-test.ll-filters-sheet body.filters-visible #filters-wrapper .filters-wrapper { position: fixed !important; inset: 0; z-index: 100000; display: block !important; margin: 0 !important; padding: 0 0 80px !important; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; background: var(--ll-paper) !important; }
   html.ll-test.ll-filters-sheet body.filters-visible .filters-unveil-button-wrapper { position: sticky; top: 0; z-index: 2; display: flex !important; align-items: center; justify-content: space-between; box-sizing: border-box; height: 56px; margin: 0 !important; padding: 0 8px 0 20px !important; background: var(--ll-paper); border-bottom: 1px solid var(--ll-line); }
   html.ll-test.ll-filters-sheet body.filters-visible .filters-unveil-button-wrapper::before { content: 'Filtrovat'; font-size: 18px; line-height: 24px; font-weight: 500; color: var(--ll-ink); }
