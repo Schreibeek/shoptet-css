@@ -774,6 +774,8 @@ html.ll-test {
   --ll-i-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3C/svg%3E");
   --ll-i-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E %3Cpath d='M12 5v14'/%3E%3C/svg%3E");  --ll-i-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
   --ll-i-trash: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 11v6'/%3E %3Cpath d='M14 11v6'/%3E %3Cpath d='M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6'/%3E %3Cpath d='M3 6h18'/%3E %3Cpath d='M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
+  --ll-i-menu: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 5h16'/%3E %3Cpath d='M4 12h16'/%3E %3Cpath d='M4 19h16'/%3E%3C/svg%3E");
+  --ll-i-x: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E %3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
 }
 html.ll-test .top-nav-button-login::before, html.ll-test .btn.cart-count::before, html.ll-test #header .search .btn::before,
 html.ll-test .project-phone::before, html.ll-test .project-email::before, html.ll-test #navigation .menu-level-1 > li.ext > a::after,
@@ -1032,3 +1034,61 @@ html.ll-test #cart-widget .cart-free-shipping::after { width: 100% !important; b
 html.ll-test #cart-widget .cart-free-shipping::before { max-width: 100%; background: var(--ll-gold) !important; z-index: 2 !important; }
 html.ll-test #cart-widget #continue-order-button { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: 100% !important; height: 48px !important; min-height: 48px !important; margin: 0 !important; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
 html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
+
+/* ---------- Mobil do 767 px podle karet MobileHeader, MobileMenu a MobileProduct v design systému ---------- */
+html.ll-test .responsive-tools > a[data-target="navigation"]::before, html.ll-test #navigation .submenu-arrow::after, html.ll-test .p-detail-tabs-wrapper .detail-tab-item::after {
+  content: '' !important; font-size: 0 !important; line-height: 0 !important; background-color: currentColor; -webkit-text-fill-color: currentColor;
+  -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat;
+}
+@media (max-width: 767px) {
+  /* Hlavička: košík jen s ikonou a počtem (částka je v košíku), Menu ikonou Lucide; otevřené menu na dlaždici s křížkem a popiskem Zavřít */
+  html.ll-test .responsive-tools .click-cart .cart-price { display: none !important; }
+  html.ll-test .responsive-tools .click-cart .btn { justify-content: center !important; width: 44px !important; }
+  html.ll-test .responsive-tools .click-cart .btn.cart-count::before { margin-right: 0 !important; }
+  html.ll-test .responsive-tools .click-cart a.btn.cart-count i { top: 2px !important; left: 24px !important; right: auto !important; }
+  html.ll-test .responsive-tools > a[data-target="navigation"] { color: var(--ll-ink) !important; background: transparent !important; border-radius: var(--ll-r-sm) !important; transition: background-color 150ms var(--ll-ease); }
+  html.ll-test .responsive-tools > a[data-target="navigation"]::before { --ll-icon: var(--ll-i-menu); width: 22px !important; height: 22px !important; top: -6px !important; color: var(--ll-ink) !important; }
+  html.ll-test .responsive-tools > a[data-target="navigation"]::after { color: var(--ll-ink) !important; font-size: 10px !important; font-weight: 500 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; }
+  html.ll-test body.navigation-window-visible .responsive-tools > a[data-target="navigation"] { background: var(--ll-tile) !important; }
+  html.ll-test body.navigation-window-visible .responsive-tools > a[data-target="navigation"]::before { --ll-icon: var(--ll-i-x); }
+  html.ll-test body.navigation-window-visible .responsive-tools > a[data-target="navigation"]::after { content: 'Zavřít' !important; left: 0 !important; right: 0 !important; width: auto !important; }
+
+  /* Menu: kategorie jako řádky 52 px s linkou místo šedých dlaždic, jedna šipka Lucide (podkategorie se otevírají vedle, šablona) */
+  html.ll-test #navigation .menu-level-1 { padding: 4px 20px 16px !important; }
+  html.ll-test #navigation .menu-level-1 > li { margin: 0 !important; padding: 0 !important; background: transparent !important; border-bottom: 1px solid var(--ll-line); }
+  html.ll-test #navigation .menu-level-1 > li > a { display: flex !important; align-items: center; min-height: 52px; height: auto !important; margin: 0 !important; padding: 0 44px 0 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.08em !important; color: var(--ll-ink) !important; background: transparent !important; border-radius: 0 !important; box-shadow: none !important; }
+  html.ll-test #navigation .menu-level-1 > li > a b { font-weight: inherit !important; color: inherit !important; }
+  html.ll-test #navigation .menu-level-1 > li.ext > a::after { display: none !important; }
+  html.ll-test #navigation .submenu-arrow { display: flex !important; align-items: center; justify-content: center; right: -12px !important; width: 44px !important; height: 44px !important; color: var(--ll-ink-muted) !important; }
+  html.ll-test #navigation .submenu-arrow::after { --ll-icon: var(--ll-i-chev-right); position: static !important; width: 18px !important; height: 18px !important; transform: none !important; color: var(--ll-ink-muted) !important; }
+  /* Otevřená kategorie: řádek zpět se šipkou vlevo, podkategorie s fotkou na dlaždici a odkazy pod názvem */
+  html.ll-test #navigation .menu-level-2 { padding: 4px 0 16px !important; background: var(--ll-paper) !important; }
+  html.ll-test #navigation .menu-level-2 > a { position: relative; display: flex !important; align-items: center; min-height: 52px; margin: 0 20px !important; padding: 0 0 0 28px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.08em !important; text-transform: uppercase; color: var(--ll-ink) !important; background: transparent !important; border-radius: 0 !important; border-bottom: 1px solid var(--ll-line); }
+  html.ll-test #navigation .menu-level-2 > a b { font-weight: inherit !important; }
+  html.ll-test #navigation .menu-level-2 > a .submenu-arrow { left: -13px !important; right: auto !important; top: 50% !important; transform: translateY(-50%) !important; }
+  html.ll-test #navigation .menu-level-2 > a .submenu-arrow::after { transform: rotate(180deg) !important; }
+  html.ll-test #navigation .menu-level-2 > li { display: flex !important; align-items: flex-start !important; gap: 14px; margin: 0 20px !important; padding: 14px 0 !important; border-bottom: 1px solid var(--ll-line); }
+  html.ll-test #navigation .menu-level-2 > li > a.menu-image { flex: none !important; box-sizing: border-box; width: 52px !important; height: 52px !important; margin: 0 !important; overflow: hidden; background: var(--ll-tile) !important; border-radius: var(--ll-r-sm) !important; }
+  html.ll-test #navigation .menu-level-2 > li > a.menu-image img { display: block; width: 100% !important; height: 100% !important; object-fit: cover; mix-blend-mode: multiply; }
+  html.ll-test #navigation .menu-level-2 > li > div { min-width: 0; padding-top: 2px; }
+  html.ll-test #navigation .menu-level-2 > li > div > a, html.ll-test #navigation .menu-level-2 > li > div > a span { font-size: 15px !important; line-height: 22px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+  html.ll-test #navigation .menu-level-3 { margin: 2px 0 0 !important; padding: 0 !important; }
+  html.ll-test #navigation .menu-level-3 li, html.ll-test #navigation .menu-level-3 a { font-size: 13px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
+  html.ll-test #navigation .menu-level-3 a:hover { color: var(--ll-ink) !important; }
+  /* Spodek menu: informační odkazy vlevo, kontakt dole na ivory */
+  html.ll-test #navigation .navigation-in-bottom { display: flex !important; flex-direction: column; padding: 8px 20px 0 !important; background: var(--ll-paper) !important; text-align: left !important; }
+  html.ll-test #navigation .navigation-in-bottom .top-navigation-bar-menu { order: 1; margin: 0 !important; padding: 0 0 16px !important; }
+  html.ll-test #navigation .navigation-in-bottom .top-navigation-bar-menu li { margin: 0 !important; padding: 0 !important; text-align: left !important; }
+  html.ll-test #navigation .navigation-in-bottom .top-navigation-bar-menu a { display: flex !important; align-items: center; min-height: 40px; padding: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; text-align: left !important; color: var(--ll-ink-soft) !important; }
+  html.ll-test #navigation .navigation-in-bottom .top-navigation-contacts { order: 2; display: grid !important; gap: 4px; margin: 0 -20px !important; padding: 16px 20px 24px !important; background: var(--ll-ivory); border-top: 1px solid var(--ll-line); }
+  html.ll-test #navigation .navigation-in-bottom .top-navigation-contacts a { justify-content: flex-start !important; align-items: center; min-height: 40px; font-size: 15px !important; line-height: 22px !important; font-weight: 500 !important; color: var(--ll-ink) !important; }
+  html.ll-test #navigation .navigation-in-bottom .top-navigation-contacts a::before { width: 18px !important; height: 18px !important; margin-right: 8px !important; vertical-align: middle; }
+
+  /* Záložky detailu jako akordeon: řádek 56 px na okraji obsahu, 16 px řez 500 v inkoustu, šipka Lucide; linka mezi oddíly */
+  html.ll-test .p-detail-tabs-wrapper .tab-pane { padding: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+  html.ll-test .p-detail-tabs-wrapper .tab-content > .tab-pane:first-child { border-top: 1px solid var(--ll-line) !important; }
+  html.ll-test .p-detail-tabs-wrapper .detail-tab-item { position: relative; display: flex !important; align-items: center; min-height: 56px; margin: 0 !important; padding: 0 32px 0 0 !important; font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; cursor: pointer; }
+  html.ll-test .p-detail-tabs-wrapper .detail-tab-item::after { --ll-icon: var(--ll-i-chev-down); position: absolute !important; top: 50% !important; right: 0 !important; width: 18px !important; height: 18px !important; transform: translateY(-50%) !important; color: var(--ll-ink-muted) !important; transition: transform 150ms var(--ll-ease); }
+  html.ll-test .p-detail-tabs-wrapper .tab-pane.active > .detail-tab-item::after { transform: translateY(-50%) rotate(180deg) !important; }
+  html.ll-test .p-detail-tabs-wrapper .tab-pane.active > .detail-tab-content { padding-bottom: 24px !important; }
+}
