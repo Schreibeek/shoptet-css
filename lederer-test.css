@@ -2440,3 +2440,9 @@ html.ll-test #header .search-whisperer .search-whisperer-empty::before { content
   html.ll-test #header .search-whisperer .search-whisperer-ul-group, html.ll-test #header .search-whisperer .search-whisperer-category-group, html.ll-test #header .search-whisperer .search-whisperer-tags-group { padding: 8px 12px !important; }
   html.ll-test #header .search-whisperer .search-whisperer-btn { padding: 12px 20px !important; }
 }
+
+/* ---------- Odkazy v popisu produktu (DS ProductDetail, jako v článku) ----------
+   Inkoustové s podtržením 1 px, po najetí gold-text. Šablona je dává zlaté bez podtržení; v testovacím vzhledu zčernaly
+   a s textem splývaly. Po najetí zlatě i v článku a na textových stránkách (DS Article, PageText). */
+html.ll-test #description .basic-description a:not(.btn):not([style*="background"]) { color: var(--ll-ink) !important; text-decoration: underline !important; text-decoration-thickness: 1px !important; text-underline-offset: 3px; }
+html.ll-test #description .basic-description a:not(.btn):not([style*="background"]):hover, html.ll-test body.type-post .news-item-detail .text a:not([style*="background"]):hover, html.ll-test body.type-page .pageArticleDetail [itemprop="about"] a:hover { color: var(--ll-gold-text) !important; }
