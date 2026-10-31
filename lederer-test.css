@@ -471,3 +471,19 @@ html.ll-test .slider-group-products .swiper-arrow-next { right: 12px !important;
 html.ll-test .carousel-control.left { left: 20px !important; }
 html.ll-test .carousel-control.right { right: 20px !important; }
 html.ll-test .brand-banner--lerdee .brand-banner__content, html.ll-test .brand-banner--lerdee .brand-banner__image { border: 0 !important; }
+
+/* ---------- Šipky karuselů na hraně (protínají okraj banneru a karet), celé viditelné ---------- */
+html.ll-test .banners-row .carousel { overflow: visible !important; }
+html.ll-test .carousel-control.left::before { left: -22px !important; }
+html.ll-test .carousel-control.right::before { right: -22px !important; }
+@media (min-width: 768px) {
+  html.ll-test .slider-group-products .swiper-arrow-prev { left: -22px !important; }
+  html.ll-test .slider-group-products .swiper-arrow-next { right: -22px !important; }
+}
+
+/* ---------- Lerdee: barvy z obalů a fotky (světlý kámen a šedohnědá) místo šampaň ---------- */
+html.ll-test .brand-banner--lerdee .brand-banner__inner, html.ll-test .brand-banner--lerdee .brand-banner__content { background: #ece8e5 !important; }
+html.ll-test .brand-banner--lerdee .brand-banner__eyebrow { color: #5c5550 !important; }
+html.ll-test .brand-banner--lerdee .brand-banner__text { color: #514c48 !important; }
+html.ll-test .brand-banner--lerdee .brand-banner__btn { color: #fff !important; background: #5c5550 !important; border-color: #5c5550 !important; }
+html.ll-test .brand-banner--lerdee .brand-banner__btn:hover { background: #4a4440 !important; border-color: #4a4440 !important; }
