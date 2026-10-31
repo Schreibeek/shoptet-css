@@ -346,9 +346,6 @@ html.ll-test .p-detail-inner-header .p-info-headline { display: flex !important;
 }
 @media (max-width: 767px) {
   html.ll-test .p-info-headline h1 { font-size: 24px !important; line-height: 1.25 !important; }
-  html.ll-test .p-info-grid { padding: 20px 16px 12px !important; }
-  html.ll-test .loyalty-box-wrapper { padding: 0 16px 12px !important; }
-  html.ll-test .add-to-cart { padding: 0 16px 16px !important; gap: 8px; }
   html.ll-test .add-to-cart .btn-conversion, html.ll-test .add-to-cart .btn.btn-lg.btn-conversion { flex: 1 1 0 !important; min-width: 0 !important; padding: 0 12px !important; font-size: 15px !important; white-space: nowrap; }
   html.ll-test .add-to-cart .btn-conversion::before { display: none !important; }
   html.ll-test .add-to-cart .quantity button.increase, html.ll-test .add-to-cart .quantity button.decrease { width: 38px !important; }
@@ -1137,4 +1134,12 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
   html.ll-test #footer .custom-footer__newsletter fieldset.box > .captcha-image img { display: block; width: auto !important; height: 48px !important; border-radius: var(--ll-r-sm); }
   html.ll-test #footer .custom-footer__newsletter .consents { margin-top: 16px !important; }
   html.ll-test #footer .custom-footer__newsletter form.subscribe-form .btn, html.ll-test #footer .custom-footer__newsletter .btn { display: flex !important; justify-content: center; width: 100% !important; height: 48px !important; min-height: 48px !important; margin-top: 16px !important; }
+}
+
+/* ---------- Detail na mobilu: nákupní panel podle DS (MobileProduct) ----------
+   Odsazení 16 px od linky, mezi řádky 12 px. Musí být až za obecnými pravidly panelu (24 px), jinak je přebijí. */
+@media (max-width: 767px) {
+  html.ll-test .p-info-grid { margin-top: 20px !important; padding: 16px 16px 12px !important; gap: 12px !important; }
+  html.ll-test .loyalty-box-wrapper { padding: 0 16px 12px !important; }
+  html.ll-test .add-to-cart { padding: 0 16px 16px !important; gap: 8px !important; }
 }
