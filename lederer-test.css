@@ -1277,6 +1277,6 @@ html.ll-test .basic-description ul > li:last-child, html.ll-test .basic-descript
 
 /* ---------- Blog na homepage: Číst článek u všech článků dole na stejné úrovni (BlogCard: ll-post__more margin-top auto) ---------- */
 html.ll-test .homepage-blog-wrapper .news-item { display: flex !important; flex-direction: column; }
-html.ll-test .homepage-blog-wrapper .news-item > a { display: flex !important; flex-direction: column; flex: 1 1 auto; }
-html.ll-test .homepage-blog-wrapper .news-item .text { display: flex !important; flex-direction: column; align-items: flex-start; flex: 1 1 auto; }
+html.ll-test .homepage-blog-wrapper .news-item > a { display: flex !important; flex-direction: column; flex: 1 1 auto !important; }
+html.ll-test .homepage-blog-wrapper .news-item .text { display: flex !important; flex-direction: column; align-items: flex-start; flex: 1 1 auto !important; }
 html.ll-test .homepage-blog-wrapper .news-item .read-article { margin-top: auto !important; }
