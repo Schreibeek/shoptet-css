@@ -859,3 +859,57 @@ html.ll-test .HpBanners > a img { display: block; width: 100% !important; height
   html.ll-test .type-index .products.products-block > .product:first-child { margin-left: 12px !important; }
   html.ll-test .type-index .news-wrapper { padding-left: 0 !important; }
 }
+
+/* ---------- Detail: záložka Hodnocení (ReviewSummary a pole formuláře podle Field) ----------
+   Souhrn vlevo jako béžový box s hodnotou inkoustem (šablona: žlutá 80 px), formulář vpravo, recenze pod tím jako karty s linkou. */
+html.ll-test #ratingTab .rate-wrapper { display: flex !important; align-items: flex-start; gap: 48px; }
+html.ll-test #ratingTab .rate-wrap { order: -1; flex: none !important; box-sizing: border-box; width: 340px !important; margin: 0 !important; padding: 24px !important; background: var(--ll-ivory) !important; border: 0 !important; border-radius: var(--ll-r-md) !important; box-shadow: none !important; }
+html.ll-test #ratingTab #rate-form { flex: 1 1 auto; min-width: 0; width: auto !important; margin: 0 !important; }
+html.ll-test #ratingTab h3 { margin: 0 0 20px !important; font-size: 22px !important; line-height: 1.3 !important; font-weight: 500 !important; letter-spacing: -0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test #ratingTab .rate-wrap h3 { margin: 0 0 14px !important; font-size: 12px !important; line-height: 16px !important; font-weight: 600 !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; }
+html.ll-test #ratingTab .rate-average-inner { display: flex !important; align-items: center; gap: 16px; margin: 0 !important; padding: 0 !important; }
+html.ll-test #ratingTab .rate-average { margin: 0 !important; font-size: 56px !important; line-height: 1 !important; font-weight: 500 !important; letter-spacing: -0.025em; color: var(--ll-ink) !important; font-variant-numeric: tabular-nums; }
+html.ll-test #ratingTab .rate-star-wrap { display: flex !important; flex-direction: column; align-items: flex-start; gap: 4px; margin: 0 !important; }
+html.ll-test #ratingTab .rate-star-wrap .stars { display: inline-flex !important; gap: 1px; margin: 0 !important; }
+html.ll-test #ratingTab .rate-star-wrap .star { width: 17px !important; height: 17px !important; margin: 0 !important; }
+html.ll-test #ratingTab .rate-star-wrap .star::before { width: 17px !important; font-size: 17px !important; line-height: 17px !important; }
+html.ll-test #ratingTab .rate-star-wrap .stars-label, html.ll-test #ratingTab .rate-star-wrap .stars-label span { margin: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; }
+html.ll-test #ratingTab .votes { margin: 20px 0 0 !important; padding: 0 !important; }
+html.ll-test #ratingTab .rate-list { position: relative; display: flex !important; align-items: center; gap: 8px; margin: 0 0 6px !important; padding: 0 36px 0 0 !important; }
+html.ll-test #ratingTab .rate-list .rate-star { flex: none; display: inline-flex !important; align-items: center; gap: 4px; width: 30px !important; margin: 0 !important; }
+html.ll-test #ratingTab .rate-list .rate-value { font-size: 13px !important; line-height: 20px !important; font-weight: 600 !important; color: var(--ll-ink-muted) !important; }
+html.ll-test #ratingTab .rate-list .star { width: 12px !important; height: 12px !important; margin: 0 !important; }
+html.ll-test #ratingTab .rate-list .star::before { width: 12px !important; font-size: 12px !important; line-height: 12px !important; color: var(--ll-gold) !important; }
+html.ll-test #ratingTab .rate-list .rate-block { position: static !important; flex: 1 1 auto !important; width: auto !important; height: 4px !important; margin: 0 !important; background: var(--ll-line) !important; border-radius: 999px !important; }
+html.ll-test #ratingTab .rate-list .rate-bar { position: static !important; display: block !important; height: 4px !important; background: var(--ll-gold) !important; border-radius: 999px !important; }
+html.ll-test #ratingTab .rate-list .rate-count { position: absolute !important; top: 50% !important; right: 0 !important; left: auto !important; transform: translateY(-50%) !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; color: var(--ll-ink-muted) !important; }
+/* Formulář: popisky 13/500 větou, pole bílá 48 px, hvězdy k výběru šedé a zlaté */
+html.ll-test #ratingTab #rate-form .form-group { margin: 0 0 20px !important; }
+html.ll-test #ratingTab #rate-form label:not(.rating-star), html.ll-test #ratingTab #rate-form p.label { display: block; margin: 0 0 8px !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test #ratingTab #rate-form label:not(.rating-star) *, html.ll-test #ratingTab #rate-form p.label * { font-weight: inherit !important; letter-spacing: 0 !important; text-transform: none !important; }
+html.ll-test #ratingTab #rate-form .consents p.label, html.ll-test #ratingTab #rate-form .consents p.label * { font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
+html.ll-test #ratingTab #rate-form input.form-control, html.ll-test #ratingTab #rate-form textarea.form-control { box-sizing: border-box; width: 100% !important; min-height: 48px; height: auto; padding: 12px 16px !important; font-size: 15px !important; line-height: 22px !important; color: var(--ll-ink) !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line-control) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #ratingTab #rate-form textarea.form-control { min-height: 112px; }
+html.ll-test #ratingTab #rate-form .form-control:hover { border-color: var(--ll-ink-soft) !important; }
+html.ll-test #ratingTab #rate-form .form-control:focus { border-color: var(--ll-ink) !important; }
+html.ll-test #ratingTab .required-asterisk::after { color: var(--ll-sale) !important; }
+html.ll-test #ratingTab .rating-star::before { color: var(--ll-line-strong) !important; }
+html.ll-test #ratingTab .rating-star.full::before { color: var(--ll-gold) !important; }
+html.ll-test #ratingTab #rate-form .btn-primary { min-height: 48px !important; height: auto !important; padding: 0 28px !important; font-size: 15px !important; font-weight: 500 !important; }
+/* Recenze jako karty s linkou nahoře (jako na homepage) */
+html.ll-test #ratingTab #ratingsList { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 40px 0 0 !important; }
+html.ll-test #ratingTab #ratingsList .vote-wrap { margin: 0 !important; padding: 20px 0 0 !important; background: transparent !important; border: 0 !important; border-top: 1px solid var(--ll-ink) !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test #ratingTab .vote-header { display: block !important; margin: 0 0 6px !important; }
+html.ll-test #ratingTab .vote-summary { display: flex !important; flex-direction: column; align-items: flex-start; gap: 4px; }
+html.ll-test #ratingTab .vote-name, html.ll-test #ratingTab .vote-name span { font-size: 15px !important; line-height: 22px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test #ratingTab .vote-rating { display: flex !important; align-items: center; gap: 8px; }
+html.ll-test #ratingTab .vote-rating .stars { display: inline-flex !important; gap: 1px; }
+html.ll-test #ratingTab .vote-rating .star { width: 14px !important; height: 14px !important; margin: 0 !important; }
+html.ll-test #ratingTab .vote-rating .star::before { width: 14px !important; font-size: 14px !important; line-height: 14px !important; }
+html.ll-test #ratingTab .vote-time { font-size: 12px !important; line-height: 16px !important; color: var(--ll-ink-muted) !important; }
+html.ll-test #ratingTab .vote-content, html.ll-test #ratingTab .vote-content * { font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; }
+@media (max-width: 991px) {
+  html.ll-test #ratingTab .rate-wrapper { flex-direction: column; gap: 32px; }
+  html.ll-test #ratingTab .rate-wrap { width: 100% !important; }
+  html.ll-test #ratingTab #ratingsList { grid-template-columns: minmax(0, 1fr); }
+}
