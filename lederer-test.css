@@ -1906,6 +1906,8 @@ html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-
 html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(> .login-button, > div > .login-button), html.ll-test body.ordering-process #checkoutContent .form-group-content > .company-shopping, html.ll-test body.ordering-process #checkoutContent .form-group-content > #company-info, html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(#billStreet), html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(.js-location), html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(#deliveryStreet) { grid-column: 1 / -1; }
 html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group-city { grid-column: span 4; }
 html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group-zip { grid-column: span 2; }
+/* Sbalené bloky (firemní údaje, poznámka) šablona schovává výškou 0, v mřížce by přidaly mezeru: bez třídy visible pryč */
+html.ll-test body.ordering-process #checkoutContent #company-info.js-hidden:not(.visible), html.ll-test body.ordering-process #checkoutContent #note.js-hidden:not(.visible) { display: none !important; }
 html.ll-test body.ordering-process #checkoutContent #company-info.visible, html.ll-test body.ordering-process #checkoutContent #company-info:not(.js-hidden) { margin: 0 !important; padding: 0 !important; display: grid !important; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 16px; }
 html.ll-test body.ordering-process #checkoutContent #company-info > .form-group { grid-column: span 3; display: block !important; width: auto !important; max-width: none !important; flex: none !important; margin: 0 !important; padding: 0 !important; }
 html.ll-test body.ordering-process #checkoutContent #company-info > .form-group:has(#billCompany) { grid-column: 1 / -1; }
@@ -1946,7 +1948,7 @@ html.ll-test body.ordering-process .form-group > input[type="checkbox"] + label.
 html.ll-test body.ordering-process #checkoutContent .additional-information { color: var(--ll-ink-muted) !important; }
 html.ll-test body.ordering-process #checkoutContent .company-shopping, html.ll-test body.ordering-process #checkoutContent .co-box-additional > .form-group, html.ll-test body.ordering-process #checkoutContent .stay-in-touch > .form-group { margin: 0 !important; padding: 0 !important; }
 html.ll-test body.ordering-process #checkoutContent .co-box-additional { display: grid !important; gap: 12px; }
-html.ll-test body.ordering-process #checkoutContent .co-box-additional > #note:not(.js-hidden) { margin: 4px 0 8px !important; }
+html.ll-test body.ordering-process #checkoutContent .co-box-additional > #note.visible, html.ll-test body.ordering-process #checkoutContent .co-box-additional > #note:not(.js-hidden) { margin: 4px 0 8px !important; }
 html.ll-test body.ordering-process #checkoutContent .stay-in-touch { display: grid !important; gap: 12px; }
 /* Souhrn v kroku Údaje: doprava a platba (jiné HTML než v kroku 2), souhlasy, Objednat s povinností platby */
 html.ll-test body.ordering-process #checkoutSidebar .order-recapitulation:empty { display: none !important; }
