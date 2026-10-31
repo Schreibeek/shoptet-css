@@ -1093,6 +1093,9 @@ html.ll-test #cart-widget .cart-widget-title { margin: 0 !important; padding: 20
 html.ll-test #cart-widget .cart-widget-inner { padding: 0 24px !important; }
 html.ll-test #cart-widget .cart-widget-product { position: relative; display: grid !important; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; align-items: start; margin: 0 !important; padding: 16px 0 !important; border-bottom: 1px solid var(--ll-line); }
 html.ll-test #cart-widget .cart-widget-product:last-child { border-bottom: 0; }
+/* Apollo podbarvuje položku po najetí studenou šedou (#f5f6f8) jen mezi okraji obsahu; ll-line stav najetí nemá,
+   reaguje jen odkaz názvu a ikony */
+html.ll-test #cart-widget .cart-widget-product, html.ll-test #cart-widget .cart-widget-product:hover { background: transparent !important; }
 html.ll-test #cart-widget .cart-widget-product-image { box-sizing: border-box; width: 64px !important; height: 64px !important; margin: 0 !important; padding: 4px !important; background: var(--ll-tile) !important; border-radius: var(--ll-r-sm) !important; overflow: hidden; }
 html.ll-test #cart-widget .cart-widget-product-image a { display: block !important; width: 100% !important; height: 100% !important; }
 html.ll-test #cart-widget .cart-widget-product-image img { display: block; width: 100% !important; height: 100% !important; max-width: none !important; object-fit: contain; mix-blend-mode: multiply; }
