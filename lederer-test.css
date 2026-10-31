@@ -2073,6 +2073,8 @@ html.ll-test body.in-dekujeme .order-complete-links .btn::before, html.ll-test b
    doprava zdarma, sleva za registraci, Přejít do košíku a Zpět do obchodu; doporučené produkty jako řádky.
    Šablona: okno uprostřed 1152 px (mobil 335 px) se zeleným pruhem, boxy se stínem, velké karty produktů. */
 @keyframes ll-drawer-in { from { transform: translateX(100%); } to { transform: none; } }
+/* Odznak Ověřeno zákazníky a Nahoru mají z-index nad vším; snížené pod panel (pořád nad hlavičkou 9999) */
+html.ll-test div[id^="hw-"][id$="right"], html.ll-test #back-to-top { z-index: 10000 !important; }
 html.ll-test body:has(#colorbox.colorbox--order) #cboxOverlay { z-index: 10001 !important; background: rgb(32, 31, 31) !important; opacity: 0.32 !important; }
 html.ll-test #colorbox.colorbox--order { position: fixed !important; top: 0 !important; right: 0 !important; bottom: 0 !important; left: auto !important; z-index: 10002 !important; box-sizing: border-box; width: min(440px, 100vw) !important; height: auto !important; max-height: none !important; margin: 0 !important; padding: 0 !important; overflow: hidden !important; background: var(--ll-paper) !important; border-radius: 0 !important; box-shadow: 0 24px 60px -20px rgba(32, 31, 31, 0.3) !important; animation: ll-drawer-in 420ms var(--ll-ease); }
 html.ll-test #colorbox.colorbox--order #cboxWrapper { position: absolute !important; inset: 0; width: auto !important; height: auto !important; overflow: hidden !important; }
