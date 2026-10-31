@@ -527,6 +527,14 @@ html.ll-test .overall-wrapper { overflow-x: clip; }
 /* Lupa ve vyhledávání: uvnitř pole, průhledná, nepřekrývá okraj */
 html.ll-test #header .search .btn { top: 1px !important; right: 1px !important; height: 44px !important; min-height: 0 !important; color: transparent !important; background: transparent !important; border: 0 !important; border-radius: 0 3px 3px 0 !important; box-shadow: none !important; }
 html.ll-test #header .search .btn:hover { background: var(--ll-tile) !important; }
+/* Hledání podle design systému (Field / Search): lupa vlevo v poli, text 15 px inkoustem, nápověda teple šedá (ink-muted), ne studeně šedá šablony */
+html.ll-test #header .search input.query-input, html.ll-test #header .search input[type="search"] { font-size: 15px !important; color: var(--ll-ink) !important; }
+html.ll-test #header .search input::placeholder { color: var(--ll-ink-muted) !important; opacity: 1; }
+@media (min-width: 768px) {
+  html.ll-test #header .search input.query-input, html.ll-test #header .search input[type="search"] { padding-left: 44px !important; padding-right: 16px !important; }
+  html.ll-test #header .search .btn { left: 1px !important; right: auto !important; width: 44px !important; border-radius: 3px 0 0 3px !important; }
+  html.ll-test #header .search .btn:hover { background: transparent !important; }
+}
 
 /* Úvodní karusel: odstup od hlavičky jako v šabloně PageHome */
 html.ll-test .homepage-box.before-carousel { padding-top: 32px; }
