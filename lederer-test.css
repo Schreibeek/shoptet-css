@@ -329,26 +329,86 @@ html.ll-test .gallery-new .splide__arrow { background: var(--ll-paper); border: 
 html.ll-test .p-image-wrapper .p-image, html.ll-test .p-image-wrapper .p-thumbnail { background: var(--ll-tile); isolation: isolate; border-radius: var(--ll-r-md); }
 html.ll-test .p-image-wrapper .p-image img, html.ll-test .p-image-wrapper .p-thumbnail img { mix-blend-mode: multiply; filter: brightness(1.03); }
 html.ll-test .p-info-headline h1, html.ll-test .p-detail-inner-header .h1 { font-size: 32px; line-height: 1.2; font-weight: 500; letter-spacing: -0.015em; color: var(--ll-ink); }
-html.ll-test .p-short-description, html.ll-test .p-short-description p { color: var(--ll-ink-soft); }
-html.ll-test .p-info-grid { padding: 16px 20px; border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); background: var(--ll-paper); box-shadow: none; }
-html.ll-test .detail-grid-title { color: var(--ll-ink-muted); font-weight: 500; }
+/* Hlavička nákupního panelu (ProductDetail): značka jako popisek nad názvem, hodnocení řádkem pod názvem, bez bílé bubliny se stínem */
+html.ll-test .p-info-headline { display: flex !important; flex-direction: column; align-items: flex-start; }
+html.ll-test .p-info-headline h1 { margin: 0 0 12px !important; }
+html.ll-test .p-info-headline .p-detail-info { display: contents !important; }
+html.ll-test .p-info-headline .p-detail-info > div:not(.stars-wrapper) { order: -1; margin: 0 0 8px !important; padding: 0 !important; }
+html.ll-test .p-info-headline .p-detail-info > div:not(.stars-wrapper) a { font-size: 0 !important; text-decoration: none !important; }
+html.ll-test .p-info-headline .p-detail-info > div:not(.stars-wrapper) a span { font-size: 11px !important; line-height: 16px !important; font-weight: 600 !important; letter-spacing: 0.16em !important; text-transform: uppercase !important; color: var(--ll-gold-text) !important; }
+html.ll-test .p-info-headline .p-detail-info > div:not(.stars-wrapper) a:hover span { color: var(--ll-ink) !important; }
+html.ll-test .p-info-headline .stars-wrapper { order: 1; display: flex !important; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0 !important; padding: 0 !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test .p-info-headline .stars-wrapper .stars { display: inline-flex !important; gap: 1px; margin: 0 !important; }
+html.ll-test .p-info-headline .stars-wrapper .star { width: 17px !important; height: 17px !important; margin: 0 !important; }
+html.ll-test .p-info-headline .stars-wrapper .star::before { width: 17px !important; font-size: 17px !important; line-height: 17px !important; }
+html.ll-test .p-info-headline .stars-label, html.ll-test .p-info-headline .stars-label span { margin: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-muted) !important; }
+html.ll-test .p-info-headline .stars-link { margin: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; text-decoration: underline !important; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+html.ll-test .p-info-headline .stars-link:hover { color: var(--ll-ink) !important; }
+html.ll-test .p-short-description, html.ll-test .p-short-description p { font-size: 16px; line-height: 26px; color: var(--ll-ink-soft); }
+html.ll-test .p-short-description-block > p a.chevron-after { display: inline-flex !important; align-items: center; gap: 6px; padding: 0 0 3px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; text-decoration: none !important; border-bottom: 1px solid var(--ll-gold-deep); }
+html.ll-test .p-short-description-block > p a.chevron-after:hover { color: var(--ll-gold-text) !important; border-bottom-color: var(--ll-gold-text); }
+
+/* Cena, dostupnost, sleva po přihlášení a košík jako jeden panel (buybox__panel). Shoptet je má jako tři sourozence,
+   proto navazující okraje: mřížka nahoře, sleva uprostřed, košík dole. */
+html.ll-test .p-info-grid { display: flex !important; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin: 24px 0 0 !important; padding: 24px 24px 16px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-bottom: 0 !important; border-radius: var(--ll-r-md) var(--ll-r-md) 0 0 !important; box-shadow: none !important; }
+html.ll-test .p-info-grid .detail-grid-item { flex: 0 1 auto !important; width: auto !important; margin: 0 !important; padding: 0 !important; border: 0 !important; }
+html.ll-test .p-info-grid .detail-grid-title { display: none !important; }
 html.ll-test .p-final-price-wrapper .price-final, html.ll-test .p-final-price-wrapper .price-final * { color: var(--ll-ink); font-size: 28px; line-height: 34px; font-weight: 600; font-variant-numeric: tabular-nums; }
-html.ll-test .p-final-price-wrapper .price-measure { color: var(--ll-ink-muted); }
-html.ll-test .loyalty-box-wrapper, html.ll-test .loyalty-box-content { background: var(--ll-gold-soft); border: 0; border-radius: var(--ll-r-sm); color: var(--ll-ink); box-shadow: none; }
-html.ll-test .loyalty-box-wrapper a { color: var(--ll-ink); text-decoration: underline; text-underline-offset: 3px; }
-html.ll-test .add-to-cart .quantity { border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); background: var(--ll-paper); box-shadow: none; }
-html.ll-test .add-to-cart .quantity input { border: 0; }
-html.ll-test .add-to-cart .quantity button { color: var(--ll-ink); background: transparent; }
-html.ll-test .add-to-cart .btn-conversion { color: #fff; background: var(--ll-ink); border-color: var(--ll-ink); border-radius: var(--ll-r-sm); }
-html.ll-test .add-to-cart .btn-conversion:hover { background: var(--ll-ink-hover); border-color: var(--ll-ink-hover); }
+html.ll-test .p-final-price-wrapper .price-measure, html.ll-test .p-final-price-wrapper .price-measure * { display: block; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
+html.ll-test .p-final-price-wrapper .price-standard, html.ll-test .p-final-price-wrapper .price-standard * { font-size: 16px !important; line-height: 24px; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
+html.ll-test .detail-availability-block { text-align: right; }
+html.ll-test .detail-availability-block .availability-value { margin: 0 !important; }
+html.ll-test .detail-availability-block .availability-label { display: inline-flex !important; align-items: center; gap: 8px; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; }
+html.ll-test .detail-availability-block .availability-label::before { content: ''; flex: none; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+html.ll-test .detail-availability-block .availability-label[style*="009901"] { color: var(--ll-success) !important; }
+html.ll-test .detail-availability-block > div[style] { margin: 2px 0 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
+html.ll-test .detail-availability-block table.detail-parameters:not(:has(tr)) { display: none; }
+html.ll-test .loyalty-box-wrapper { margin: 0 !important; padding: 0 24px 16px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-top: 0 !important; border-bottom: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test .loyalty-box-content { display: flex !important; align-items: center; gap: 8px; margin: 0 !important; padding: 9px 12px !important; background: var(--ll-gold-soft) !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; text-align: left !important; }
+html.ll-test .loyalty-box-text { margin: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; color: var(--ll-ink) !important; text-align: left !important; }
+html.ll-test .loyalty-box-text strong { font-weight: 600; }
+html.ll-test .loyalty-box-wrapper a { color: var(--ll-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+html.ll-test .ll-loyalty-icon { display: inline-flex; flex: none; color: var(--ll-gold-text); }
+html.ll-test .ll-loyalty-icon svg { display: block; width: 16px; height: 16px; }
+html.ll-test .add-to-cart { display: flex !important; align-items: stretch; justify-content: flex-start !important; gap: 12px; margin: 0 !important; padding: 0 24px 24px !important; background: var(--ll-paper); border: 1px solid var(--ll-line); border-top: 0; border-radius: 0 0 var(--ll-r-md) var(--ll-r-md); }
+/* Množství (QuantityStepper): − číslo +, výška jako tlačítko */
+html.ll-test .add-to-cart .quantity { position: relative; display: inline-flex !important; align-items: stretch; flex: none !important; box-sizing: border-box; width: auto !important; height: 52px !important; margin: 0 !important; padding: 0 !important; background: var(--ll-paper); border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none; }
+html.ll-test .add-to-cart .quantity label { order: 2; display: flex !important; align-items: center; margin: 0 !important; }
+html.ll-test .add-to-cart .quantity input.amount { box-sizing: border-box; width: 40px !important; height: 100% !important; margin: 0 !important; padding: 0 !important; font-size: 15px !important; font-weight: 600 !important; color: var(--ll-ink) !important; text-align: center; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; -moz-appearance: textfield; appearance: textfield; font-variant-numeric: tabular-nums; }
+html.ll-test .add-to-cart .quantity input.amount::-webkit-outer-spin-button, html.ll-test .add-to-cart .quantity input.amount::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+html.ll-test .add-to-cart .quantity button.decrease { order: 1; }
+html.ll-test .add-to-cart .quantity button.increase { order: 3; }
+html.ll-test .add-to-cart .quantity button.increase, html.ll-test .add-to-cart .quantity button.decrease { position: static !important; display: grid !important; place-items: center; width: 44px !important; height: auto !important; margin: 0 !important; padding: 0 !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transform: none !important; }
+html.ll-test .add-to-cart .quantity button.increase:hover, html.ll-test .add-to-cart .quantity button.decrease:hover { background: var(--ll-tile) !important; }
+html.ll-test .add-to-cart .quantity .increase__sign, html.ll-test .add-to-cart .quantity .decrease__sign { font-size: 0 !important; line-height: 0 !important; }
+html.ll-test .add-to-cart .quantity .increase__sign::before, html.ll-test .add-to-cart .quantity .decrease__sign::before { content: ''; display: block; width: 16px; height: 16px; background-color: currentColor; -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat; }
+html.ll-test .add-to-cart .quantity .increase__sign::before { --ll-icon: var(--ll-i-plus); }
+html.ll-test .add-to-cart .quantity .decrease__sign::before { --ll-icon: var(--ll-i-minus); }
+html.ll-test .add-to-cart .btn-conversion, html.ll-test .add-to-cart .btn.btn-lg.btn-conversion { flex: 1 1 auto !important; display: inline-flex !important; align-items: center; justify-content: center; gap: 10px; width: auto !important; height: 52px !important; min-height: 52px !important; margin: 0 !important; padding: 0 24px !important; font-size: 16px !important; font-weight: 500 !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test .add-to-cart .btn-conversion:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
+html.ll-test .add-to-cart .btn-conversion::after { display: none !important; }
+html.ll-test .add-to-cart .btn-conversion::before { content: '' !important; display: inline-block; flex: none; width: 20px; height: 20px; font-size: 0 !important; background-color: currentColor; -webkit-mask: var(--ll-i-bag) center / contain no-repeat; mask: var(--ll-i-bag) center / contain no-repeat; }
+/* Zeptat se, Hlídat, Tisk: malé odkazy s ikonami Lucide */
+html.ll-test .social-buttons-wrapper { margin: 12px 0 0 !important; padding: 0 !important; }
+html.ll-test .social-buttons-wrapper .link-icons { display: flex !important; flex-wrap: wrap; gap: 20px; margin: 0 !important; }
+html.ll-test .social-buttons-wrapper a.link-icon { display: inline-flex !important; align-items: center; gap: 6px; margin: 0 !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; text-decoration: none !important; background: transparent !important; border: 0 !important; }
+html.ll-test .social-buttons-wrapper a.link-icon:hover { color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+html.ll-test .social-buttons-wrapper a.link-icon::before { content: '' !important; position: static !important; display: inline-block; flex: none; width: 16px !important; height: 16px !important; margin: 0 !important; font-size: 0 !important; background-color: currentColor; -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat; }
+html.ll-test .social-buttons-wrapper a.link-icon.chat::before { --ll-icon: var(--ll-i-help); }
+html.ll-test .social-buttons-wrapper a.link-icon.watchdog::before { --ll-icon: var(--ll-i-bell); }
+html.ll-test .social-buttons-wrapper a.link-icon.print::before { --ll-icon: var(--ll-i-print); }
 html.ll-test .benefitBanner__item { background: transparent; border: 0; box-shadow: none; }
 html.ll-test .benefitBanner__title { color: var(--ll-ink); font-weight: 500; }
 html.ll-test .benefitBanner__data { color: var(--ll-ink-soft); }
-html.ll-test .shp-tabs { border-bottom: 1px solid var(--ll-line); }
-html.ll-test .shp-tabs > li > a, html.ll-test .shp-tabs .shp-tab-link {
-  color: var(--ll-ink-soft); background: transparent; border: 0; border-bottom: 2px solid transparent; border-radius: 0; font-weight: 500; text-transform: none; letter-spacing: 0; box-shadow: none;
-}
-html.ll-test .shp-tabs > li.active > a, html.ll-test .shp-tabs > li > a.active, html.ll-test .shp-tabs .shp-tab-link.active { color: var(--ll-ink); border-bottom-color: var(--ll-gold); background: transparent; }
+
+/* Záložky (Tabs): vlevo podle šířky textu, mezera 32 px, zlatá linka jen pod aktivní, obsah bez rámečku */
+html.ll-test .shp-tabs-wrapper .shp-tabs { display: flex !important; justify-content: flex-start !important; gap: 32px; margin: 0 !important; padding: 0 !important; border-bottom: 1px solid var(--ll-line) !important; background: transparent !important; }
+html.ll-test .shp-tabs-wrapper .shp-tabs > li { flex: none !important; width: auto !important; margin: 0 !important; padding: 0 !important; text-align: left !important; background: transparent !important; border: 0 !important; }
+html.ll-test .shp-tabs-wrapper .shp-tabs .shp-tab-link { display: inline-flex !important; align-items: center; height: 48px !important; margin: 0 0 -1px !important; padding: 0 !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; white-space: nowrap; color: var(--ll-ink-soft) !important; background: transparent !important; border: 0 !important; border-bottom: 2px solid transparent !important; border-radius: 0 !important; box-shadow: none !important; text-decoration: none !important; }
+html.ll-test .shp-tabs-wrapper .shp-tabs .shp-tab-link:hover { color: var(--ll-ink) !important; }
+html.ll-test .shp-tabs-wrapper .shp-tabs > li.active > .shp-tab-link { color: var(--ll-ink) !important; border-bottom-color: var(--ll-gold) !important; }
+html.ll-test .p-detail-tabs-wrapper .tab-pane { padding: 24px 0 0 !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test .p-detail-tabs-wrapper .tab-pane, html.ll-test .p-detail-tabs-wrapper .tab-pane p, html.ll-test .p-detail-tabs-wrapper .tab-pane li { font-size: 16px; line-height: 27px; color: var(--ll-ink-soft); }
 
 /* ---------- Bannery na homepage ---------- */
 html.ll-test .carousel, html.ll-test .carousel-inner, html.ll-test .banner-wrapper img, html.ll-test .banners-top-block img { border-radius: var(--ll-r-lg); }
@@ -677,13 +737,17 @@ html.ll-test {
   --ll-i-chev-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   --ll-i-chev-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E");
   --ll-i-chev-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m18 15-6-6-6 6'/%3E%3C/svg%3E");
-  --ll-i-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  --ll-i-help: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E %3Cpath d='M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3'/%3E %3Cpath d='M12 17h.01'/%3E%3C/svg%3E");
+  --ll-i-bell: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.268 21a2 2 0 0 0 3.464 0'/%3E %3Cpath d='M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326'/%3E%3C/svg%3E");
+  --ll-i-print: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2'/%3E %3Cpath d='M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6'/%3E %3Crect x='6' y='14' width='12' height='8' rx='1'/%3E%3C/svg%3E");
+  --ll-i-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3C/svg%3E");
+  --ll-i-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E %3Cpath d='M12 5v14'/%3E%3C/svg%3E");  --ll-i-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
 }
 html.ll-test .top-nav-button-login::before, html.ll-test .btn.cart-count::before, html.ll-test #header .search .btn::before,
 html.ll-test .project-phone::before, html.ll-test .project-email::before, html.ll-test #navigation .menu-level-1 > li.ext > a::after,
 html.ll-test .breadcrumbs a::after, html.ll-test .pagination__link--next::before, html.ll-test .pagination__link--prev::before,
 html.ll-test .back-to-top i::before, html.ll-test .products .product .btn-cart::before, html.ll-test #filters .toggle-filters::after,
-html.ll-test .category-perex a.showmore::after, html.ll-test .responsive-tools > a[data-target="search"]::before, html.ll-test .responsive-tools > a[data-target="login"]::before,
+html.ll-test .category-perex a.showmore::after, html.ll-test .p-short-description-block > p a.chevron-after::after, html.ll-test .responsive-tools > a[data-target="search"]::before, html.ll-test .responsive-tools > a[data-target="login"]::before,
 html.ll-test .products-top-wrapper .toggle-top-products::after, html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before {
   content: '' !important; display: inline-block; flex: none; font-size: 0 !important; line-height: 0 !important;
   background-color: currentColor; -webkit-text-fill-color: currentColor;
@@ -710,6 +774,7 @@ html.ll-test .products .product .btn-cart::after { display: none !important; }
 html.ll-test .products .product .btn-cart::before { --ll-icon: var(--ll-i-bag); width: 18px !important; height: 18px !important; margin: 0 8px 0 0 !important; }
 html.ll-test #filters .toggle-filters::after { --ll-icon: var(--ll-i-chev-down); position: static !important; width: 14px !important; height: 14px !important; margin: 0 !important; transform: none !important; }
 html.ll-test .category-perex a.showmore::after { --ll-icon: var(--ll-i-chev-down); width: 14px !important; height: 14px !important; margin: 0 !important; transform: none !important; border: 0 !important; }
+html.ll-test .p-short-description-block > p a.chevron-after::after { --ll-icon: var(--ll-i-chev-down); position: static !important; width: 14px !important; height: 14px !important; margin: 0 !important; transform: none !important; }
 html.ll-test .responsive-tools > a[data-target="search"]::before { --ll-icon: var(--ll-i-search); }
 html.ll-test .responsive-tools > a[data-target="login"]::before { --ll-icon: var(--ll-i-user); }
 html.ll-test .responsive-tools > a[data-target="search"]::before, html.ll-test .responsive-tools > a[data-target="login"]::before { width: 22px !important; height: 22px !important; vertical-align: middle; color: var(--ll-ink) !important; }
