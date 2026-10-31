@@ -2370,3 +2370,12 @@ html.ll-test body.in-hodnoceni-obchodu #ratingsList .admin-response .vote-conten
   html.ll-test body.in-hodnoceni-obchodu #content .content-inner { padding-bottom: 48px !important; }
   html.ll-test body.in-hodnoceni-obchodu #rate-form .form-control { font-size: 16px !important; }
 }
+
+/* ---------- Nákupní panel u produktu, který nelze objednat (DS BuyboxPrice, stav Nelze objednat) ----------
+   Panel skládají tři díly pod sebou (.p-info-grid nahoře, .loyalty-box-wrapper, .add-to-cart s dolní linkou a zaoblením).
+   Bez tlačítka zůstával dole otevřený: linku, zaoblení a spodní odsazení dostane poslední díl. */
+html.ll-test .p-info-wrapper:not(:has(> .add-to-cart)) > .loyalty-box-wrapper { padding-bottom: 24px !important; border-bottom: 1px solid var(--ll-line) !important; border-radius: 0 0 var(--ll-r-md) var(--ll-r-md) !important; }
+html.ll-test .p-info-wrapper:not(:has(> .add-to-cart)):not(:has(> .loyalty-box-wrapper)) > .p-info-grid { padding-bottom: 24px !important; border-bottom: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; }
+@media (max-width: 767px) {
+  html.ll-test .p-info-wrapper:not(:has(> .add-to-cart)) > .loyalty-box-wrapper, html.ll-test .p-info-wrapper:not(:has(> .add-to-cart)):not(:has(> .loyalty-box-wrapper)) > .p-info-grid { padding-bottom: 16px !important; }
+}
