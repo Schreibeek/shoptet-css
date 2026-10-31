@@ -849,11 +849,12 @@ html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before 
 
 /* ---------- Homepage: bannery Pro ni / Pro něj na hranách obsahu ----------
    Odkazy měly okraj 10 px, takže bannery byly zúžené proti produktům a ostatním blokům. Mezera 24 px jako u bannerů značek. */
-html.ll-test .HpBanners { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+/* Blok je v HTML na všech stránkách a šablona ho mimo homepage skrývá, proto mřížka jen na homepage (body.type-index) */
+html.ll-test body.type-index .HpBanners { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 html.ll-test .HpBanners > a { display: block !important; width: auto !important; max-width: none !important; flex: none !important; margin: 0 !important; }
 html.ll-test .HpBanners > a img { display: block; width: 100% !important; height: auto; }
 @media (max-width: 767px) {
-  html.ll-test .HpBanners { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  html.ll-test body.type-index .HpBanners { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   /* Vodorovné řady na mobilu: první karta na hraně obsahu (20 px), ne o 2 px vedle (produkty) nebo o 10 px dál (blog) */
   html.ll-test .type-index .products.products-block > .product:first-child { margin-left: 12px !important; }
   html.ll-test .type-index .news-wrapper { padding-left: 0 !important; }
