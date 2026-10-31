@@ -1667,6 +1667,8 @@ html.ll-test #cart-wrapper .ll-cart-help a[href^="tel:"]::before { --ll-icon: va
   html.ll-test #cart-wrapper .cart-content:has(> .cart-table) > .cart-summary { grid-column: 1; grid-row: 4; margin-top: 40px !important; position: static !important; }
   html.ll-test #cart-wrapper .cart-content:has(> .text-center > .delivery-time):not(:has(.ll-cart-date)) > .text-center { margin-top: 40px !important; }
   html.ll-test #cart-wrapper .cart-content:has(> .text-center > .delivery-time):not(:has(.ll-cart-date)) > .cart-summary { margin-top: 0 !important; }
+  /* Kroky jen s popiskem aktuálního jako na mobilu (všechny popisky se vedle titulku nevejdou) */
+  html.ll-test #cart-wrapper ol.cart-header li.step:not(.active) span { gap: 0; font-size: 0 !important; }
 }
 @media (max-width: 767px) {
   /* Košík na mobilu (MobileCart): titulek 24 px a kroky jen s popiskem aktuálního, položka na dva řádky, panel pod položkami, dole lišta s cenou a Pokračovat */
