@@ -1335,7 +1335,7 @@ html.ll-test .gallery-new #main-slider .splide__arrow--prev::before { transform:
    Lišta s logem a ikonami (.top-navigation-bar, pevná) a všechno, co na ni navazuje: odsazení obsahu (.overall-wrapper),
    hledání (#header vyjede pod lištu), menu (#navigation) a přihlášení (#login) od 56 px.
    Logo 36 px na výšku, 20 px od kraje; ikonová tlačítka 44 × 44 px uprostřed lišty, Menu 48 px s ikonou nad popiskem, 8 px od pravého kraje.
-   Otevřené menu: šablona dává tlačítku position fixed vpravo nahoře, tady na stejné místo jako zavřené. */
+   Otevřené menu: šablona dávala tlačítku position fixed, tím vypadlo z řady a košík se posunul pod něj (zmizel); zůstává v řadě na stejném místě. */
 @media (max-width: 767px) {
   html.ll-test .top-navigation-bar, html.ll-test .top-navigation-tools { height: 56px !important; }
   html.ll-test .top-navigation-bar .site-name { left: 20px !important; height: 56px !important; }
@@ -1348,7 +1348,7 @@ html.ll-test .gallery-new #main-slider .splide__arrow--prev::before { transform:
   html.ll-test .responsive-tools > a[data-target="navigation"]::before { position: static !important; top: auto !important; }
   html.ll-test .responsive-tools > a[data-target="navigation"]::after { position: static !important; top: auto !important; bottom: auto !important; left: auto !important; right: auto !important; line-height: 12px !important; }
   html.ll-test body:not(.navigation-window-visible) .responsive-tools > a[data-target="navigation"] { left: 0 !important; right: auto !important; }
-  html.ll-test body.navigation-window-visible .responsive-tools > a[data-target="navigation"] { top: 6px !important; right: 8px !important; left: auto !important; }
+  html.ll-test body.navigation-window-visible .responsive-tools > a[data-target="navigation"] { position: relative !important; top: auto !important; right: auto !important; left: 0 !important; }
   html.ll-test .overall-wrapper { padding-top: 56px !important; }
   html.ll-test body.search-window-visible #header { top: 56px !important; }
   html.ll-test #navigation { top: 56px !important; bottom: -56px !important; }
