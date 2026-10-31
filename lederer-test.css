@@ -68,8 +68,13 @@ html.ll-test .top-navigation-bar a:hover { color: var(--ll-ink); }
 html.ll-test #header { background: var(--ll-paper); border-bottom: 1px solid var(--ll-line); box-shadow: none; }
 /* Hlavička bez stínu (šablona ho dává pevné liště na mobilu a vypadá to, že pod ní leze obsah); na mobilu bílá jako v šabloně */
 html.ll-test .top-navigation-bar, html.ll-test #header, html.ll-test #header .header-top, html.ll-test .header-top, html.ll-test .top-navigation-tools, html.ll-test .responsive-tools { box-shadow: none !important; }
-@media (max-width: 767px) { html.ll-test .top-navigation-bar { background: var(--ll-paper) !important; } }
-html.ll-test #header .search input, html.ll-test #header .search .form-control { height: 46px; background: var(--ll-paper); border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none; }
+@media (max-width: 767px) {
+  html.ll-test .top-navigation-bar { background: var(--ll-paper) !important; border-bottom: 0 !important; box-shadow: inset 0 -1px 0 var(--ll-line) !important; }
+  html.ll-test #header { border-bottom: 0 !important; }
+}
+html.ll-test #header .search input, html.ll-test #header .search .form-control { background: var(--ll-paper); border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none; }
+/* Vyšší pole jen na počítači: na mobilu je hledání v pevné hlavičce a obsah má odsazení podle 40px pole, jinak hlavička přečnívá přes drobečky */
+@media (min-width: 768px) { html.ll-test #header .search input, html.ll-test #header .search .form-control { height: 46px; } }
 html.ll-test #header .navigation-buttons .top-nav-button, html.ll-test #header .navigation-buttons .top-nav-button span { color: var(--ll-ink); }
 html.ll-test #header .click-cart { background: transparent; border-radius: var(--ll-r-sm); }
 html.ll-test #header .click-cart .btn, html.ll-test #header .navigation-buttons .cart-count {
