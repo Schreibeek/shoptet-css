@@ -578,7 +578,8 @@ html.ll-test .brand-banner__link:hover { color: var(--ll-gold-text) !important; 
 
 /* ---------- Blog (BlogCard): bez rámečku a stínu, titulek 18/500, odkaz Číst článek ---------- */
 html.ll-test .news-wrapper .news-item { background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
-html.ll-test .news-wrapper .news-item .image { overflow: hidden; aspect-ratio: 3 / 2; background: var(--ll-tile); border-radius: var(--ll-r-md) !important; }
+/* Fotka 2:1 jako obrázky článků v Shoptetu (1200 × 600), celá bez ořezu; šablona dává pevnou výšku 190 px, na kartě 255 px široké se pak ořezávaly strany */
+html.ll-test .news-wrapper .news-item .image { overflow: hidden; height: auto !important; aspect-ratio: 2 / 1; background: var(--ll-tile); border-radius: var(--ll-r-md) !important; }
 html.ll-test .news-wrapper .news-item .image img { width: 100%; height: 100%; object-fit: cover; border-radius: 0 !important; transition: transform 420ms var(--ll-ease); }
 html.ll-test .news-wrapper .news-item:hover .image img { transform: scale(1.035); }
 html.ll-test .news-wrapper .news-item .text { padding: 16px 2px 0 !important; background: transparent !important; }
@@ -798,7 +799,8 @@ html.ll-test .brand-banner--lerdee .brand-banner__btn:hover { background: #4a444
 
 /* ---------- Pruh výhod nad patičkou (benefitBanner) jako TrustBar: ikona v kruhu, titulek a text, linky ----------
    Barevné obrázky nahrazuje lederer-test.js ikonami Lucide (podle názvu výhody); když nepozná, nechá obrázek. */
-html.ll-test .benefitBanner { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 !important; margin: 64px 0 0 !important; padding: 0 !important; border-top: 1px solid var(--ll-line); border-bottom: 1px solid var(--ll-line); }
+/* Položky na výšku nejvyšší (šablona má align-items flex-start): linky mezi nimi dotažené dolů, i když se titulek zalomí */
+html.ll-test .benefitBanner { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch !important; gap: 0 !important; margin: 64px 0 0 !important; padding: 0 !important; border-top: 1px solid var(--ll-line); border-bottom: 1px solid var(--ll-line); }
 html.ll-test .benefitBanner__item { display: grid !important; grid-template-columns: 44px minmax(0, 1fr); align-items: start; column-gap: 16px; box-sizing: border-box; width: auto !important; max-width: none !important; flex: none !important; margin: 0 !important; padding: 24px 28px !important; text-align: left !important; }
 html.ll-test .benefitBanner__item + .benefitBanner__item { border-left: 1px solid var(--ll-line); }
 html.ll-test .benefitBanner__link { display: grid !important; grid-column: 1 / -1; grid-template-columns: 44px minmax(0, 1fr); align-items: start; column-gap: 16px; color: inherit !important; text-decoration: none !important; }
