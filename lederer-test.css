@@ -333,7 +333,15 @@ html.ll-test .p-info-headline h1, html.ll-test .p-detail-inner-header .h1 { font
 /* Šablona má hlavičku dvakrát: pod 992 px nad galerií (.p-detail-inner-header), od 992 px ve sloupci vpravo; druhou vždy skrývá */
 html.ll-test .p-detail-inner-header .p-info-headline { display: flex !important; flex-direction: column; align-items: flex-start; }
 @media (min-width: 992px) { html.ll-test .p-info-wrapper .p-info-headline { display: flex !important; flex-direction: column; align-items: flex-start; } }
-@media (max-width: 767px) { html.ll-test .p-info-headline h1 { font-size: 24px !important; line-height: 1.25 !important; } }
+@media (max-width: 767px) {
+  html.ll-test .p-info-headline h1 { font-size: 24px !important; line-height: 1.25 !important; }
+  html.ll-test .p-info-grid { padding: 20px 16px 12px !important; }
+  html.ll-test .loyalty-box-wrapper { padding: 0 16px 12px !important; }
+  html.ll-test .add-to-cart { padding: 0 16px 16px !important; gap: 8px; }
+  html.ll-test .add-to-cart .btn-conversion, html.ll-test .add-to-cart .btn.btn-lg.btn-conversion { padding: 0 14px !important; font-size: 15px !important; }
+  html.ll-test .add-to-cart .quantity button.increase, html.ll-test .add-to-cart .quantity button.decrease { width: 38px !important; }
+  html.ll-test .add-to-cart .quantity input.amount { width: 32px !important; }
+}
 html.ll-test .p-info-headline h1 { margin: 0 0 12px !important; }
 html.ll-test .p-info-headline .p-detail-info { display: contents !important; }
 html.ll-test .p-info-headline .p-detail-info > div:not(.stars-wrapper) { order: -1; margin: 0 0 8px !important; padding: 0 !important; }
@@ -373,7 +381,7 @@ html.ll-test .loyalty-box-text strong { font-weight: 600; }
 html.ll-test .loyalty-box-wrapper a { color: var(--ll-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 html.ll-test .ll-loyalty-icon { display: inline-flex; flex: none; color: var(--ll-gold-text); }
 html.ll-test .ll-loyalty-icon svg { display: block; width: 16px; height: 16px; }
-html.ll-test .add-to-cart { display: flex !important; align-items: stretch; justify-content: flex-start !important; gap: 12px; margin: 0 !important; padding: 0 24px 24px !important; background: var(--ll-paper); border: 1px solid var(--ll-line); border-top: 0; border-radius: 0 0 var(--ll-r-md) var(--ll-r-md); }
+html.ll-test .add-to-cart { display: flex !important; flex-wrap: nowrap !important; align-items: stretch; justify-content: flex-start !important; gap: 12px; margin: 0 !important; padding: 0 24px 24px !important; background: var(--ll-paper); border: 1px solid var(--ll-line); border-top: 0; border-radius: 0 0 var(--ll-r-md) var(--ll-r-md); }
 /* Množství (QuantityStepper): − číslo +, výška jako tlačítko */
 html.ll-test .add-to-cart .quantity { position: relative; display: inline-flex !important; align-items: stretch; flex: none !important; box-sizing: border-box; width: auto !important; height: 52px !important; margin: 0 !important; padding: 0 !important; background: var(--ll-paper); border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none; }
 html.ll-test .add-to-cart .quantity label { order: 2; display: flex !important; align-items: center; margin: 0 !important; }
