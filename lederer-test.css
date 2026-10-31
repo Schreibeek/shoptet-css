@@ -118,11 +118,11 @@ html.ll-test .products .product .p .image {
   position: relative; display: block; overflow: hidden; isolation: isolate;
   background: var(--ll-tile); border-radius: var(--ll-r-md);
 }
-html.ll-test .products .product .p .image img:not(.extra-flags img) {
+html.ll-test .products .product .p .image img:not(.extra-flags img):not(.js-product-badge) {
   mix-blend-mode: multiply; filter: brightness(1.03);
   transition: transform 420ms var(--ll-ease);
 }
-html.ll-test .products .product:hover .p .image img:not(.extra-flags img) { transform: scale(1.035); }
+html.ll-test .products .product:hover .p .image img:not(.extra-flags img):not(.js-product-badge) { transform: scale(1.035); }
 html.ll-test .products .product .p .flags-default { top: 12px; left: 12px; right: auto; z-index: 2; gap: 4px; }
 html.ll-test .products .product .p .flags-extra { top: 12px !important; right: 12px !important; left: auto !important; bottom: auto !important; z-index: 2; }
 html.ll-test .products .product .p-in { padding: 14px 2px 0; }
@@ -187,7 +187,7 @@ html.ll-test #productsTop .product { float: none !important; width: auto !import
 html.ll-test #productsTop .product .p { display: grid !important; grid-template-columns: 64px minmax(0, 1fr); align-items: center; column-gap: 14px; box-sizing: border-box; height: 100%; padding: 8px 16px 8px 8px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: border-color 150ms var(--ll-ease); }
 html.ll-test #productsTop .product .p:hover { border-color: var(--ll-ink) !important; }
 html.ll-test #productsTop .product .p .image { width: 64px !important; height: 64px !important; aspect-ratio: auto; border-radius: var(--ll-r-xs) !important; }
-html.ll-test #productsTop .product:hover .p .image img:not(.extra-flags img) { transform: none; }
+html.ll-test #productsTop .product:hover .p .image img:not(.extra-flags img):not(.js-product-badge) { transform: none; }
 html.ll-test #productsTop .product .p-in { display: flex !important; flex-direction: column; align-items: stretch !important; justify-content: center !important; gap: 4px; width: auto !important; max-width: none !important; min-width: 0; justify-self: stretch !important; padding: 0 !important; text-align: left !important; }
 html.ll-test #productsTop .product .p-in-in { margin: 0 !important; padding: 0 !important; }
 html.ll-test #productsTop .product .p .name { display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 3; width: auto !important; max-width: none !important; overflow: hidden; height: auto !important; min-height: 0 !important; margin: 0 !important; }
@@ -569,8 +569,10 @@ html.ll-test #footer .custom-footer__newsletter { margin-top: 48px !important; }
 /* ---------- Produktové fotky v kartě: celá fotka ve čtvercové dlaždici, bez přiblížení ----------
    Šablona fotce dávala pevných 380 px v dlaždici 320 px, proto byla oříznutá a přiblížená. */
 html.ll-test .products .product .p .image { width: 100% !important; height: auto !important; aspect-ratio: 1 / 1; margin: 0 !important; padding: 0 !important; display: flex !important; align-items: center; justify-content: center; }
-/* Jen hlavní fotka: obrázkové štítky v .extra-flags (např. Přírodní složení u Lerdee) si nechávají velikost a roh ze šablony */
-html.ll-test .products .product .p .image img:not(.extra-flags img) { width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; margin: 0 !important; object-fit: contain !important; }
+/* Jen hlavní fotka: obrázkové štítky (.extra-flags a odznak Přírodní složení u Lerdee z lederer.js) si nechávají velikost a roh z lederer.css.
+   Fotka je v testu bez vnitřního odsazení, proto --imgPadX 0 (lederer.css jím posouvá odznak doprava). */
+html.ll-test .p a.image { --imgPadX: 0px; }
+html.ll-test .products .product .p .image img:not(.extra-flags img):not(.js-product-badge) { width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important; margin: 0 !important; object-fit: contain !important; }
 
 /* ---------- Lerdee: jedno zaoblení 10 px, bez rámečku kolem ---------- */
 html.ll-test .brand-banner--lerdee { border: 0 !important; border-radius: var(--ll-r-lg) !important; background: transparent !important; overflow: hidden; box-shadow: none !important; }
