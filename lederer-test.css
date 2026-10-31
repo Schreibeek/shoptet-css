@@ -1096,5 +1096,6 @@ html.ll-test .responsive-tools > a[data-target="navigation"]::before, html.ll-te
   html.ll-test .p-detail-tabs-wrapper .detail-tab-item { position: relative; display: flex !important; align-items: center; min-height: 56px; margin: 0 !important; padding: 0 32px 0 0 !important; font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; cursor: pointer; }
   html.ll-test .p-detail-tabs-wrapper .detail-tab-item::after { --ll-icon: var(--ll-i-chev-down); position: absolute !important; top: 50% !important; right: 0 !important; width: 18px !important; height: 18px !important; transform: translateY(-50%) !important; color: var(--ll-ink-muted) !important; transition: transform 150ms var(--ll-ease); }
   html.ll-test .p-detail-tabs-wrapper .tab-pane.active > .detail-tab-item::after { transform: translateY(-50%) rotate(180deg) !important; }
+  html.ll-test .p-detail-tabs-wrapper .tab-pane > .detail-tab-content { padding-left: 0 !important; padding-right: 0 !important; }
   html.ll-test .p-detail-tabs-wrapper .tab-pane.active > .detail-tab-content { padding-bottom: 24px !important; }
 }
