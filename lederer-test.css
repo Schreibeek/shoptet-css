@@ -323,7 +323,10 @@ html.ll-test .gallery-new #main-slider .splide__slide, html.ll-test .gallery-new
   background: var(--ll-tile); border-radius: var(--ll-r-md); overflow: hidden; isolation: isolate;
 }
 html.ll-test .gallery-new #main-slider .splide__slide img { mix-blend-mode: multiply; filter: brightness(1.03); }
-html.ll-test .gallery-new #main-slider .flags { top: 16px; left: 16px; z-index: 3; }
+html.ll-test .gallery-new #main-slider .flags { top: 16px; left: 16px; z-index: 3; display: flex !important; flex-direction: row !important; flex-wrap: wrap; align-items: flex-start; gap: 4px; }
+@media (max-width: 767px) {
+  html.ll-test .gallery-new #main-slider .flags { top: 8px; left: 8px; flex-direction: column !important; }
+}
 html.ll-test .gallery-new #thumbnail-slider .splide__slide { background: var(--ll-tile); border: 1px solid transparent; border-radius: var(--ll-r-sm); overflow: hidden; isolation: isolate; }
 html.ll-test .gallery-new #thumbnail-slider .splide__slide.is-active { border-color: var(--ll-ink); }
 html.ll-test .gallery-new #thumbnail-slider .splide__slide img { mix-blend-mode: multiply; filter: brightness(1.03); }
@@ -364,6 +367,10 @@ html.ll-test .p-info-headline .stars-wrapper .star::before { width: 17px !import
 html.ll-test .p-info-headline .stars-label, html.ll-test .p-info-headline .stars-label span { margin: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-muted) !important; }
 html.ll-test .p-info-headline .stars-link { margin: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; text-decoration: underline !important; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 html.ll-test .p-info-headline .stars-link:hover { color: var(--ll-ink) !important; }
+/* Hodnota za hvězdami jako v DS (ll-rating__value, "4,6/5"). Číslo doplní lederer-test.js ze skrytého textu šablony do data-ll-value. */
+html.ll-test .p-info-headline .stars-wrapper[data-ll-value]::before { content: attr(data-ll-value) '/5'; order: 1; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ll-ink); }
+html.ll-test .p-info-headline .stars-wrapper .stars-label { order: 2; }
+html.ll-test .p-info-headline .stars-wrapper .stars-link { order: 3; }
 html.ll-test .p-short-description, html.ll-test .p-short-description p { font-size: 16px; line-height: 26px; color: var(--ll-ink-soft); }
 /* Odstupy: hodnocení → krátký popis 18 px (bylo 30), popis → Detailní informace 16 px (bylo 10) */
 html.ll-test .p-info-headline { margin-bottom: 18px !important; }
@@ -384,6 +391,8 @@ html.ll-test .detail-availability-block .availability-value { margin: 0 !importa
 html.ll-test .detail-availability-block .availability-label { display: inline-flex !important; align-items: center; gap: 8px; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; }
 html.ll-test .detail-availability-block .availability-label::before { content: ''; flex: none; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
 html.ll-test .detail-availability-block .availability-label[style*="009901"] { color: var(--ll-success) !important; }
+html.ll-test .detail-availability-block .availability-label[style*="cb0000"] { color: var(--ll-ink-muted) !important; }
+html.ll-test .detail-availability-block .availability-label[style*="color"]:not([style*="009901"]):not([style*="cb0000"]) { color: var(--ll-gold-text) !important; }
 html.ll-test .detail-availability-block > div[style] { margin: 2px 0 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
 html.ll-test .detail-availability-block table.detail-parameters:not(:has(tr)) { display: none; }
 html.ll-test .loyalty-box-wrapper { margin: 0 !important; padding: 0 24px 16px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-top: 0 !important; border-bottom: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
@@ -1151,32 +1160,69 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
 
 /* ---------- Produktová karta podle DS ProductCard (výpis, homepage, související; ne kompaktní Nejprodávanější) ----------
    Název bez značky, pod ním hodnocení a dostupnost v jednom řádku (ll-card__meta), cena a tlačítko dole.
-   Šablona je má v různých obalech (hodnocení nad názvem, dostupnost pod cenou), proto mřížka a obaly display: contents. */
-html.ll-test .products:not(#productsTop) .product .p { display: grid !important; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto auto 1fr auto; grid-template-areas: "image image" "name name" "rating stock" "price price" "btn btn"; column-gap: 8px; }
+   Šablona je má v různých obalech (hodnocení nad názvem, dostupnost pod cenou), proto mřížka a obaly display: contents.
+   Řádek wrap je prázdný; na úzké kartě do něj spadne dostupnost (ll-card__meta se v DS zalamuje). */
+html.ll-test .products:not(#productsTop) .product .p { display: grid !important; grid-template-columns: auto auto; grid-template-rows: auto auto auto auto 1fr auto; grid-template-areas: "image image" "name name" "rating stock" "wrap wrap" "price price" "btn btn"; column-gap: 8px; container-type: inline-size; }
 html.ll-test .products:not(#productsTop) .product .p-in, html.ll-test .products:not(#productsTop) .product .p-in-in, html.ll-test .products:not(#productsTop) .product .p-bottom, html.ll-test .products:not(#productsTop) .product .p-bottom > div { display: contents !important; }
 html.ll-test .products:not(#productsTop) .product .p > a.image { grid-area: image; }
 html.ll-test .products:not(#productsTop) .product .p a.name { grid-area: name; display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; height: auto !important; min-height: 44px; margin: 14px 0 0 !important; padding: 0 2px !important; }
 html.ll-test .products:not(#productsTop) .product .p a.name, html.ll-test .products:not(#productsTop) .product .p a.name span { font-size: 15px !important; line-height: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
-html.ll-test .products:not(#productsTop) .product .p .ratings-wrapper { grid-area: rating; align-self: center; min-height: 20px; margin: 6px 0 0 2px !important; padding: 0 !important; }
+html.ll-test .products:not(#productsTop) .product .p .ratings-wrapper { grid-area: rating; justify-self: start; align-self: center; min-height: 20px; margin: 6px 0 0 2px !important; padding: 0 !important; }
 html.ll-test .products:not(#productsTop) .product .p .p-tools { grid-area: stock; justify-self: end; align-self: center; margin: 6px 2px 0 0 !important; padding: 0 !important; }
 /* Bez hodnocení dostupnost vlevo (jako ll-card__meta s jednou položkou) */
+html.ll-test .products:not(#productsTop) .product .p:not(:has(.ratings-wrapper .star)) .ratings-wrapper { display: none !important; }
 html.ll-test .products:not(#productsTop) .product .p:not(:has(.ratings-wrapper .star)) .p-tools { grid-column: 1 / -1; justify-self: start; margin-left: 2px !important; }
 html.ll-test .products:not(#productsTop) .product .p .prices { grid-area: price; align-self: end; margin: 10px 0 0 2px !important; }
 html.ll-test .products:not(#productsTop) .product .p .product-btn { grid-area: btn; margin-top: 12px !important; }
-/* Hvězdy podle Rating: 14 px zlaté s mezerou 1 px (šablona 15 px s mezerou 4 px, poloviční ve žluté #f0b820) */
-html.ll-test .products:not(#productsTop) .product .ratings-wrapper .stars-wrapper, html.ll-test .products:not(#productsTop) .product .ratings-wrapper .stars { display: inline-flex !important; align-items: center; gap: 1px; margin: 0 !important; }
+/* Hodnocení podle Rating: zlaté hvězdy 14 px s mezerou 1 px (šablona 15 px s mezerou 4 px, poloviční ve žluté #f0b820),
+   za nimi po 8 px hodnota a počet ("4,6 (8)"). Hodnotu s desetinnou čárkou doplní lederer-test.js do data-ll-value, počet je v data-micro-rating-count. */
+html.ll-test .products:not(#productsTop) .product .ratings-wrapper .stars-wrapper { display: inline-flex !important; align-items: center; gap: 8px; margin: 0 !important; font-size: 13px; line-height: 20px; font-weight: 400; color: var(--ll-ink-muted); white-space: nowrap; }
+html.ll-test .products:not(#productsTop) .product .ratings-wrapper .stars { display: inline-flex !important; align-items: center; gap: 1px; margin: 0 !important; }
+html.ll-test .products:not(#productsTop) .product .ratings-wrapper .stars-wrapper[data-ll-value]::before { content: attr(data-ll-value); order: 1; font-weight: 600; color: var(--ll-ink); }
+html.ll-test .products:not(#productsTop) .product .ratings-wrapper .stars-wrapper[data-ll-value][data-micro-rating-count]::after { content: '(' attr(data-micro-rating-count) ')'; order: 2; }
 html.ll-test .products:not(#productsTop) .product .ratings-wrapper .star { width: 14px !important; height: 14px !important; margin: 0 !important; }
 html.ll-test .products:not(#productsTop) .product .ratings-wrapper .star::before { width: 14px !important; font-size: 14px !important; line-height: 14px !important; color: var(--ll-gold) !important; }
 html.ll-test .products:not(#productsTop) .product .ratings-wrapper .star-off::before { color: var(--ll-line-strong) !important; }
-/* Dostupnost podle Availability: 13 px řez 500 větou, tečka 7 px v barvě stavu; Skladem v success */
+html.ll-test .products:not(#productsTop) .product .ratings-wrapper .star-half::before { color: transparent !important; background: linear-gradient(90deg, var(--ll-gold) 50%, var(--ll-line-strong) 50%) !important; -webkit-background-clip: text !important; background-clip: text !important; }
+/* Dostupnost podle Availability: 13 px řez 500 větou, tečka 7 px v barvě stavu. Skladem (#009901) success,
+   Vyprodáno a Momentálně nedostupné (#cb0000) ink-muted, jiný stav s barvou (Na objednávku) gold-text. */
 html.ll-test .products:not(#productsTop) .product .availability { display: inline-flex !important; align-items: center; margin: 0 !important; padding: 0 !important; }
-html.ll-test .products:not(#productsTop) .product .availability span { display: inline-flex !important; align-items: center; gap: 6px; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; white-space: nowrap; }
+html.ll-test .products:not(#productsTop) .product .availability span { display: inline-flex !important; align-items: center; gap: 8px; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; text-align: right; }
 html.ll-test .products:not(#productsTop) .product .availability span::before { content: ''; flex: none; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
 html.ll-test .products:not(#productsTop) .product .availability span[style*="009901"] { color: var(--ll-success) !important; }
+html.ll-test .products:not(#productsTop) .product .availability span[style*="cb0000"] { color: var(--ll-ink-muted) !important; }
+html.ll-test .products:not(#productsTop) .product .availability span[style*="color"]:not([style*="009901"]):not([style*="cb0000"]) { color: var(--ll-gold-text) !important; }
 @media (max-width: 767px) {
   html.ll-test .products:not(#productsTop) .product .p a.name { min-height: 40px; margin-top: 12px !important; }
   html.ll-test .products:not(#productsTop) .product .p a.name, html.ll-test .products:not(#productsTop) .product .p a.name span { font-size: 14px !important; line-height: 20px !important; }
   html.ll-test .products:not(#productsTop) .product .p .ratings-wrapper { margin-top: 4px !important; }
   html.ll-test .products:not(#productsTop) .product .p .p-tools { margin-top: 4px !important; }
-  html.ll-test .products:not(#productsTop) .product .availability span { white-space: normal; text-align: right; }
+  html.ll-test .products:not(#productsTop) .product .p .prices { margin-top: 8px !important; }
 }
+/* Úzká karta (mobil, výpis vedle filtru): dostupnost na další řádek vlevo, 8 px pod hodnocením */
+@container (max-width: 249px) {
+  html.ll-test .products:not(#productsTop) .product .p .p-tools { grid-area: wrap; justify-self: start; margin: 8px 0 0 2px !important; }
+  html.ll-test .products:not(#productsTop) .product .p:not(:has(.ratings-wrapper .star)) .p-tools { margin-top: 4px !important; }
+  html.ll-test .products:not(#productsTop) .product .availability span { text-align: left; }
+}
+@supports not (container-type: inline-size) {
+  @media (max-width: 767px) {
+    html.ll-test .products:not(#productsTop) .product .p .p-tools { grid-area: wrap; justify-self: start; margin: 8px 0 0 2px !important; }
+    html.ll-test .products:not(#productsTop) .product .p:not(:has(.ratings-wrapper .star)) .p-tools { margin-top: 4px !important; }
+    html.ll-test .products:not(#productsTop) .product .availability span { text-align: left; }
+  }
+}
+
+/* ---------- Poloviční hvězda ----------
+   Šablona ji kreslí celou ve žluté #f0b820, vedle zlatých vypadá jako jiná barva. Podle DS zlatá do půlky, zbytek jako vypnutá hvězda. */
+html.ll-test .star.star-half::before { color: transparent !important; background: linear-gradient(90deg, var(--ll-gold) 50%, var(--ll-line-strong) 50%) !important; -webkit-background-clip: text !important; background-clip: text !important; }
+
+/* ---------- Detail produktu: odrážky v popisu ----------
+   HTML je v pořádku (li se span), mezery dělala šablona: 12 px mezi položkami a odsazení 40 px.
+   Podle DS (Article): 8 px mezi položkami, odsazení 26 px, zlatý kosočtverec; číslované seznamy jen odstupy. */
+html.ll-test .basic-description ul { margin: 0 0 20px !important; padding: 0 !important; list-style: none !important; }
+html.ll-test .basic-description ul > li { position: relative; margin: 0 0 8px !important; padding: 0 0 0 26px !important; list-style: none !important; }
+html.ll-test .basic-description ul > li::before { content: '' !important; position: absolute !important; left: 5px; top: 10.5px; width: 6px; height: 6px; margin: 0 !important; background: var(--ll-gold) !important; border: 0 !important; border-radius: 0 !important; transform: rotate(45deg); }
+html.ll-test .basic-description ol { margin: 0 0 20px !important; padding: 0 0 0 26px !important; }
+html.ll-test .basic-description ol > li { margin: 0 0 8px !important; padding: 0 0 0 4px !important; }
+html.ll-test .basic-description ul > li:last-child, html.ll-test .basic-description ol > li:last-child { margin-bottom: 0 !important; }
