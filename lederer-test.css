@@ -275,7 +275,9 @@ html.ll-test .sidebar .vote-rating { font-size: 12px !important; line-height: 16
 html.ll-test .sidebar .vote-rating span:not([class*="star"]) { font-size: inherit !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-muted) !important; }
 html.ll-test .sidebar .vote-content { font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-soft) !important; }
 /* Banner v panelu: jedno zaoblení 6 px na obalu, fotka bez vlastního zaoblení a bez zvětšení při najetí */
-html.ll-test .sidebar .banner { overflow: hidden !important; isolation: isolate; border-radius: var(--ll-r-md) !important; box-shadow: none !important; }
+html.ll-test .sidebar .banner { overflow: hidden !important; isolation: isolate; padding: 0 !important; border-radius: var(--ll-r-md) !important; box-shadow: none !important; }
+html.ll-test .sidebar .banner .banner-wrapper, html.ll-test .sidebar .banner a { display: block !important; margin: 0 !important; padding: 0 !important; line-height: 0; }
+html.ll-test .sidebar .banner img { position: static !important; top: auto !important; left: auto !important; width: 100% !important; height: auto !important; min-height: 0 !important; max-height: none !important; margin: 0 !important; }
 html.ll-test .sidebar .banner img, html.ll-test .sidebar .banner a:hover img, html.ll-test .sidebar .banner:hover img { border-radius: 0 !important; transform: none !important; transition: none !important; }
 /* Hodnocení obchodu v panelu (ReviewSummary): skupina s linkou, hodnota inkoustem, hvězdy 16 px, obrysové tlačítko */
 html.ll-test .sidebar .sidepanel-rating { width: auto !important; margin: 32px 0 0 !important; padding: 24px 0 0 !important; background: transparent !important; border: 0 !important; border-top: 1px solid var(--ll-line) !important; border-radius: 0 !important; box-shadow: none !important; }
