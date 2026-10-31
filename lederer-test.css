@@ -157,7 +157,7 @@ html.ll-test .products-top-header, html.ll-test .products-related-header, html.l
 html.ll-test ul.subcategories { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 8px 0 40px !important; padding: 0 !important; }
 html.ll-test ul.subcategories::before, html.ll-test ul.subcategories::after { display: none !important; }
 html.ll-test ul.subcategories > li { float: none !important; width: auto !important; max-width: none !important; flex: none !important; margin: 0 !important; padding: 0 !important; }
-html.ll-test ul.subcategories > li > a { display: flex !important; align-items: center; gap: 14px; box-sizing: border-box; height: 100%; min-height: 0 !important; padding: 8px 16px 8px 8px !important; color: var(--ll-ink) !important; text-decoration: none; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: border-color 150ms var(--ll-ease); }
+html.ll-test ul.subcategories > li > a { display: flex !important; flex-direction: row !important; justify-content: flex-start !important; align-items: center; gap: 14px; text-align: left !important; box-sizing: border-box; height: 100%; min-height: 0 !important; padding: 8px 16px 8px 8px !important; color: var(--ll-ink) !important; text-decoration: none; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: border-color 150ms var(--ll-ease); }
 html.ll-test ul.subcategories > li > a:hover { border-color: var(--ll-ink) !important; }
 html.ll-test ul.subcategories > li > a::before, html.ll-test ul.subcategories > li > a::after { display: none !important; }
 html.ll-test ul.subcategories > li > a .image { flex: none !important; width: 52px !important; height: 52px !important; margin: 0 !important; padding: 0 !important; overflow: hidden; background: var(--ll-tile); border-radius: var(--ll-r-xs) !important; }
@@ -650,7 +650,8 @@ html.ll-test .top-nav-button-login::before, html.ll-test .btn.cart-count::before
 html.ll-test .project-phone::before, html.ll-test .project-email::before, html.ll-test #navigation .menu-level-1 > li.ext > a::after,
 html.ll-test .breadcrumbs a::after, html.ll-test .pagination__link--next::before, html.ll-test .pagination__link--prev::before,
 html.ll-test .back-to-top i::before, html.ll-test .products .product .btn-cart::before, html.ll-test #filters .toggle-filters::after,
-html.ll-test .category-perex a.showmore::after {
+html.ll-test .category-perex a.showmore::after, html.ll-test .responsive-tools > a[data-target="search"]::before, html.ll-test .responsive-tools > a[data-target="login"]::before,
+html.ll-test .products-top-wrapper .toggle-top-products::after, html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before {
   content: '' !important; display: inline-block; flex: none; font-size: 0 !important; line-height: 0 !important;
   background-color: currentColor; -webkit-text-fill-color: currentColor;
   -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat;
@@ -676,6 +677,17 @@ html.ll-test .products .product .btn-cart::after { display: none !important; }
 html.ll-test .products .product .btn-cart::before { --ll-icon: var(--ll-i-bag); width: 18px !important; height: 18px !important; margin: 0 8px 0 0 !important; }
 html.ll-test #filters .toggle-filters::after { --ll-icon: var(--ll-i-chev-down); position: static !important; width: 14px !important; height: 14px !important; margin: 0 !important; transform: none !important; }
 html.ll-test .category-perex a.showmore::after { --ll-icon: var(--ll-i-chev-down); width: 14px !important; height: 14px !important; margin: 0 !important; transform: none !important; border: 0 !important; }
+html.ll-test .responsive-tools > a[data-target="search"]::before { --ll-icon: var(--ll-i-search); }
+html.ll-test .responsive-tools > a[data-target="login"]::before { --ll-icon: var(--ll-i-user); }
+html.ll-test .responsive-tools > a[data-target="search"]::before, html.ll-test .responsive-tools > a[data-target="login"]::before { width: 22px !important; height: 22px !important; vertical-align: middle; color: var(--ll-ink) !important; }
+/* Zobrazit více produktů (Nejprodávanější na mobilu) jako textový odkaz */
+html.ll-test .products-top-wrapper .button-wrapper { margin: 12px 0 0 !important; padding: 0 !important; text-align: left !important; }
+html.ll-test .products-top-wrapper .toggle-top-products.btn { display: inline-flex !important; align-items: center; gap: 6px; height: auto !important; min-height: 0 !important; padding: 0 0 3px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-gold-deep) !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test .products-top-wrapper .toggle-top-products::after { --ll-icon: var(--ll-i-chev-down); position: static !important; width: 14px !important; height: 14px !important; margin: 0 !important; transform: none !important; }
+html.ll-test .products-top-wrapper .toggle-top-products[aria-expanded="true"]::after { transform: rotate(180deg) !important; }
+/* Otevřít filtr (mobil): obrysové tlačítko přes celou šířku, šipka vpravo */
+html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button { display: flex !important; align-items: center; justify-content: space-between; box-sizing: border-box; width: 100%; height: 48px !important; min-height: 48px !important; padding: 0 16px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line-strong) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before { --ll-icon: var(--ll-i-chev-down); position: static !important; order: 2; width: 16px !important; height: 16px !important; margin: 0 !important; transform: none !important; }
 
 /* ---------- Kategorie na tabletu a mobilu ---------- */
 @media (max-width: 991px) {
@@ -685,6 +697,9 @@ html.ll-test .category-perex a.showmore::after { --ll-icon: var(--ll-i-chev-down
   html.ll-test .benefitBanner__item:nth-child(n + 3) { border-top: 1px solid var(--ll-line); }
 }
 @media (max-width: 767px) {
+  html.ll-test .breadcrumbs-wrapper { background: transparent !important; }
+  html.ll-test .breadcrumbs a { gap: 6px; margin-left: 0 !important; padding: 12px 0 !important; }
+  html.ll-test .breadcrumbs a::after { order: -1; margin: 0 !important; transform: rotate(180deg); }
   html.ll-test .category-title { font-size: 30px; }
   html.ll-test ul.subcategories, html.ll-test #productsTop.products-top { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   html.ll-test ul.subcategories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
