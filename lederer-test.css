@@ -914,6 +914,7 @@ html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before 
   html.ll-test body.filters-visible #filters fieldset > div { margin: 0 !important; }
   html.ll-test body.filters-visible #filters .filter-label { padding-top: 9px !important; padding-bottom: 9px !important; }
   html.ll-test body.filters-visible #filters .filter-label::before { top: 11px !important; }
+  html.ll-test body.filters-visible #filters .filter-count::before, html.ll-test body.filters-visible #filters .filter-count::after { content: none !important; }
   /* Patička: počet produktů jako inkoustové tlačítko „Zobrazit produkty (32)“, klik zavře list (lederer-test.js) */
   html.ll-test body.filters-visible #filters .filter-section.filter-section-count { position: fixed !important; right: 0; bottom: 0; left: 0; z-index: 3; display: block !important; margin: 0 !important; padding: 12px 20px calc(16px + env(safe-area-inset-bottom)) !important; background: var(--ll-paper); border-top: 1px solid var(--ll-line) !important; }
   html.ll-test body.filters-visible #filters .filter-total-count { display: flex !important; align-items: center; justify-content: center; height: 48px; margin: 0 !important; font-size: 0 !important; color: #fff !important; background: var(--ll-ink); border-radius: var(--ll-r-sm); cursor: pointer; }
