@@ -1092,7 +1092,12 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
   html.ll-test #navigation .navigation-in-bottom .top-navigation-contacts a::before { width: 18px !important; height: 18px !important; margin-right: 8px !important; vertical-align: middle; }
 
   /* Záložky detailu jako akordeon: řádek 56 px na okraji obsahu, 16 px řez 500 v inkoustu, šipka Lucide; linka mezi oddíly */
-  html.ll-test .p-detail-tabs-wrapper .tab-pane { padding: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+  html.ll-test .p-detail-tabs-wrapper .tab-pane { margin: 0 !important; padding: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+  /* Šablona dává oddílům 10 px pod linku a zavřený obsah skládá na výšku 0, ale jeho okraje (recenze 40 px) zůstávají: řádky byly nesouměrné */
+  html.ll-test .p-detail-tabs-wrapper .tab-pane:not(.active) > :not(.detail-tab-item) { margin-top: 0 !important; margin-bottom: 0 !important; }
+  /* Oddíl bez nadpisu (alternativní produkty) bez linky */
+  html.ll-test .p-detail-tabs-wrapper .tab-pane:not(:has(> .detail-tab-item)) { border-bottom: 0 !important; }
+  html.ll-test #ratingTab.tab-pane.active { padding-bottom: 24px !important; }
   html.ll-test .p-detail-tabs-wrapper .tab-content > .tab-pane:first-child { border-top: 1px solid var(--ll-line) !important; }
   html.ll-test .p-detail-tabs-wrapper .detail-tab-item { position: relative; display: flex !important; align-items: center; min-height: 56px; margin: 0 !important; padding: 0 32px 0 0 !important; font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; cursor: pointer; }
   html.ll-test .p-detail-tabs-wrapper .detail-tab-item::after { --ll-icon: var(--ll-i-chev-down); position: absolute !important; top: 50% !important; right: 0 !important; width: 18px !important; height: 18px !important; transform: translateY(-50%) !important; color: var(--ll-ink-muted) !important; transition: transform 150ms var(--ll-ease); }
@@ -1101,5 +1106,8 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
   /* Tabulky vložené do popisu z Excelu mají pevnou šířku v pt a na mobilu přetékají; roztáhnou se na šířku obsahu (širší se dál posouvají) */
   html.ll-test #description table { width: 100% !important; height: auto !important; }
   html.ll-test #description table td, html.ll-test #description table tr { width: auto !important; height: auto !important; }
-  html.ll-test .p-detail-tabs-wrapper .tab-pane.active > .detail-tab-content { padding-bottom: 24px !important; }
+  html.ll-test .p-detail-tabs-wrapper .tab-pane.active > .detail-tab-content { padding-top: 0 !important; padding-bottom: 24px !important; }
+  /* Pod posledním odstavcem popisu jen těch 24 px, ne ještě jeho okraj 20 px */
+  html.ll-test .p-detail-tabs-wrapper .basic-description > :last-child { margin-bottom: 0 !important; }
+  html.ll-test .p-detail-tabs-wrapper .basic-description > :nth-last-child(1 of :not(meta, script, style, br)) { margin-bottom: 0 !important; }
 }
