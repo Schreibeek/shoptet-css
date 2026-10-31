@@ -357,6 +357,9 @@ html.ll-test .p-info-headline .stars-label, html.ll-test .p-info-headline .stars
 html.ll-test .p-info-headline .stars-link { margin: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; text-decoration: underline !important; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 html.ll-test .p-info-headline .stars-link:hover { color: var(--ll-ink) !important; }
 html.ll-test .p-short-description, html.ll-test .p-short-description p { font-size: 16px; line-height: 26px; color: var(--ll-ink-soft); }
+/* Odstupy: hodnocení → krátký popis 18 px (bylo 30), popis → Detailní informace 16 px (bylo 10) */
+html.ll-test .p-info-headline { margin-bottom: 18px !important; }
+html.ll-test .p-short-description { margin-bottom: 16px !important; }
 html.ll-test .p-short-description-block > p a.chevron-after { display: inline-flex !important; align-items: center; gap: 6px; padding: 0 0 3px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; text-decoration: none !important; border-bottom: 1px solid var(--ll-gold-deep); }
 html.ll-test .p-short-description-block > p a.chevron-after:hover { color: var(--ll-gold-text) !important; border-bottom-color: var(--ll-gold-text); }
 
