@@ -455,7 +455,7 @@ html.ll-test .shp-tabs-wrapper { margin-top: 48px !important; }
 html.ll-test .p-detail-tabs-wrapper .tab-pane { scroll-margin-top: 190px; }
 /* Panel dostane po kliknutí na záložku fokus (přístupnost), obrys kolem celého obsahu ale nepatří; fokus ukazuje záložka */
 html.ll-test .p-detail-tabs-wrapper .tab-pane:focus, html.ll-test .p-detail-tabs-wrapper .tab-pane:focus-visible { outline: none !important; }
-@media (max-width: 767px) { html.ll-test .p-detail-tabs-wrapper .tab-pane { scroll-margin-top: 120px; } }
+@media (max-width: 767px) { html.ll-test .p-detail-tabs-wrapper .tab-pane { scroll-margin-top: 126px; } }
 html.ll-test .p-detail-tabs-wrapper .tab-pane { padding: 24px 0 0 !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
 html.ll-test .p-detail-tabs-wrapper .tab-pane, html.ll-test .p-detail-tabs-wrapper .tab-pane p, html.ll-test .p-detail-tabs-wrapper .tab-pane li, html.ll-test .p-detail-tabs-wrapper .tab-pane .ewa-rteLine { font-size: 16px; line-height: 27px; color: var(--ll-ink-soft); }
 /* Jen popis produktu užší kvůli délce řádků; Parametry, Hodnocení a Diskuze přes celou šířku */
@@ -1329,4 +1329,42 @@ html.ll-test .gallery-new #main-slider .splide__arrow--prev::before { transform:
   html.ll-test .ratings-block .slider-group-reviews .swiper-arrow-next { right: 0 !important; left: auto !important; }
   html.ll-test .ratings-block .slider-group-reviews .swiper-arrow-prev { right: 52px !important; left: auto !important; }
   html.ll-test .ratings-block .rating-more-btn { display: flex !important; align-items: center; justify-content: flex-start; width: auto !important; min-height: 44px; margin: 24px 104px 0 0 !important; text-align: left !important; }
+}
+
+/* ---------- Mobilní hlavička 56 px podle DS MobileHeader (šablona 50 px) ----------
+   Lišta s logem a ikonami (.top-navigation-bar, pevná) a všechno, co na ni navazuje: odsazení obsahu (.overall-wrapper),
+   hledání (#header vyjede pod lištu), menu (#navigation) a přihlášení (#login) od 56 px.
+   Logo 36 px na výšku, 20 px od kraje; ikonová tlačítka 44 × 44 px uprostřed lišty, Menu 48 px s ikonou nad popiskem, 8 px od pravého kraje.
+   Otevřené menu: šablona dává tlačítku position fixed vpravo nahoře, tady na stejné místo jako zavřené. */
+@media (max-width: 767px) {
+  html.ll-test .top-navigation-bar, html.ll-test .top-navigation-tools { height: 56px !important; }
+  html.ll-test .top-navigation-bar .site-name { left: 20px !important; height: 56px !important; }
+  html.ll-test .top-navigation-bar .site-name img { width: auto !important; height: 36px !important; max-height: none !important; }
+  html.ll-test .responsive-tools { gap: 0 !important; margin-right: -12px !important; }
+  html.ll-test .responsive-tools > a.toggle-window { width: 44px !important; height: 44px !important; }
+  html.ll-test .responsive-tools .click-cart { height: 44px !important; margin: 0 !important; padding: 0 !important; }
+  html.ll-test .responsive-tools .click-cart a.btn { height: 44px !important; }
+  html.ll-test .responsive-tools > a[data-target="navigation"] { flex-direction: column !important; justify-content: center !important; gap: 1px; width: 48px !important; height: 44px !important; margin: 0 !important; }
+  html.ll-test .responsive-tools > a[data-target="navigation"]::before { position: static !important; top: auto !important; }
+  html.ll-test .responsive-tools > a[data-target="navigation"]::after { position: static !important; top: auto !important; bottom: auto !important; left: auto !important; right: auto !important; line-height: 12px !important; }
+  html.ll-test body:not(.navigation-window-visible) .responsive-tools > a[data-target="navigation"] { left: 0 !important; right: auto !important; }
+  html.ll-test body.navigation-window-visible .responsive-tools > a[data-target="navigation"] { top: 6px !important; right: 8px !important; left: auto !important; }
+  html.ll-test .overall-wrapper { padding-top: 56px !important; }
+  html.ll-test body.search-window-visible #header { top: 56px !important; }
+  html.ll-test #navigation { top: 56px !important; bottom: -56px !important; }
+  html.ll-test #navigation .navigation-close { top: -56px !important; height: 56px !important; }
+  html.ll-test #login { top: 56px !important; }
+}
+
+/* ---------- Výhody na mobilu od kraje ke kraji ----------
+   Levý sloupec u levého okraje obsahu, pravý u pravého, mezi nimi 12 px od linky; dřív 16 px z obou stran a texty se zbytečně zalamovaly. */
+@media (max-width: 767px) {
+  html.ll-test .benefitBanner__item { padding: 20px 12px 20px 0 !important; }
+  html.ll-test .benefitBanner__item:nth-child(even) { padding: 20px 0 20px 12px !important; }
+}
+
+/* ---------- Detail na mobilu: galerie bez šipek (DS MobileProduct) ----------
+   Fotky se posouvají prstem, polohu ukazuje aktivní náhled pod fotkou; šipky přes fotku byly na malém displeji moc výrazné. */
+@media (max-width: 767px) {
+  html.ll-test .gallery-new #main-slider .splide__arrow { display: none !important; }
 }
