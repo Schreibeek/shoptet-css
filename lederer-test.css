@@ -169,7 +169,8 @@ html.ll-test .breadcrumbs, html.ll-test .breadcrumbs a, html.ll-test .breadcrumb
 html.ll-test .category-title { margin: 0 0 12px; font-size: 40px; line-height: 1.12; font-weight: 500; letter-spacing: -0.02em; color: var(--ll-ink); }
 html.ll-test .category-perex { max-width: 760px; }
 html.ll-test .category-perex, html.ll-test .category-perex p { color: var(--ll-ink-soft); }
-html.ll-test .category-perex .fvstudio-showmore-wrapper { margin: 4px 0 0 !important; text-align: left !important; }
+html.ll-test .category-perex p { margin-bottom: 12px; }
+html.ll-test .category-perex .fvstudio-showmore-wrapper { margin: 0 !important; padding-top: 0 !important; text-align: left !important; }
 html.ll-test .category-perex a.showmore { display: inline-flex; align-items: center; gap: 6px; padding-bottom: 3px; font-size: 14px; line-height: 20px; font-weight: 500; color: var(--ll-ink) !important; text-decoration: none !important; border-bottom: 1px solid var(--ll-gold-deep); }
 html.ll-test .category-perex a.showmore:hover { color: var(--ll-gold-text) !important; border-bottom-color: var(--ll-gold-text); }
 html.ll-test .products-top-header, html.ll-test .products-related-header, html.ll-test .homepage-group-title, html.ll-test .h4.homepage-group-title { font-weight: 500; letter-spacing: -0.015em; color: var(--ll-ink); }
