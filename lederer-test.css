@@ -1907,7 +1907,7 @@ html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-
 html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group-city { grid-column: span 4; }
 html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group-zip { grid-column: span 2; }
 html.ll-test body.ordering-process #checkoutContent #company-info.visible, html.ll-test body.ordering-process #checkoutContent #company-info:not(.js-hidden) { display: grid !important; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 16px; }
-html.ll-test body.ordering-process #checkoutContent #company-info > .form-group { grid-column: span 3; display: block !important; width: auto !important; margin: 0 !important; padding: 0 !important; }
+html.ll-test body.ordering-process #checkoutContent #company-info > .form-group { grid-column: span 3; display: block !important; width: auto !important; max-width: none !important; flex: none !important; margin: 0 !important; padding: 0 !important; }
 html.ll-test body.ordering-process #checkoutContent #company-info > .form-group:has(#billCompany) { grid-column: 1 / -1; }
 /* Popisek a pole (Field) */
 html.ll-test body.ordering-process #checkoutContent .form-group > label:not(.whole-width), html.ll-test body.ordering-process #checkoutContent .form-group > p.label { position: static !important; display: block !important; margin: 0 0 8px !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; transform: none !important; }
