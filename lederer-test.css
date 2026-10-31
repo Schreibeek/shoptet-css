@@ -370,7 +370,12 @@ html.ll-test .p-info-headline .stars-link:hover { color: var(--ll-ink) !importan
 /* Hodnota za hvězdami jako v DS (ll-rating__value, "4,6/5"). Číslo doplní lederer-test.js ze skrytého textu šablony do data-ll-value. */
 html.ll-test .p-info-headline .stars-wrapper[data-ll-value]::before { content: attr(data-ll-value) '/5'; order: 1; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ll-ink); }
 html.ll-test .p-info-headline .stars-wrapper .stars-label { order: 2; }
-html.ll-test .p-info-headline .stars-wrapper .stars-link { order: 3; }
+/* Místo odkazu Podrobnosti hodnocení je proklikem počet („8 hodnocení“, „Neohodnoceno“): odkaz šablony zůstává (skok na záložku
+   Hodnocení dělá šablona), jen je bez textu průhledně roztažený přes hvězdy, hodnotu i počet; počet podtržený jako odkaz */
+html.ll-test .p-info-headline .stars-wrapper { position: relative !important; }
+html.ll-test .p-info-headline .stars-wrapper .stars-link { position: absolute !important; inset: 0; z-index: 1; margin: 0 !important; padding: 0 !important; font-size: 0 !important; line-height: 0 !important; color: transparent !important; text-decoration: none !important; border: 0 !important; background: transparent !important; }
+html.ll-test .p-info-headline .stars-wrapper .stars-label span { text-decoration: underline !important; text-decoration-thickness: 1px !important; text-underline-offset: 3px; }
+html.ll-test .p-info-headline .stars-wrapper:hover .stars-label, html.ll-test .p-info-headline .stars-wrapper:hover .stars-label span { color: var(--ll-ink) !important; }
 html.ll-test .p-short-description, html.ll-test .p-short-description p { font-size: 16px; line-height: 26px; color: var(--ll-ink-soft); }
 /* Odstupy: hodnocení → krátký popis 18 px (bylo 30), popis → Detailní informace 16 px (bylo 10) */
 html.ll-test .p-info-headline { margin-bottom: 18px !important; }
