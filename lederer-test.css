@@ -2150,7 +2150,7 @@ html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn { display:
 html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn:hover { color: #fff !important; background: var(--ll-ink) !important; }
 html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn::before, html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn::after { content: none !important; display: none !important; }
 html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn span { font-size: inherit !important; }
-@media (max-width: 767px) {
-  /* Titulek na jeden řádek i na 375 px */
+@media (max-width: 402px) {
+  /* Panel přes celou šířku: titulek 16 px, ať se vejde na řádek i na 375 px */
   html.ll-test #colorbox.colorbox--order .advanced-order > .h1:not(.advanced-order-suggestion) { font-size: 16px !important; line-height: 24px !important; }
 }
