@@ -1286,3 +1286,10 @@ html.ll-test .homepage-blog-wrapper .news-item { display: grid !important; grid-
 html.ll-test .homepage-blog-wrapper .news-item > a { display: flex !important; flex-direction: column; height: auto !important; }
 html.ll-test .homepage-blog-wrapper .news-item .text { display: flex !important; flex-direction: column; align-items: flex-start; flex: 1 1 auto !important; }
 html.ll-test .homepage-blog-wrapper .news-item .read-article { margin-top: auto !important; }
+
+/* ---------- Detail: pruh výhod souměrně 48 px pod obsahem i nad záložkami (DS PageProduct) ----------
+   Nahoře bylo 99 px (35 px okraj pod náhledy + 64 px pruhu), dole k záložkám 48 px. */
+@media (min-width: 992px) {
+  html.ll-test .p-image-wrapper .gallery-new { margin-bottom: 0 !important; }
+}
+html.ll-test .benefitBanner.position--benefitProduct { margin-top: 48px !important; }
