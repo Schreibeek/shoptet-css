@@ -339,7 +339,10 @@ html.ll-test .p-detail-inner-header .p-info-headline { display: flex !important;
    horní kopii nad galerií schovat, ukázat tu ve sloupci s cenou (je tam opravdový h1, horní má jen div.h1) */
 @media (max-width: 991px) {
   html.ll-test .p-detail-inner-header .p-info-headline { display: none !important; }
-  html.ll-test .p-info-wrapper .p-info-headline { display: flex !important; flex-direction: column; align-items: flex-start; }
+  html.ll-test .p-info-wrapper .p-info-headline { display: flex !important; flex-direction: column; align-items: flex-start; margin-bottom: 16px !important; }
+  /* Galerie → značka 24 px jako v DS (šablona 35 px pod náhledy + 30 px pod galerií) */
+  html.ll-test .p-image-wrapper { margin-bottom: 24px !important; }
+  html.ll-test .p-image-wrapper .gallery-new { margin-bottom: 0 !important; }
 }
 @media (max-width: 767px) {
   html.ll-test .p-info-headline h1 { font-size: 24px !important; line-height: 1.25 !important; }
@@ -1133,5 +1136,5 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
   html.ll-test #footer .custom-footer__newsletter fieldset.box > .captcha-image { grid-area: image; margin: 0 !important; }
   html.ll-test #footer .custom-footer__newsletter fieldset.box > .captcha-image img { display: block; width: auto !important; height: 48px !important; border-radius: var(--ll-r-sm); }
   html.ll-test #footer .custom-footer__newsletter .consents { margin-top: 16px !important; }
-  html.ll-test #footer .custom-footer__newsletter .btn { display: flex !important; justify-content: center; width: 100% !important; height: 48px !important; min-height: 48px !important; margin-top: 16px !important; }
+  html.ll-test #footer .custom-footer__newsletter form.subscribe-form .btn, html.ll-test #footer .custom-footer__newsletter .btn { display: flex !important; justify-content: center; width: 100% !important; height: 48px !important; min-height: 48px !important; margin-top: 16px !important; }
 }
