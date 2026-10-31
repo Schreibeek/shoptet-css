@@ -2384,7 +2384,7 @@ html.ll-test .p-info-wrapper:not(:has(> .add-to-cart)):not(:has(> .loyalty-box-w
    Pole zůstává jako bez hledání (šablona z formuláře dělá bílý box a poli bere levé odsazení). Panel 8 px pod polem, široký
    jako pole a aspoň 520 px, nejvýš 640 px a do výšky okna, uvnitř se posouvá. Produkty nahoře (5), pak kategorie a ostatní
    výsledky jako řádky s ikonou podle typu, dole přilepené Zobrazit všechny výsledky. Na mobilu list přes celou šířku pod polem
-   až ke spodnímu kraji okna. */
+   až ke spodnímu kraji okna (hlavička 56 px + řádek s polem 60 px = 116 px). */
 html.ll-test {
   --ll-i-folder: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z' /%3E%3C/svg%3E");
   --ll-i-tag: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z' /%3E %3Ccircle cx='7.5' cy='7.5' r='.5' fill='currentColor' /%3E%3C/svg%3E");
@@ -2435,7 +2435,7 @@ html.ll-test #header .search-whisperer .search-whisperer-empty { display: grid !
 html.ll-test #header .search-whisperer .search-whisperer-empty::before { content: ''; display: block; width: 24px; height: 24px; background: var(--ll-ink-muted); -webkit-mask: var(--ll-i-search-x) center / contain no-repeat; mask: var(--ll-i-search-x) center / contain no-repeat; }
 @media (max-width: 767px) {
   html.ll-test #header .search input.query-input, html.ll-test #header .search input[type="search"] { padding-left: 16px !important; padding-right: 50px !important; }
-  html.ll-test #header .search-whisperer { position: fixed !important; top: var(--ll-suggest-top, 117px) !important; right: 0 !important; bottom: 0 !important; left: 0 !important; width: auto !important; max-height: none; border: 0 !important; border-top: 1px solid var(--ll-line) !important; border-radius: 0 !important; box-shadow: none !important; }
+  html.ll-test #header .search-whisperer { position: fixed !important; top: 116px !important; right: 0 !important; bottom: 0 !important; left: 0 !important; width: auto !important; max-height: none; border: 0 !important; border-top: 1px solid var(--ll-line) !important; border-radius: 0 !important; box-shadow: none !important; }
   html.ll-test #header .search-whisperer .search-whisperer-ul-group, html.ll-test #header .search-whisperer .search-whisperer-category-group, html.ll-test #header .search-whisperer .search-whisperer-tags-group { padding: 8px 12px !important; }
   html.ll-test #header .search-whisperer .search-whisperer-btn { padding: 12px 20px !important; }
 }
