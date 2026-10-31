@@ -202,7 +202,8 @@ html.ll-test #productsTop .product .p .image { width: 64px !important; height: 6
 html.ll-test #productsTop .product:hover .p .image img:not(.extra-flags img):not(.js-product-badge) { transform: none; }
 html.ll-test #productsTop .product .p-in { display: flex !important; flex-direction: column; align-items: stretch !important; justify-content: center !important; gap: 4px; width: auto !important; max-width: none !important; min-width: 0; justify-self: stretch !important; padding: 0 !important; text-align: left !important; }
 html.ll-test #productsTop .product .p-in-in { margin: 0 !important; padding: 0 !important; }
-html.ll-test #productsTop .product .p .name { display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 3; width: auto !important; max-width: none !important; overflow: hidden; height: auto !important; min-height: 0 !important; margin: 0 !important; }
+/* Název nejvýš na 2 řádky a vždy na výšku 2 řádků, ať mají všechny položky stejnou výšku */
+html.ll-test #productsTop .product .p .name { display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; width: auto !important; max-width: none !important; overflow: hidden; height: auto !important; min-height: 40px !important; margin: 0 !important; }
 html.ll-test #productsTop .product .p .name, html.ll-test #productsTop .product .p .name span { font-size: 14px !important; line-height: 20px !important; }
 html.ll-test #productsTop .product .p-bottom, html.ll-test #productsTop .product .offers, html.ll-test #productsTop .product .prices { display: flex !important; flex-wrap: wrap; align-items: baseline; justify-content: flex-start !important; column-gap: 8px; min-height: 0 !important; margin: 0 !important; padding: 0 !important; text-align: left !important; }
 html.ll-test #productsTop .product .price-final, html.ll-test #productsTop .product .price-final strong { font-size: 15px !important; line-height: 20px !important; }
