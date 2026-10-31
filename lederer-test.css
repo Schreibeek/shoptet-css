@@ -426,7 +426,7 @@ html.ll-test .shp-tabs-wrapper .shp-tabs > li.active > .shp-tab-link { color: va
 /* Šablona pod aktivní záložkou kreslí bílý pruh (zakrývá linku pro staré „krabicové“ záložky), ten zakrýval zlatou linku */
 html.ll-test .shp-tabs-wrapper .shp-tabs > li::before, html.ll-test .shp-tabs-wrapper .shp-tabs > li::after { display: none !important; }
 html.ll-test .shp-tabs-wrapper { margin-top: 48px !important; }
-html.ll-test .p-detail-tabs-wrapper .tab-pane { padding: 24px 0 0 !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test .p-detail-tabs-wrapper .tab-pane { max-width: 820px; padding: 24px 0 0 !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
 html.ll-test .p-detail-tabs-wrapper .tab-pane, html.ll-test .p-detail-tabs-wrapper .tab-pane p, html.ll-test .p-detail-tabs-wrapper .tab-pane li, html.ll-test .p-detail-tabs-wrapper .tab-pane .ewa-rteLine { font-size: 16px; line-height: 27px; color: var(--ll-ink-soft); }
 
 /* ---------- Bannery na homepage ---------- */
