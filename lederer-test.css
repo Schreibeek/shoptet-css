@@ -1978,3 +1978,86 @@ html.ll-test body.ordering-process #checkoutSidebar .next-step-finish::before, h
   html.ll-test body.ordering-process #checkoutSidebar .next-step-finish { position: fixed !important; right: 20px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 1001; flex-direction: column; flex-wrap: nowrap; width: auto !important; min-width: 160px; height: 54px !important; padding: 0 20px !important; line-height: 18px !important; }
   html.ll-test body.ordering-process #checkoutSidebar .next-step-finish .order-button-suffix { font-size: 12px !important; line-height: 16px !important; }
 }
+
+/* ---------- Objednávka odeslána (DS PageOrderDone, MobileOrderDone) ----------
+   Bez hlavičky košíku. Na středu do 880 px: ikona check v kruhu se zlatavou linkou, titulek 28 px, věta o e-mailu a číslo objednávky
+   v pilulce na ivory; pod tím oddíly Platba a doručení (panel se dvěma sloupci: doprava, platba, částka | účet, IBAN, BIC, VS a QR)
+   a Obsah objednávky (řádky mezi linkami), dole obrysové Zpět do obchodu.
+   Šablona: zelený rámeček se zaoblením 20 px, šedé tabulky, ikony písmem Apollo u nadpisů, zelené číslo objednávky. */
+html.ll-test body.in-dekujeme .cart-header-block { display: none !important; }
+html.ll-test body.in-dekujeme #content .content-inner { box-sizing: border-box; max-width: 880px; margin: 0 auto !important; padding: 48px 0 64px !important; }
+/* Potvrzení */
+html.ll-test body.in-dekujeme .recapitulation-wrapper-box { position: relative; display: flex !important; flex-direction: column; align-items: center; gap: 16px; margin: 0 !important; padding: 96px 0 0 !important; text-align: center !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test body.in-dekujeme .recapitulation-wrapper-box::before { content: '' !important; position: absolute !important; top: 0; left: 50%; display: block !important; box-sizing: border-box; width: 72px; height: 72px; margin: 0 0 0 -36px; background: var(--ll-paper); border: 1px solid var(--ll-gold-line); border-radius: 50%; }
+html.ll-test body.in-dekujeme .recapitulation-wrapper-box::after { content: '' !important; position: absolute !important; top: 22px; left: 50%; display: block !important; width: 28px; height: 28px; margin: 0 0 0 -14px; background: var(--ll-gold-deep); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center / contain no-repeat; }
+html.ll-test body.in-dekujeme .order-summary-heading { margin: 0 !important; padding: 0 !important; font-size: 28px !important; line-height: 36px !important; font-weight: 500 !important; letter-spacing: -0.015em !important; text-transform: none !important; text-align: center !important; color: var(--ll-ink) !important; text-wrap: balance; }
+html.ll-test body.in-dekujeme .recapitulation-wrapper-box .order-summary-item { margin: 0 !important; padding: 0 !important; font-size: 15px !important; line-height: 24px !important; font-weight: 400 !important; text-align: center !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; }
+html.ll-test body.in-dekujeme .recapitulation-wrapper-box .order-summary-item.order-number { display: inline-flex !important; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 4px 8px; margin-top: 4px !important; padding: 10px 20px !important; font-size: 14px !important; line-height: 22px !important; background: var(--ll-ivory) !important; border-radius: 999px !important; }
+html.ll-test body.in-dekujeme .order-summary-item.order-number strong { font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important; color: var(--ll-ink-soft) !important; }
+html.ll-test body.in-dekujeme .order-summary-item.order-number strong[data-testid="orderNumber"] { font-size: 16px !important; font-weight: 600 !important; letter-spacing: 0.02em !important; color: var(--ll-ink) !important; font-variant-numeric: tabular-nums; }
+html.ll-test body.in-dekujeme .order-summary-item.summary-thx, html.ll-test body.in-dekujeme .reca-number { display: none !important; }
+/* Oddíly po 40 px, titulky 18 px bez ikon */
+html.ll-test body.in-dekujeme .recapitulation-wrapper.in-thanks-page:not(.recapitulation-wrapper-box) { display: grid !important; gap: 40px; margin: 40px 0 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test body.in-dekujeme .recapitulation-wrapper .co-box { display: grid !important; gap: 16px; min-width: 0; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important; }
+html.ll-test body.in-dekujeme .recapitulation-wrapper .co-box h4 { margin: 0 !important; padding: 0 !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: none !important; }
+html.ll-test body.in-dekujeme .recapitulation-wrapper .co-box h4::before, html.ll-test body.in-dekujeme .recapitulation-wrapper .co-box h4::after { content: none !important; display: none !important; }
+/* Platba a doručení: jeden panel, sloupce vedle sebe oddělené linkou (bez údajů k převodu zůstane jeden sloupec přes celou šířku) */
+html.ll-test body.in-dekujeme .co-payment-method > .row { display: flex !important; margin: 0 !important; background: var(--ll-paper); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); }
+html.ll-test body.in-dekujeme .co-payment-method > .row::before, html.ll-test body.in-dekujeme .co-payment-method > .row::after { content: none !important; display: none !important; }
+html.ll-test body.in-dekujeme .co-payment-method > .row > [class*="col-"] { float: none !important; flex: 1 1 0; width: auto !important; max-width: none !important; min-width: 0; margin: 0 !important; padding: 8px 24px !important; }
+html.ll-test body.in-dekujeme .co-payment-method > .row > [class*="col-"]:not(:has(tr)) { display: none !important; }
+html.ll-test body.in-dekujeme .co-payment-method > .row > [class*="col-"] ~ [class*="col-"] { border-left: 1px solid var(--ll-line); }
+html.ll-test body.in-dekujeme .recapitulation-table { display: block !important; width: 100% !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test body.in-dekujeme .recapitulation-table tbody { display: grid !important; }
+html.ll-test body.in-dekujeme .recapitulation-table tr { display: grid !important; grid-template-columns: 132px minmax(0, 1fr); column-gap: 16px; padding: 12px 0 !important; background: none !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+html.ll-test body.in-dekujeme .recapitulation-table tr:last-child { border-bottom: 0 !important; }
+html.ll-test body.in-dekujeme .recapitulation-table th, html.ll-test body.in-dekujeme .recapitulation-table td { display: block !important; width: auto !important; height: auto !important; margin: 0 !important; padding: 0 !important; text-align: left !important; vertical-align: top !important; background: none !important; border: 0 !important; }
+html.ll-test body.in-dekujeme .recapitulation-table th { font-size: 13px !important; line-height: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-muted) !important; }
+html.ll-test body.in-dekujeme .recapitulation-table td, html.ll-test body.in-dekujeme .recapitulation-table td strong { font-size: 14px !important; line-height: 22px !important; font-weight: 500 !important; letter-spacing: 0 !important; color: var(--ll-ink) !important; white-space: normal !important; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+html.ll-test body.in-dekujeme .recapitulation-table td strong[data-testid="orderTotalPrice"] { font-size: 20px !important; line-height: 26px !important; font-weight: 600 !important; }
+/* QR: obrázek má vlastní bílý okraj, jen linka a zaoblení; v nativní velikosti 145 px, ať je ostrý */
+html.ll-test body.in-dekujeme .recapitulation-table img.qrcode { display: block; box-sizing: content-box; width: 145px !important; height: 145px !important; max-width: none !important; margin: 0 !important; padding: 0 !important; background: #fff; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-sm); image-rendering: pixelated; }
+/* Obsah objednávky: řádky mezi linkami (fotka na dlaždici 64 px, název, počet a cena za kus, cena) */
+html.ll-test body.in-dekujeme .co-order .cart-table { display: block !important; width: 100% !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-top: 1px solid var(--ll-line) !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test body.in-dekujeme .co-order .cart-table tbody { display: block !important; }
+html.ll-test body.in-dekujeme .co-order .cart-table tr { display: grid !important; grid-template-columns: 64px minmax(0, 1fr) auto 96px; grid-template-areas: "media name qty price"; align-items: center; column-gap: 16px; padding: 16px 0 !important; background: none !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+html.ll-test body.in-dekujeme .co-order .cart-table td { display: block !important; width: auto !important; height: auto !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; }
+html.ll-test body.in-dekujeme .co-order .cart-table td.cart-p-image { grid-area: media; box-sizing: border-box; width: 64px !important; height: 64px !important; padding: 4px !important; background: var(--ll-tile) !important; border-radius: var(--ll-r-sm) !important; overflow: hidden; }
+html.ll-test body.in-dekujeme .co-order .cart-table td.cart-p-image:not(:has(img)) { background: none !important; }
+html.ll-test body.in-dekujeme .co-order .cart-p-image img { display: block; width: 100% !important; height: 100% !important; max-width: none !important; object-fit: contain; mix-blend-mode: multiply; }
+html.ll-test body.in-dekujeme .co-order .cart-table td.p-name, html.ll-test body.in-dekujeme .co-order .cart-table td.p-name * { grid-area: name; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test body.in-dekujeme .co-order .cart-table td.p-quantity { grid-area: qty; font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-muted) !important; text-align: right !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
+html.ll-test body.in-dekujeme .co-order .cart-table td.p-quantity > * { font-size: inherit !important; font-weight: 400 !important; color: inherit !important; }
+html.ll-test body.in-dekujeme .co-order .cart-table td.p-price { grid-area: price; font-size: 15px !important; line-height: 22px !important; font-weight: 600 !important; color: var(--ll-ink) !important; text-align: right !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
+/* Zpět do obchodu: obrysové tlačítko 48 px na středu, bez šipky */
+html.ll-test body.in-dekujeme .order-complete-links { display: flex !important; justify-content: center; margin: 40px 0 0 !important; padding: 0 !important; text-align: center !important; }
+html.ll-test body.in-dekujeme .order-complete-links p { margin: 0 !important; padding: 0 !important; }
+html.ll-test body.in-dekujeme .order-complete-links .btn { display: inline-flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: auto !important; min-width: 0 !important; height: auto !important; min-height: 48px !important; margin: 0 !important; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; text-decoration: none !important; }
+html.ll-test body.in-dekujeme .order-complete-links .btn:hover { color: #fff !important; background: var(--ll-ink) !important; }
+html.ll-test body.in-dekujeme .order-complete-links .btn::before, html.ll-test body.in-dekujeme .order-complete-links .btn::after { content: none !important; display: none !important; }
+@media (max-width: 900px) {
+  html.ll-test body.in-dekujeme .co-payment-method > .row { flex-direction: column; }
+  html.ll-test body.in-dekujeme .co-payment-method > .row > [class*="col-"] { flex: none; }
+  html.ll-test body.in-dekujeme .co-payment-method > .row > [class*="col-"] ~ [class*="col-"] { border-left: 0; border-top: 1px solid var(--ll-line); }
+}
+@media (max-width: 767px) {
+  html.ll-test body.in-dekujeme #content .content-inner { padding: 32px 0 48px !important; }
+  html.ll-test body.in-dekujeme .recapitulation-wrapper-box { gap: 12px; padding-top: 80px !important; }
+  html.ll-test body.in-dekujeme .recapitulation-wrapper-box::before { width: 64px; height: 64px; margin-left: -32px; }
+  html.ll-test body.in-dekujeme .recapitulation-wrapper-box::after { top: 20px; width: 24px; height: 24px; margin-left: -12px; }
+  html.ll-test body.in-dekujeme .order-summary-heading { font-size: 24px !important; line-height: 30px !important; }
+  html.ll-test body.in-dekujeme .recapitulation-wrapper-box .order-summary-item { font-size: 14px !important; line-height: 22px !important; }
+  html.ll-test body.in-dekujeme .recapitulation-wrapper.in-thanks-page:not(.recapitulation-wrapper-box) { gap: 32px; margin-top: 32px !important; }
+  html.ll-test body.in-dekujeme .co-payment-method > .row > [class*="col-"] { padding: 4px 16px !important; }
+  /* Popisek nad hodnotou, ať se IBAN vejde na řádek */
+  html.ll-test body.in-dekujeme .recapitulation-table tr { grid-template-columns: minmax(0, 1fr); row-gap: 2px; padding: 10px 0 !important; }
+  html.ll-test body.in-dekujeme .recapitulation-table th { line-height: 20px !important; }
+  html.ll-test body.in-dekujeme .recapitulation-table th:empty { display: none !important; }
+  html.ll-test body.in-dekujeme .recapitulation-table tr:has(img.qrcode) { padding-top: 12px !important; }
+  html.ll-test body.in-dekujeme .recapitulation-table td strong[data-testid="orderTotalPrice"] { font-size: 18px !important; line-height: 24px !important; }
+  html.ll-test body.in-dekujeme .co-order .cart-table tr { grid-template-columns: 56px minmax(0, 1fr) auto; grid-template-areas: "media name name" "media qty price"; align-items: start; row-gap: 8px; }
+  html.ll-test body.in-dekujeme .co-order .cart-table td.cart-p-image { width: 56px !important; height: 56px !important; }
+  html.ll-test body.in-dekujeme .co-order .cart-table td.p-quantity { align-self: center; text-align: left !important; }
+  html.ll-test body.in-dekujeme .order-complete-links p, html.ll-test body.in-dekujeme .order-complete-links .btn { width: 100% !important; }
+  html.ll-test body.in-dekujeme .order-complete-links { margin-top: 32px !important; }
+}
