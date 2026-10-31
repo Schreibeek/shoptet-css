@@ -237,7 +237,6 @@ html.ll-test .carousel-indicators li.active { width: 24px; height: 8px; margin: 
 /* ---------- Nadpisy sekcí: popisek se zlatými linkami + h2 30 px ---------- */
 html.ll-test .homepage-group-title, html.ll-test .h4.homepage-group-title { margin-top: 0 !important; font-size: 30px !important; line-height: 1.2 !important; font-weight: 500 !important; letter-spacing: -0.015em; color: var(--ll-ink); text-transform: none; }
 html.ll-test .ll-eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 80px 0 10px; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ll-gold-text); }
-html.ll-test .ll-eyebrow::before, html.ll-test .ll-eyebrow::after { content: ""; flex: none; width: 20px; height: 1px; background: var(--ll-gold-deep); }
 html.ll-test .partners-block + .products-group .ll-eyebrow:first-child { margin-top: 56px; }
 
 /* ---------- Karusely produktů: šipky a tečky ---------- */
@@ -265,7 +264,6 @@ html.ll-test .brand-banner--lerdee .brand-banner__inner { background: var(--ll-c
 html.ll-test .brand-banner--lerdee .brand-banner__image img { border-radius: 0; }
 html.ll-test .brand-banner--lerdee .brand-banner__content { align-items: flex-start !important; justify-content: center; padding: 48px 56px !important; text-align: left !important; }
 html.ll-test .brand-banner__eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 12px !important; font-size: 11px !important; line-height: 16px !important; font-weight: 600 !important; letter-spacing: 0.16em !important; text-transform: uppercase; color: var(--ll-gold-text) !important; }
-html.ll-test .brand-banner__eyebrow::before { content: ""; flex: none; width: 20px; height: 1px; background: var(--ll-gold-deep); }
 html.ll-test .brand-banner__title { margin: 0 0 12px !important; font-size: 38px !important; line-height: 1.15 !important; font-weight: 500 !important; letter-spacing: -0.02em; color: var(--ll-ink) !important; text-align: left; }
 html.ll-test .brand-banner__text { margin: 0 0 24px !important; max-width: 460px; font-size: 16px !important; line-height: 26px !important; color: var(--ll-ink-soft) !important; text-align: left; }
 html.ll-test .brand-banner__btn { display: inline-flex !important; align-items: center; justify-content: center; min-height: 54px; padding: 0 30px !important; font-size: 16px !important; line-height: 20px; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
@@ -438,7 +436,6 @@ html.ll-test.ll-has-brands .partners-block { display: none !important; }
 html.ll-test .ll-brands { margin: 40px 0 0; }
 html.ll-test .ll-brands__head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 0 0 16px; }
 html.ll-test .ll-brands__eyebrow { display: flex; align-items: center; gap: 10px; font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ll-gold-text); }
-html.ll-test .ll-brands__eyebrow::before { content: ""; flex: none; width: 20px; height: 1px; background: var(--ll-gold-deep); }
 html.ll-test .ll-brands__all { padding-bottom: 3px; font-size: 14px; line-height: 20px; font-weight: 500; color: var(--ll-ink); text-decoration: none; border-bottom: 1px solid var(--ll-gold-deep); white-space: nowrap; }
 html.ll-test .ll-brands__all:hover { color: var(--ll-gold-text); border-bottom-color: var(--ll-gold-text); }
 html.ll-test .ll-brands__list { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ll-line); border-bottom: 1px solid var(--ll-line); }
