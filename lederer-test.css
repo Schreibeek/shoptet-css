@@ -380,10 +380,12 @@ html.ll-test .add-to-cart .quantity button.decrease { order: 1; }
 html.ll-test .add-to-cart .quantity button.increase { order: 3; }
 html.ll-test .add-to-cart .quantity button.increase, html.ll-test .add-to-cart .quantity button.decrease { position: static !important; display: grid !important; place-items: center; width: 44px !important; height: auto !important; margin: 0 !important; padding: 0 !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transform: none !important; }
 html.ll-test .add-to-cart .quantity button.increase:hover, html.ll-test .add-to-cart .quantity button.decrease:hover { background: var(--ll-tile) !important; }
-html.ll-test .add-to-cart .quantity .increase__sign, html.ll-test .add-to-cart .quantity .decrease__sign { font-size: 0 !important; line-height: 0 !important; }
-html.ll-test .add-to-cart .quantity .increase__sign::before, html.ll-test .add-to-cart .quantity .decrease__sign::before { content: ''; display: block; width: 16px; height: 16px; background-color: currentColor; -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat; }
-html.ll-test .add-to-cart .quantity .increase__sign::before { --ll-icon: var(--ll-i-plus); }
-html.ll-test .add-to-cart .quantity .decrease__sign::before { --ll-icon: var(--ll-i-minus); }
+/* Šablona kreslí + a − přes celé pole (absolutní ::before 128 px), proto ikony přímo v tlačítkách */
+html.ll-test .add-to-cart .quantity .increase__sign, html.ll-test .add-to-cart .quantity .decrease__sign { display: none !important; }
+html.ll-test .add-to-cart .quantity button.increase::before, html.ll-test .add-to-cart .quantity button.decrease::before { content: '' !important; position: static !important; display: block !important; width: 16px !important; height: 16px !important; font-size: 0 !important; color: var(--ll-ink) !important; background-color: currentColor !important; -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat; }
+html.ll-test .add-to-cart .quantity button.increase::before { --ll-icon: var(--ll-i-plus); }
+html.ll-test .add-to-cart .quantity button.decrease::before { --ll-icon: var(--ll-i-minus); }
+html.ll-test .add-to-cart .quantity button.increase::after, html.ll-test .add-to-cart .quantity button.decrease::after { display: none !important; }
 html.ll-test .add-to-cart .btn-conversion, html.ll-test .add-to-cart .btn.btn-lg.btn-conversion { flex: 1 1 auto !important; display: inline-flex !important; align-items: center; justify-content: center; gap: 10px; width: auto !important; height: 52px !important; min-height: 52px !important; margin: 0 !important; padding: 0 24px !important; font-size: 16px !important; font-weight: 500 !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
 html.ll-test .add-to-cart .btn-conversion:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
 html.ll-test .add-to-cart .btn-conversion::after { display: none !important; }
@@ -392,7 +394,9 @@ html.ll-test .add-to-cart .btn-conversion::before { content: '' !important; disp
 html.ll-test .social-buttons-wrapper { margin: 12px 0 0 !important; padding: 0 !important; }
 html.ll-test .social-buttons-wrapper .link-icons { display: flex !important; flex-wrap: wrap; gap: 20px; margin: 0 !important; }
 html.ll-test .social-buttons-wrapper a.link-icon { display: inline-flex !important; align-items: center; gap: 6px; margin: 0 !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; text-decoration: none !important; background: transparent !important; border: 0 !important; }
-html.ll-test .social-buttons-wrapper a.link-icon:hover { color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+html.ll-test .social-buttons-wrapper a.link-icon span { text-decoration: none !important; }
+html.ll-test .social-buttons-wrapper a.link-icon:hover span { text-decoration: underline !important; text-underline-offset: 3px; }
+html.ll-test .social-buttons-wrapper a.link-icon:hover { color: var(--ll-ink) !important; }
 html.ll-test .social-buttons-wrapper a.link-icon::before { content: '' !important; position: static !important; display: inline-block; flex: none; width: 16px !important; height: 16px !important; margin: 0 !important; font-size: 0 !important; background-color: currentColor; -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat; }
 html.ll-test .social-buttons-wrapper a.link-icon.chat::before { --ll-icon: var(--ll-i-help); }
 html.ll-test .social-buttons-wrapper a.link-icon.watchdog::before { --ll-icon: var(--ll-i-bell); }
