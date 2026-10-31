@@ -1036,11 +1036,12 @@ html.ll-test #cart-widget #continue-order-button { display: flex !important; ali
 html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
 
 /* ---------- Mobil do 767 px podle karet MobileHeader, MobileMenu a MobileProduct v design systému ---------- */
-html.ll-test .responsive-tools > a[data-target="navigation"]::before, html.ll-test #navigation .submenu-arrow::after, html.ll-test .p-detail-tabs-wrapper .detail-tab-item::after {
-  content: '' !important; font-size: 0 !important; line-height: 0 !important; background-color: currentColor; -webkit-text-fill-color: currentColor;
-  -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat;
-}
 @media (max-width: 767px) {
+  /* Ikony Lucide jako maska (jen na mobilu, na desktopu tyto prvky šablona nepoužívá) */
+  html.ll-test .responsive-tools > a[data-target="navigation"]::before, html.ll-test #navigation .submenu-arrow::after, html.ll-test .p-detail-tabs-wrapper .detail-tab-item::after {
+    content: '' !important; font-size: 0 !important; line-height: 0 !important; background-color: currentColor; -webkit-text-fill-color: currentColor;
+    -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat;
+  }
   /* Hlavička: košík jen s ikonou a počtem (částka je v košíku), Menu ikonou Lucide; otevřené menu na dlaždici s křížkem a popiskem Zavřít */
   html.ll-test .responsive-tools .click-cart .cart-price { display: none !important; }
   html.ll-test .responsive-tools .click-cart .btn { justify-content: center !important; width: 44px !important; }
