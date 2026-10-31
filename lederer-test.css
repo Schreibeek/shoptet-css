@@ -1906,13 +1906,13 @@ html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-
 html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(> .login-button, > div > .login-button), html.ll-test body.ordering-process #checkoutContent .form-group-content > .company-shopping, html.ll-test body.ordering-process #checkoutContent .form-group-content > #company-info, html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(#billStreet), html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(.js-location), html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(#deliveryStreet) { grid-column: 1 / -1; }
 html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group-city { grid-column: span 4; }
 html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group-zip { grid-column: span 2; }
-html.ll-test body.ordering-process #checkoutContent #company-info:not(.js-hidden) { display: grid !important; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 16px; }
+html.ll-test body.ordering-process #checkoutContent #company-info.visible, html.ll-test body.ordering-process #checkoutContent #company-info:not(.js-hidden) { display: grid !important; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 16px; }
 html.ll-test body.ordering-process #checkoutContent #company-info > .form-group { grid-column: span 3; display: block !important; width: auto !important; margin: 0 !important; padding: 0 !important; }
 html.ll-test body.ordering-process #checkoutContent #company-info > .form-group:has(#billCompany) { grid-column: 1 / -1; }
 /* Popisek a pole (Field) */
 html.ll-test body.ordering-process #checkoutContent .form-group > label:not(.whole-width), html.ll-test body.ordering-process #checkoutContent .form-group > p.label { position: static !important; display: block !important; margin: 0 0 8px !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; transform: none !important; }
 /* Skryté prvky šablony (výběr země, který se ukáže jen u jiné země) nechat skryté */
-html.ll-test body.ordering-process #checkoutContent .js-location--hidden { display: none !important; }
+html.ll-test body.ordering-process #checkoutContent .form-group > .js-location--hidden, html.ll-test body.ordering-process #checkoutContent .form-group > label.js-location--hidden:not(.whole-width) { display: none !important; }
 html.ll-test body.ordering-process #checkoutContent .required-asterisk { font: inherit !important; color: inherit !important; text-transform: none !important; }
 html.ll-test body.ordering-process #checkoutContent .required-asterisk { padding: 0 !important; }
 html.ll-test body.ordering-process #checkoutContent .required-asterisk::after { position: static !important; margin: 0 0 0 2px !important; padding: 0 !important; font-weight: 400; color: var(--ll-ink-muted) !important; }
