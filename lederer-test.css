@@ -1580,7 +1580,7 @@ html.ll-test #cart-wrapper .cart-content:has(> .text-center > .delivery-time):no
 @media (min-width: 768px) {
   html.ll-test #cart-wrapper .cart-content:has(.ll-cart-date) > .cart-summary, html.ll-test #cart-wrapper .cart-content:has(> .cart-table):not(:has(> .text-center > .delivery-time)) > .cart-summary { position: sticky; top: 24px; }
 }
-html.ll-test #cart-wrapper .delivery-time { display: flex !important; align-items: center; justify-content: flex-start !important; gap: 0 !important; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test #cart-wrapper .delivery-time { display: flex !important; align-items: center; justify-content: flex-start !important; gap: 0 !important; min-height: 0 !important; height: auto !important; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
 html.ll-test #cart-wrapper .delivery-time::before { content: '' !important; position: static !important; display: block !important; flex: none; width: 20px !important; height: 20px !important; margin: 0 12px 0 0 !important; background: var(--ll-gold-deep) !important; -webkit-mask: var(--ll-i-truck) center / contain no-repeat; mask: var(--ll-i-truck) center / contain no-repeat; border: 0 !important; transform: none !important; }
 html.ll-test #cart-wrapper .delivery-time::after { display: none !important; }
 html.ll-test #cart-wrapper .delivery-time strong { margin: 0 0 0 4px !important; font-weight: 600 !important; color: var(--ll-ink) !important; }
@@ -1703,6 +1703,8 @@ html.ll-test #cart-wrapper .ll-cart-help a[href^="tel:"]::before { --ll-icon: va
   html.ll-test #cart-wrapper .cart-summary .price-secondary { display: none !important; }
   html.ll-test #cart-wrapper .cart-summary .next-step { flex: none; }
   html.ll-test #cart-wrapper .cart-summary .next-step-forward { width: auto !important; min-width: 160px; }
+  /* Celkem a Pokračovat jsou v liště, kontakt tedy 16 px pod věrnostní slevou (mezera za prázdným sloupcem souhrnu stačí) */
+  html.ll-test #cart-wrapper .ll-cart-help { margin-top: 0; }
   html.ll-test body.in-kosik #back-to-top { display: none !important; }
   html.ll-test body.in-kosik .ll-test-badge { bottom: 92px !important; }
 }
