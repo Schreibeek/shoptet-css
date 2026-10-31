@@ -1118,3 +1118,20 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
   html.ll-test .p-detail-tabs-wrapper .basic-description > :last-child { margin-bottom: 0 !important; }
   html.ll-test .p-detail-tabs-wrapper .basic-description > :nth-last-child(1 of :not(meta, script, style, br)) { margin-bottom: 0 !important; }
 }
+
+/* ---------- Patička na mobilu: newsletter (DS Footer: box v okraji obsahu, uvnitř 24/20 px, pole 48 px, formulář pod sebou) ---------- */
+@media (max-width: 767px) {
+  /* Box šel od kraje ke kraji se zaoblením a šablona přidávala obsahu dalších 20 px po stranách */
+  html.ll-test #footer .custom-footer__newsletter { flex: 1 1 calc(100% - 40px) !important; max-width: calc(100% - 40px) !important; margin: 20px 20px 0 !important; padding: 24px 20px !important; }
+  html.ll-test #footer .custom-footer__newsletter .newsletter-header, html.ll-test #footer .custom-footer__newsletter form.subscribe-form { padding-left: 0 !important; padding-right: 0 !important; }
+  html.ll-test #footer .custom-footer__newsletter input.form-control { height: 48px !important; }
+  /* Opište text z obrázku: popisek přes celou šířku, pod ním pole a obrázek vedle sebe */
+  html.ll-test #footer .custom-footer__newsletter fieldset.box { display: grid !important; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "label label" "input image"; align-items: center; gap: 8px 12px; margin: 16px 0 0 !important; padding: 0 !important; background: transparent !important; border: 0 !important; }
+  html.ll-test #footer .custom-footer__newsletter fieldset.box > .smart-label-wrapper { display: contents !important; }
+  html.ll-test #footer .custom-footer__newsletter fieldset.box > .smart-label-wrapper > label { grid-area: label; margin: 0 !important; }
+  html.ll-test #footer .custom-footer__newsletter fieldset.box > .smart-label-wrapper > .form-control-wrapper { grid-area: input; min-width: 0; }
+  html.ll-test #footer .custom-footer__newsletter fieldset.box > .captcha-image { grid-area: image; margin: 0 !important; }
+  html.ll-test #footer .custom-footer__newsletter fieldset.box > .captcha-image img { display: block; width: auto !important; height: 48px !important; border-radius: var(--ll-r-sm); }
+  html.ll-test #footer .custom-footer__newsletter .consents { margin-top: 16px !important; }
+  html.ll-test #footer .custom-footer__newsletter .btn { display: flex !important; justify-content: center; width: 100% !important; height: 48px !important; min-height: 48px !important; margin-top: 16px !important; }
+}
