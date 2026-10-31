@@ -1763,6 +1763,15 @@ html.ll-test #cart-wrapper .cart-empty .col-md-4 .contact-box a::before { conten
 html.ll-test #cart-wrapper .cart-empty .col-md-4 .contact-box .mail a::before { --ll-icon: var(--ll-i-mail); }
 html.ll-test #cart-wrapper .cart-empty .col-md-4 .contact-box .tel a::before { --ll-icon: var(--ll-i-phone); }
 html.ll-test #cart-wrapper .cart-empty .col-md-4 .contact-box .mail::before, html.ll-test #cart-wrapper .cart-empty .col-md-4 .contact-box .tel::before { display: none !important; }
+/* Po vyprázdnění košíku Shoptet přidá nahoru hlavičku košíku (titulek Můj košík a Zpět do obchodu) a dole Zpět do obchodu, kontakt vynechá:
+   hlavičku schovat (prázdný stav má vlastní titulek), dole Zpět do obchodu jako odkaz se šipkou, prázdný sloupec kontaktu pryč */
+html.ll-test body.in-kosik:has(#cart-wrapper .cart-empty) .cart-header-block { display: none !important; }
+html.ll-test #cart-wrapper .cart-empty .cart-row > .col-md-4:not(:has(.contact-box)) { display: none !important; }
+html.ll-test #cart-wrapper:has(> .cart-empty) > .text-center { margin: -40px 0 0 !important; padding: 0 0 64px !important; text-align: center !important; background: none !important; border: 0 !important; }
+html.ll-test #cart-wrapper .back-to-shop { position: static !important; display: inline-flex !important; align-items: center; gap: 4px; width: auto !important; height: auto !important; min-height: 0 !important; margin: 0 !important; padding: 4px 8px !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test #cart-wrapper .back-to-shop:hover { color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+html.ll-test #cart-wrapper .back-to-shop::before { content: '' !important; position: static !important; display: block !important; flex: none; width: 16px !important; height: 16px !important; margin: 0 !important; background: currentColor !important; -webkit-mask: var(--ll-i-chev-right) center / contain no-repeat; mask: var(--ll-i-chev-right) center / contain no-repeat; border: 0 !important; transform: rotate(180deg) !important; }
+html.ll-test #cart-wrapper .back-to-shop::after { content: none !important; display: none !important; }
 @media (max-width: 767px) {
   html.ll-test #cart-wrapper .cart-inner.cart-empty { gap: 20px; padding: 40px 0 48px !important; }
   html.ll-test #cart-wrapper .cart-empty .cart-heading { padding-top: 84px !important; font-size: 24px !important; line-height: 30px !important; }
