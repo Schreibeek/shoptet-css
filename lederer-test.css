@@ -839,6 +839,8 @@ html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before 
   /* Odkaz zpět jako v DS (MobileCategory, MobileProduct): 4 px pod hlavičkou, řádek 44 px, 8 px k fotce nebo titulku (šablona 0 a 20 px) */
   html.ll-test .breadcrumbs-wrapper { margin-bottom: 8px !important; padding-top: 4px !important; background: transparent !important; }
   html.ll-test .breadcrumbs a { gap: 6px; margin-left: 0 !important; padding: 12px 0 !important; }
+  /* Odkaz zpět 14 px v inkoustu jako v DS (na desktopu drobečky 13 px) */
+  html.ll-test .breadcrumbs a, html.ll-test .breadcrumbs a span { font-size: 14px !important; color: var(--ll-ink) !important; }
   html.ll-test .breadcrumbs a::after { order: -1; margin: 0 !important; transform: rotate(180deg) !important; transform-origin: 50% 50% !important; }
   html.ll-test .breadcrumbs a, html.ll-test .breadcrumbs a span { text-decoration: none !important; }
   html.ll-test .filters-unveil-button-wrapper { margin: 0 0 16px !important; }
