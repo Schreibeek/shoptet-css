@@ -415,7 +415,8 @@ html.ll-test .p-final-price-wrapper .price-final, html.ll-test .p-final-price-wr
 html.ll-test .p-final-price-wrapper .price-measure, html.ll-test .p-final-price-wrapper .price-measure * { display: block; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
 html.ll-test .p-final-price-wrapper .price-standard, html.ll-test .p-final-price-wrapper .price-standard * { font-size: 16px !important; line-height: 24px; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
 /* Cena podle BuyboxPrice: přeškrtnutá původní nad akční cenou (při slevě karmínová), jednotková pod ní. Blok je úzký, takže dostupnost s dopravou zůstává vpravo jako u běžné ceny. */
-html.ll-test .p-final-price-wrapper { display: inline-grid !important; grid-template-columns: auto; justify-items: start; }
+html.ll-test .p-final-price-wrapper { display: inline-grid !important; grid-template-columns: auto; justify-items: start; gap: 0 !important; }
+html.ll-test .p-final-price-wrapper > * { margin: 0 !important; }
 html.ll-test .p-final-price-wrapper .price-standard { grid-row: 1; }
 html.ll-test .p-final-price-wrapper .price-standard, html.ll-test .p-final-price-wrapper .price-standard * { line-height: 20px !important; }
 html.ll-test .p-final-price-wrapper .price-final { grid-row: 2; }
