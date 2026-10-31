@@ -771,6 +771,7 @@ html.ll-test {
   --ll-i-print: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2'/%3E %3Cpath d='M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6'/%3E %3Crect x='6' y='14' width='12' height='8' rx='1'/%3E%3C/svg%3E");
   --ll-i-minus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E%3C/svg%3E");
   --ll-i-plus: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12h14'/%3E %3Cpath d='M12 5v14'/%3E%3C/svg%3E");  --ll-i-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E");
+  --ll-i-trash: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 11v6'/%3E %3Cpath d='M14 11v6'/%3E %3Cpath d='M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6'/%3E %3Cpath d='M3 6h18'/%3E %3Cpath d='M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2'/%3E%3C/svg%3E");
 }
 html.ll-test .top-nav-button-login::before, html.ll-test .btn.cart-count::before, html.ll-test #header .search .btn::before,
 html.ll-test .project-phone::before, html.ll-test .project-email::before, html.ll-test #navigation .menu-level-1 > li.ext > a::after,
@@ -888,19 +889,19 @@ html.ll-test #ratingTab .rate-list .star::before { width: 12px !important; font-
 html.ll-test #ratingTab .rate-list .rate-block { position: static !important; flex: 1 1 auto !important; width: auto !important; height: 4px !important; margin: 0 !important; background: var(--ll-line) !important; border-radius: 999px !important; }
 html.ll-test #ratingTab .rate-list .rate-bar { position: static !important; display: block !important; height: 4px !important; background: var(--ll-gold) !important; border-radius: 999px !important; }
 html.ll-test #ratingTab .rate-list .rate-count { position: absolute !important; top: 50% !important; right: 0 !important; left: auto !important; transform: translateY(-50%) !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; color: var(--ll-ink-muted) !important; }
-/* Formulář: popisky 13/500 větou, pole bílá 48 px, hvězdy k výběru šedé a zlaté */
-html.ll-test #ratingTab #rate-form .form-group { margin: 0 0 20px !important; padding-left: 0 !important; padding-right: 0 !important; }
-html.ll-test #ratingTab #rate-form label:not(.rating-star), html.ll-test #ratingTab #rate-form p.label { display: block; margin: 0 0 8px !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
-html.ll-test #ratingTab #rate-form label:not(.rating-star) *, html.ll-test #ratingTab #rate-form p.label * { font-weight: inherit !important; letter-spacing: 0 !important; text-transform: none !important; }
-html.ll-test #ratingTab #rate-form .consents p.label, html.ll-test #ratingTab #rate-form .consents p.label * { font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
-html.ll-test #ratingTab #rate-form input.form-control, html.ll-test #ratingTab #rate-form textarea.form-control { box-sizing: border-box; width: 100% !important; min-height: 48px; height: auto; padding: 12px 16px !important; font-size: 15px !important; line-height: 22px !important; color: var(--ll-ink) !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line-control) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
-html.ll-test #ratingTab #rate-form textarea.form-control { min-height: 112px; }
-html.ll-test #ratingTab #rate-form .form-control:hover { border-color: var(--ll-ink-soft) !important; }
-html.ll-test #ratingTab #rate-form .form-control:focus { border-color: var(--ll-ink) !important; }
-html.ll-test #ratingTab .required-asterisk::after { color: var(--ll-sale) !important; }
+/* Formuláře Hodnocení a Diskuze: popisky 13/500 větou, pole bílá 48 px (Field), hvězdy k výběru šedé a zlaté */
+html.ll-test #ratingTab #rate-form .form-group, html.ll-test #productDiscussion #formDiscussion .form-group { margin: 0 0 20px !important; padding-left: 0 !important; padding-right: 0 !important; }
+html.ll-test #ratingTab #rate-form label:not(.rating-star), html.ll-test #ratingTab #rate-form p.label, html.ll-test #productDiscussion #formDiscussion label:not(.rating-star), html.ll-test #productDiscussion #formDiscussion p.label { display: block; margin: 0 0 8px !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test #ratingTab #rate-form label:not(.rating-star) *, html.ll-test #ratingTab #rate-form p.label *, html.ll-test #productDiscussion #formDiscussion label:not(.rating-star) *, html.ll-test #productDiscussion #formDiscussion p.label * { font-weight: inherit !important; letter-spacing: 0 !important; text-transform: none !important; }
+html.ll-test #ratingTab #rate-form .consents p.label, html.ll-test #ratingTab #rate-form .consents p.label *, html.ll-test #productDiscussion #formDiscussion .consents p.label, html.ll-test #productDiscussion #formDiscussion .consents p.label * { font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
+html.ll-test #ratingTab #rate-form input.form-control, html.ll-test #ratingTab #rate-form textarea.form-control, html.ll-test #productDiscussion #formDiscussion input.form-control, html.ll-test #productDiscussion #formDiscussion textarea.form-control { box-sizing: border-box; width: 100% !important; min-height: 48px; height: auto; padding: 12px 16px !important; font-size: 15px !important; line-height: 22px !important; color: var(--ll-ink) !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line-control) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #ratingTab #rate-form textarea.form-control, html.ll-test #productDiscussion #formDiscussion textarea.form-control { min-height: 112px; }
+html.ll-test #ratingTab #rate-form .form-control:hover, html.ll-test #productDiscussion #formDiscussion .form-control:hover { border-color: var(--ll-ink-soft) !important; }
+html.ll-test #ratingTab #rate-form .form-control:focus, html.ll-test #productDiscussion #formDiscussion .form-control:focus { border-color: var(--ll-ink) !important; }
+html.ll-test #ratingTab .required-asterisk::after, html.ll-test #productDiscussion .required-asterisk::after { color: var(--ll-sale) !important; }
 html.ll-test #ratingTab .rating-star::before { color: var(--ll-line-strong) !important; }
 html.ll-test #ratingTab .rating-star.full::before { color: var(--ll-gold) !important; }
-html.ll-test #ratingTab #rate-form .btn-primary { min-height: 48px !important; height: auto !important; padding: 0 28px !important; font-size: 15px !important; font-weight: 500 !important; }
+html.ll-test #ratingTab #rate-form .btn-primary, html.ll-test #productDiscussion #formDiscussion .btn-primary { min-height: 48px !important; height: auto !important; padding: 0 28px !important; font-size: 15px !important; font-weight: 500 !important; }
 /* Recenze jako karty s linkou nahoře (jako na homepage) */
 html.ll-test #ratingTab #ratingsList { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; width: auto !important; max-width: none !important; margin: 40px 0 0 !important; }
 html.ll-test #ratingTab #ratingsList .vote-wrap { margin: 0 !important; padding: 20px 0 0 !important; background: transparent !important; border: 0 !important; border-top: 1px solid var(--ll-ink) !important; border-radius: 0 !important; box-shadow: none !important; }
@@ -919,3 +920,96 @@ html.ll-test #ratingTab .vote-content, html.ll-test #ratingTab .vote-content * {
   html.ll-test #ratingTab .rate-wrap { width: 100% !important; }
   html.ll-test #ratingTab #ratingsList { grid-template-columns: minmax(0, 1fr); padding-left: 0 !important; padding-right: 0 !important; }
 }
+
+/* ---------- Detail: záložka Diskuze (nadpis, úvod a pole jako v Hodnocení) ----------
+   Šablona: nadpis 26 px tučně, pod ním ještě Diskuze, fialková linka, popisky verzálkami, šedá pole odsazená o 10 px. */
+html.ll-test #productDiscussion h3 { margin: 0 0 8px !important; font-size: 22px !important; line-height: 1.3 !important; font-weight: 500 !important; letter-spacing: -0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; }
+/* Nadpis „Diskuze“ opakuje název záložky, zůstává jen pro čtečky */
+html.ll-test #productDiscussion #discussionWrapper > h2 { position: absolute !important; width: 1px !important; height: 1px !important; margin: -1px !important; padding: 0 !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; border: 0 !important; }
+html.ll-test #productDiscussion .discussionContainer > p { margin: 0 0 24px !important; font-size: 15px !important; line-height: 24px !important; color: var(--ll-ink-soft) !important; }
+html.ll-test #productDiscussion #discussion-form { margin: 0 !important; padding: 0 !important; border: 0 !important; }
+html.ll-test #productDiscussion #formDiscussion { box-sizing: border-box; width: auto !important; max-width: 760px !important; margin: 0 !important; padding: 0 !important; }
+@media (max-width: 991px) {
+  html.ll-test #productDiscussion .discussion-wrapper, html.ll-test #productDiscussion .discussionContainer { padding-left: 0 !important; padding-right: 0 !important; }
+}
+/* Automatické vyplnění v Chromu barví pole modře, pole zůstávají bílá */
+html.ll-test #login input.form-control:-webkit-autofill, html.ll-test #rate-form .form-control:-webkit-autofill, html.ll-test #formDiscussion .form-control:-webkit-autofill { -webkit-box-shadow: 0 0 0 100px var(--ll-paper) inset !important; box-shadow: 0 0 0 100px var(--ll-paper) inset !important; -webkit-text-fill-color: var(--ll-ink) !important; caret-color: var(--ll-ink); }
+
+/* ---------- Hlavička: okna Přihlášení a Košík ----------
+   Šablona je lepí na tlačítko jako záložku (rohy 20 px, fialková linka, stín). Podle DS samostatný panel 8 px pod tlačítkem:
+   okraj line, rohy radius-md, stín shadow-2 (rozbalovací menu); tlačítko 44 px, při hoveru i otevření na dlaždici. */
+html.ll-test #header .top-nav-button-login, html.ll-test #header .click-cart .btn { height: 44px !important; min-height: 0 !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: background-color 150ms var(--ll-ease) !important; }
+html.ll-test #header .top-nav-button-login { padding: 0 12px !important; background: transparent !important; }
+html.ll-test #header .click-cart .btn { padding: 0 14px !important; }
+html.ll-test #header .top-nav-button-login:hover, html.ll-test body.login-window-visible #header .top-nav-button-login,
+html.ll-test #header .click-cart .btn:hover, html.ll-test body.cart-window-visible #header .click-cart .btn { background: var(--ll-tile) !important; }
+html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { margin-top: 8px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; box-shadow: 0 12px 28px -14px rgba(32, 31, 31, 0.24) !important; }
+
+/* Přihlášení: pole podle Field, hlavní tlačítko inkoustové (šablona zlaté), registrace obrysová, zapomenuté heslo jako odkaz, sociální sítě jemná tlačítka */
+html.ll-test #login .popup-widget-inner { padding: 24px !important; }
+html.ll-test #login .login-form .form-group { margin: 0 0 16px !important; padding: 0 !important; }
+html.ll-test #login .login-form label { display: block; margin: 0 0 8px !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test #login .login-form label * { font-weight: inherit !important; letter-spacing: 0 !important; text-transform: none !important; }
+html.ll-test #login .required-asterisk::after { color: var(--ll-sale) !important; }
+html.ll-test #login input.form-control { box-sizing: border-box; width: 100% !important; height: 48px !important; min-height: 48px; padding: 12px 16px !important; font-size: 15px !important; line-height: 22px !important; color: var(--ll-ink) !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line-control) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #login input.form-control:hover { border-color: var(--ll-ink-soft) !important; }
+html.ll-test #login input.form-control:focus { border-color: var(--ll-ink) !important; }
+html.ll-test #login .login-form .submit-wrapper { margin: 24px 0 0 !important; }
+html.ll-test #login .login-form .btn-primary { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: 100% !important; height: 48px !important; min-height: 48px !important; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #login .login-form .btn-primary:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
+html.ll-test #login .alternative-links { display: flex !important; flex-direction: column; align-items: center; gap: 16px; margin: 12px 0 0 !important; padding: 0 !important; }
+html.ll-test #login .alternative-links a[href*="registrace"] { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: 100% !important; height: 48px !important; margin: 0 !important; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; text-decoration: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #login .alternative-links a[href*="registrace"]:hover { color: #fff !important; background: var(--ll-ink) !important; }
+html.ll-test #login .alternative-links a[href*="heslo"] { display: inline-flex !important; width: auto !important; height: auto !important; margin: 0 !important; padding: 0 0 3px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; text-decoration: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-gold-deep) !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test #login .alternative-links a[href*="heslo"]:hover { color: var(--ll-gold-text) !important; border-bottom-color: var(--ll-gold-text) !important; }
+html.ll-test #login .social-login-buttons { display: grid !important; grid-template-columns: minmax(0, 1fr); gap: 8px; margin: 20px 0 0 !important; padding: 20px 0 0 !important; border-top: 1px solid var(--ll-line); }
+html.ll-test #login .social-login-buttons .form-group { float: none !important; width: auto !important; margin: 0 !important; padding: 0 !important; }
+html.ll-test #login .social-login-buttons a.login-btn { position: relative; display: flex !important; align-items: center; justify-content: center; gap: 10px; box-sizing: border-box; height: 44px; padding: 0 16px !important; text-decoration: none !important; background: var(--ll-tile) !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; transition: background-color 150ms var(--ll-ease); }
+html.ll-test #login .social-login-buttons a.login-btn:hover { background: var(--ll-line) !important; }
+html.ll-test #login .social-login-buttons a.login-btn > span { display: block !important; flex: none; width: 18px; height: 18px; }
+html.ll-test #login .social-login-buttons a.login-btn > span::before { position: static !important; display: block !important; width: 18px !important; height: 18px !important; margin: 0 !important; transform: none !important; background-size: contain !important; }
+html.ll-test #login .social-login-buttons a.login-btn strong { font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+
+/* Košík podle CartDrawer: hlavička s linkou, položka s fotkou na dlaždici a menším krokovačem (ll-qty--sm),
+   patička na ivory s ukazatelem dopravy zdarma (zlatá výplň na line) a hlavním tlačítkem */
+html.ll-test #cart-widget .cart-widget-title { margin: 0 !important; padding: 20px 24px 16px !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; letter-spacing: -0.01em !important; text-align: left !important; text-transform: none !important; color: var(--ll-ink) !important; border-bottom: 1px solid var(--ll-line); }
+html.ll-test #cart-widget .cart-widget-inner { padding: 0 24px !important; }
+html.ll-test #cart-widget .cart-widget-product { position: relative; display: grid !important; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; align-items: start; margin: 0 !important; padding: 16px 0 !important; border-bottom: 1px solid var(--ll-line); }
+html.ll-test #cart-widget .cart-widget-product:last-child { border-bottom: 0; }
+html.ll-test #cart-widget .cart-widget-product-image { box-sizing: border-box; width: 64px !important; height: 64px !important; margin: 0 !important; padding: 4px !important; background: var(--ll-tile) !important; border-radius: var(--ll-r-sm) !important; overflow: hidden; }
+html.ll-test #cart-widget .cart-widget-product-image a { display: block !important; width: 100% !important; height: 100% !important; }
+html.ll-test #cart-widget .cart-widget-product-image img { display: block; width: 100% !important; height: 100% !important; max-width: none !important; object-fit: contain; mix-blend-mode: multiply; }
+html.ll-test #cart-widget .cart-widget-product-name { display: grid !important; grid-template-columns: auto minmax(0, 1fr); grid-template-areas: "name name" "qty price"; align-items: center; gap: 10px 12px; width: auto !important; margin: 0 !important; padding: 0 !important; }
+html.ll-test #cart-widget .cart-widget-product-name > strong { grid-area: name; display: block; padding: 0 28px 0 0 !important; font-weight: 400 !important; }
+html.ll-test #cart-widget .cart-widget-product-name > strong a { font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; text-decoration: none !important; color: var(--ll-ink) !important; }
+html.ll-test #cart-widget .cart-widget-product-name > strong a:hover { color: var(--ll-gold-text) !important; }
+html.ll-test #cart-widget .cart-widget-product-name > span { grid-area: price; justify-self: end; margin: 0 !important; font-size: 15px !important; line-height: 22px !important; font-weight: 600 !important; white-space: nowrap; color: var(--ll-ink) !important; font-variant-numeric: tabular-nums; }
+html.ll-test #cart-widget .cart-widget-product-amount { grid-area: qty; margin: 0 !important; padding: 0 !important; }
+html.ll-test #cart-widget .quantity { position: relative; display: inline-flex !important; align-items: stretch; box-sizing: border-box; width: auto !important; height: 34px !important; margin: 0 !important; padding: 0 !important; background: var(--ll-paper); border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none; }
+html.ll-test #cart-widget .quantity label { order: 2; display: flex !important; align-items: center; margin: 0 !important; }
+html.ll-test #cart-widget .quantity input.amount { box-sizing: border-box; width: 28px !important; height: 100% !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; font-size: 14px !important; font-weight: 600 !important; color: var(--ll-ink) !important; text-align: center; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; -moz-appearance: textfield; appearance: textfield; font-variant-numeric: tabular-nums; }
+html.ll-test #cart-widget .quantity input.amount::-webkit-outer-spin-button, html.ll-test #cart-widget .quantity input.amount::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+html.ll-test #cart-widget .quantity button.decrease { order: 1; }
+html.ll-test #cart-widget .quantity button.increase { order: 3; }
+html.ll-test #cart-widget .quantity button.increase, html.ll-test #cart-widget .quantity button.decrease { position: static !important; display: grid !important; place-items: center; width: 32px !important; height: auto !important; margin: 0 !important; padding: 0 !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transform: none !important; }
+html.ll-test #cart-widget .quantity button.increase:hover, html.ll-test #cart-widget .quantity button.decrease:hover { background: var(--ll-tile) !important; }
+html.ll-test #cart-widget .quantity .increase__sign, html.ll-test #cart-widget .quantity .decrease__sign { display: none !important; }
+html.ll-test #cart-widget .quantity button.increase::before, html.ll-test #cart-widget .quantity button.decrease::before { content: '' !important; position: static !important; display: block !important; width: 14px !important; height: 14px !important; font-size: 0 !important; color: var(--ll-ink) !important; background-color: currentColor !important; -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat; }
+html.ll-test #cart-widget .quantity button.increase::before { --ll-icon: var(--ll-i-plus); }
+html.ll-test #cart-widget .quantity button.decrease::before { --ll-icon: var(--ll-i-minus); }
+html.ll-test #cart-widget .quantity button.increase::after, html.ll-test #cart-widget .quantity button.decrease::after { display: none !important; }
+html.ll-test #cart-widget .cart-widget-product-delete { position: absolute !important; top: 12px !important; right: -6px !important; width: auto !important; margin: 0 !important; }
+html.ll-test #cart-widget .cart-widget-product-delete .inline { display: block !important; }
+html.ll-test #cart-widget button.remove-item { display: grid !important; place-items: center; width: 28px !important; height: 28px !important; margin: 0 !important; padding: 0 !important; color: var(--ll-ink-muted) !important; background: transparent !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #cart-widget button.remove-item:hover { color: var(--ll-sale) !important; background: var(--ll-tile) !important; }
+html.ll-test #cart-widget button.remove-item::before { content: '' !important; position: static !important; display: block !important; width: 16px !important; height: 16px !important; font-size: 0 !important; color: inherit !important; background-color: currentColor !important; transform: none !important; -webkit-mask: var(--ll-i-trash) center / contain no-repeat; mask: var(--ll-i-trash) center / contain no-repeat; }
+html.ll-test #cart-widget .cart-widget-button { margin: 0 !important; padding: 16px 24px 24px !important; background: var(--ll-ivory) !important; border-top: 1px solid var(--ll-line); border-radius: 0 0 5px 5px; }
+html.ll-test #cart-widget .cart-free-shipping { position: relative; margin: 0 0 16px !important; padding: 0 0 14px !important; background: transparent !important; border: 0 !important; text-align: left !important; }
+html.ll-test #cart-widget .cart-free-shipping > div { position: static !important; margin: 0 !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; text-align: left !important; color: var(--ll-ink-soft) !important; }
+html.ll-test #cart-widget .cart-free-shipping > div::before { display: none !important; }
+html.ll-test #cart-widget .cart-free-shipping strong { font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test #cart-widget .cart-free-shipping::before, html.ll-test #cart-widget .cart-free-shipping::after { top: auto !important; bottom: 0 !important; left: 0 !important; height: 4px !important; border-radius: 999px !important; }
+html.ll-test #cart-widget .cart-free-shipping::after { width: 100% !important; background: var(--ll-line) !important; }
+html.ll-test #cart-widget .cart-free-shipping::before { max-width: 100%; background: var(--ll-gold) !important; z-index: 2 !important; }
+html.ll-test #cart-widget #continue-order-button { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: 100% !important; height: 48px !important; min-height: 48px !important; margin: 0 !important; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
