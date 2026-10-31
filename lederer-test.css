@@ -1142,4 +1142,6 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
   html.ll-test .p-info-grid { margin-top: 20px !important; padding: 16px 16px 12px !important; gap: 12px !important; }
   html.ll-test .loyalty-box-wrapper { padding: 0 16px 12px !important; }
   html.ll-test .add-to-cart { padding: 0 16px 16px !important; gap: 8px !important; }
+  /* Pod souvisejícími produkty zbývá z karet 35 px, patička tedy jen 24 px (celkem ~64 px jako sekce v DS, ne 95) */
+  html.ll-test body.type-detail #footer { margin-top: 24px !important; }
 }
