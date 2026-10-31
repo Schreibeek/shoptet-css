@@ -364,7 +364,7 @@ html.ll-test .detail-availability-block .availability-label[style*="009901"] { c
 html.ll-test .detail-availability-block > div[style] { margin: 2px 0 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
 html.ll-test .detail-availability-block table.detail-parameters:not(:has(tr)) { display: none; }
 html.ll-test .loyalty-box-wrapper { margin: 0 !important; padding: 0 24px 16px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-top: 0 !important; border-bottom: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
-html.ll-test .loyalty-box-content { display: flex !important; align-items: center; gap: 8px; margin: 0 !important; padding: 9px 12px !important; background: var(--ll-gold-soft) !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; text-align: left !important; }
+html.ll-test .loyalty-box-content { display: flex !important; align-items: center; justify-content: flex-start !important; gap: 8px; margin: 0 !important; padding: 9px 12px !important; background: var(--ll-gold-soft) !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; text-align: left !important; }
 html.ll-test .loyalty-box-text { margin: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; color: var(--ll-ink) !important; text-align: left !important; }
 html.ll-test .loyalty-box-text strong { font-weight: 600; }
 html.ll-test .loyalty-box-wrapper a { color: var(--ll-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
@@ -411,8 +411,11 @@ html.ll-test .shp-tabs-wrapper .shp-tabs > li { flex: none !important; width: au
 html.ll-test .shp-tabs-wrapper .shp-tabs .shp-tab-link { display: inline-flex !important; align-items: center; height: 48px !important; margin: 0 0 -1px !important; padding: 0 !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; white-space: nowrap; color: var(--ll-ink-soft) !important; background: transparent !important; border: 0 !important; border-bottom: 2px solid transparent !important; border-radius: 0 !important; box-shadow: none !important; text-decoration: none !important; }
 html.ll-test .shp-tabs-wrapper .shp-tabs .shp-tab-link:hover { color: var(--ll-ink) !important; }
 html.ll-test .shp-tabs-wrapper .shp-tabs > li.active > .shp-tab-link { color: var(--ll-ink) !important; border-bottom-color: var(--ll-gold) !important; }
+/* Šablona pod aktivní záložkou kreslí bílý pruh (zakrývá linku pro staré „krabicové“ záložky), ten zakrýval zlatou linku */
+html.ll-test .shp-tabs-wrapper .shp-tabs > li::before, html.ll-test .shp-tabs-wrapper .shp-tabs > li::after { display: none !important; }
+html.ll-test .shp-tabs-wrapper { margin-top: 48px !important; }
 html.ll-test .p-detail-tabs-wrapper .tab-pane { padding: 24px 0 0 !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
-html.ll-test .p-detail-tabs-wrapper .tab-pane, html.ll-test .p-detail-tabs-wrapper .tab-pane p, html.ll-test .p-detail-tabs-wrapper .tab-pane li { font-size: 16px; line-height: 27px; color: var(--ll-ink-soft); }
+html.ll-test .p-detail-tabs-wrapper .tab-pane, html.ll-test .p-detail-tabs-wrapper .tab-pane p, html.ll-test .p-detail-tabs-wrapper .tab-pane li, html.ll-test .p-detail-tabs-wrapper .tab-pane .ewa-rteLine { font-size: 16px; line-height: 27px; color: var(--ll-ink-soft); }
 
 /* ---------- Bannery na homepage ---------- */
 html.ll-test .carousel, html.ll-test .carousel-inner, html.ll-test .banner-wrapper img, html.ll-test .banners-top-block img { border-radius: var(--ll-r-lg); }
