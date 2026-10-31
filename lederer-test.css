@@ -78,8 +78,15 @@ html.ll-test #header .click-cart .btn::before, html.ll-test #header .click-cart 
 html.ll-test #navigation .menu-level-1 > li > a, html.ll-test #navigation .menu-level-1 > li > a b {
   color: var(--ll-ink); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
 }
-html.ll-test #navigation .menu-level-1 > li > a { box-shadow: inset 0 -2px 0 transparent; transition: box-shadow 150ms var(--ll-ease); }
-html.ll-test #navigation .menu-level-1 > li:hover > a, html.ll-test #navigation .menu-level-1 > li.active > a { box-shadow: inset 0 -2px 0 var(--ll-gold); color: var(--ll-ink); }
+/* Položky menu souměrně: 18 px z každé strany (mezera 36 px jako v šabloně), šipka v pravém odsazení,
+   zlatá linka jen pod textem a šipkou, ne přes odsazení (první položka ji měla useknutou, ostatní příliš širokou) */
+@media (min-width: 768px) {
+  html.ll-test #navigation .menu-level-1 > li > a { position: relative; padding-left: 18px !important; padding-right: 18px !important; box-shadow: none !important; }
+  html.ll-test #navigation .menu-level-1 > li.ext > a { padding-right: 36px !important; }
+  html.ll-test #navigation .menu-level-1 > li > a::before { content: ''; position: absolute; left: 18px; right: 18px; bottom: 0; height: 2px; background: transparent; transition: background-color 150ms var(--ll-ease); }
+  html.ll-test #navigation .menu-level-1 > li:hover > a::before, html.ll-test #navigation .menu-level-1 > li.active > a::before { background: var(--ll-gold); }
+}
+html.ll-test #navigation .menu-level-1 > li:hover > a, html.ll-test #navigation .menu-level-1 > li.active > a { color: var(--ll-ink); }
 
 /* ---------- Drobečky ---------- */
 html.ll-test .breadcrumbs, html.ll-test .breadcrumbs a, html.ll-test .breadcrumbs span { color: var(--ll-ink-soft); font-weight: 400; }
@@ -103,7 +110,7 @@ html.ll-test .products .product .p .image img {
 }
 html.ll-test .products .product:hover .p .image img { transform: scale(1.035); }
 html.ll-test .products .product .p .flags-default { top: 12px; left: 12px; right: auto; z-index: 2; gap: 4px; }
-html.ll-test .products .product .p .flags-extra { top: 12px; right: 12px; left: auto; z-index: 2; }
+html.ll-test .products .product .p .flags-extra { top: 12px !important; right: 12px !important; left: auto !important; bottom: auto !important; z-index: 2; }
 html.ll-test .products .product .p-in { padding: 14px 2px 0; }
 html.ll-test .products .product .p .name, html.ll-test .products .product .p .name span {
   color: var(--ll-ink); font-size: 15px; line-height: 22px; font-weight: 400; letter-spacing: 0; text-transform: none;
@@ -167,9 +174,9 @@ html.ll-test #productsTop .product .p { display: grid !important; grid-template-
 html.ll-test #productsTop .product .p:hover { border-color: var(--ll-ink) !important; }
 html.ll-test #productsTop .product .p .image { width: 64px !important; height: 64px !important; aspect-ratio: auto; border-radius: var(--ll-r-xs) !important; }
 html.ll-test #productsTop .product:hover .p .image img { transform: none; }
-html.ll-test #productsTop .product .p-in { display: flex !important; flex-direction: column; align-items: stretch !important; justify-content: center !important; gap: 4px; min-width: 0; padding: 0 !important; text-align: left !important; }
+html.ll-test #productsTop .product .p-in { display: flex !important; flex-direction: column; align-items: stretch !important; justify-content: center !important; gap: 4px; width: auto !important; max-width: none !important; min-width: 0; justify-self: stretch !important; padding: 0 !important; text-align: left !important; }
 html.ll-test #productsTop .product .p-in-in { margin: 0 !important; padding: 0 !important; }
-html.ll-test #productsTop .product .p .name { display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; height: auto !important; min-height: 0 !important; margin: 0 !important; }
+html.ll-test #productsTop .product .p .name { display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 3; width: auto !important; max-width: none !important; overflow: hidden; height: auto !important; min-height: 0 !important; margin: 0 !important; }
 html.ll-test #productsTop .product .p .name, html.ll-test #productsTop .product .p .name span { font-size: 14px !important; line-height: 20px !important; }
 html.ll-test #productsTop .product .p-bottom, html.ll-test #productsTop .product .offers, html.ll-test #productsTop .product .prices { display: flex !important; flex-wrap: wrap; align-items: baseline; justify-content: flex-start !important; column-gap: 8px; min-height: 0 !important; margin: 0 !important; padding: 0 !important; text-align: left !important; }
 html.ll-test #productsTop .product .price-final, html.ll-test #productsTop .product .price-final strong { font-size: 15px !important; line-height: 20px !important; }
@@ -210,6 +217,9 @@ html.ll-test #content .pagination__list .pagination__link:hover { color: var(--l
 html.ll-test .pagination__list .pagination__currentPage { color: #fff !important; background: var(--ll-ink) !important; }
 
 /* ---------- Postranní panel (Filters): bez rámečků, skupiny oddělené linkou, titulky 12/600 verzálkami ---------- */
+/* Bez rámečku musí obsah panelu skončit dřív, jinak se tlačí k výpisu: šířka zhruba 250 px jako v šabloně */
+@media (min-width: 1200px) { html.ll-test .sidebar-inner { padding-right: 48px !important; } }
+@media (min-width: 768px) and (max-width: 1199px) { html.ll-test .sidebar-inner { padding-right: 24px !important; } }
 html.ll-test .sidebar .box, html.ll-test .sidebar .box.box-bg-variant, html.ll-test .sidebar .box.box-bg-default { margin: 0 !important; padding: 0 !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
 html.ll-test .sidebar-inner > .box + .box, html.ll-test .sidebar .box > .box + .box { margin-top: 32px !important; padding-top: 24px !important; border-top: 1px solid var(--ll-line) !important; }
 html.ll-test .sidebar-inner > .banner { margin: 32px 0 0 !important; }
@@ -264,6 +274,23 @@ html.ll-test .sidebar .vote-product-name { overflow: hidden; font-size: 13px !im
 html.ll-test .sidebar .vote-rating { font-size: 12px !important; line-height: 16px !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-muted) !important; }
 html.ll-test .sidebar .vote-rating span:not([class*="star"]) { font-size: inherit !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-muted) !important; }
 html.ll-test .sidebar .vote-content { font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-soft) !important; }
+/* Banner v panelu: jedno zaoblení 6 px na obalu, fotka bez vlastního zaoblení a bez zvětšení při najetí */
+html.ll-test .sidebar .banner { overflow: hidden !important; isolation: isolate; border-radius: var(--ll-r-md) !important; box-shadow: none !important; }
+html.ll-test .sidebar .banner img, html.ll-test .sidebar .banner a:hover img, html.ll-test .sidebar .banner:hover img { border-radius: 0 !important; transform: none !important; transition: none !important; }
+/* Hodnocení obchodu v panelu (ReviewSummary): skupina s linkou, hodnota inkoustem, hvězdy 16 px, obrysové tlačítko */
+html.ll-test .sidebar .sidepanel-rating { width: auto !important; margin: 32px 0 0 !important; padding: 24px 0 0 !important; background: transparent !important; border: 0 !important; border-top: 1px solid var(--ll-line) !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test .sidebar .sidepanel-rating__content, html.ll-test .sidebar .sidepanel-rating__title-block, html.ll-test .sidebar .sidepanel-rating__address-block { margin: 0 !important; padding: 0 !important; }
+html.ll-test .sidebar .sidepanel-rating__title { margin: 0 0 14px !important; font-size: 12px !important; line-height: 16px !important; font-weight: 600 !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; color: var(--ll-ink) !important; }
+html.ll-test .sidebar .sidepanel-rating .rate-average-inner { display: flex !important; align-items: center; gap: 14px; margin: 0 0 16px !important; padding: 0 !important; }
+html.ll-test .sidebar .sidepanel-rating .rate-average { margin: 0 !important; font-size: 40px !important; line-height: 1 !important; font-weight: 500 !important; letter-spacing: -0.025em; color: var(--ll-ink) !important; font-variant-numeric: tabular-nums; }
+html.ll-test .sidebar .sidepanel-rating .rate-star-wrap { display: flex !important; flex-direction: column; align-items: flex-start; gap: 4px; margin: 0 !important; }
+html.ll-test .sidebar .sidepanel-rating .stars { display: flex !important; gap: 2px; margin: 0 !important; }
+html.ll-test .sidebar .sidepanel-rating .star { width: 16px !important; height: 16px !important; margin: 0 !important; }
+html.ll-test .sidebar .sidepanel-rating .star::before { width: 16px !important; font-size: 16px !important; line-height: 16px !important; }
+html.ll-test .sidebar .sidepanel-rating .stars-label { margin: 0 !important; font-size: 13px !important; line-height: 18px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
+html.ll-test #content .sidebar .sidepanel-rating__btn.btn, html.ll-test .sidebar .sidepanel-rating__btn.btn { position: relative; display: flex !important; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; width: 100% !important; height: 40px !important; min-height: 40px !important; margin: 0 !important; padding: 0 16px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #content .sidebar .sidepanel-rating__btn.btn:hover, html.ll-test .sidebar .sidepanel-rating__btn.btn:hover { color: #fff !important; background: var(--ll-ink) !important; }
+html.ll-test .sidebar .sidepanel-rating__btn.btn::after { position: static !important; order: -1; font-size: 14px !important; line-height: 1 !important; color: var(--ll-gold) !important; -webkit-text-fill-color: var(--ll-gold) !important; transform: none !important; }
 
 /* ---------- Detail produktu ---------- */
 html.ll-test .gallery-new #main-slider .splide__slide, html.ll-test .gallery-new #main-slider .splide__slide a {
@@ -634,7 +661,7 @@ html.ll-test #header .search .btn::before { --ll-icon: var(--ll-i-search); width
 html.ll-test .project-phone::before { --ll-icon: var(--ll-i-phone); }
 html.ll-test .project-email::before { --ll-icon: var(--ll-i-mail); }
 html.ll-test .project-phone::before, html.ll-test .project-email::before { width: 15px !important; height: 15px !important; margin-right: 6px !important; top: 0 !important; vertical-align: -2px; color: var(--ll-gold-deep) !important; }
-html.ll-test #navigation .menu-level-1 > li.ext > a::after { --ll-icon: var(--ll-i-chev-down); width: 14px !important; height: 14px !important; top: calc(50% - 7px) !important; bottom: auto !important; left: auto !important; right: 4px !important; transform: none !important; color: var(--ll-ink-muted) !important; }
+html.ll-test #navigation .menu-level-1 > li.ext > a::after { --ll-icon: var(--ll-i-chev-down); width: 14px !important; height: 14px !important; top: calc(50% - 7px) !important; bottom: auto !important; left: auto !important; right: 18px !important; transform: none !important; color: var(--ll-ink-muted) !important; }
 html.ll-test .breadcrumbs { align-items: center !important; }
 html.ll-test .breadcrumbs a, html.ll-test .breadcrumbs > span:last-child span { display: inline-flex !important; align-items: center; padding: 0 !important; }
 html.ll-test .breadcrumbs a::after { --ll-icon: var(--ll-i-chev-right); position: static !important; left: auto !important; top: auto !important; width: 14px !important; height: 14px !important; margin: 0 6px !important; color: var(--ll-ink-muted) !important; }
