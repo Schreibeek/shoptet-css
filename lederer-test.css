@@ -38,6 +38,8 @@ html.ll-test ::selection { background: var(--ll-gold-soft); color: var(--ll-ink)
 /* Fokus podle design systému: zlatohnědý obrys 2 px při ovládání klávesnicí (šablona má modrý / 3px), po kliknutí myší bez obrysu */
 html.ll-test :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline: 2px solid var(--ll-gold-text) !important; outline-offset: 2px !important; }
 html.ll-test :where(a, button, summary, [tabindex]):focus:not(:focus-visible) { outline: none !important; }
+/* Prvky s tabindex=-1 (nadpis záložky, na který šablona přesune fokus po rozbalení) nejdou vybrat klávesou Tab, obrys u nich jen ruší */
+html.ll-test [tabindex="-1"]:focus { outline: none !important; }
 
 /* ---------- Typografie ---------- */
 html.ll-test h1, html.ll-test .h1, html.ll-test h2, html.ll-test .h2, html.ll-test h3, html.ll-test .h3 { color: var(--ll-ink); font-weight: 500; letter-spacing: -0.015em; }
