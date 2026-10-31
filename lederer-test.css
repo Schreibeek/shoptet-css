@@ -330,7 +330,10 @@ html.ll-test .p-image-wrapper .p-image, html.ll-test .p-image-wrapper .p-thumbna
 html.ll-test .p-image-wrapper .p-image img, html.ll-test .p-image-wrapper .p-thumbnail img { mix-blend-mode: multiply; filter: brightness(1.03); }
 html.ll-test .p-info-headline h1, html.ll-test .p-detail-inner-header .h1 { font-size: 32px; line-height: 1.2; font-weight: 500; letter-spacing: -0.015em; color: var(--ll-ink); }
 /* Hlavička nákupního panelu (ProductDetail): značka jako popisek nad názvem, hodnocení řádkem pod názvem, bez bílé bubliny se stínem */
-html.ll-test .p-info-headline { display: flex !important; flex-direction: column; align-items: flex-start; }
+/* Šablona má hlavičku dvakrát: pod 992 px nad galerií (.p-detail-inner-header), od 992 px ve sloupci vpravo; druhou vždy skrývá */
+html.ll-test .p-detail-inner-header .p-info-headline { display: flex !important; flex-direction: column; align-items: flex-start; }
+@media (min-width: 992px) { html.ll-test .p-info-wrapper .p-info-headline { display: flex !important; flex-direction: column; align-items: flex-start; } }
+@media (max-width: 767px) { html.ll-test .p-info-headline h1 { font-size: 24px !important; line-height: 1.25 !important; } }
 html.ll-test .p-info-headline h1 { margin: 0 0 12px !important; }
 html.ll-test .p-info-headline .p-detail-info { display: contents !important; }
 html.ll-test .p-info-headline .p-detail-info > div:not(.stars-wrapper) { order: -1; margin: 0 0 8px !important; padding: 0 !important; }
