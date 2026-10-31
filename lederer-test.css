@@ -909,6 +909,7 @@ html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before 
   html.ll-test body.filters-visible #filters .slider-wrapper:not(.is-active) > h4, html.ll-test body.filters-visible #filters .filter-section:not(.is-active) > h4 { margin-bottom: 0 !important; }
   html.ll-test body.filters-visible #filters .slider-wrapper.is-active > h4, html.ll-test body.filters-visible #filters .filter-section.is-active > h4 { margin-bottom: 20px !important; }
   html.ll-test body.filters-visible #filters .is-active > form, html.ll-test body.filters-visible #filters .is-active > .param-filter-top { padding-bottom: 0 !important; }
+  html.ll-test body.filters-visible #filters .slider-wrapper:not(.is-active) > :not(h4) { display: none !important; }
   /* Volby po 40 px na výšku kvůli dotyku */
   html.ll-test body.filters-visible #filters fieldset > div { margin: 0 !important; }
   html.ll-test body.filters-visible #filters .filter-label { padding-top: 9px !important; padding-bottom: 9px !important; }
