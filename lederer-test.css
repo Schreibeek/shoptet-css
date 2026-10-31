@@ -1091,7 +1091,7 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
   html.ll-test #navigation .menu-level-3 a:hover { color: var(--ll-ink) !important; }
   /* Spodek menu: informační odkazy vlevo, kontakt dole na ivory */
   html.ll-test #navigation .navigation-in-bottom { display: flex !important; flex-direction: column; padding: 8px 20px 0 !important; background: var(--ll-paper) !important; text-align: left !important; }
-  html.ll-test #navigation .navigation-in-bottom .top-navigation-bar-menu { order: 1; margin: 0 !important; padding: 0 0 16px !important; }
+  html.ll-test #navigation .navigation-in-bottom .top-navigation-bar-menu { order: 1; margin: 0 !important; padding: 0 0 16px !important; border: 0 !important; }
   html.ll-test #navigation .navigation-in-bottom .top-navigation-bar-menu li { margin: 0 !important; padding: 0 !important; text-align: left !important; }
   html.ll-test #navigation .navigation-in-bottom .top-navigation-bar-menu a { display: flex !important; align-items: center; min-height: 40px; padding: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; text-align: left !important; color: var(--ll-ink-soft) !important; }
   html.ll-test #navigation .navigation-in-bottom .top-navigation-contacts { order: 2; display: grid !important; gap: 4px; margin: 0 -20px !important; padding: 16px 20px 24px !important; background: var(--ll-ivory); border-top: 1px solid var(--ll-line); }
