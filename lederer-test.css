@@ -2382,7 +2382,7 @@ html.ll-test .p-info-wrapper:not(:has(> .add-to-cart)):not(:has(> .loyalty-box-w
 
 /* ---------- Našeptávač (DS SearchSuggest, MobileSearch) ----------
    Pole zůstává jako bez hledání (šablona z formuláře dělá bílý box a poli bere levé odsazení). Panel 8 px pod polem, široký
-   jako pole a aspoň 520 px, nejvýš 640 px a do výšky okna, uvnitř se posouvá. Produkty nahoře (5), pak kategorie a ostatní
+   jako pole a aspoň 520 px, na střed pod polem (u úzkého pole na tabletu by zarovnaný vlevo přečníval), nejvýš 640 px a do výšky okna, uvnitř se posouvá. Produkty nahoře (5), pak kategorie a ostatní
    výsledky jako řádky s ikonou podle typu, dole přilepené Zobrazit všechny výsledky. Na mobilu list přes celou šířku pod polem
    až ke spodnímu kraji okna (hlavička 56 px + řádek s polem 60 px = 116 px). */
 html.ll-test {
@@ -2393,7 +2393,7 @@ html.ll-test {
 }
 html.ll-test #header .search.is-searching .search-form, html.ll-test #header .search .search-form { background: transparent !important; border: 0 !important; border-radius: 0 !important; padding: 0 !important; box-shadow: none !important; }
 html.ll-test #header .search.is-searching .search-form fieldset { margin: 0 !important; padding: 0 !important; }
-html.ll-test #header .search-whisperer { top: calc(100% + 8px) !important; left: 0 !important; right: auto !important; z-index: 1000 !important; box-sizing: border-box; flex-direction: column !important; flex-wrap: nowrap !important; width: max(100%, 520px) !important; max-height: min(640px, calc(100vh - 160px)); margin: 0 !important; padding: 0 !important; overflow-x: hidden; overflow-y: auto !important; overscroll-behavior: contain; text-align: left !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; box-shadow: 0 24px 60px -20px rgba(32, 31, 31, 0.3) !important; }
+html.ll-test #header .search-whisperer { top: calc(100% + 8px) !important; left: 50% !important; right: auto !important; transform: translateX(-50%); z-index: 1000 !important; box-sizing: border-box; flex-direction: column !important; flex-wrap: nowrap !important; width: max(100%, 520px) !important; max-height: min(640px, calc(100vh - 160px)); margin: 0 !important; padding: 0 !important; overflow-x: hidden; overflow-y: auto !important; overscroll-behavior: contain; text-align: left !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; box-shadow: 0 24px 60px -20px rgba(32, 31, 31, 0.3) !important; }
 html.ll-test #header .search-whisperer .search-whisperer-ul-group { order: 1; margin: 0 !important; padding: 8px !important; }
 html.ll-test #header .search-whisperer .search-whisperer-documents { order: 2; margin: 0 !important; padding: 0 !important; text-align: left !important; border: 0 !important; }
 html.ll-test #header .search-whisperer .search-whisperer-documents:empty { display: none !important; }
@@ -2436,7 +2436,7 @@ html.ll-test #header .search-whisperer .search-whisperer-empty { display: grid !
 html.ll-test #header .search-whisperer .search-whisperer-empty::before { content: ''; display: block; width: 24px; height: 24px; background: var(--ll-ink-muted); -webkit-mask: var(--ll-i-search-x) center / contain no-repeat; mask: var(--ll-i-search-x) center / contain no-repeat; }
 @media (max-width: 767px) {
   html.ll-test #header .search input.query-input, html.ll-test #header .search input[type="search"] { padding-left: 16px !important; padding-right: 50px !important; }
-  html.ll-test #header .search-whisperer { position: fixed !important; top: 116px !important; right: 0 !important; bottom: 0 !important; left: 0 !important; width: auto !important; max-height: none; border: 0 !important; border-top: 1px solid var(--ll-line) !important; border-radius: 0 !important; box-shadow: none !important; }
+  html.ll-test #header .search-whisperer { position: fixed !important; top: 116px !important; right: 0 !important; bottom: 0 !important; left: 0 !important; transform: none; width: auto !important; max-height: none; border: 0 !important; border-top: 1px solid var(--ll-line) !important; border-radius: 0 !important; box-shadow: none !important; }
   html.ll-test #header .search-whisperer .search-whisperer-ul-group, html.ll-test #header .search-whisperer .search-whisperer-category-group, html.ll-test #header .search-whisperer .search-whisperer-tags-group { padding: 8px 12px !important; }
   html.ll-test #header .search-whisperer .search-whisperer-btn { padding: 12px 20px !important; }
 }
