@@ -902,7 +902,7 @@ html.ll-test #ratingTab .rating-star::before { color: var(--ll-line-strong) !imp
 html.ll-test #ratingTab .rating-star.full::before { color: var(--ll-gold) !important; }
 html.ll-test #ratingTab #rate-form .btn-primary { min-height: 48px !important; height: auto !important; padding: 0 28px !important; font-size: 15px !important; font-weight: 500 !important; }
 /* Recenze jako karty s linkou nahoře (jako na homepage) */
-html.ll-test #ratingTab #ratingsList { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 40px 0 0 !important; }
+html.ll-test #ratingTab #ratingsList { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; width: auto !important; max-width: none !important; margin: 40px 0 0 !important; }
 html.ll-test #ratingTab #ratingsList .vote-wrap { margin: 0 !important; padding: 20px 0 0 !important; background: transparent !important; border: 0 !important; border-top: 1px solid var(--ll-ink) !important; border-radius: 0 !important; box-shadow: none !important; }
 html.ll-test #ratingTab .vote-header { display: block !important; margin: 0 0 6px !important; }
 html.ll-test #ratingTab .vote-summary { display: flex !important; flex-direction: column; align-items: flex-start; gap: 4px; }
