@@ -1097,5 +1097,8 @@ html.ll-test .responsive-tools > a[data-target="navigation"]::before, html.ll-te
   html.ll-test .p-detail-tabs-wrapper .detail-tab-item::after { --ll-icon: var(--ll-i-chev-down); position: absolute !important; top: 50% !important; right: 0 !important; width: 18px !important; height: 18px !important; transform: translateY(-50%) !important; color: var(--ll-ink-muted) !important; transition: transform 150ms var(--ll-ease); }
   html.ll-test .p-detail-tabs-wrapper .tab-pane.active > .detail-tab-item::after { transform: translateY(-50%) rotate(180deg) !important; }
   html.ll-test .p-detail-tabs-wrapper .tab-pane > .detail-tab-content { padding-left: 0 !important; padding-right: 0 !important; }
+  /* Tabulky vložené do popisu z Excelu mají pevnou šířku v pt a na mobilu přetékají; roztáhnou se na šířku obsahu (širší se dál posouvají) */
+  html.ll-test #description table { width: 100% !important; height: auto !important; }
+  html.ll-test #description table td, html.ll-test #description table tr { width: auto !important; height: auto !important; }
   html.ll-test .p-detail-tabs-wrapper .tab-pane.active > .detail-tab-content { padding-bottom: 24px !important; }
 }
