@@ -1204,8 +1204,11 @@ html.ll-test .products:not(#productsTop) .product .availability span[style*="col
   html.ll-test .products:not(#productsTop) .product .p .p-tools { margin-top: 4px !important; }
   html.ll-test .products:not(#productsTop) .product .p .prices { margin-top: 8px !important; }
 }
-/* Úzká karta (mobil, výpis vedle filtru): dostupnost na další řádek vlevo, 8 px pod hodnocením */
+/* Úzká karta (mobil, výpis vedle filtru): dostupnost na další řádek vlevo, 8 px pod hodnocením.
+   Název až na 3 řádky (na 2 se delší názvy nevešly) a vždy na výšku 3 řádků, aby hodnocení a dostupnost seděly v řadě
+   i když má jeden název 2 řádky a druhý 3 (1lh = výška řádku názvu: mobil 20 px, počítač 22 px). */
 @container (max-width: 249px) {
+  html.ll-test .products:not(#productsTop) .product .p a.name { -webkit-line-clamp: 3; line-clamp: 3; min-height: 60px; min-height: 3lh; }
   html.ll-test .products:not(#productsTop) .product .p .p-tools { grid-area: wrap; justify-self: start; margin: 8px 0 0 2px !important; }
   html.ll-test .products:not(#productsTop) .product .p:not(:has(.ratings-wrapper .star)) .p-tools { margin-top: 4px !important; }
   html.ll-test .products:not(#productsTop) .product .availability span { text-align: left; }
