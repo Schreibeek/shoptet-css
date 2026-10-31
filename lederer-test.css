@@ -167,11 +167,11 @@ html.ll-test #productsTop .product .p { display: grid !important; grid-template-
 html.ll-test #productsTop .product .p:hover { border-color: var(--ll-ink) !important; }
 html.ll-test #productsTop .product .p .image { width: 64px !important; height: 64px !important; aspect-ratio: auto; border-radius: var(--ll-r-xs) !important; }
 html.ll-test #productsTop .product:hover .p .image img { transform: none; }
-html.ll-test #productsTop .product .p-in { display: flex; flex-direction: column; gap: 4px; min-width: 0; padding: 0 !important; }
-html.ll-test #productsTop .product .p-in-in { padding: 0 !important; }
-html.ll-test #productsTop .product .p .name { display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 0 !important; }
+html.ll-test #productsTop .product .p-in { display: flex !important; flex-direction: column; align-items: stretch !important; justify-content: center !important; gap: 4px; min-width: 0; padding: 0 !important; text-align: left !important; }
+html.ll-test #productsTop .product .p-in-in { margin: 0 !important; padding: 0 !important; }
+html.ll-test #productsTop .product .p .name { display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; height: auto !important; min-height: 0 !important; margin: 0 !important; }
 html.ll-test #productsTop .product .p .name, html.ll-test #productsTop .product .p .name span { font-size: 14px !important; line-height: 20px !important; }
-html.ll-test #productsTop .product .p-bottom, html.ll-test #productsTop .product .prices { margin: 0 !important; padding: 0 !important; }
+html.ll-test #productsTop .product .p-bottom, html.ll-test #productsTop .product .offers, html.ll-test #productsTop .product .prices { display: flex !important; flex-wrap: wrap; align-items: baseline; justify-content: flex-start !important; column-gap: 8px; min-height: 0 !important; margin: 0 !important; padding: 0 !important; text-align: left !important; }
 html.ll-test #productsTop .product .price-final, html.ll-test #productsTop .product .price-final strong { font-size: 15px !important; line-height: 20px !important; }
 html.ll-test #productsTop .product .ratings-wrapper, html.ll-test #productsTop .product .extra-flags, html.ll-test #productsTop .product .flags, html.ll-test #productsTop .product .product-btn, html.ll-test #productsTop .product .p-desc { display: none !important; }
 
@@ -229,7 +229,7 @@ html.ll-test #filters .slider-content { padding: 0 8px !important; }
 html.ll-test #filters #slider.ui-slider { height: 2px !important; margin: 12px 0 14px !important; background: var(--ll-line-strong) !important; border: 0 !important; border-radius: 0 !important; }
 html.ll-test #filters #slider .ui-slider-range { top: 0 !important; height: 2px !important; background: var(--ll-ink) !important; border: 0 !important; border-radius: 0 !important; }
 html.ll-test #filters #slider .ui-slider-handle { top: -7px !important; width: 16px !important; height: 16px !important; margin-left: -8px !important; box-sizing: border-box; background: var(--ll-paper) !important; border: 2px solid var(--ll-ink) !important; border-radius: 50% !important; box-shadow: none !important; cursor: grab; }
-html.ll-test #filters #slider .ui-slider-handle::before, html.ll-test #filters #slider .ui-slider-handle::after { display: none !important; }
+html.ll-test #filters #slider::before, html.ll-test #filters #slider::after, html.ll-test #filters #slider .ui-slider-handle::before, html.ll-test #filters #slider .ui-slider-handle::after { display: none !important; }
 html.ll-test #filters .slider-header, html.ll-test #filters .slider-header span { font-size: 13px !important; line-height: 20px; font-weight: 600 !important; color: var(--ll-ink) !important; font-variant-numeric: tabular-nums; }
 /* Zaškrtávátka 18 px, počet vpravo */
 html.ll-test #filters .filter-label { position: relative; display: flex !important; align-items: flex-start; gap: 8px; box-sizing: border-box; width: 100%; margin: 0 !important; padding: 0 0 0 28px !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink) !important; cursor: pointer; }
@@ -594,13 +594,15 @@ html.ll-test .brand-banner--lerdee .brand-banner__btn:hover { background: #4a444
 html.ll-test .benefitBanner { display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 !important; margin: 64px 0 0 !important; padding: 0 !important; border-top: 1px solid var(--ll-line); border-bottom: 1px solid var(--ll-line); }
 html.ll-test .benefitBanner__item { display: grid !important; grid-template-columns: 44px minmax(0, 1fr); align-items: start; column-gap: 16px; box-sizing: border-box; width: auto !important; max-width: none !important; flex: none !important; margin: 0 !important; padding: 24px 28px !important; text-align: left !important; }
 html.ll-test .benefitBanner__item + .benefitBanner__item { border-left: 1px solid var(--ll-line); }
-html.ll-test .benefitBanner__picture { display: grid !important; place-items: center; box-sizing: border-box; width: 44px !important; height: 44px !important; margin: 0 !important; padding: 0 !important; color: var(--ll-gold-deep); background: var(--ll-paper); border: 1px solid var(--ll-gold-line); border-radius: 50%; }
+html.ll-test .benefitBanner__link { display: grid !important; grid-column: 1 / -1; grid-template-columns: 44px minmax(0, 1fr); align-items: start; column-gap: 16px; color: inherit !important; text-decoration: none !important; }
+html.ll-test .benefitBanner__link:hover .benefitBanner__title { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+html.ll-test .benefitBanner__picture { display: grid !important; place-items: center; box-sizing: border-box; flex: none !important; width: 44px !important; min-width: 0 !important; height: 44px !important; margin: 0 !important; padding: 0 !important; color: var(--ll-gold-deep); background: var(--ll-paper); border: 1px solid var(--ll-gold-line); border-radius: 50%; }
 html.ll-test .benefitBanner__picture img { width: 24px !important; height: 24px !important; object-fit: contain; filter: grayscale(1) contrast(1.1); }
 html.ll-test .benefitBanner__picture.ll-has-icon img { display: none !important; }
 html.ll-test .benefitBanner__picture svg { width: 20px; height: 20px; }
-html.ll-test .benefitBanner__content { margin: 0 !important; padding: 0 !important; text-align: left !important; }
-html.ll-test .benefitBanner__title { display: block; margin: 0 0 2px !important; font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
-html.ll-test .benefitBanner__data, html.ll-test .benefitBanner__data * { font-size: 14px !important; line-height: 22px !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; }
+html.ll-test .benefitBanner__content { display: block !important; margin: 0 !important; padding: 0 !important; text-align: left !important; }
+html.ll-test .benefitBanner__title { display: block; margin: 0 0 2px !important; text-align: left !important; font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test .benefitBanner__data, html.ll-test .benefitBanner__data * { margin: 0 !important; text-align: left !important; font-size: 14px !important; line-height: 22px !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; }
 
 /* ---------- Ikony: Lucide z design systému (tah 1,6) místo ikonového písma šablony ----------
    Ikona je maska v barvě textu (background-color: currentColor), takže sedí barvou i při hoveru. */
@@ -632,8 +634,10 @@ html.ll-test #header .search .btn::before { --ll-icon: var(--ll-i-search); width
 html.ll-test .project-phone::before { --ll-icon: var(--ll-i-phone); }
 html.ll-test .project-email::before { --ll-icon: var(--ll-i-mail); }
 html.ll-test .project-phone::before, html.ll-test .project-email::before { width: 15px !important; height: 15px !important; margin-right: 6px !important; top: 0 !important; vertical-align: -2px; color: var(--ll-gold-deep) !important; }
-html.ll-test #navigation .menu-level-1 > li.ext > a::after { --ll-icon: var(--ll-i-chev-down); width: 14px !important; height: 14px !important; top: calc(50% - 7px) !important; bottom: auto !important; left: auto !important; right: 4px !important; color: var(--ll-ink-muted) !important; }
-html.ll-test .breadcrumbs a::after { --ll-icon: var(--ll-i-chev-right); width: 14px !important; height: 14px !important; margin: 0 2px 0 6px !important; vertical-align: -2px; color: var(--ll-ink-muted) !important; }
+html.ll-test #navigation .menu-level-1 > li.ext > a::after { --ll-icon: var(--ll-i-chev-down); width: 14px !important; height: 14px !important; top: calc(50% - 7px) !important; bottom: auto !important; left: auto !important; right: 4px !important; transform: none !important; color: var(--ll-ink-muted) !important; }
+html.ll-test .breadcrumbs { align-items: center !important; }
+html.ll-test .breadcrumbs a, html.ll-test .breadcrumbs > span:last-child span { display: inline-flex !important; align-items: center; padding: 0 !important; }
+html.ll-test .breadcrumbs a::after { --ll-icon: var(--ll-i-chev-right); position: static !important; left: auto !important; top: auto !important; width: 14px !important; height: 14px !important; margin: 0 6px !important; color: var(--ll-ink-muted) !important; }
 html.ll-test .pagination__link--next::before { --ll-icon: var(--ll-i-chev-right); width: 18px !important; height: 18px !important; }
 html.ll-test .pagination__link--prev::before { --ll-icon: var(--ll-i-chev-right); width: 18px !important; height: 18px !important; transform: rotate(180deg); }
 html.ll-test .back-to-top { width: 44px !important; height: 44px !important; border-radius: var(--ll-r-sm) !important; background: var(--ll-ink) !important; box-shadow: 0 8px 20px -10px rgba(32, 31, 31, 0.45) !important; }
@@ -641,7 +645,7 @@ html.ll-test .back-to-top:hover { background: var(--ll-ink-hover) !important; }
 html.ll-test .back-to-top i::before { --ll-icon: var(--ll-i-chev-up); width: 20px !important; height: 20px !important; color: #fff !important; }
 html.ll-test .products .product .btn-cart::after { display: none !important; }
 html.ll-test .products .product .btn-cart::before { --ll-icon: var(--ll-i-bag); width: 18px !important; height: 18px !important; margin: 0 8px 0 0 !important; }
-html.ll-test #filters .toggle-filters::after { --ll-icon: var(--ll-i-chev-down); width: 14px !important; height: 14px !important; margin: 0 !important; transform: none !important; }
+html.ll-test #filters .toggle-filters::after { --ll-icon: var(--ll-i-chev-down); position: static !important; width: 14px !important; height: 14px !important; margin: 0 !important; transform: none !important; }
 html.ll-test .category-perex a.showmore::after { --ll-icon: var(--ll-i-chev-down); width: 14px !important; height: 14px !important; margin: 0 !important; transform: none !important; border: 0 !important; }
 
 /* ---------- Kategorie na tabletu a mobilu ---------- */
@@ -665,5 +669,6 @@ html.ll-test .category-perex a.showmore::after { --ll-icon: var(--ll-i-chev-down
   html.ll-test .listItemsTotal { display: none !important; }
   html.ll-test #products.products-block { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
   html.ll-test .benefitBanner { margin-top: 40px !important; }
-  html.ll-test .benefitBanner__item { grid-template-columns: minmax(0, 1fr); row-gap: 10px; padding: 20px 16px !important; }
+  html.ll-test .benefitBanner__item, html.ll-test .benefitBanner__link { grid-template-columns: minmax(0, 1fr); row-gap: 10px; }
+  html.ll-test .benefitBanner__item { padding: 20px 16px !important; }
 }
