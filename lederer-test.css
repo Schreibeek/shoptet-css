@@ -1776,6 +1776,10 @@ html.ll-test #cart-wrapper .cart-empty .col-md-4 .contact-box .mail::before, htm
    který se drží nahoře; v souhrnu rekapitulace, celkem, Pokračovat a pod ním Zpět. */
 html.ll-test body.ordering-process .content-inner > .cart-inner { margin: 0 !important; padding: 0 !important; background: transparent !important; border: 0 !important; box-shadow: none !important; }
 html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent) { display: grid !important; grid-template-columns: minmax(0, 1fr) clamp(320px, 32%, 380px); column-gap: 40px; align-items: start; margin: 0 !important; padding: 0 0 64px !important; }
+/* Bootstrap .row má clearfix ::before a ::after, v mřížce by zabraly buňky */
+html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent)::before, html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent)::after, html.ll-test #cart-wrapper .cart-empty .cart-row::before, html.ll-test #cart-wrapper .cart-empty .cart-row::after, html.ll-test #cart-wrapper .cart-empty .empty-cart-boxes::before, html.ll-test #cart-wrapper .cart-empty .empty-cart-boxes::after { content: none !important; display: none !important; }
+html.ll-test body.ordering-process .cart-row > #checkoutContent { grid-column: 1; grid-row: 1; }
+html.ll-test body.ordering-process .cart-row > #checkoutSidebar { grid-column: 2; grid-row: 1; }
 html.ll-test body.ordering-process .cart-row > #checkoutContent, html.ll-test body.ordering-process .cart-row > #checkoutSidebar { float: none !important; width: auto !important; max-width: none !important; flex: none !important; margin: 0 !important; padding: 0 !important; }
 html.ll-test body.ordering-process #checkoutContent > .cart-content { margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important; }
 html.ll-test body.ordering-process #checkoutSidebar { position: sticky !important; top: 24px; transform: none !important; }
@@ -1852,10 +1856,12 @@ html.ll-test body.ordering-process #checkoutSidebar .next-step-back::after { con
 @media (min-width: 768px) and (max-width: 1023px) {
   html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent) { grid-template-columns: minmax(0, 1fr); }
   html.ll-test body.ordering-process #checkoutSidebar { position: static !important; margin-top: 40px !important; }
+  html.ll-test body.ordering-process .cart-row > #checkoutSidebar { grid-column: 1; grid-row: 2; }
 }
 @media (max-width: 767px) {
   html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent) { grid-template-columns: minmax(0, 1fr); padding-bottom: 104px !important; }
   html.ll-test body.ordering-process #checkoutSidebar { position: static !important; margin-top: 32px !important; }
+  html.ll-test body.ordering-process .cart-row > #checkoutSidebar { grid-column: 1; grid-row: 2; }
   html.ll-test body.ordering-process #checkoutSidebar > .cart-content { padding: 16px !important; }
   html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper > input[type="radio"] { left: 16px !important; }
   html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper > label { grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: 1fr auto auto 1fr; column-gap: 12px; padding: 12px 16px 12px 48px !important; }
