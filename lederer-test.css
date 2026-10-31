@@ -1353,7 +1353,9 @@ html.ll-test .basic-description ul > li:last-child, html.ll-test .basic-descript
 
 /* ---------- Blog na homepage: Číst článek u všech článků dole na stejné úrovni (BlogCard: ll-post__more margin-top auto) ---------- */
 /* Odkaz uvnitř karty: flex-grow na něm šablona přebíjí, proto karta jako mřížka (odkaz se roztáhne na výšku karty) */
-html.ll-test .homepage-blog-wrapper .news-item { display: grid !important; grid-template-rows: minmax(0, 1fr); }
+/* Sloupec mřížky na šířku karty (minmax 0): bez toho se roztáhl podle obsahu a články přetékaly do vedlejších */
+html.ll-test .homepage-blog-wrapper .news-item { display: grid !important; grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+html.ll-test .homepage-blog-wrapper .news-item > a { min-width: 0; }
 html.ll-test .homepage-blog-wrapper .news-item > a { display: flex !important; flex-direction: column; height: auto !important; }
 html.ll-test .homepage-blog-wrapper .news-item .text { display: flex !important; flex-direction: column; align-items: flex-start; flex: 1 1 auto !important; }
 html.ll-test .homepage-blog-wrapper .news-item .read-article { margin-top: auto !important; }
