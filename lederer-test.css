@@ -902,6 +902,8 @@ html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before 
   html.ll-test body.filters-visible .filters-unveil-button-wrapper::before { content: 'Filtrovat'; font-size: 18px; line-height: 24px; font-weight: 500; color: var(--ll-ink); }
   html.ll-test body.filters-visible #content .filters-unveil-button-wrapper .btn.unveil-button { justify-content: center; width: 44px; height: 44px !important; min-height: 44px !important; padding: 0 !important; font-size: 0 !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; }
   html.ll-test body.filters-visible #content .filters-unveil-button-wrapper .btn.unveil-button::before { --ll-icon: var(--ll-i-x); order: 0; width: 22px !important; height: 22px !important; }
+  /* Bez animace šířky: šablona animuje vše a křížek by při otevření přejížděl zleva doprava */
+  html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button { transition: color .15s, background-color .15s, border-color .15s !important; }
   html.ll-test body.filters-visible #filters { margin: 0 !important; padding: 0 20px !important; }
   html.ll-test body.filters-visible #filters .slider-wrapper { padding: 20px 0 !important; }
   html.ll-test body.filters-visible #filters .filter-section::before { display: none !important; }
