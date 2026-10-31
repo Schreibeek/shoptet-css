@@ -894,6 +894,31 @@ html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before 
   html.ll-test #filters h4 { position: relative; padding-right: 28px !important; }
   html.ll-test #filters h4::after { content: '' !important; top: 50% !important; right: 0 !important; width: 16px !important; height: 16px !important; font-size: 0 !important; line-height: 0 !important; transform: translateY(-50%) !important; background-color: var(--ll-ink); -webkit-mask: var(--ll-i-chev-down) center / contain no-repeat; mask: var(--ll-i-chev-down) center / contain no-repeat; transition: transform 150ms var(--ll-ease); }
   html.ll-test #filters .is-active > h4::after { transform: translateY(-50%) rotate(180deg) !important; }
+  /* Otevřený filtr (MobileFilters): list přes celou obrazovku, hlavička 56 px s křížkem, skupiny jako akordeon po 56 px, dole Zobrazit produkty */
+  html.ll-test body.filters-visible { overflow: hidden !important; }
+  html.ll-test body.filters-visible .ll-test-badge { display: none !important; }
+  html.ll-test body.filters-visible #filters-wrapper .filters-wrapper { position: fixed !important; inset: 0; z-index: 100000; display: block !important; margin: 0 !important; padding: 0 0 80px !important; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; background: var(--ll-paper) !important; }
+  html.ll-test body.filters-visible .filters-unveil-button-wrapper { position: sticky; top: 0; z-index: 2; display: flex !important; align-items: center; justify-content: space-between; box-sizing: border-box; height: 56px; margin: 0 !important; padding: 0 8px 0 20px !important; background: var(--ll-paper); border-bottom: 1px solid var(--ll-line); }
+  html.ll-test body.filters-visible .filters-unveil-button-wrapper::before { content: 'Filtrovat'; font-size: 18px; line-height: 24px; font-weight: 500; color: var(--ll-ink); }
+  html.ll-test body.filters-visible #content .filters-unveil-button-wrapper .btn.unveil-button { justify-content: center; width: 44px; height: 44px !important; min-height: 44px !important; padding: 0 !important; font-size: 0 !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; }
+  html.ll-test body.filters-visible #content .filters-unveil-button-wrapper .btn.unveil-button::before { --ll-icon: var(--ll-i-x); order: 0; width: 22px !important; height: 22px !important; }
+  html.ll-test body.filters-visible #filters { margin: 0 !important; padding: 0 20px !important; }
+  html.ll-test body.filters-visible #filters .slider-wrapper { padding: 20px 0 !important; }
+  html.ll-test body.filters-visible #filters .filter-section::before { display: none !important; }
+  /* Zavřená skupina: řádek 56 px (20 + 16 + 20), otevřená: obsah 20 px pod nadpisem a 20 px na konci jako v DS */
+  html.ll-test body.filters-visible #filters .slider-wrapper:not(.is-active) > h4, html.ll-test body.filters-visible #filters .filter-section:not(.is-active) > h4 { margin-bottom: 0 !important; }
+  html.ll-test body.filters-visible #filters .slider-wrapper.is-active > h4, html.ll-test body.filters-visible #filters .filter-section.is-active > h4 { margin-bottom: 20px !important; }
+  html.ll-test body.filters-visible #filters .is-active > form, html.ll-test body.filters-visible #filters .is-active > .param-filter-top { padding-bottom: 0 !important; }
+  /* Volby po 40 px na výšku kvůli dotyku */
+  html.ll-test body.filters-visible #filters fieldset > div { margin: 0 !important; }
+  html.ll-test body.filters-visible #filters .filter-label { padding-top: 9px !important; padding-bottom: 9px !important; }
+  html.ll-test body.filters-visible #filters .filter-label::before { top: 11px !important; }
+  /* Patička: počet produktů jako inkoustové tlačítko „Zobrazit produkty (32)“, klik zavře list (lederer-test.js) */
+  html.ll-test body.filters-visible #filters .filter-section.filter-section-count { position: fixed !important; right: 0; bottom: 0; left: 0; z-index: 3; display: block !important; margin: 0 !important; padding: 12px 20px calc(16px + env(safe-area-inset-bottom)) !important; background: var(--ll-paper); border-top: 1px solid var(--ll-line) !important; }
+  html.ll-test body.filters-visible #filters .filter-total-count { display: flex !important; align-items: center; justify-content: center; height: 48px; margin: 0 !important; font-size: 0 !important; color: #fff !important; background: var(--ll-ink); border-radius: var(--ll-r-sm); cursor: pointer; }
+  html.ll-test body.filters-visible #filters .filter-total-count::before { content: 'Zobrazit produkty ('; font-size: 15px; line-height: 20px; font-weight: 500; }
+  html.ll-test body.filters-visible #filters .filter-total-count::after { content: ')'; font-size: 15px; line-height: 20px; font-weight: 500; }
+  html.ll-test body.filters-visible #filters .filter-total-count strong { font-size: 15px !important; line-height: 20px; font-weight: 500 !important; color: #fff !important; }
   html.ll-test .category-title { font-size: 30px; }
   html.ll-test ul.subcategories, html.ll-test #productsTop.products-top { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   html.ll-test ul.subcategories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
