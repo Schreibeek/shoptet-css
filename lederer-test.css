@@ -1531,6 +1531,28 @@ html.ll-test #cart-wrapper .cart-table .remove-item { position: static !importan
 html.ll-test #cart-wrapper .cart-table .remove-item:hover { color: var(--ll-sale) !important; background: var(--ll-tile) !important; }
 html.ll-test #cart-wrapper .cart-table .remove-item::before { content: '' !important; position: static !important; display: block !important; width: 18px !important; height: 18px !important; font-size: 0 !important; background-color: currentColor !important; -webkit-mask: var(--ll-i-trash) center / contain no-repeat; mask: var(--ll-i-trash) center / contain no-repeat; transform: none !important; }
 html.ll-test #cart-wrapper .cart-table .remove-item::after { display: none !important; }
+/* Související produkty rozbalené pod položkou: panel ivory zarovnaný s textem položky, řádky s fotkou 48 px, názvem, dostupností, cenou a obrysovým Do košíku 36 px */
+html.ll-test #cart-wrapper .cart-table tr.removeable.related-visible { border-bottom: 0 !important; padding-bottom: 12px !important; }
+html.ll-test #cart-wrapper .cart-table tr.removeable.related-visible .show-related::after { transform: rotate(180deg) !important; }
+html.ll-test #cart-wrapper .cart-table tr.related.visible { display: block !important; margin: 0 !important; padding: 0 0 20px !important; background: none !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+html.ll-test #cart-wrapper .cart-table tr.related.visible > td { display: block !important; margin: 0 0 0 104px !important; padding: 4px 16px !important; background: var(--ll-ivory) !important; border: 0 !important; border-radius: var(--ll-r-md) !important; }
+html.ll-test #cart-wrapper .cart-related-product { position: relative; display: grid !important; grid-template-columns: 48px minmax(0, 1fr) auto auto; grid-template-rows: auto auto; align-items: center; column-gap: 12px; margin: 0 !important; padding: 12px 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test #cart-wrapper .cart-related-product + .cart-related-product { border-top: 1px solid var(--ll-line) !important; }
+html.ll-test #cart-wrapper .cart-related-info, html.ll-test #cart-wrapper .cart-related-button { display: contents !important; }
+html.ll-test #cart-wrapper .cart-related-img { grid-column: 1; grid-row: 1 / span 2; display: block !important; width: 48px !important; height: 48px !important; margin: 0 !important; padding: 0 !important; overflow: hidden; isolation: isolate; background: var(--ll-paper) !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; }
+html.ll-test #cart-wrapper .cart-related-img img { display: block; width: 100% !important; height: 100% !important; max-width: none !important; object-fit: contain; mix-blend-mode: multiply; }
+html.ll-test #cart-wrapper .cart-related-name { grid-column: 2; grid-row: 1; align-self: end; display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; text-decoration: none !important; }
+html.ll-test #cart-wrapper .cart-related-name:hover { text-decoration: underline !important; text-underline-offset: 3px; }
+html.ll-test #cart-wrapper .cart-related-availability { grid-column: 2; grid-row: 2; align-self: start; position: static !important; display: block !important; margin: 2px 0 0 !important; padding: 0 !important; font-size: 12px !important; line-height: 18px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; background: none !important; transform: none !important; }
+html.ll-test #cart-wrapper .cart-related-availability > span { display: inline-flex !important; align-items: center; gap: 6px; font: inherit !important; letter-spacing: 0 !important; text-transform: none !important; }
+html.ll-test #cart-wrapper .cart-related-availability > span::before { content: ''; flex: none; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+html.ll-test #cart-wrapper .cart-related-availability > span[style*="009901"] { color: var(--ll-success) !important; }
+html.ll-test #cart-wrapper .cart-related-availability > span[style*="cb0000"] { color: var(--ll-ink-muted) !important; }
+html.ll-test #cart-wrapper .cart-related-product .price-final { grid-column: 3; grid-row: 1 / span 2; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 600 !important; color: var(--ll-ink) !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
+html.ll-test #cart-wrapper .cart-related-product form.pr-action { grid-column: 4; grid-row: 1 / span 2; margin: 0 !important; padding: 0 !important; }
+html.ll-test #cart-wrapper .cart-related-product .add-to-cart-button { position: static !important; display: inline-flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: auto !important; min-width: 0 !important; height: 36px !important; min-height: 0 !important; margin: 0 !important; padding: 0 14px !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; white-space: nowrap; }
+html.ll-test #cart-wrapper .cart-related-product .add-to-cart-button:hover { color: #fff !important; background: var(--ll-ink) !important; }
+html.ll-test #cart-wrapper .cart-related-product .add-to-cart-button::before, html.ll-test #cart-wrapper .cart-related-product .add-to-cart-button::after { display: none !important; }
 /* Dýško (doplněk fvDoplnek): titulek 18 px, věta, částky jako přepínací volby 40 px */
 html.ll-test #cart-wrapper .fvDoplnek { margin: 40px 0 0 !important; padding: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important; }
 html.ll-test #cart-wrapper .fvDoplnek > h4 { margin: 0 0 4px !important; padding: 0 !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
@@ -1556,10 +1578,10 @@ html.ll-test #cart-wrapper .cart-content:has(> .text-center > .delivery-time):no
 @media (min-width: 768px) {
   html.ll-test #cart-wrapper .cart-content:has(.ll-cart-date) > .cart-summary, html.ll-test #cart-wrapper .cart-content:has(> .cart-table):not(:has(> .text-center > .delivery-time)) > .cart-summary { position: sticky; top: 24px; }
 }
-html.ll-test #cart-wrapper .delivery-time { display: flex !important; align-items: center; gap: 12px; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
-html.ll-test #cart-wrapper .delivery-time::before { content: '' !important; position: static !important; display: block !important; flex: none; width: 20px !important; height: 20px !important; margin: 0 !important; background: var(--ll-gold-deep) !important; -webkit-mask: var(--ll-i-truck) center / contain no-repeat; mask: var(--ll-i-truck) center / contain no-repeat; border: 0 !important; transform: none !important; }
+html.ll-test #cart-wrapper .delivery-time { display: flex !important; align-items: center; justify-content: flex-start !important; gap: 0 !important; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test #cart-wrapper .delivery-time::before { content: '' !important; position: static !important; display: block !important; flex: none; width: 20px !important; height: 20px !important; margin: 0 12px 0 0 !important; background: var(--ll-gold-deep) !important; -webkit-mask: var(--ll-i-truck) center / contain no-repeat; mask: var(--ll-i-truck) center / contain no-repeat; border: 0 !important; transform: none !important; }
 html.ll-test #cart-wrapper .delivery-time::after { display: none !important; }
-html.ll-test #cart-wrapper .delivery-time strong { font-weight: 600 !important; color: var(--ll-ink) !important; }
+html.ll-test #cart-wrapper .delivery-time strong { margin: 0 0 0 4px !important; font-weight: 600 !important; color: var(--ll-ink) !important; }
 html.ll-test #cart-wrapper .cart-summary > h2 { display: none !important; }
 /* Pořadí bloků podle DS: sloupec s dopravou a slevou se rozpustí (display contents), bloky seřadí order */
 html.ll-test #cart-wrapper .cart-summary .extras-wrapper { display: flex !important; flex-direction: column; gap: 16px; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; }
@@ -1658,6 +1680,13 @@ html.ll-test #cart-wrapper .ll-cart-help a[href^="tel:"]::before { --ll-icon: va
   html.ll-test #cart-wrapper .cart-table .quantity input.amount { width: 32px !important; }
   html.ll-test #cart-wrapper .cart-table td.p-total > .p-price-content { grid-column: 3; grid-row: 4; align-self: end; margin: 12px 0 0 !important; }
   html.ll-test #cart-wrapper .cart-table td.p-total > strong.price-final { grid-column: 3; grid-row: 5; }
+  html.ll-test #cart-wrapper .cart-table tr.related.visible > td { margin-left: 0 !important; padding: 4px 12px !important; }
+  html.ll-test #cart-wrapper .cart-related-product { grid-template-columns: 48px minmax(0, 1fr) auto; grid-template-rows: auto auto auto; }
+  html.ll-test #cart-wrapper .cart-related-img { grid-row: 1 / span 3; align-self: start; }
+  html.ll-test #cart-wrapper .cart-related-name { grid-column: 2 / -1; align-self: start; }
+  html.ll-test #cart-wrapper .cart-related-availability { grid-column: 2; grid-row: 2; }
+  html.ll-test #cart-wrapper .cart-related-product .price-final { grid-column: 2; grid-row: 3; align-self: end; }
+  html.ll-test #cart-wrapper .cart-related-product form.pr-action { grid-column: 3; grid-row: 2 / span 2; align-self: end; }
   html.ll-test #cart-wrapper .fvDoplnek { margin-top: 32px !important; }
   html.ll-test #cart-wrapper .fvDoplnek-variants { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)); }
   html.ll-test #cart-wrapper .fvDoplnek-variant { min-width: 0; padding: 0 !important; }
