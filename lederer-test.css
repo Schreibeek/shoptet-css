@@ -1911,6 +1911,8 @@ html.ll-test body.ordering-process #checkoutContent #company-info > .form-group 
 html.ll-test body.ordering-process #checkoutContent #company-info > .form-group:has(#billCompany) { grid-column: 1 / -1; }
 /* Popisek a pole (Field) */
 html.ll-test body.ordering-process #checkoutContent .form-group > label:not(.whole-width), html.ll-test body.ordering-process #checkoutContent .form-group > p.label { position: static !important; display: block !important; margin: 0 0 8px !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; transform: none !important; }
+/* Skryté prvky šablony (výběr země, který se ukáže jen u jiné země) nechat skryté */
+html.ll-test body.ordering-process #checkoutContent .js-location--hidden { display: none !important; }
 html.ll-test body.ordering-process #checkoutContent .required-asterisk { font: inherit !important; color: inherit !important; text-transform: none !important; }
 html.ll-test body.ordering-process #checkoutContent .required-asterisk { padding: 0 !important; }
 html.ll-test body.ordering-process #checkoutContent .required-asterisk::after { position: static !important; margin: 0 0 0 2px !important; padding: 0 !important; font-weight: 400; color: var(--ll-ink-muted) !important; }
