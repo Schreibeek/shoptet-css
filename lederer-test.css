@@ -1216,6 +1216,8 @@ html.ll-test .products:not(#productsTop) .product .availability span[style*="col
 /* ---------- Poloviční hvězda ----------
    Šablona ji kreslí celou ve žluté #f0b820, vedle zlatých vypadá jako jiná barva. Podle DS zlatá do půlky, zbytek jako vypnutá hvězda. */
 html.ll-test .star.star-half::before { color: transparent !important; background: linear-gradient(90deg, var(--ll-gold) 50%, var(--ll-line-strong) 50%) !important; -webkit-background-clip: text !important; background-clip: text !important; }
+/* Skrytý text "Průměrné hodnocení je…" šablona v kartách vykreslí jako 14 px širokou hvězdu (relative, okraje); vrátit jako sr-only, jinak dělá mezeru za hvězdami */
+html.ll-test .stars .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; margin: -1px !important; padding: 0 !important; overflow: hidden !important; clip: rect(0 0 0 0) !important; white-space: nowrap !important; border: 0 !important; }
 
 /* ---------- Detail produktu: odrážky v popisu ----------
    HTML je v pořádku (li se span), mezery dělala šablona: 12 px mezi položkami a odsazení 40 px.
