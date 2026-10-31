@@ -414,11 +414,12 @@ html.ll-test .p-info-grid .detail-grid-title { display: none !important; }
 html.ll-test .p-final-price-wrapper .price-final, html.ll-test .p-final-price-wrapper .price-final * { color: var(--ll-ink); font-size: 28px; line-height: 34px; font-weight: 600; font-variant-numeric: tabular-nums; }
 html.ll-test .p-final-price-wrapper .price-measure, html.ll-test .p-final-price-wrapper .price-measure * { display: block; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
 html.ll-test .p-final-price-wrapper .price-standard, html.ll-test .p-final-price-wrapper .price-standard * { font-size: 16px !important; line-height: 24px; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
-/* Cena jako mřížka podle BuyboxPrice: akční cena první (při slevě karmínová), přeškrtnutá původní za ní, jednotková pod nimi. Šířku určuje delší řádek, ne součet, takže dostupnost se na počítači vejde vedle. */
-html.ll-test .p-final-price-wrapper { display: inline-grid !important; grid-template-columns: auto auto; justify-content: start; align-items: baseline; column-gap: 8px; }
-html.ll-test .p-final-price-wrapper .price-final { grid-column: 1; grid-row: 1; }
-html.ll-test .p-final-price-wrapper .price-standard { grid-column: 2; grid-row: 1; }
-html.ll-test .p-final-price-wrapper .price-measure { grid-column: 1 / -1; grid-row: 2; }
+/* Cena podle BuyboxPrice: přeškrtnutá původní nad akční cenou (při slevě karmínová), jednotková pod ní. Blok je úzký, takže dostupnost s dopravou zůstává vpravo jako u běžné ceny. */
+html.ll-test .p-final-price-wrapper { display: inline-grid !important; grid-template-columns: auto; justify-items: start; }
+html.ll-test .p-final-price-wrapper .price-standard { grid-row: 1; }
+html.ll-test .p-final-price-wrapper .price-standard, html.ll-test .p-final-price-wrapper .price-standard * { line-height: 20px !important; }
+html.ll-test .p-final-price-wrapper .price-final { grid-row: 2; }
+html.ll-test .p-final-price-wrapper .price-measure { grid-row: 3; }
 html.ll-test .p-final-price-wrapper .price-save { display: none !important; }
 html.ll-test .p-final-price-wrapper:has(.price-standard) .price-final, html.ll-test .p-final-price-wrapper:has(.price-standard) .price-final * { color: var(--ll-sale) !important; }
 /* Dostupnost: stav s tečkou a pod ním doprava zarovnaná s textem stavu, obojí vlevo. Vedle ceny sedí blok vpravo, když se nevejde, zalomí se pod cenu k levému kraji. */
