@@ -1660,6 +1660,14 @@ html.ll-test #cart-wrapper .ll-cart-help a:hover { text-decoration: underline; t
 html.ll-test #cart-wrapper .ll-cart-help a::before { content: ''; flex: none; width: 16px; height: 16px; background: var(--ll-gold-deep); -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat; }
 html.ll-test #cart-wrapper .ll-cart-help a[href^="mailto:"]::before { --ll-icon: var(--ll-i-mail); }
 html.ll-test #cart-wrapper .ll-cart-help a[href^="tel:"]::before { --ll-icon: var(--ll-i-phone); }
+/* Tablet (768 až 1023 px): na dva sloupce není místo (položka má pevné sloupce 406 px), souhrn pod položkami přes celou šířku */
+@media (min-width: 768px) and (max-width: 1023px) {
+  html.ll-test #cart-wrapper .cart-row > .col-md-8 > .cart-content:has(> .cart-table) { grid-template-columns: minmax(0, 1fr); }
+  html.ll-test #cart-wrapper .cart-content:has(> .cart-table) > .text-center { grid-column: 1; grid-row: 3; }
+  html.ll-test #cart-wrapper .cart-content:has(> .cart-table) > .cart-summary { grid-column: 1; grid-row: 4; margin-top: 40px !important; position: static !important; }
+  html.ll-test #cart-wrapper .cart-content:has(> .text-center > .delivery-time):not(:has(.ll-cart-date)) > .text-center { margin-top: 40px !important; }
+  html.ll-test #cart-wrapper .cart-content:has(> .text-center > .delivery-time):not(:has(.ll-cart-date)) > .cart-summary { margin-top: 0 !important; }
+}
 @media (max-width: 767px) {
   /* Košík na mobilu (MobileCart): titulek 24 px a kroky jen s popiskem aktuálního, položka na dva řádky, panel pod položkami, dole lišta s cenou a Pokračovat */
   html.ll-test .cart-header-block { min-height: 72px; padding: 16px 0 !important; }
