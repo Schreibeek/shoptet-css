@@ -338,7 +338,8 @@ html.ll-test .p-detail-inner-header .p-info-headline { display: flex !important;
   html.ll-test .p-info-grid { padding: 20px 16px 12px !important; }
   html.ll-test .loyalty-box-wrapper { padding: 0 16px 12px !important; }
   html.ll-test .add-to-cart { padding: 0 16px 16px !important; gap: 8px; }
-  html.ll-test .add-to-cart .btn-conversion, html.ll-test .add-to-cart .btn.btn-lg.btn-conversion { padding: 0 14px !important; font-size: 15px !important; }
+  html.ll-test .add-to-cart .btn-conversion, html.ll-test .add-to-cart .btn.btn-lg.btn-conversion { flex: 1 1 0 !important; min-width: 0 !important; padding: 0 12px !important; font-size: 15px !important; white-space: nowrap; }
+  html.ll-test .add-to-cart .btn-conversion::before { display: none !important; }
   html.ll-test .add-to-cart .quantity button.increase, html.ll-test .add-to-cart .quantity button.decrease { width: 38px !important; }
   html.ll-test .add-to-cart .quantity input.amount { width: 32px !important; }
 }
