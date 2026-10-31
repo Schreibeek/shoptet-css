@@ -35,6 +35,9 @@ html.ll-test {
 }
 html.ll-test body { color: var(--ll-ink); background: var(--ll-paper); -webkit-font-smoothing: antialiased; }
 html.ll-test ::selection { background: var(--ll-gold-soft); color: var(--ll-ink); }
+/* Fokus podle design systému: zlatohnědý obrys 2 px při ovládání klávesnicí (šablona má modrý / 3px), po kliknutí myší bez obrysu */
+html.ll-test :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { outline: 2px solid var(--ll-gold-text) !important; outline-offset: 2px !important; }
+html.ll-test :where(a, button, summary, [tabindex]):focus:not(:focus-visible) { outline: none !important; }
 
 /* ---------- Typografie ---------- */
 html.ll-test h1, html.ll-test .h1, html.ll-test h2, html.ll-test .h2, html.ll-test h3, html.ll-test .h3 { color: var(--ll-ink); font-weight: 500; letter-spacing: -0.015em; }
@@ -62,14 +65,15 @@ html.ll-test input[type="text"], html.ll-test input[type="email"], html.ll-test 
 html.ll-test input:focus, html.ll-test select:focus, html.ll-test textarea:focus { border-color: var(--ll-ink); }
 
 /* ---------- Horní lišta a hlavička ---------- */
-html.ll-test .top-navigation-bar { background: var(--ll-ivory); border-bottom: 1px solid var(--ll-line); }
+/* Lišta zůstává béžová i při otevřeném menu (šablona ji pod body.submenu-visible přebarvuje na studeně šedou) */
+html.ll-test .top-navigation-bar, html.ll-test body.submenu-visible .top-navigation-bar { background: var(--ll-ivory) !important; border-bottom: 1px solid var(--ll-line); }
 html.ll-test .top-navigation-bar a, html.ll-test .top-navigation-bar .top-navigation-menu a { color: var(--ll-ink-soft); }
 html.ll-test .top-navigation-bar a:hover { color: var(--ll-ink); }
 html.ll-test #header { background: var(--ll-paper); border-bottom: 1px solid var(--ll-line); box-shadow: none; }
 /* Hlavička bez stínu (šablona ho dává pevné liště na mobilu a vypadá to, že pod ní leze obsah); na mobilu bílá jako v šabloně */
 html.ll-test .top-navigation-bar, html.ll-test #header, html.ll-test #header .header-top, html.ll-test .header-top, html.ll-test .top-navigation-tools, html.ll-test .responsive-tools { box-shadow: none !important; }
 @media (max-width: 767px) {
-  html.ll-test .top-navigation-bar { background: var(--ll-paper) !important; border-bottom: 0 !important; box-shadow: inset 0 -1px 0 var(--ll-line) !important; }
+  html.ll-test .top-navigation-bar, html.ll-test body.submenu-visible .top-navigation-bar { background: var(--ll-paper) !important; border-bottom: 0 !important; box-shadow: inset 0 -1px 0 var(--ll-line) !important; }
   html.ll-test #header { border-bottom: 0 !important; }
 }
 html.ll-test #header .search input, html.ll-test #header .search .form-control { background: var(--ll-paper); border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none; }
@@ -95,6 +99,9 @@ html.ll-test #navigation .menu-level-1 > li > a, html.ll-test #navigation .menu-
   html.ll-test #navigation .menu-level-1 > li:hover > a::before, html.ll-test #navigation .menu-level-1 > li.active > a::before { background: var(--ll-gold); }
 }
 html.ll-test #navigation .menu-level-1 > li:hover > a, html.ll-test #navigation .menu-level-1 > li.active > a { color: var(--ll-ink); }
+/* Tři tečky u podkategorií v menu (víc položek): tlumeně místo modré šablony */
+html.ll-test #navigation .more-items-trigger::before { color: var(--ll-ink-muted) !important; }
+html.ll-test #navigation .more-items-trigger:hover::before { color: var(--ll-ink) !important; }
 
 /* ---------- Drobečky ---------- */
 html.ll-test .breadcrumbs, html.ll-test .breadcrumbs a, html.ll-test .breadcrumbs span { color: var(--ll-ink-soft); font-weight: 400; }
