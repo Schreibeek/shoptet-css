@@ -735,7 +735,7 @@ html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before 
   html.ll-test .category-header .listSorting__controls button.listSorting__control.listSorting__control--current::after { bottom: 0; }
   html.ll-test .listItemsTotal { display: none !important; }
   html.ll-test #products.products-block { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 16px; }
-  html.ll-test .products .product .p .flags-default { top: 8px !important; left: 8px !important; }
+  html.ll-test .products .product .p .flags-default { top: 8px !important; left: 8px !important; flex-direction: column !important; align-items: flex-start !important; }
   html.ll-test .products .product .p .flags-extra { top: 8px !important; right: 8px !important; }
   html.ll-test .benefitBanner { margin-top: 40px !important; }
   html.ll-test .benefitBanner__item, html.ll-test .benefitBanner__link { grid-template-columns: minmax(0, 1fr); row-gap: 10px; }
