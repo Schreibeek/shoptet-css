@@ -1784,9 +1784,9 @@ html.ll-test #cart-wrapper .back-to-shop::after { content: none !important; disp
    Titulek a kroky jako v košíku (kroky tu nejsou v #cart-wrapper). Dva sloupce mřížkou na .cart-row: vlevo formulář, vpravo souhrn,
    který se drží nahoře; v souhrnu rekapitulace, celkem, Pokračovat a pod ním Zpět. */
 html.ll-test body.ordering-process .content-inner > .cart-inner { margin: 0 !important; padding: 0 !important; background: transparent !important; border: 0 !important; box-shadow: none !important; }
-html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent) { display: grid !important; grid-template-columns: minmax(0, 1fr) clamp(320px, 32%, 380px); column-gap: 40px; align-items: start; margin: 0 !important; padding: 0 0 64px !important; }
+html.ll-test body.ordering-process .cart-inner .cart-row:has(> #checkoutContent) { display: grid !important; grid-template-columns: minmax(0, 1fr) clamp(320px, 32%, 380px); column-gap: 40px; align-items: start; margin: 0 !important; padding: 0 0 64px !important; }
 /* Bootstrap .row má clearfix ::before a ::after, v mřížce by zabraly buňky */
-html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent)::before, html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent)::after, html.ll-test #cart-wrapper .cart-empty .cart-row::before, html.ll-test #cart-wrapper .cart-empty .cart-row::after, html.ll-test #cart-wrapper .cart-empty .empty-cart-boxes::before, html.ll-test #cart-wrapper .cart-empty .empty-cart-boxes::after { content: none !important; display: none !important; }
+html.ll-test body.ordering-process .cart-inner .cart-row:has(> #checkoutContent)::before, html.ll-test body.ordering-process .cart-inner .cart-row:has(> #checkoutContent)::after, html.ll-test #cart-wrapper .cart-empty .cart-row::before, html.ll-test #cart-wrapper .cart-empty .cart-row::after, html.ll-test #cart-wrapper .cart-empty .empty-cart-boxes::before, html.ll-test #cart-wrapper .cart-empty .empty-cart-boxes::after { content: none !important; display: none !important; }
 html.ll-test body.ordering-process .cart-row > #checkoutContent { grid-column: 1; grid-row: 1; }
 html.ll-test body.ordering-process .cart-row > #checkoutSidebar { grid-column: 2; grid-row: 1; }
 html.ll-test body.ordering-process .cart-row > #checkoutContent, html.ll-test body.ordering-process .cart-row > #checkoutSidebar { float: none !important; width: auto !important; max-width: none !important; flex: none !important; margin: 0 !important; padding: 0 !important; }
@@ -1795,8 +1795,8 @@ html.ll-test body.ordering-process #checkoutSidebar { position: sticky !importan
 /* Bloky formuláře bez rámečku, titulek 18 px bez ikony, 40 px od sebe */
 html.ll-test body.ordering-process #checkoutContent .co-box { margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
 html.ll-test body.ordering-process #checkoutContent .co-box + .co-box { margin-top: 40px !important; }
-html.ll-test body.ordering-process #checkoutContent .co-box > h2, html.ll-test body.ordering-process #checkoutContent .co-box > h4 { display: block !important; margin: 0 0 16px !important; padding: 0 !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
-html.ll-test body.ordering-process #checkoutContent .co-box > h2::before, html.ll-test body.ordering-process #checkoutContent .co-box > h2::after { content: none !important; display: none !important; }
+html.ll-test body.ordering-process #checkoutContent .co-box h2, html.ll-test body.ordering-process #checkoutContent .co-box > h4 { display: block !important; margin: 0 0 16px !important; padding: 0 !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process #checkoutContent .co-box h2::before, html.ll-test body.ordering-process #checkoutContent .co-box h2::after { content: none !important; display: none !important; }
 /* Volby dopravy a platby: jeden panel, řádky mezi linkami, radio 20 px, název s vysvětlivkou, logo a cena vpravo, vybraný řádek na ivory */
 html.ll-test body.ordering-process .shipping-billing-table { overflow: hidden; margin: 0 !important; padding: 0 !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; box-shadow: none !important; }
 html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper { position: relative; display: block !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
@@ -1865,13 +1865,14 @@ html.ll-test body.ordering-process #checkoutSidebar .next-step-back::before { co
 html.ll-test body.ordering-process #checkoutSidebar .next-step-back::after { content: none !important; display: none !important; }
 /* Tablet: souhrn pod formulářem, kroky jen s popiskem aktuálního */
 @media (min-width: 768px) and (max-width: 1023px) {
-  html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent) { grid-template-columns: minmax(0, 1fr); }
-  html.ll-test body.ordering-process #checkoutSidebar { position: static !important; margin-top: 40px !important; }
+  /* Mezera mezi formulářem a souhrnem mřížkou (okraj souhrnu přebíjelo margin 0 se silnějším selektorem) */
+  html.ll-test body.ordering-process .cart-inner .cart-row:has(> #checkoutContent) { grid-template-columns: minmax(0, 1fr); row-gap: 40px; }
+  html.ll-test body.ordering-process #checkoutSidebar { position: static !important; }
   html.ll-test body.ordering-process .cart-row > #checkoutSidebar { grid-column: 1; grid-row: 2; }
 }
 @media (max-width: 767px) {
-  html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent) { grid-template-columns: minmax(0, 1fr); padding-bottom: 104px !important; }
-  html.ll-test body.ordering-process #checkoutSidebar { position: static !important; margin-top: 32px !important; }
+  html.ll-test body.ordering-process .cart-inner .cart-row:has(> #checkoutContent) { grid-template-columns: minmax(0, 1fr); row-gap: 32px; padding-bottom: 104px !important; }
+  html.ll-test body.ordering-process #checkoutSidebar { position: static !important; }
   html.ll-test body.ordering-process .cart-row > #checkoutSidebar { grid-column: 1; grid-row: 2; }
   html.ll-test body.ordering-process #checkoutSidebar > .cart-content { padding: 16px !important; }
   html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper > input[type="radio"] { left: 16px !important; }
@@ -1893,4 +1894,78 @@ html.ll-test body.ordering-process #checkoutSidebar .next-step-back::after { con
   html.ll-test body.ordering-process #checkoutSidebar .next-step-forward { position: fixed !important; right: 20px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 1001; width: auto !important; min-width: 160px; }
   html.ll-test body.ordering-process #back-to-top { display: none !important; }
   html.ll-test body.ordering-process .ll-test-badge { bottom: 92px !important; }
+}
+
+/* ---------- Krok Osobní údaje a adresa (DS PageAddress, MobileAddress) ----------
+   Oddíly bez rámečku, pole na mřížce 6 sloupců (dvě vedle sebe, město a PSČ 4 + 2), popisky 13 px nad poli 48 px,
+   zaškrtávátka 18 px jako ll-check; v souhrnu souhlasy a Objednat s povinností platby. Tlačítko Objednat odešle objednávku. */
+html.ll-test body.ordering-process #checkoutContent fieldset { min-width: 0; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutContent .form-group-content { display: grid !important; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 16px; margin: 0 !important; padding: 0 !important; }
+html.ll-test body.ordering-process #checkoutContent .form-group-content > h2 { grid-column: 1 / -1; margin: 0 !important; }
+html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group { grid-column: span 3; display: block !important; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(> .login-button, > div > .login-button), html.ll-test body.ordering-process #checkoutContent .form-group-content > .company-shopping, html.ll-test body.ordering-process #checkoutContent .form-group-content > #company-info, html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(#billStreet), html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(.js-location), html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group:has(#deliveryStreet) { grid-column: 1 / -1; }
+html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group-city { grid-column: span 4; }
+html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group-zip { grid-column: span 2; }
+html.ll-test body.ordering-process #checkoutContent #company-info:not(.js-hidden) { display: grid !important; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px 16px; }
+html.ll-test body.ordering-process #checkoutContent #company-info > .form-group { grid-column: span 3; display: block !important; width: auto !important; margin: 0 !important; padding: 0 !important; }
+html.ll-test body.ordering-process #checkoutContent #company-info > .form-group:has(#billCompany) { grid-column: 1 / -1; }
+/* Popisek a pole (Field) */
+html.ll-test body.ordering-process #checkoutContent .form-group > label:not(.whole-width), html.ll-test body.ordering-process #checkoutContent .form-group > p.label { position: static !important; display: block !important; margin: 0 0 8px !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; transform: none !important; }
+html.ll-test body.ordering-process #checkoutContent .required-asterisk { font: inherit !important; color: inherit !important; text-transform: none !important; }
+html.ll-test body.ordering-process #checkoutContent .required-asterisk::after { margin-left: 2px; font-weight: 400; color: var(--ll-ink-muted) !important; }
+html.ll-test body.ordering-process #checkoutContent .form-control-wrapper { position: relative; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+html.ll-test body.ordering-process #checkoutContent .form-control { box-sizing: border-box; width: 100% !important; max-width: none !important; height: 48px !important; min-height: 48px; margin: 0 !important; padding: 0 16px !important; font-size: 15px !important; line-height: 22px !important; color: var(--ll-ink) !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line-control) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutContent textarea.form-control { height: auto !important; min-height: 112px; padding: 12px 16px !important; resize: vertical; }
+html.ll-test body.ordering-process #checkoutContent .form-control:hover { border-color: var(--ll-ink-soft) !important; }
+html.ll-test body.ordering-process #checkoutContent .form-control:focus { border-color: var(--ll-ink) !important; outline: none; }
+html.ll-test body.ordering-process #checkoutContent .form-control.error, html.ll-test body.ordering-process #checkoutContent .js-validated-element-wrapper.error .form-control, html.ll-test body.ordering-process #checkoutContent .form-control[aria-invalid="true"] { border-color: var(--ll-danger, #b42318) !important; }
+html.ll-test body.ordering-process #checkoutContent .form-group-tooltip { top: 50% !important; right: 14px !important; margin-top: -8px !important; }
+/* Zákaznický účet: řádek na ivory s obrysovým Přihlásit se */
+html.ll-test body.ordering-process #checkoutContent .form-group:has(.login-button) { display: flex !important; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 16px; padding: 12px 16px !important; background: var(--ll-ivory) !important; border-radius: var(--ll-r-md); }
+html.ll-test body.ordering-process #checkoutContent .form-group:has(.login-button) > p.label { margin: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
+html.ll-test body.ordering-process #checkoutContent .form-group:has(.login-button) > div { margin: 0 !important; padding: 0 !important; }
+html.ll-test body.ordering-process #checkoutContent .login-button { display: inline-flex !important; align-items: center; justify-content: center; width: auto !important; min-width: 0 !important; height: 40px !important; min-height: 40px !important; margin: 0 !important; padding: 0 16px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutContent .login-button:hover { color: #fff !important; background: var(--ll-ink) !important; }
+html.ll-test body.ordering-process #checkoutContent .login-button::before, html.ll-test body.ordering-process #checkoutContent .login-button::after { content: none !important; display: none !important; }
+/* Telefon: předvolba s vlajkou uvnitř pole */
+html.ll-test body.ordering-process #checkoutContent .phone-combined-input { position: relative; display: flex !important; align-items: stretch; width: 100% !important; margin: 0 !important; }
+html.ll-test body.ordering-process #checkoutContent .phone-combined-input .country-flags { top: 0 !important; height: 48px !important; }
+/* Země jako text */
+html.ll-test body.ordering-process #checkoutContent .form-group:has(.js-location) .form-control-wrapper--with-note, html.ll-test body.ordering-process #checkoutContent .form-group:has(.js-location) .form-control-wrapper--with-note strong { height: auto !important; font-size: 15px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink) !important; }
+/* Zaškrtávátka: čtverec 18 px s linkou line-control, zaškrtnuté inkoustové s bílou fajfkou */
+html.ll-test body.ordering-process .form-group > input[type="checkbox"] + label.whole-width { position: relative !important; display: block !important; width: auto !important; min-height: 22px; height: auto !important; margin: 0 !important; padding: 0 0 0 30px !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: none !important; cursor: pointer; }
+html.ll-test body.ordering-process .form-group > input[type="checkbox"] + label.whole-width::before { content: '' !important; position: absolute !important; top: 2px !important; left: 0 !important; display: block !important; box-sizing: border-box; width: 18px !important; height: 18px !important; margin: 0 !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line-control) !important; border-radius: var(--ll-r-xs, 2px) !important; box-shadow: none !important; transform: none !important; }
+html.ll-test body.ordering-process .form-group > input[type="checkbox"] + label.whole-width:hover::before { border-color: var(--ll-ink-soft) !important; }
+html.ll-test body.ordering-process .form-group > input[type="checkbox"]:checked + label.whole-width::before { background: var(--ll-ink) var(--ll-i-check) center / 12px no-repeat !important; border-color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process .form-group > input[type="checkbox"]:focus-visible + label.whole-width::before { outline: 2px solid var(--ll-ink); outline-offset: 2px; }
+html.ll-test body.ordering-process .form-group > input[type="checkbox"] + label.whole-width::after { content: none !important; display: none !important; }
+html.ll-test body.ordering-process .form-group > input[type="checkbox"] + label.whole-width a { color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+html.ll-test body.ordering-process #checkoutContent .additional-information { color: var(--ll-ink-muted) !important; }
+html.ll-test body.ordering-process #checkoutContent .company-shopping, html.ll-test body.ordering-process #checkoutContent .co-box-additional > .form-group, html.ll-test body.ordering-process #checkoutContent .stay-in-touch > .form-group { margin: 0 !important; padding: 0 !important; }
+html.ll-test body.ordering-process #checkoutContent .co-box-additional { display: grid !important; gap: 12px; }
+html.ll-test body.ordering-process #checkoutContent .co-box-additional > #note:not(.js-hidden) { margin: 4px 0 8px !important; }
+html.ll-test body.ordering-process #checkoutContent .stay-in-touch { display: grid !important; gap: 12px; }
+/* Souhrn v kroku Údaje: doprava a platba (jiné HTML než v kroku 2), souhlasy, Objednat s povinností platby */
+html.ll-test body.ordering-process #checkoutSidebar .order-recapitulation:empty { display: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-items > .recapitulation-single > span { display: block !important; font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-muted) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-items > .recapitulation-single > strong { display: flex !important; justify-content: space-between; align-items: baseline; gap: 16px; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; font-style: normal !important; color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-items > .recapitulation-single > strong > span { order: 2; flex: none; font-weight: 600 !important; color: var(--ll-ink) !important; white-space: nowrap; }
+html.ll-test body.ordering-process #checkoutSidebar .consents { margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .consents > input[type="checkbox"] + label.whole-width { font-size: 13px !important; line-height: 20px !important; }
+html.ll-test body.ordering-process #checkoutSidebar .consents > input[type="checkbox"] + label.whole-width::before { top: 1px !important; }
+html.ll-test body.ordering-process #checkoutSidebar .consents > p.label { margin: 0 !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .consents a { color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-finish { order: 1; display: flex !important; flex-wrap: wrap; align-items: center; justify-content: center; column-gap: .3em; box-sizing: border-box; width: 100% !important; min-height: 54px !important; height: auto !important; margin: 0 !important; padding: 8px 24px !important; font-size: 16px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-finish:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-finish span { display: inline !important; margin: 0 !important; font-size: inherit !important; line-height: inherit !important; font-weight: 500 !important; color: inherit !important; text-transform: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-finish .order-button-suffix { font-weight: 400 !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-finish::before, html.ll-test body.ordering-process #checkoutSidebar .next-step-finish::after { content: none !important; display: none !important; }
+@media (max-width: 767px) {
+  html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group, html.ll-test body.ordering-process #checkoutContent #company-info > .form-group { grid-column: 1 / -1; }
+  html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group-city { grid-column: span 4; }
+  html.ll-test body.ordering-process #checkoutContent .form-group-content > .form-group-zip { grid-column: span 2; }
+  html.ll-test body.ordering-process #checkoutContent .form-control { font-size: 16px !important; }
+  /* Objednat v liště na dva řádky (dovětek 12 px) */
+  html.ll-test body.ordering-process #checkoutSidebar .next-step-finish { position: fixed !important; right: 20px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 1001; flex-direction: column; flex-wrap: nowrap; width: auto !important; min-width: 160px; height: 54px !important; padding: 0 20px !important; line-height: 18px !important; }
+  html.ll-test body.ordering-process #checkoutSidebar .next-step-finish .order-button-suffix { font-size: 12px !important; line-height: 16px !important; }
 }
