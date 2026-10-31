@@ -1449,7 +1449,7 @@ html.ll-test .gallery-new #main-slider .splide__arrow--prev::before { transform:
    Pravý sloupec šablony (.col-md-4) je prázdný, sloupce dělá mřížka na .cart-content.
    lederer-test.js přesune termín doručení do souhrnu (pod dopravu zdarma) a přidá do něj kontakt z hlavičky košíku;
    bez JS je termín doručení nad souhrnem a vypadá jako jeho horní část. */
-html.ll-test body.in-kosik #content { position: relative; }
+html.ll-test body.ordering-process #content { position: relative; }
 html.ll-test .cart-header-block { display: flex !important; align-items: center; gap: 12px; box-sizing: border-box; min-height: 104px; margin: 0 !important; padding: 32px 0 !important; background: transparent !important; border: 0 !important; box-shadow: none !important; }
 html.ll-test .cart-header__back:empty { display: none !important; }
 /* Hlavička košíku je v #content s odsazením 20 px, obsah košíku ho ruší zápornými okraji: titulek zarovnat s obsahem */
@@ -1460,15 +1460,19 @@ html.ll-test .cart-header__headline { margin: 0 !important; padding: 0 !importan
 html.ll-test .cart-header__headline .h4 { display: block !important; margin: 0 !important; font-size: 32px !important; line-height: 40px !important; font-weight: 500 !important; letter-spacing: -0.015em !important; text-transform: none !important; color: var(--ll-ink) !important; }
 html.ll-test .cart-header__contact { display: none !important; }
 /* Kroky: číslo v kruhu 28 px (aktuální inkoustový, další s linkou line-strong), mezi kroky linka 40 px */
-html.ll-test #cart-wrapper ol.cart-header { position: absolute; top: 32px; right: 0; display: flex !important; align-items: center; height: 40px; margin: 0 !important; padding: 0 !important; list-style: none; background: transparent !important; border: 0 !important; box-shadow: none !important; }
-html.ll-test #cart-wrapper ol.cart-header li.step { display: flex !important; align-items: center; flex: none !important; width: auto !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; }
-html.ll-test #cart-wrapper ol.cart-header li.step + li.step::before { content: ''; display: block; flex: none; width: 40px; height: 1px; margin: 0 14px; background: var(--ll-line-strong); }
-html.ll-test #cart-wrapper ol.cart-header li.step > strong, html.ll-test #cart-wrapper ol.cart-header li.step > a { display: flex !important; align-items: center; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; text-decoration: none !important; color: var(--ll-ink-muted) !important; background: none !important; border: 0 !important; }
-html.ll-test #cart-wrapper ol.cart-header li.step span { display: inline-flex !important; align-items: center; gap: 10px; font: inherit !important; color: inherit !important; white-space: nowrap; }
-html.ll-test #cart-wrapper ol.cart-header li.step span::before { position: static !important; display: grid !important; place-items: center; flex: none; box-sizing: border-box; width: 28px !important; height: 28px !important; margin: 0 !important; font-size: 13px !important; line-height: 1 !important; font-weight: 600 !important; color: var(--ll-ink-muted) !important; background: transparent !important; border: 1px solid var(--ll-line-strong) !important; border-radius: 50% !important; box-shadow: none !important; transform: none !important; }
-html.ll-test #cart-wrapper ol.cart-header li.step.active > strong, html.ll-test #cart-wrapper ol.cart-header li.step.active > a { color: var(--ll-ink) !important; }
-html.ll-test #cart-wrapper ol.cart-header li.step.active span::before { color: #fff !important; background: var(--ll-ink) !important; border-color: var(--ll-ink) !important; }
-html.ll-test #cart-wrapper ol.cart-header li.step > a:hover { color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process ol.cart-header { position: absolute; top: 32px; right: 0; display: flex !important; align-items: center; height: 40px; margin: 0 !important; padding: 0 !important; list-style: none; background: transparent !important; border: 0 !important; box-shadow: none !important; }
+html.ll-test body.ordering-process ol.cart-header li.step { display: flex !important; align-items: center; flex: none !important; width: auto !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; }
+html.ll-test body.ordering-process ol.cart-header li.step + li.step::before { content: ''; display: block; flex: none; width: 40px; height: 1px; margin: 0 14px; background: var(--ll-line-strong); }
+html.ll-test body.ordering-process ol.cart-header li.step > strong, html.ll-test body.ordering-process ol.cart-header li.step > a { display: flex !important; align-items: center; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; text-decoration: none !important; color: var(--ll-ink-muted) !important; background: none !important; border: 0 !important; }
+html.ll-test body.ordering-process ol.cart-header li.step span { display: inline-flex !important; align-items: center; gap: 10px; font: inherit !important; color: inherit !important; white-space: nowrap; }
+html.ll-test body.ordering-process ol.cart-header li.step span::before { position: static !important; display: grid !important; place-items: center; flex: none; box-sizing: border-box; width: 28px !important; height: 28px !important; margin: 0 !important; font-size: 13px !important; line-height: 1 !important; font-weight: 600 !important; color: var(--ll-ink-muted) !important; background: transparent !important; border: 1px solid var(--ll-line-strong) !important; border-radius: 50% !important; box-shadow: none !important; transform: none !important; }
+html.ll-test body.ordering-process ol.cart-header li.step.active > strong, html.ll-test body.ordering-process ol.cart-header li.step.active > a { color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process ol.cart-header li.step.active span::before { color: #fff !important; background: var(--ll-ink) !important; border-color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process ol.cart-header li.step > a:hover { color: var(--ll-ink) !important; }
+/* Hotový krok (Můj košík v dalších krocích): inkoustový kroužek a popisek, odkaz zpět */
+html.ll-test body.ordering-process ol.cart-header li.step.completed > a { color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process ol.cart-header li.step.completed span::before { color: var(--ll-ink) !important; border-color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process ol.cart-header li.step.completed > a:hover span { text-decoration: underline; text-underline-offset: 3px; }
 /* Dva sloupce */
 html.ll-test #cart-wrapper .cart-inner { padding: 0 !important; background: transparent !important; border: 0 !important; box-shadow: none !important; }
 html.ll-test #cart-wrapper .cart-row { display: block !important; margin: 0 !important; }
@@ -1668,16 +1672,16 @@ html.ll-test #cart-wrapper .ll-cart-help a[href^="tel:"]::before { --ll-icon: va
   html.ll-test #cart-wrapper .cart-content:has(> .text-center > .delivery-time):not(:has(.ll-cart-date)) > .text-center { margin-top: 40px !important; }
   html.ll-test #cart-wrapper .cart-content:has(> .text-center > .delivery-time):not(:has(.ll-cart-date)) > .cart-summary { margin-top: 0 !important; }
   /* Kroky jen s popiskem aktuálního jako na mobilu (všechny popisky se vedle titulku nevejdou) */
-  html.ll-test #cart-wrapper ol.cart-header li.step:not(.active) span { gap: 0; font-size: 0 !important; }
+  html.ll-test body.ordering-process ol.cart-header li.step:not(.active) span { gap: 0; font-size: 0 !important; }
 }
 @media (max-width: 767px) {
   /* Košík na mobilu (MobileCart): titulek 24 px a kroky jen s popiskem aktuálního, položka na dva řádky, panel pod položkami, dole lišta s cenou a Pokračovat */
   html.ll-test .cart-header-block { min-height: 72px; padding: 16px 0 !important; }
   html.ll-test .cart-header__headline .h4 { font-size: 24px !important; line-height: 40px !important; }
-  html.ll-test #cart-wrapper ol.cart-header { top: 16px; }
-  html.ll-test #cart-wrapper ol.cart-header li.step + li.step::before { width: 20px; margin: 0 6px; }
-  html.ll-test #cart-wrapper ol.cart-header li.step:not(.active) span { gap: 0; font-size: 0 !important; }
-  html.ll-test #cart-wrapper ol.cart-header li.step span::before { width: 26px !important; height: 26px !important; font-size: 12px !important; }
+  html.ll-test body.ordering-process ol.cart-header { top: 16px; }
+  html.ll-test body.ordering-process ol.cart-header li.step + li.step::before { width: 20px; margin: 0 6px; }
+  html.ll-test body.ordering-process ol.cart-header li.step:not(.active) span { gap: 0; font-size: 0 !important; }
+  html.ll-test body.ordering-process ol.cart-header li.step span::before { width: 26px !important; height: 26px !important; font-size: 12px !important; }
   html.ll-test #cart-wrapper .cart-row > .col-md-8 > .cart-content:has(> .cart-table) { grid-template-columns: minmax(0, 1fr); padding-bottom: 104px !important; }
   html.ll-test #cart-wrapper .cart-content:has(> .cart-table) > .text-center { grid-column: 1; grid-row: 3; }
   html.ll-test #cart-wrapper .cart-content:has(> .cart-table) > .cart-summary { grid-column: 1; grid-row: 4; margin-top: 32px !important; padding: 16px !important; }
@@ -1765,4 +1769,108 @@ html.ll-test #cart-wrapper .cart-empty .col-md-4 .contact-box .mail::before, htm
   html.ll-test #cart-wrapper .cart-empty .cart-heading::before { width: 64px !important; height: 64px !important; margin-left: -32px !important; }
   html.ll-test #cart-wrapper .cart-empty .cart-heading::after { top: 20px; width: 24px !important; height: 24px !important; margin-left: -12px !important; }
   html.ll-test #cart-wrapper .cart-empty .empty-cart-boxes .search .query-input { font-size: 16px !important; }
+}
+
+/* ---------- Kroky objednávky: Doprava a platba, Údaje (DS PageShipping, MobileShipping) ----------
+   Titulek a kroky jako v košíku (kroky tu nejsou v #cart-wrapper). Dva sloupce mřížkou na .cart-row: vlevo formulář, vpravo souhrn,
+   který se drží nahoře; v souhrnu rekapitulace, celkem, Pokračovat a pod ním Zpět. */
+html.ll-test body.ordering-process .content-inner > .cart-inner { margin: 0 !important; padding: 0 !important; background: transparent !important; border: 0 !important; box-shadow: none !important; }
+html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent) { display: grid !important; grid-template-columns: minmax(0, 1fr) clamp(320px, 32%, 380px); column-gap: 40px; align-items: start; margin: 0 !important; padding: 0 0 64px !important; }
+html.ll-test body.ordering-process .cart-row > #checkoutContent, html.ll-test body.ordering-process .cart-row > #checkoutSidebar { float: none !important; width: auto !important; max-width: none !important; flex: none !important; margin: 0 !important; padding: 0 !important; }
+html.ll-test body.ordering-process #checkoutContent > .cart-content { margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar { position: sticky !important; top: 24px; transform: none !important; }
+/* Bloky formuláře bez rámečku, titulek 18 px bez ikony, 40 px od sebe */
+html.ll-test body.ordering-process #checkoutContent .co-box { margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutContent .co-box + .co-box { margin-top: 40px !important; }
+html.ll-test body.ordering-process #checkoutContent .co-box > h2, html.ll-test body.ordering-process #checkoutContent .co-box > h4 { display: block !important; margin: 0 0 16px !important; padding: 0 !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process #checkoutContent .co-box > h2::before, html.ll-test body.ordering-process #checkoutContent .co-box > h2::after { content: none !important; display: none !important; }
+/* Volby dopravy a platby: jeden panel, řádky mezi linkami, radio 20 px, název s vysvětlivkou, logo a cena vpravo, vybraný řádek na ivory */
+html.ll-test body.ordering-process .shipping-billing-table { overflow: hidden; margin: 0 !important; padding: 0 !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; box-shadow: none !important; }
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper { position: relative; display: block !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper + .radio-wrapper { border-top: 1px solid var(--ll-line) !important; }
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper.active { background: var(--ll-ivory) !important; }
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper > input[type="radio"] { position: absolute !important; top: 50% !important; left: 20px !important; z-index: 1; display: block !important; box-sizing: border-box; width: 20px !important; height: 20px !important; margin: -10px 0 0 !important; padding: 0 !important; opacity: 1 !important; -webkit-appearance: none; appearance: none; background: var(--ll-paper) !important; border: 1px solid var(--ll-line-control) !important; border-radius: 50% !important; cursor: pointer; clip: auto !important; }
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper > input[type="radio"]:checked { border: 6px solid var(--ll-ink) !important; }
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper:hover > input[type="radio"]:not(:checked) { border-color: var(--ll-ink-soft) !important; }
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper > label { position: relative; display: grid !important; grid-template-columns: minmax(0, 1fr) 64px 72px; align-items: center; column-gap: 16px; box-sizing: border-box; width: 100% !important; min-height: 64px; margin: 0 !important; padding: 12px 20px 12px 56px !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; cursor: pointer; }
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper > label::before, html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper > label::after { content: none !important; display: none !important; }
+html.ll-test body.ordering-process .shipping-billing-table .payment-info { display: block !important; min-width: 0; margin: 0 !important; padding: 0 !important; text-align: left !important; }
+html.ll-test body.ordering-process .shipping-billing-table .shipping-billing-name { display: inline !important; font-size: 15px !important; line-height: 22px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process .shipping-billing-table .question-tooltip { position: static !important; display: inline-block !important; box-sizing: border-box; width: 16px !important; height: 16px !important; margin: 0 0 0 6px !important; padding: 0 !important; vertical-align: -3px; font-size: 0 !important; color: transparent !important; background: var(--ll-ink-muted) !important; border: 0 !important; border-radius: 0 !important; -webkit-mask: var(--ll-i-help) center / contain no-repeat; mask: var(--ll-i-help) center / contain no-repeat; cursor: help; }
+html.ll-test body.ordering-process .shipping-billing-table .question-tooltip::before, html.ll-test body.ordering-process .shipping-billing-table .question-tooltip::after { content: none !important; display: none !important; }
+html.ll-test body.ordering-process .shipping-billing-table .sublabel { display: block !important; margin: 2px 0 0 !important; padding: 0 !important; }
+html.ll-test body.ordering-process .shipping-billing-table .sublabel a { display: inline !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; text-decoration: underline !important; text-decoration-thickness: 1px !important; text-underline-offset: 3px; }
+html.ll-test body.ordering-process .shipping-billing-table .sublabel a::after { content: '' !important; position: static !important; display: inline-block !important; width: 14px !important; height: 14px !important; margin: 0 0 0 4px !important; vertical-align: -3px; border: 0 !important; background: currentColor !important; -webkit-mask: var(--ll-i-chev-down) center / contain no-repeat; mask: var(--ll-i-chev-down) center / contain no-repeat; transform: none !important; }
+html.ll-test body.ordering-process .shipping-billing-table .sublabel a::before { content: none !important; display: none !important; }
+html.ll-test body.ordering-process .shipping-billing-table .not-possible-info { display: none !important; }
+html.ll-test body.ordering-process .shipping-billing-table .payment-logo { display: grid !important; place-items: center; justify-self: center; width: 64px !important; height: 32px !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test body.ordering-process .shipping-billing-table .payment-logo img { display: block; width: auto !important; max-width: 64px !important; height: auto !important; max-height: 28px !important; object-fit: contain; }
+html.ll-test body.ordering-process .shipping-billing-table .payment-shipping-price { justify-self: end; margin: 0 !important; padding: 0 !important; font-size: 15px !important; line-height: 22px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; text-align: right !important; color: var(--ll-ink) !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
+/* Nedostupná kombinace dopravy a platby: řádek v 45 % a pod názvem vysvětlení */
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper.inactive-child > label { cursor: not-allowed; }
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper.inactive-child > input, html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper.inactive-child .shipping-billing-name, html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper.inactive-child .question-tooltip, html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper.inactive-child .payment-logo, html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper.inactive-child .payment-shipping-price { opacity: .45; }
+html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper.inactive-child .not-possible-info { display: block !important; margin: 2px 0 0 !important; font-size: 12px !important; line-height: 18px !important; font-style: normal !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
+/* Souhrn: panel s linkou, rohy 6 px, odsazení 24 px, bloky po 16 px */
+html.ll-test body.ordering-process #checkoutSidebar > .cart-content { display: grid !important; gap: 16px; margin: 0 !important; padding: 24px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .order-summary, html.ll-test body.ordering-process #checkoutSidebar .order-summary-inner, html.ll-test body.ordering-process #checkoutSidebar .order-summary-top, html.ll-test body.ordering-process #checkoutSidebar .order-summary-bottom { display: grid !important; gap: 16px; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .order-summary-top > h2 { margin: 0 !important; padding: 0 !important; font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; text-align: left !important; color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-items { display: grid !important; gap: 12px; margin: 0 !important; padding: 0 0 16px !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-item { display: grid !important; grid-template-columns: minmax(0, 1fr) auto; column-gap: 16px; margin: 0 !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; background: none !important; border: 0 !important; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-item > div { width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; text-align: left !important; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-item-name, html.ll-test body.ordering-process #checkoutSidebar .cart-item-name a { grid-column: 1; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; text-decoration: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-item-name a:hover { text-decoration: underline !important; text-underline-offset: 3px; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-item-amount { grid-column: 1; grid-row: 2; font-size: 13px !important; color: var(--ll-ink-muted) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-item-amount .unit-value { margin: 0 !important; padding: 0 !important; font: inherit !important; color: inherit !important; }
+html.ll-test body.ordering-process #checkoutSidebar .cart-item-price { grid-column: 2; grid-row: 1; font-size: 13px !important; font-weight: 600 !important; color: var(--ll-ink) !important; text-align: right !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
+html.ll-test body.ordering-process #checkoutSidebar .order-recapitulation { display: grid !important; gap: 12px; margin: 0 !important; padding: 0 0 16px !important; background: none !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .recapitulation-single { display: block !important; margin: 0 !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; background: none !important; border: 0 !important; }
+html.ll-test body.ordering-process #checkoutSidebar .recapitulation-shipping-billing-label { display: block !important; margin: 0 !important; font-size: 13px !important; font-weight: 400 !important; text-transform: none !important; color: var(--ll-ink-muted) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .recapitulation-shipping-billing-info { display: flex !important; justify-content: space-between; align-items: baseline; gap: 16px; margin: 0 !important; font-size: 13px !important; font-weight: 400 !important; text-transform: none !important; text-align: left !important; color: var(--ll-ink) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .recapitulation-shipping-billing-info > span { order: 2; flex: none; font-weight: 600 !important; color: var(--ll-ink) !important; white-space: nowrap; font-variant-numeric: tabular-nums; }
+html.ll-test body.ordering-process #checkoutSidebar .order-summary-item { display: flex !important; justify-content: space-between; align-items: baseline; gap: 16px; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; }
+html.ll-test body.ordering-process #checkoutSidebar .order-summary-item > div { margin: 0 !important; padding: 0 !important; }
+html.ll-test body.ordering-process #checkoutSidebar .order-summary-item.helper strong { font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .order-summary-item.helper > div:last-child { color: var(--ll-ink) !important; white-space: nowrap; }
+html.ll-test body.ordering-process #checkoutSidebar .order-summary-item.price { display: block !important; }
+html.ll-test body.ordering-process #checkoutSidebar .price-wrapper { display: grid !important; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; column-gap: 16px; margin: 0 !important; padding: 0 !important; text-align: left !important; }
+html.ll-test body.ordering-process #checkoutSidebar .price-label { margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .price.price-primary, html.ll-test body.ordering-process #checkoutSidebar .price.price-primary * { margin: 0 !important; font-size: 24px !important; line-height: 30px !important; font-weight: 600 !important; color: var(--ll-ink) !important; text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+html.ll-test body.ordering-process #checkoutSidebar .price-label.price-secondary, html.ll-test body.ordering-process #checkoutSidebar .price.price-secondary, html.ll-test body.ordering-process #checkoutSidebar .price.price-secondary * { margin: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .price.price-secondary { text-align: right; }
+/* Pokračovat inkoustové 54 px se šipkou, pod ním Zpět */
+html.ll-test body.ordering-process #checkoutSidebar .next-step { display: flex !important; flex-direction: column; align-items: stretch; gap: 8px; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-forward { order: 1; display: flex !important; align-items: center; justify-content: center; gap: 10px; box-sizing: border-box; width: 100% !important; height: 54px !important; min-height: 54px !important; margin: 0 !important; padding: 0 24px !important; font-size: 16px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-forward:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-forward span { font: inherit !important; color: inherit !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-forward::before { content: none !important; display: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-forward::after { content: '' !important; position: static !important; display: block !important; flex: none; width: 18px !important; height: 18px !important; margin: 0 !important; background: currentColor !important; -webkit-mask: var(--ll-i-arrow-right) center / contain no-repeat; mask: var(--ll-i-arrow-right) center / contain no-repeat; border: 0 !important; transform: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-back { order: 2; display: inline-flex !important; align-items: center; justify-content: center; gap: 4px; align-self: center; width: auto !important; height: auto !important; min-height: 0 !important; margin: 0 !important; padding: 4px 8px !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; box-shadow: none !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-back:hover { color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-back::before { content: '' !important; position: static !important; display: block !important; flex: none; width: 16px !important; height: 16px !important; margin: 0 !important; background: currentColor !important; -webkit-mask: var(--ll-i-chev-right) center / contain no-repeat; mask: var(--ll-i-chev-right) center / contain no-repeat; border: 0 !important; transform: rotate(180deg) !important; }
+html.ll-test body.ordering-process #checkoutSidebar .next-step-back::after { content: none !important; display: none !important; }
+/* Tablet: souhrn pod formulářem, kroky jen s popiskem aktuálního */
+@media (min-width: 768px) and (max-width: 1023px) {
+  html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent) { grid-template-columns: minmax(0, 1fr); }
+  html.ll-test body.ordering-process #checkoutSidebar { position: static !important; margin-top: 40px !important; }
+}
+@media (max-width: 767px) {
+  html.ll-test body.ordering-process .cart-inner > .cart-row:has(> #checkoutContent) { grid-template-columns: minmax(0, 1fr); padding-bottom: 104px !important; }
+  html.ll-test body.ordering-process #checkoutSidebar { position: static !important; margin-top: 32px !important; }
+  html.ll-test body.ordering-process #checkoutSidebar > .cart-content { padding: 16px !important; }
+  html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper > input[type="radio"] { left: 16px !important; }
+  html.ll-test body.ordering-process .shipping-billing-table > .radio-wrapper > label { grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: 1fr auto auto 1fr; column-gap: 12px; padding: 12px 16px 12px 48px !important; }
+  html.ll-test body.ordering-process .shipping-billing-table .payment-info { grid-column: 1; grid-row: 1 / -1; align-self: center; }
+  html.ll-test body.ordering-process .shipping-billing-table .payment-shipping-price { grid-column: 2; grid-row: 2; }
+  html.ll-test body.ordering-process .shipping-billing-table .payment-logo { grid-column: 2; grid-row: 3; justify-self: end; width: auto !important; height: 24px !important; margin-top: 4px !important; }
+  html.ll-test body.ordering-process .shipping-billing-table .payment-logo:not(:has(img)) { display: none !important; }
+  html.ll-test body.ordering-process .shipping-billing-table .payment-logo img { max-width: 56px !important; max-height: 24px !important; }
+  /* Lišta dole: Celkem k úhradě vlevo (blok ceny z panelu), Pokračovat vpravo; Zpět zůstává v panelu */
+  html.ll-test body.ordering-process #checkoutSidebar .order-summary-item.price { position: fixed !important; right: 0; bottom: 0; left: 0; z-index: 1000; display: flex !important; align-items: center; box-sizing: border-box; min-height: calc(78px + env(safe-area-inset-bottom)); padding: 12px 20px calc(12px + env(safe-area-inset-bottom)) !important; background: var(--ll-paper) !important; border-top: 1px solid var(--ll-line) !important; }
+  html.ll-test body.ordering-process #checkoutSidebar .price-wrapper { display: flex !important; flex-direction: column; align-items: flex-start; }
+  html.ll-test body.ordering-process #checkoutSidebar .price-label.price-primary { font-size: 12px !important; line-height: 16px !important; color: var(--ll-ink-muted) !important; }
+  html.ll-test body.ordering-process #checkoutSidebar .price.price-primary, html.ll-test body.ordering-process #checkoutSidebar .price.price-primary * { font-size: 20px !important; line-height: 26px !important; text-align: left; }
+  html.ll-test body.ordering-process #checkoutSidebar .price-secondary { display: none !important; }
+  html.ll-test body.ordering-process #checkoutSidebar .next-step-forward { position: fixed !important; right: 20px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 1001; width: auto !important; min-width: 160px; }
+  html.ll-test body.ordering-process #back-to-top { display: none !important; }
+  html.ll-test body.ordering-process .ll-test-badge { bottom: 92px !important; }
 }
