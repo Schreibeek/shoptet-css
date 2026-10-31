@@ -938,16 +938,26 @@ html.ll-test #login input.form-control:-webkit-autofill, html.ll-test #rate-form
 /* ---------- Hlavička: okna Přihlášení a Košík ----------
    Šablona je lepí na tlačítko jako záložku (rohy 20 px, fialková linka, stín). Podle DS samostatný panel 8 px pod tlačítkem:
    okraj line, rohy radius-md, stín shadow-2 (rozbalovací menu); tlačítko 44 px, při hoveru i otevření na dlaždici. */
-html.ll-test #header .top-nav-button-login, html.ll-test #header .click-cart .btn { height: 44px !important; min-height: 0 !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: background-color 150ms var(--ll-ease) !important; }
-html.ll-test #header .top-nav-button-login { padding: 0 12px !important; background: transparent !important; }
-html.ll-test #header .click-cart .btn { padding: 0 14px !important; }
-html.ll-test #header .top-nav-button-login:hover, html.ll-test body.login-window-visible #header .top-nav-button-login,
-html.ll-test #header .click-cart .btn:hover, html.ll-test body.cart-window-visible #header .click-cart .btn { background: var(--ll-tile) !important; }
+@media (min-width: 768px) {
+  html.ll-test #header .top-nav-button-login, html.ll-test #header .click-cart .btn { height: 44px !important; min-height: 0 !important; padding: 0 12px !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: background-color 150ms var(--ll-ease) !important; }
+  html.ll-test #header .top-nav-button-login { background: transparent !important; }
+  html.ll-test #header .top-nav-button-login:hover, html.ll-test body.login-window-visible #header .top-nav-button-login,
+  html.ll-test #header .click-cart .btn:hover, html.ll-test body.cart-window-visible #header .click-cart .btn { background: var(--ll-tile) !important; }
+  /* Počítadlo na pravém horním rohu tašky (DS: 7 px nad, 9 px přes okraj), částka 12 px od ikony */
+  html.ll-test #header .click-cart .btn.cart-count::before { margin-right: 12px !important; }
+  html.ll-test #header .click-cart a.btn.cart-count i { top: 4px !important; left: 25px !important; right: auto !important; }
+  /* Obě okna zarovnaná s pravým okrajem obsahu hlavičky (konec tlačítka Košík); kontejner šablony má 747 / 940 / 1120 / 1380 px a 20 px odsazení */
+  html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { left: auto !important; right: calc(50% - 353.5px) !important; margin-left: 0 !important; }
+}
+@media (min-width: 992px) { html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { right: calc(50% - 450px) !important; } }
+@media (min-width: 1200px) { html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { right: calc(50% - 540px) !important; } }
+@media (min-width: 1440px) { html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { right: calc(50% - 670px) !important; } }
 html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { margin-top: 8px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; box-shadow: 0 12px 28px -14px rgba(32, 31, 31, 0.24) !important; }
 
 /* Přihlášení: pole podle Field, hlavní tlačítko inkoustové (šablona zlaté), registrace obrysová, zapomenuté heslo jako odkaz, sociální sítě jemná tlačítka */
 html.ll-test #login .popup-widget-inner { padding: 24px !important; }
 html.ll-test #login .login-form .form-group { margin: 0 0 16px !important; padding: 0 !important; }
+html.ll-test #login .login-form .form-control-wrapper { margin: 0 !important; }
 html.ll-test #login .login-form label { display: block; margin: 0 0 8px !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
 html.ll-test #login .login-form label * { font-weight: inherit !important; letter-spacing: 0 !important; text-transform: none !important; }
 html.ll-test #login .required-asterisk::after { color: var(--ll-sale) !important; }
@@ -958,7 +968,7 @@ html.ll-test #login .login-form .submit-wrapper { margin: 24px 0 0 !important; }
 html.ll-test #login .login-form .btn-primary { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: 100% !important; height: 48px !important; min-height: 48px !important; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
 html.ll-test #login .login-form .btn-primary:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
 html.ll-test #login .alternative-links { display: flex !important; flex-direction: column; align-items: center; gap: 16px; margin: 12px 0 0 !important; padding: 0 !important; }
-html.ll-test #login .alternative-links a[href*="registrace"] { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: 100% !important; height: 48px !important; margin: 0 !important; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; text-decoration: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #login .alternative-links a[href*="registrace"] { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: 100% !important; height: 48px !important; min-height: 0 !important; margin: 0 !important; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; text-decoration: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
 html.ll-test #login .alternative-links a[href*="registrace"]:hover { color: #fff !important; background: var(--ll-ink) !important; }
 html.ll-test #login .alternative-links a[href*="heslo"] { display: inline-flex !important; width: auto !important; height: auto !important; margin: 0 !important; padding: 0 0 3px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; text-decoration: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-gold-deep) !important; border-radius: 0 !important; box-shadow: none !important; }
 html.ll-test #login .alternative-links a[href*="heslo"]:hover { color: var(--ll-gold-text) !important; border-bottom-color: var(--ll-gold-text) !important; }
@@ -968,7 +978,7 @@ html.ll-test #login .social-login-buttons a.login-btn { position: relative; disp
 html.ll-test #login .social-login-buttons a.login-btn:hover { background: var(--ll-line) !important; }
 html.ll-test #login .social-login-buttons a.login-btn > span { display: block !important; flex: none; width: 18px; height: 18px; }
 html.ll-test #login .social-login-buttons a.login-btn > span::before { position: static !important; display: block !important; width: 18px !important; height: 18px !important; margin: 0 !important; transform: none !important; background-size: contain !important; }
-html.ll-test #login .social-login-buttons a.login-btn strong { font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test #login .social-login-buttons a.login-btn strong { width: auto !important; max-width: none !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
 
 /* Košík podle CartDrawer: hlavička s linkou, položka s fotkou na dlaždici a menším krokovačem (ll-qty--sm),
    patička na ivory s ukazatelem dopravy zdarma (zlatá výplň na line) a hlavním tlačítkem */
