@@ -1314,3 +1314,16 @@ html.ll-test .gallery-new #main-slider .splide__arrow--prev { left: 16px !import
 html.ll-test .gallery-new #main-slider .splide__arrow svg { display: none !important; }
 html.ll-test .gallery-new #main-slider .splide__arrow::before { content: '' !important; display: block !important; width: 18px !important; height: 18px !important; margin: 0 !important; font-size: 0 !important; line-height: 0 !important; background-color: currentColor; -webkit-mask: var(--ll-i-chev-right) center / contain no-repeat; mask: var(--ll-i-chev-right) center / contain no-repeat; }
 html.ll-test .gallery-new #main-slider .splide__arrow--prev::before { transform: rotate(180deg); }
+
+/* ---------- Homepage na mobilu: recenze ----------
+   Šipky překrývaly text recenze (šablona je dávala na kraje 15 px do karty). Recenze přes celou šířku obsahu,
+   šipky vpravo pod ní v jednom řádku s odkazem Zobrazit všechna hodnocení (vlevo). */
+@media (max-width: 767px) {
+  html.ll-test .ratings-block .ratingsList { position: relative !important; }
+  html.ll-test .ratings-block .slider-group-reviews { position: static !important; padding: 0 !important; }
+  html.ll-test .ratings-block .slider-group-reviews .swiper-container { width: auto !important; margin-left: 0 !important; margin-right: 0 !important; }
+  html.ll-test .ratings-block .slider-group-reviews .swiper-arrow { top: auto !important; bottom: 0 !important; transform: none !important; margin: 0 !important; }
+  html.ll-test .ratings-block .slider-group-reviews .swiper-arrow-next { right: 0 !important; left: auto !important; }
+  html.ll-test .ratings-block .slider-group-reviews .swiper-arrow-prev { right: 52px !important; left: auto !important; }
+  html.ll-test .ratings-block .rating-more-btn { display: flex !important; align-items: center; justify-content: flex-start; width: auto !important; min-height: 44px; margin: 24px 104px 0 0 !important; text-align: left !important; }
+}
