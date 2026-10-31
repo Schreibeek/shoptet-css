@@ -66,6 +66,9 @@ html.ll-test .top-navigation-bar { background: var(--ll-ivory); border-bottom: 1
 html.ll-test .top-navigation-bar a, html.ll-test .top-navigation-bar .top-navigation-menu a { color: var(--ll-ink-soft); }
 html.ll-test .top-navigation-bar a:hover { color: var(--ll-ink); }
 html.ll-test #header { background: var(--ll-paper); border-bottom: 1px solid var(--ll-line); box-shadow: none; }
+/* Hlavička bez stínu (šablona ho dává pevné liště na mobilu a vypadá to, že pod ní leze obsah); na mobilu bílá jako v šabloně */
+html.ll-test .top-navigation-bar, html.ll-test #header, html.ll-test #header .header-top, html.ll-test .header-top, html.ll-test .top-navigation-tools, html.ll-test .responsive-tools { box-shadow: none !important; }
+@media (max-width: 767px) { html.ll-test .top-navigation-bar { background: var(--ll-paper) !important; } }
 html.ll-test #header .search input, html.ll-test #header .search .form-control { height: 46px; background: var(--ll-paper); border: 1px solid var(--ll-line-control); border-radius: var(--ll-r-sm); box-shadow: none; }
 html.ll-test #header .navigation-buttons .top-nav-button, html.ll-test #header .navigation-buttons .top-nav-button span { color: var(--ll-ink); }
 html.ll-test #header .click-cart { background: transparent; border-radius: var(--ll-r-sm); }
@@ -682,6 +685,7 @@ html.ll-test .responsive-tools > a[data-target="login"]::before { --ll-icon: var
 html.ll-test .responsive-tools > a[data-target="search"]::before, html.ll-test .responsive-tools > a[data-target="login"]::before { width: 22px !important; height: 22px !important; vertical-align: middle; color: var(--ll-ink) !important; }
 /* Zobrazit více produktů (Nejprodávanější na mobilu) jako textový odkaz */
 html.ll-test .products-top-wrapper .button-wrapper { margin: 12px 0 0 !important; padding: 0 !important; text-align: left !important; }
+html.ll-test .products-top-wrapper .toggle-top-products.btn, html.ll-test .products-top-wrapper .toggle-top-products.btn * { text-decoration: none !important; }
 html.ll-test .products-top-wrapper .toggle-top-products.btn { display: inline-flex !important; align-items: center; gap: 6px; height: auto !important; min-height: 0 !important; padding: 0 0 3px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-gold-deep) !important; border-radius: 0 !important; box-shadow: none !important; }
 html.ll-test .products-top-wrapper .toggle-top-products::after { --ll-icon: var(--ll-i-chev-down); position: static !important; width: 14px !important; height: 14px !important; margin: 0 !important; transform: none !important; }
 html.ll-test .products-top-wrapper .toggle-top-products[aria-expanded="true"]::after { transform: rotate(180deg) !important; }
