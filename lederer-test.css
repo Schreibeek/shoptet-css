@@ -1098,6 +1098,7 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
   /* Oddíl bez nadpisu (alternativní produkty) bez linky */
   html.ll-test .p-detail-tabs-wrapper .tab-pane:not(:has(> .detail-tab-item)) { border-bottom: 0 !important; }
   html.ll-test #ratingTab.tab-pane.active { padding-bottom: 24px !important; }
+  html.ll-test #ratingTab.tab-pane:not(.active) #ratingsList, html.ll-test #ratingTab.tab-pane:not(.active) > h3 { margin: 0 !important; }
   html.ll-test .p-detail-tabs-wrapper .tab-content > .tab-pane:first-child { border-top: 1px solid var(--ll-line) !important; }
   html.ll-test .p-detail-tabs-wrapper .detail-tab-item { position: relative; display: flex !important; align-items: center; min-height: 56px; margin: 0 !important; padding: 0 32px 0 0 !important; font-size: 16px !important; line-height: 24px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; cursor: pointer; }
   html.ll-test .p-detail-tabs-wrapper .detail-tab-item::after { --ll-icon: var(--ll-i-chev-down); position: absolute !important; top: 50% !important; right: 0 !important; width: 18px !important; height: 18px !important; transform: translateY(-50%) !important; color: var(--ll-ink-muted) !important; transition: transform 150ms var(--ll-ease); }
