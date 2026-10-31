@@ -1303,3 +1303,14 @@ html.ll-test .benefitBanner.position--benefitProduct { margin-top: 48px !importa
   html.ll-test #category-filter-hover { display: block !important; }
   html.ll-test #filters .filter-section.filter-section-button { display: none !important; }
 }
+
+/* ---------- Detail: šipky galerie jako šipky karuselů ----------
+   Šablona je lepila na kraj fotky jako záložku 30 × 50 px se zaoblením jen vlevo (vypadala useknutá). Teď 44 px, rohy 4 px, linka line-strong,
+   uvnitř fotky 16 px od kraje a na výšku uprostřed, šipka Lucide. Zobrazení (první fotka bez šipky zpět) řídí šablona. */
+html.ll-test .gallery-new #main-slider .splide__arrow { box-sizing: border-box; align-items: center; justify-content: center; width: 44px !important; height: 44px !important; padding: 0 !important; top: 50% !important; transform: translateY(-50%) !important; color: var(--ll-ink) !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line-strong) !important; border-radius: var(--ll-r-sm) !important; box-shadow: 0 1px 2px rgba(32, 31, 31, 0.06) !important; opacity: 1 !important; }
+html.ll-test .gallery-new #main-slider .splide__arrow:hover { border-color: var(--ll-ink) !important; }
+html.ll-test .gallery-new #main-slider .splide__arrow--next { right: 16px !important; left: auto !important; }
+html.ll-test .gallery-new #main-slider .splide__arrow--prev { left: 16px !important; right: auto !important; }
+html.ll-test .gallery-new #main-slider .splide__arrow svg { display: none !important; }
+html.ll-test .gallery-new #main-slider .splide__arrow::before { content: '' !important; display: block !important; width: 18px !important; height: 18px !important; margin: 0 !important; font-size: 0 !important; line-height: 0 !important; background-color: currentColor; -webkit-mask: var(--ll-i-chev-right) center / contain no-repeat; mask: var(--ll-i-chev-right) center / contain no-repeat; }
+html.ll-test .gallery-new #main-slider .splide__arrow--prev::before { transform: rotate(180deg); }
