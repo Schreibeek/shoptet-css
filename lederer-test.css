@@ -1231,7 +1231,28 @@ html.ll-test .basic-description ul > li:last-child, html.ll-test .basic-descript
 
 /* ---------- Homepage na mobilu podle DS (MobileHome) ----------
    Velké fotky a bloky (úvodní karusel, bannery Pro ni / Pro něj, Lerdee, newsletter) mají na mobilu zaoblení 6 px jako dlaždice produktů a panely
-   (radius-lg se do 767 px přepne na radius-md); 10 px na úzkém displeji působilo oble proti ostatním prvkům. */
+   (radius-lg se do 767 px přepne na radius-md); 10 px na úzkém displeji působilo oble proti ostatním prvkům.
+   Všechno v okraji obsahu 20 px a sekce po 64 px (space-16), měřeno od viditelného obsahu (tlačítko pod kartami, tečky pod karuselem). */
 @media (max-width: 767px) {
   html.ll-test { --ll-r-lg: 6px; }
+  /* Úvodní karusel: šablona ho záporným okrajem roztáhla přes celý displej a lepila na hlavičku; teď v okraji 20 px a 16 px pod hlavičkou.
+     Pod ním 24 px na tečky (16 px mezera + 8 px tečka) místo 50 px. */
+  html.ll-test .homepage-box.before-carousel { padding-top: 0 !important; }
+  html.ll-test .banners-row #carousel { margin: 16px 0 24px !important; }
+  /* Tečky (ll-dots): 16 px pod fotkou, line-strong a aktivní protáhlá inkoustová; bílé se stínem na bílém podkladu nebyly vidět */
+  html.ll-test .banners-row .carousel-indicators { display: flex !important; justify-content: center; align-items: center; gap: 6px; bottom: -24px !important; height: 8px !important; margin-bottom: 0 !important; padding: 0 !important; }
+  html.ll-test .banners-row .carousel-indicators li, html.ll-test .banners-row .carousel-indicators li.active { flex: none; margin: 0 !important; width: 8px !important; height: 8px !important; background: var(--ll-line-strong) !important; border: 0 !important; border-radius: 4px !important; box-shadow: none !important; }
+  html.ll-test .banners-row .carousel-indicators li.active { width: 24px !important; background: var(--ll-ink) !important; }
+  /* Pruh značek byl v kontejneru dvakrát (40 px od kraje) */
+  html.ll-test #content > .container:has(> .ll-brands) { padding-left: 0 !important; padding-right: 0 !important; }
+  /* Sekce po 64 px: značky, nadpisy sekcí (produkty, blog, recenze), Pro ni / Pro něj (bylo 40), pilíře (56), Lerdee (80) */
+  html.ll-test .ll-brands, html.ll-test .ll-eyebrow, html.ll-test .HpBanners, html.ll-test .list-icon.top, html.ll-test .brand-banner--lerdee { margin-top: 64px !important; }
+  /* Bannery K18 a ABC pod Lerdee a pod sebou po 16 px (space-4) jako bannery Pro ni / Pro něj (bylo 24) */
+  html.ll-test .list-banner-2 { margin-bottom: 0 !important; }
+  html.ll-test .brand-banner-grid { margin-top: 16px !important; gap: 16px !important; }
+  /* Řady produktů: karty měly pod sebou 35 px navíc (padding a okraj), mezera k další sekci pak byla 99 px */
+  html.ll-test .type-index .products.products-block > .product { padding-bottom: 0 !important; margin-bottom: 0 !important; }
+  /* Recenze → newsletter v patičce 64 px (bylo 96): okraj pod recenzemi pryč, patička 64 px bez 20 px okraje newsletteru a 1 px skrytého nadpisu */
+  html.ll-test body.type-index .ratings-block { margin-bottom: 0 !important; }
+  html.ll-test body.type-index #footer { margin-top: calc(64px - 21px) !important; }
 }
