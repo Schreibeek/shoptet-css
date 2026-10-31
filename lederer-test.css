@@ -188,7 +188,7 @@ html.ll-test ul.subcategories > li > a:hover { border-color: var(--ll-ink) !impo
 html.ll-test ul.subcategories > li > a::before, html.ll-test ul.subcategories > li > a::after { display: none !important; }
 /* Náhledy kategorií posílá Shoptet vždy 140 × 100 (loga značek přes celou šířku): dlaždice ve stejném poměru, fotka celá bez ořezu,
    bílé pozadí splyne s dlaždicí (dřív čtverec s ořezem na střed uřízl logům okraje) */
-html.ll-test ul.subcategories > li > a .image { flex: none !important; box-sizing: border-box; width: 70px !important; height: 50px !important; margin: 0 !important; padding: 4px !important; overflow: hidden; background: var(--ll-tile); border-radius: var(--ll-r-xs) !important; isolation: isolate; }
+html.ll-test ul.subcategories > li > a .image { flex: none !important; box-sizing: border-box; width: 70px !important; height: 50px !important; margin: 0 !important; padding: 0 !important; overflow: hidden; background: var(--ll-tile); border-radius: var(--ll-r-xs) !important; isolation: isolate; }
 html.ll-test ul.subcategories > li > a .image img { display: block; width: 100% !important; height: 100% !important; max-width: none !important; object-fit: contain !important; mix-blend-mode: multiply; border-radius: 0 !important; }
 html.ll-test ul.subcategories > li > a .text { flex: 1 1 auto !important; width: auto !important; min-width: 0; margin: 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; color: var(--ll-ink) !important; text-align: left; }
 
@@ -941,7 +941,7 @@ html.ll-test #content .filters-unveil-button-wrapper .btn.unveil-button::before 
   html.ll-test ul.subcategories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   /* Náhled 50 × 36 (1,4 : 1) a menší mezery, ať se celé vejdou i jednoslovné názvy jako Moroccanoil® */
   html.ll-test ul.subcategories > li > a { gap: 8px; padding: 6px 8px 6px 6px !important; }
-  html.ll-test ul.subcategories > li > a .image { width: 50px !important; height: 36px !important; padding: 3px !important; }
+  html.ll-test ul.subcategories > li > a .image { width: 50px !important; height: 36px !important; }
   html.ll-test ul.subcategories > li > a .text { font-size: 13px !important; line-height: 18px !important; }
   html.ll-test .category-header .listSorting { flex: 1 1 auto; min-width: 0; overflow-x: auto; scrollbar-width: none; }
   html.ll-test .category-header .listSorting::-webkit-scrollbar { display: none; }
@@ -1172,8 +1172,8 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
   html.ll-test #navigation .menu-level-2 > a .submenu-arrow { left: -13px !important; right: auto !important; top: 50% !important; transform: translateY(-50%) !important; }
   html.ll-test #navigation .menu-level-2 > a .submenu-arrow::after { transform: rotate(180deg) !important; }
   html.ll-test #navigation .menu-level-2 > li { display: flex !important; flex-wrap: nowrap !important; width: auto !important; box-sizing: border-box; align-items: flex-start !important; gap: 14px; margin: 0 20px !important; padding: 14px 0 !important; border-bottom: 1px solid var(--ll-line); }
-  /* Náhled 140 × 100 celý na dlaždici 70 × 50 s okrajem 4 px (čtverec s ořezem uřízl logům značek okraje; loga přes celou šířku nenarážejí na kraj) */
-  html.ll-test #navigation .menu-level-2 > li > a.menu-image { flex: none !important; box-sizing: border-box; width: 70px !important; height: 50px !important; margin: 0 !important; padding: 4px !important; overflow: hidden; background: var(--ll-tile) !important; border-radius: var(--ll-r-sm) !important; isolation: isolate; }
+  /* Náhled 140 × 100 celý na dlaždici 70 × 50 v původním formátu, bez okraje (čtverec s ořezem uřízl logům značek okraje) */
+  html.ll-test #navigation .menu-level-2 > li > a.menu-image { flex: none !important; box-sizing: border-box; width: 70px !important; height: 50px !important; margin: 0 !important; padding: 0 !important; overflow: hidden; background: var(--ll-tile) !important; border-radius: var(--ll-r-sm) !important; isolation: isolate; }
   /* Šablona dává obrázku max-width 60 px: na dlaždici 70 px pak zbylo 10 px vpravo a logo bylo vlevo */
   html.ll-test #navigation .menu-level-2 > li > a.menu-image img { display: block; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; margin: 0 !important; object-fit: contain; object-position: center; mix-blend-mode: multiply; }
   html.ll-test #navigation .menu-level-2 > li > div { flex: 1 1 auto !important; width: auto !important; min-width: 0; padding-top: 2px; }
