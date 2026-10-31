@@ -1148,3 +1148,35 @@ html.ll-test #cart-widget #continue-order-button:hover { background: var(--ll-in
   /* Pod souvisejícími produkty zbývá z karet 35 px, patička tedy jen 24 px (celkem ~64 px jako sekce v DS, ne 95) */
   html.ll-test body.type-detail #footer { margin-top: 24px !important; }
 }
+
+/* ---------- Produktová karta podle DS ProductCard (výpis, homepage, související; ne kompaktní Nejprodávanější) ----------
+   Název bez značky, pod ním hodnocení a dostupnost v jednom řádku (ll-card__meta), cena a tlačítko dole.
+   Šablona je má v různých obalech (hodnocení nad názvem, dostupnost pod cenou), proto mřížka a obaly display: contents. */
+html.ll-test .products:not(#productsTop) .product .p { display: grid !important; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto auto 1fr auto; grid-template-areas: "image image" "name name" "rating stock" "price price" "btn btn"; column-gap: 8px; }
+html.ll-test .products:not(#productsTop) .product .p-in, html.ll-test .products:not(#productsTop) .product .p-in-in, html.ll-test .products:not(#productsTop) .product .p-bottom, html.ll-test .products:not(#productsTop) .product .p-bottom > div { display: contents !important; }
+html.ll-test .products:not(#productsTop) .product .p > a.image { grid-area: image; }
+html.ll-test .products:not(#productsTop) .product .p a.name { grid-area: name; display: -webkit-box !important; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; height: auto !important; min-height: 44px; margin: 14px 0 0 !important; padding: 0 2px !important; }
+html.ll-test .products:not(#productsTop) .product .p a.name, html.ll-test .products:not(#productsTop) .product .p a.name span { font-size: 15px !important; line-height: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test .products:not(#productsTop) .product .p .ratings-wrapper { grid-area: rating; align-self: center; min-height: 20px; margin: 6px 0 0 2px !important; padding: 0 !important; }
+html.ll-test .products:not(#productsTop) .product .p .p-tools { grid-area: stock; justify-self: end; align-self: center; margin: 6px 2px 0 0 !important; padding: 0 !important; }
+/* Bez hodnocení dostupnost vlevo (jako ll-card__meta s jednou položkou) */
+html.ll-test .products:not(#productsTop) .product .p:not(:has(.ratings-wrapper .star)) .p-tools { grid-column: 1 / -1; justify-self: start; margin-left: 2px !important; }
+html.ll-test .products:not(#productsTop) .product .p .prices { grid-area: price; align-self: end; margin: 10px 0 0 2px !important; }
+html.ll-test .products:not(#productsTop) .product .p .product-btn { grid-area: btn; margin-top: 12px !important; }
+/* Hvězdy podle Rating: 14 px zlaté s mezerou 1 px (šablona 15 px s mezerou 4 px, poloviční ve žluté #f0b820) */
+html.ll-test .products:not(#productsTop) .product .ratings-wrapper .stars-wrapper, html.ll-test .products:not(#productsTop) .product .ratings-wrapper .stars { display: inline-flex !important; align-items: center; gap: 1px; margin: 0 !important; }
+html.ll-test .products:not(#productsTop) .product .ratings-wrapper .star { width: 14px !important; height: 14px !important; margin: 0 !important; }
+html.ll-test .products:not(#productsTop) .product .ratings-wrapper .star::before { width: 14px !important; font-size: 14px !important; line-height: 14px !important; color: var(--ll-gold) !important; }
+html.ll-test .products:not(#productsTop) .product .ratings-wrapper .star-off::before { color: var(--ll-line-strong) !important; }
+/* Dostupnost podle Availability: 13 px řez 500 větou, tečka 7 px v barvě stavu; Skladem v success */
+html.ll-test .products:not(#productsTop) .product .availability { display: inline-flex !important; align-items: center; margin: 0 !important; padding: 0 !important; }
+html.ll-test .products:not(#productsTop) .product .availability span { display: inline-flex !important; align-items: center; gap: 6px; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; white-space: nowrap; }
+html.ll-test .products:not(#productsTop) .product .availability span::before { content: ''; flex: none; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+html.ll-test .products:not(#productsTop) .product .availability span[style*="009901"] { color: var(--ll-success) !important; }
+@media (max-width: 767px) {
+  html.ll-test .products:not(#productsTop) .product .p a.name { min-height: 40px; margin-top: 12px !important; }
+  html.ll-test .products:not(#productsTop) .product .p a.name, html.ll-test .products:not(#productsTop) .product .p a.name span { font-size: 14px !important; line-height: 20px !important; }
+  html.ll-test .products:not(#productsTop) .product .p .ratings-wrapper { margin-top: 4px !important; }
+  html.ll-test .products:not(#productsTop) .product .p .p-tools { margin-top: 4px !important; }
+  html.ll-test .products:not(#productsTop) .product .availability span { white-space: normal; text-align: right; }
+}
