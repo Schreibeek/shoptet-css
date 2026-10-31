@@ -2155,3 +2155,120 @@ html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn span { fon
   /* Panel přes celou šířku: titulek 16 px, ať se vejde na řádek i na 375 px */
   html.ll-test #colorbox.colorbox--order .advanced-order > .h1:not(.advanced-order-suggestion) { font-size: 16px !important; line-height: 24px !important; }
 }
+
+/* ---------- Blog: výpis (DS PageBlogList, MobileBlogList) ----------
+   Titulek 40 px řez 500 bez emoji (lederer-test.js), témata jako dlaždice podkategorií, články jako BlogCard po třech:
+   datum nad titulkem, titulek bez podtržení (podtrhne se na hover), perex na tři řádky, Zobrazit celý článek jako odkaz se zlatou linkou,
+   celá karta klikací. Šablona: titulek 36 px řez 700, podtržené titulky, datum pod titulkem. */
+html.ll-test body.type-posts-listing .sectionDescription { margin: 0 0 32px !important; padding: 0 !important; }
+html.ll-test body.type-posts-listing .sectionDescription h1 { margin: 0 !important; font-size: 40px !important; line-height: 1.12 !important; font-weight: 500 !important; letter-spacing: -0.02em !important; text-transform: none !important; text-align: left !important; color: var(--ll-ink) !important; }
+html.ll-test body.type-posts-listing ul.subcategories { margin: 0 0 40px !important; }
+html.ll-test body.type-posts-listing #newsWrapper { display: grid !important; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px 24px; margin: 0 !important; padding: 0 !important; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item { position: relative; display: flex !important; flex-direction: column; flex: none !important; width: auto !important; max-width: none !important; min-width: 0; margin: 0 !important; padding: 0 !important; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item .text { display: flex !important; flex-direction: column; flex: 1 1 auto; gap: 8px; width: auto !important; padding: 16px 2px 0 !important; text-align: left !important; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item time { order: -1; display: block !important; margin: 0 !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; color: var(--ll-ink-muted) !important; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item .title { margin: 0 !important; text-decoration: none !important; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item:hover .title { text-decoration: underline !important; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item .title::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item .description { margin: 0 !important; padding: 0 !important; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item .description p { margin: 0 !important; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item .text-center { display: block !important; margin: auto 0 0 !important; padding: 8px 0 0 !important; text-align: left !important; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item .text-center .btn { display: inline-block !important; width: auto !important; height: auto !important; min-height: 0 !important; margin: 0 !important; padding: 0 0 3px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; white-space: nowrap; color: var(--ll-ink) !important; background: none !important; border: 0 !important; border-bottom: 1px solid var(--ll-gold-deep) !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test body.type-posts-listing #newsWrapper .news-item .text-center .btn::before, html.ll-test body.type-posts-listing #newsWrapper .news-item .text-center .btn::after { content: none !important; display: none !important; }
+@media (max-width: 1023px) { html.ll-test body.type-posts-listing #newsWrapper { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 767px) {
+  html.ll-test body.type-posts-listing .sectionDescription { margin-bottom: 24px !important; }
+  html.ll-test body.type-posts-listing .sectionDescription h1 { font-size: 30px !important; line-height: 1.15 !important; }
+  html.ll-test body.type-posts-listing ul.subcategories { margin-bottom: 32px !important; }
+  html.ll-test body.type-posts-listing #newsWrapper { grid-template-columns: minmax(0, 1fr); row-gap: 32px; }
+}
+
+/* ---------- Blog: článek (DS PageBlog, MobileArticle) ----------
+   Sloupec 760 px, titulek 44 px řez 500 na střed, datum pod ním, úvodní fotka (první obrázek) o 64 px širší než text, text 17/30,
+   h2 26 px a h3 20 px řez 500, odrážky jako zlatý kosočtverec. Bloky psané v editoru s vloženými styly sjednocené na tokeny
+   (podklad champagne, zaoblení radius-md, písmo 500, barvy ink, čísla gold-deep, výzva jako ll-btn--accent). Šablona: písmo 700. */
+html.ll-test body.type-post .news-item-detail { box-sizing: border-box; max-width: 760px; margin: 0 auto !important; padding: 8px 0 64px !important; }
+html.ll-test body.type-post .news-item-detail > h1 { margin: 0 0 16px !important; padding: 0 !important; font-size: 44px !important; line-height: 1.1 !important; font-weight: 500 !important; letter-spacing: -0.02em !important; text-transform: none !important; text-align: center !important; color: var(--ll-ink) !important; text-wrap: balance; }
+html.ll-test body.type-post .news-item-detail > time { display: block !important; margin: 0 !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; text-align: center !important; color: var(--ll-ink-muted) !important; }
+html.ll-test body.type-post .news-item-detail > .text { margin: 40px 0 0 !important; padding: 0 !important; font-size: 17px !important; line-height: 30px !important; color: var(--ll-ink) !important; }
+html.ll-test body.type-post .news-item-detail .text p, html.ll-test body.type-post .news-item-detail .text li, html.ll-test body.type-post .news-item-detail .text td, html.ll-test body.type-post .news-item-detail .text th { font-family: inherit !important; letter-spacing: 0 !important; }
+html.ll-test body.type-post .news-item-detail .text p:not([style*="font-size"]), html.ll-test body.type-post .news-item-detail .text li { font-size: inherit !important; line-height: inherit !important; color: inherit; }
+html.ll-test body.type-post .news-item-detail .text p:not([style*="margin"]) { margin: 0 0 20px !important; }
+html.ll-test body.type-post .news-item-detail .text > p:first-child:has(> img) { margin: 0 -64px 40px !important; }
+html.ll-test body.type-post .news-item-detail .text > p:first-child > img { display: block; width: 100% !important; height: auto !important; border-radius: var(--ll-r-lg) !important; }
+html.ll-test body.type-post .news-item-detail .text img { max-width: 100%; height: auto; }
+html.ll-test body.type-post .news-item-detail .text .ll-blank { display: none !important; }
+html.ll-test body.type-post .news-item-detail .text h2 { margin: 48px 0 16px; padding: 0 !important; font-size: 26px !important; line-height: 1.25 !important; font-weight: 500 !important; letter-spacing: -0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test body.type-post .news-item-detail .text h3 { margin: 32px 0 12px; padding: 0 !important; font-size: 20px !important; line-height: 1.3 !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test body.type-post .news-item-detail .text ul { margin-left: 0 !important; padding: 0 !important; list-style: none !important; }
+html.ll-test body.type-post .news-item-detail .text ul:not([style*="margin"]) { margin: 0 0 20px !important; }
+html.ll-test body.type-post .news-item-detail .text ul > li { position: relative; margin: 0 0 8px !important; padding: 0 0 0 26px !important; list-style: none !important; }
+html.ll-test body.type-post .news-item-detail .text ul > li::before { content: '' !important; position: absolute !important; left: 5px !important; top: 12px !important; display: block !important; width: 6px !important; height: 6px !important; margin: 0 !important; background: var(--ll-gold) !important; border: 0 !important; border-radius: 0 !important; transform: rotate(45deg) !important; }
+html.ll-test body.type-post .news-item-detail .text ol { margin: 0 0 20px !important; padding: 0 0 0 24px !important; list-style: decimal !important; }
+html.ll-test body.type-post .news-item-detail .text ol > li { margin: 0 0 8px !important; padding: 0 0 0 4px !important; list-style: decimal !important; }
+html.ll-test body.type-post .news-item-detail .text ol > li::before { content: none !important; display: none !important; }
+html.ll-test body.type-post .news-item-detail .text ol > li::marker { font-weight: 600; color: var(--ll-gold-deep); }
+html.ll-test body.type-post .news-item-detail .text strong, html.ll-test body.type-post .news-item-detail .text b { font-weight: 600 !important; }
+html.ll-test body.type-post .news-item-detail .text a:not([style*="background"]) { color: var(--ll-ink) !important; text-decoration: underline !important; text-decoration-thickness: 1px !important; text-underline-offset: 3px; }
+html.ll-test body.type-post .news-item-detail .text small { font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-muted) !important; }
+html.ll-test body.type-post .news-item-detail .text table { font-size: 15px !important; line-height: 23px !important; }
+html.ll-test body.type-post .news-item-detail .text th { font-weight: 600 !important; }
+/* Bloky s vloženými styly: tokeny místo #F4EFE9, zaoblení 15 px, tučného písma a zlatého tlačítka do kulata */
+html.ll-test body.type-post .news-item-detail .text [style*="border-radius: 15px"] { border-radius: var(--ll-r-md) !important; }
+html.ll-test body.type-post .news-item-detail .text [style*="border-radius: 10px"], html.ll-test body.type-post .news-item-detail .text [style*="border-radius: 12px"] { border-radius: var(--ll-r-sm) !important; }
+html.ll-test body.type-post .news-item-detail .text [style*="background: #F4EFE9"] { background: var(--ll-champagne) !important; }
+html.ll-test body.type-post .news-item-detail .text [style*="#E9E0D6"] { border-color: var(--ll-line) !important; }
+html.ll-test body.type-post .news-item-detail .text [style*="font-weight: bold"] { font-weight: 500 !important; letter-spacing: -0.02em !important; }
+html.ll-test body.type-post .news-item-detail .text p[style*="font-size: 20px"][style*="font-weight: 600"] { font-weight: 500 !important; }
+html.ll-test body.type-post .news-item-detail .text [style*="font-size: 34px"] { font-size: 32px !important; }
+html.ll-test body.type-post .news-item-detail .text [style*="color: #363029"] { color: var(--ll-ink) !important; }
+html.ll-test body.type-post .news-item-detail .text [style*="color: #7c6f5f"] { color: var(--ll-ink-soft) !important; }
+html.ll-test body.type-post .news-item-detail .text [style*="color: #e2b171"] { color: var(--ll-gold-deep) !important; }
+html.ll-test body.type-post .news-item-detail .text a[style*="background: #E2B171"] { display: inline-flex !important; align-items: center; justify-content: center; box-sizing: border-box; min-height: 48px; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em; color: var(--ll-ink) !important; background: var(--ll-gold) !important; border: 1px solid var(--ll-gold) !important; border-radius: var(--ll-r-sm) !important; text-decoration: none !important; }
+html.ll-test body.type-post .news-item-detail .text a[style*="background: #E2B171"]:hover { background: var(--ll-gold-hover) !important; border-color: var(--ll-gold-hover) !important; }
+/* Další článek: obrysové tlačítko se šipkou */
+html.ll-test body.type-post .news-item-detail .next-prev { display: flex !important; justify-content: center; margin: 48px 0 0 !important; padding: 0 !important; }
+html.ll-test body.type-post .news-item-detail .next-prev .btn { display: inline-flex !important; align-items: center; justify-content: center; gap: 8px; box-sizing: border-box; width: auto !important; height: auto !important; min-height: 48px !important; margin: 0 !important; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test body.type-post .news-item-detail .next-prev .btn:hover { color: #fff !important; background: var(--ll-ink) !important; }
+html.ll-test body.type-post .news-item-detail .next-prev .btn::before { content: none !important; display: none !important; }
+html.ll-test body.type-post .news-item-detail .next-prev .btn::after { content: '' !important; position: static !important; display: block !important; flex: none; width: 18px !important; height: 18px !important; margin: 0 !important; background: currentColor !important; -webkit-mask: var(--ll-i-arrow-right) center / contain no-repeat; mask: var(--ll-i-arrow-right) center / contain no-repeat; border: 0 !important; transform: none !important; }
+@media (max-width: 1023px) { html.ll-test body.type-post .news-item-detail .text > p:first-child:has(> img) { margin-left: 0 !important; margin-right: 0 !important; } }
+@media (max-width: 767px) {
+  html.ll-test body.type-post .news-item-detail { padding-top: 0 !important; padding-bottom: 48px !important; }
+  html.ll-test body.type-post .news-item-detail > h1 { font-size: 32px !important; }
+  html.ll-test body.type-post .news-item-detail > .text { margin-top: 24px !important; font-size: 16px !important; line-height: 28px !important; }
+  html.ll-test body.type-post .news-item-detail .text > p:first-child:has(> img) { margin-bottom: 24px !important; }
+  html.ll-test body.type-post .news-item-detail .text > p:first-child > img { border-radius: var(--ll-r-md) !important; }
+  html.ll-test body.type-post .news-item-detail .text h2 { margin-top: 40px; font-size: 22px !important; }
+  html.ll-test body.type-post .news-item-detail .text h3 { font-size: 18px !important; }
+}
+
+/* ---------- Textové stránky (DS PageText, MobileText) ----------
+   Obchodní podmínky, ochrana údajů a další stránky typu page: sloupec 760 px na střed (drobečky nad ním), titulek 40 px řez 500 vlevo,
+   text 16/28. Obsah z editoru: velikosti písma ve span se ruší, odstavec s tučným 14pt textem je oddíl (20 px řez 500),
+   prázdné odstavce schová lederer-test.js (třída ll-blank). Šablona: titulek 36 px řez 700 na střed, oddíly 14pt tučně. */
+html.ll-test body.type-page .breadcrumbs-wrapper .breadcrumbs { box-sizing: border-box; max-width: 760px; margin-left: auto !important; margin-right: auto !important; }
+html.ll-test body.type-page .pageArticleDetail { box-sizing: border-box; max-width: 760px; margin: 0 auto !important; padding: 8px 0 64px !important; }
+html.ll-test body.type-page .pageArticleDetail > header { margin: 0 0 32px !important; padding: 0 !important; }
+html.ll-test body.type-page .pageArticleDetail > header h1 { margin: 0 !important; padding: 0 !important; font-size: 40px !important; line-height: 1.12 !important; font-weight: 500 !important; letter-spacing: -0.02em !important; text-transform: none !important; text-align: left !important; color: var(--ll-ink) !important; text-wrap: balance; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] { font-size: 16px !important; line-height: 28px !important; color: var(--ll-ink) !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] p, html.ll-test body.type-page .pageArticleDetail [itemprop="about"] li { font-size: inherit !important; line-height: inherit !important; color: inherit !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] p { margin: 0 0 16px !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] [style*="font-size"], html.ll-test body.type-page .pageArticleDetail [itemprop="about"] [style*="font-family"] { font-size: inherit !important; font-family: inherit !important; letter-spacing: inherit !important; line-height: inherit !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] .ll-blank { display: none !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] h2, html.ll-test body.type-page .pageArticleDetail [itemprop="about"] p:has(> span[style*="14pt"] strong), html.ll-test body.type-page .pageArticleDetail [itemprop="about"] p:has(> strong:only-child > span[style*="14pt"]) { margin: 40px 0 12px !important; padding: 0 !important; font-size: 20px !important; line-height: 28px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] p:has(> span[style*="14pt"] strong) strong, html.ll-test body.type-page .pageArticleDetail [itemprop="about"] p:has(> strong:only-child > span[style*="14pt"]) strong, html.ll-test body.type-page .pageArticleDetail [itemprop="about"] h2 strong { font-weight: 500 !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] h3 { margin: 24px 0 8px !important; padding: 0 !important; font-size: 17px !important; line-height: 26px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] h4 { margin: 20px 0 8px !important; padding: 0 !important; font-size: 16px !important; line-height: 26px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] ul { margin: 0 0 16px !important; padding: 0 !important; list-style: none !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] ul > li { position: relative; margin: 0 0 8px !important; padding: 0 0 0 24px !important; list-style: none !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] ul > li::before { content: '' !important; position: absolute !important; left: 5px !important; top: 11px !important; display: block !important; width: 6px !important; height: 6px !important; margin: 0 !important; background: var(--ll-gold) !important; border: 0 !important; border-radius: 0 !important; transform: rotate(45deg) !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] ol { margin: 0 0 16px !important; padding: 0 0 0 24px !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] strong, html.ll-test body.type-page .pageArticleDetail [itemprop="about"] b { font-weight: 600 !important; }
+html.ll-test body.type-page .pageArticleDetail [itemprop="about"] a { color: var(--ll-ink) !important; text-decoration: underline !important; text-decoration-thickness: 1px !important; text-underline-offset: 3px; }
+@media (max-width: 767px) {
+  html.ll-test body.type-page .pageArticleDetail { padding-top: 0 !important; padding-bottom: 48px !important; }
+  html.ll-test body.type-page .pageArticleDetail > header { margin-bottom: 24px !important; }
+  html.ll-test body.type-page .pageArticleDetail > header h1 { font-size: 30px !important; line-height: 1.15 !important; }
+  html.ll-test body.type-page .pageArticleDetail [itemprop="about"] h2, html.ll-test body.type-page .pageArticleDetail [itemprop="about"] p:has(> span[style*="14pt"] strong), html.ll-test body.type-page .pageArticleDetail [itemprop="about"] p:has(> strong:only-child > span[style*="14pt"]) { margin-top: 32px !important; font-size: 19px !important; line-height: 26px !important; }
+}
