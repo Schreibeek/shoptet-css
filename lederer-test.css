@@ -344,15 +344,10 @@ html.ll-test .gallery-new #main-slider .flags { top: 16px; left: 16px; z-index: 
 @media (max-width: 767px) {
   html.ll-test .gallery-new #main-slider .flags { top: 8px; left: 8px; flex-direction: column !important; }
 }
-/* Sleva je v Shoptetu ve vlastním bloku .flags-extra na stejném místě jako ostatní štítky: řadíme ji za ně (na počítači na další řádek, na mobilu pod sebe), štítek 22 px + mezera 4 px */
-html.ll-test .gallery-new #main-slider .flags-extra { right: auto !important; bottom: auto !important; }
-html.ll-test .gallery-new #main-slider:has(.flags-default > .flag) .flags-extra { top: 42px; }
+/* Sleva v procentech (.flags-extra, v šabloně vpravo) vpravo nahoře jako na kartách, ostatní štítky vlevo */
+html.ll-test .gallery-new #main-slider .flags-extra { top: 16px !important; right: 16px !important; bottom: auto !important; left: auto !important; align-items: flex-end; }
 @media (max-width: 767px) {
-  html.ll-test .gallery-new #main-slider:has(.flags-default > .flag:nth-child(1)) .flags-extra { top: 34px; }
-  html.ll-test .gallery-new #main-slider:has(.flags-default > .flag:nth-child(2)) .flags-extra { top: 60px; }
-  html.ll-test .gallery-new #main-slider:has(.flags-default > .flag:nth-child(3)) .flags-extra { top: 86px; }
-  html.ll-test .gallery-new #main-slider:has(.flags-default > .flag:nth-child(4)) .flags-extra { top: 112px; }
-  html.ll-test .gallery-new #main-slider:has(.flags-default > .flag:nth-child(5)) .flags-extra { top: 138px; }
+  html.ll-test .gallery-new #main-slider .flags-extra { top: 8px !important; right: 8px !important; }
 }
 html.ll-test .gallery-new #thumbnail-slider .splide__slide { background: var(--ll-tile); border: 1px solid transparent; border-radius: var(--ll-r-sm); overflow: hidden; isolation: isolate; }
 html.ll-test .gallery-new #thumbnail-slider .splide__slide.is-active { border-color: var(--ll-ink); }
