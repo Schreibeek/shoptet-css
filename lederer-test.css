@@ -930,7 +930,7 @@ html.ll-test #productDiscussion .discussionContainer > p { margin: 0 0 24px !imp
 html.ll-test #productDiscussion #discussion-form { margin: 0 !important; padding: 0 !important; border: 0 !important; }
 html.ll-test #productDiscussion #formDiscussion { box-sizing: border-box; width: auto !important; max-width: 760px !important; margin: 0 !important; padding: 0 !important; }
 @media (max-width: 991px) {
-  html.ll-test #productDiscussion .discussion-wrapper, html.ll-test #productDiscussion .discussionContainer { padding-left: 0 !important; padding-right: 0 !important; }
+  html.ll-test #productDiscussion > .detail-tab-content, html.ll-test #productDiscussion .discussion-wrapper, html.ll-test #productDiscussion .discussionContainer { padding-left: 0 !important; padding-right: 0 !important; }
 }
 /* Automatické vyplnění v Chromu barví pole modře, pole zůstávají bílá */
 html.ll-test #login input.form-control:-webkit-autofill, html.ll-test #rate-form .form-control:-webkit-autofill, html.ll-test #formDiscussion .form-control:-webkit-autofill { -webkit-box-shadow: 0 0 0 100px var(--ll-paper) inset !important; box-shadow: 0 0 0 100px var(--ll-paper) inset !important; -webkit-text-fill-color: var(--ll-ink) !important; caret-color: var(--ll-ink); }
