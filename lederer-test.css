@@ -162,6 +162,8 @@ html.ll-test .flag.flag-gift, html.ll-test .flag.flag-darek { color: var(--ll-go
 html.ll-test .flags-extra .flag.flag-discount { width: auto !important; min-width: 0 !important; }
 html.ll-test .flags-extra .flag.flag-discount::before, html.ll-test .flags-extra .flag.flag-discount::after { display: none !important; }
 html.ll-test .flags-extra .flag.flag-discount .price-save { font-size: inherit !important; font-weight: 600 !important; letter-spacing: 0.04em; color: #fff !important; }
+/* Procento je v <sub> s písmem 16 px: stejná velikost a účaří jako číslo, úzká mezera jako „-16 %“ */
+html.ll-test .flag.flag-discount sub { position: static !important; top: auto !important; margin-left: 2px; font-size: inherit !important; line-height: inherit !important; vertical-align: baseline !important; }
 
 /* ---------- Hvězdičky ---------- */
 html.ll-test .stars .star.star-on, html.ll-test .stars .star.star-on::before, html.ll-test .star-on::before { color: var(--ll-gold); }
@@ -341,6 +343,16 @@ html.ll-test .gallery-new #main-slider .splide__slide img { mix-blend-mode: mult
 html.ll-test .gallery-new #main-slider .flags { top: 16px; left: 16px; z-index: 3; display: flex !important; flex-direction: row !important; flex-wrap: wrap; align-items: flex-start; gap: 4px; }
 @media (max-width: 767px) {
   html.ll-test .gallery-new #main-slider .flags { top: 8px; left: 8px; flex-direction: column !important; }
+}
+/* Sleva je v Shoptetu ve vlastním bloku .flags-extra na stejném místě jako ostatní štítky: řadíme ji za ně (na počítači na další řádek, na mobilu pod sebe), štítek 22 px + mezera 4 px */
+html.ll-test .gallery-new #main-slider .flags-extra { right: auto !important; bottom: auto !important; }
+html.ll-test .gallery-new #main-slider:has(.flags-default > .flag) .flags-extra { top: 42px; }
+@media (max-width: 767px) {
+  html.ll-test .gallery-new #main-slider:has(.flags-default > .flag:nth-child(1)) .flags-extra { top: 34px; }
+  html.ll-test .gallery-new #main-slider:has(.flags-default > .flag:nth-child(2)) .flags-extra { top: 60px; }
+  html.ll-test .gallery-new #main-slider:has(.flags-default > .flag:nth-child(3)) .flags-extra { top: 86px; }
+  html.ll-test .gallery-new #main-slider:has(.flags-default > .flag:nth-child(4)) .flags-extra { top: 112px; }
+  html.ll-test .gallery-new #main-slider:has(.flags-default > .flag:nth-child(5)) .flags-extra { top: 138px; }
 }
 html.ll-test .gallery-new #thumbnail-slider .splide__slide { background: var(--ll-tile); border: 1px solid transparent; border-radius: var(--ll-r-sm); overflow: hidden; isolation: isolate; }
 html.ll-test .gallery-new #thumbnail-slider .splide__slide.is-active { border-color: var(--ll-ink); }
