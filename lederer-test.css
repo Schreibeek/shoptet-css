@@ -1295,3 +1295,11 @@ html.ll-test .homepage-blog-wrapper .news-item .read-article { margin-top: auto 
 /* Spodní okraj 50 px řádku s galerií a nákupním panelem se sčítal s okrajem pruhu (výsledek 50 místo 48) */
 html.ll-test .p-detail .product-top { margin-bottom: 0 !important; }
 html.ll-test .benefitBanner.position--benefitProduct { margin-top: 48px !important; }
+
+/* ---------- Kategorie: filtry na počítači rozbalené (DS Filters: skupiny pod sebou bez skrývání) ----------
+   Šablona značky a parametry schovávala za odkaz Rozbalit filtr (#category-filter-hover se ukáže až s třídou visible).
+   Sidebar je od 992 px; na mobilu zůstává filtr za tlačítkem. */
+@media (min-width: 992px) {
+  html.ll-test #category-filter-hover { display: block !important; }
+  html.ll-test #filters .filter-section.filter-section-button { display: none !important; }
+}
