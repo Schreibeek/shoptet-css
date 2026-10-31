@@ -647,7 +647,8 @@ html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-t
 }
 
 /* ---------- Homepage: opravy po kontrole ---------- */
-html.ll-test .top-navigation-bar .top-navigation-contacts { background: transparent !important; border-radius: 0 !important; }
+/* Kontakty v liště leží přes tlačítko Více (Shoptet ho dává pod ně, když se odkazy nevejdou): barva lišty ho zakryje jako v ostrém vzhledu, jinak prosvítá přes telefon */
+html.ll-test .top-navigation-bar .top-navigation-contacts { background: var(--ll-ivory) !important; border-radius: 0 !important; }
 html.ll-test .list-icon.top { box-sizing: border-box; width: 100% !important; max-width: none !important; justify-content: stretch !important; }
 html.ll-test .brand-banner--small img { filter: brightness(1.18); }
 html.ll-test .ratings-block .add-comment, html.ll-test .ratings-block .add-comment * { color: var(--ll-ink) !important; }
