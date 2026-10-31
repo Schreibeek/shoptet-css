@@ -889,7 +889,7 @@ html.ll-test #ratingTab .rate-list .rate-block { position: static !important; fl
 html.ll-test #ratingTab .rate-list .rate-bar { position: static !important; display: block !important; height: 4px !important; background: var(--ll-gold) !important; border-radius: 999px !important; }
 html.ll-test #ratingTab .rate-list .rate-count { position: absolute !important; top: 50% !important; right: 0 !important; left: auto !important; transform: translateY(-50%) !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; color: var(--ll-ink-muted) !important; }
 /* Formulář: popisky 13/500 větou, pole bílá 48 px, hvězdy k výběru šedé a zlaté */
-html.ll-test #ratingTab #rate-form .form-group { margin: 0 0 20px !important; }
+html.ll-test #ratingTab #rate-form .form-group { margin: 0 0 20px !important; padding-left: 0 !important; padding-right: 0 !important; }
 html.ll-test #ratingTab #rate-form label:not(.rating-star), html.ll-test #ratingTab #rate-form p.label { display: block; margin: 0 0 8px !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
 html.ll-test #ratingTab #rate-form label:not(.rating-star) *, html.ll-test #ratingTab #rate-form p.label * { font-weight: inherit !important; letter-spacing: 0 !important; text-transform: none !important; }
 html.ll-test #ratingTab #rate-form .consents p.label, html.ll-test #ratingTab #rate-form .consents p.label * { font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
