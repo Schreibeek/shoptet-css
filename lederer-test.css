@@ -914,7 +914,8 @@ html.ll-test #ratingTab .vote-rating .star::before { width: 14px !important; fon
 html.ll-test #ratingTab .vote-time { font-size: 12px !important; line-height: 16px !important; color: var(--ll-ink-muted) !important; }
 html.ll-test #ratingTab .vote-content, html.ll-test #ratingTab .vote-content * { font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; }
 @media (max-width: 991px) {
-  html.ll-test #ratingTab .rate-wrapper { flex-direction: column; gap: 32px; }
+  /* Šablona tu přidává 20 px po stranách, ostatní záložky (Popis, Parametry) jdou na okraj obsahu */
+  html.ll-test #ratingTab .rate-wrapper { flex-direction: column; gap: 32px; padding-left: 0 !important; padding-right: 0 !important; }
   html.ll-test #ratingTab .rate-wrap { width: 100% !important; }
-  html.ll-test #ratingTab #ratingsList { grid-template-columns: minmax(0, 1fr); }
+  html.ll-test #ratingTab #ratingsList { grid-template-columns: minmax(0, 1fr); padding-left: 0 !important; padding-right: 0 !important; }
 }
