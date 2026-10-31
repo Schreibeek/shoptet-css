@@ -1068,12 +1068,13 @@ html.ll-test .responsive-tools > a[data-target="navigation"]::before, html.ll-te
   html.ll-test #navigation .menu-level-2 > a b { font-weight: inherit !important; }
   html.ll-test #navigation .menu-level-2 > a .submenu-arrow { left: -13px !important; right: auto !important; top: 50% !important; transform: translateY(-50%) !important; }
   html.ll-test #navigation .menu-level-2 > a .submenu-arrow::after { transform: rotate(180deg) !important; }
-  html.ll-test #navigation .menu-level-2 > li { display: flex !important; align-items: flex-start !important; gap: 14px; margin: 0 20px !important; padding: 14px 0 !important; border-bottom: 1px solid var(--ll-line); }
+  html.ll-test #navigation .menu-level-2 > li { display: flex !important; flex-wrap: nowrap !important; align-items: flex-start !important; gap: 14px; margin: 0 20px !important; padding: 14px 0 !important; border-bottom: 1px solid var(--ll-line); }
   html.ll-test #navigation .menu-level-2 > li > a.menu-image { flex: none !important; box-sizing: border-box; width: 52px !important; height: 52px !important; margin: 0 !important; overflow: hidden; background: var(--ll-tile) !important; border-radius: var(--ll-r-sm) !important; }
   html.ll-test #navigation .menu-level-2 > li > a.menu-image img { display: block; width: 100% !important; height: 100% !important; object-fit: cover; mix-blend-mode: multiply; }
-  html.ll-test #navigation .menu-level-2 > li > div { min-width: 0; padding-top: 2px; }
+  html.ll-test #navigation .menu-level-2 > li > div { flex: 1 1 auto !important; width: auto !important; min-width: 0; padding-top: 2px; }
   html.ll-test #navigation .menu-level-2 > li > div > a, html.ll-test #navigation .menu-level-2 > li > div > a span { font-size: 15px !important; line-height: 22px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
-  html.ll-test #navigation .menu-level-3 { margin: 2px 0 0 !important; padding: 0 !important; }
+  html.ll-test #navigation .menu-level-3 { display: block !important; margin: 2px 0 0 !important; padding: 0 !important; }
+  html.ll-test #navigation .menu-level-3 > li { display: inline !important; width: auto !important; margin: 0 !important; padding: 0 !important; }
   html.ll-test #navigation .menu-level-3 li, html.ll-test #navigation .menu-level-3 a { font-size: 13px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; }
   html.ll-test #navigation .menu-level-3 a:hover { color: var(--ll-ink) !important; }
   /* Spodek menu: informační odkazy vlevo, kontakt dole na ivory */
