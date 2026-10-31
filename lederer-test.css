@@ -92,12 +92,12 @@ html.ll-test #header .click-cart .btn::before, html.ll-test #header .click-cart 
 html.ll-test #navigation .menu-level-1 > li > a, html.ll-test #navigation .menu-level-1 > li > a b {
   color: var(--ll-ink); font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
 }
-/* Položky menu souměrně: 18 px z každé strany (mezera 36 px jako v šabloně), šipka v pravém odsazení,
+/* Položky menu souměrně: 14 px z každé strany (mezera 28 px, v šabloně 36 px působilo roztahaně), šipka v pravém odsazení,
    zlatá linka jen pod textem a šipkou, ne přes odsazení (první položka ji měla useknutou, ostatní příliš širokou) */
 @media (min-width: 768px) {
-  html.ll-test #navigation .menu-level-1 > li > a { position: relative; padding-left: 18px !important; padding-right: 18px !important; box-shadow: none !important; }
-  html.ll-test #navigation .menu-level-1 > li.ext > a { padding-right: 36px !important; }
-  html.ll-test #navigation .menu-level-1 > li > a::before { content: ''; position: absolute; left: 18px; right: 18px; bottom: 0; height: 2px; background: transparent; transition: background-color 150ms var(--ll-ease); }
+  html.ll-test #navigation .menu-level-1 > li > a { position: relative; padding-left: 14px !important; padding-right: 14px !important; box-shadow: none !important; }
+  html.ll-test #navigation .menu-level-1 > li.ext > a { padding-right: 32px !important; }
+  html.ll-test #navigation .menu-level-1 > li > a::before { content: ''; position: absolute; left: 14px; right: 14px; bottom: 0; height: 2px; background: transparent; transition: background-color 150ms var(--ll-ease); }
   html.ll-test #navigation .menu-level-1 > li:hover > a::before, html.ll-test #navigation .menu-level-1 > li.active > a::before { background: var(--ll-gold); }
 }
 html.ll-test #navigation .menu-level-1 > li:hover > a, html.ll-test #navigation .menu-level-1 > li.active > a { color: var(--ll-ink); }
@@ -810,7 +810,7 @@ html.ll-test #header .search .btn::before { --ll-icon: var(--ll-i-search); width
 html.ll-test .project-phone::before { --ll-icon: var(--ll-i-phone); }
 html.ll-test .project-email::before { --ll-icon: var(--ll-i-mail); }
 html.ll-test .project-phone::before, html.ll-test .project-email::before { width: 15px !important; height: 15px !important; margin-right: 6px !important; top: 0 !important; vertical-align: -2px; color: var(--ll-gold-deep) !important; }
-html.ll-test #navigation .menu-level-1 > li.ext > a::after { --ll-icon: var(--ll-i-chev-down); width: 14px !important; height: 14px !important; top: calc(50% - 7px) !important; bottom: auto !important; left: auto !important; right: 18px !important; transform: none !important; color: var(--ll-ink-muted) !important; }
+html.ll-test #navigation .menu-level-1 > li.ext > a::after { --ll-icon: var(--ll-i-chev-down); width: 14px !important; height: 14px !important; top: calc(50% - 7px) !important; bottom: auto !important; left: auto !important; right: 14px !important; transform: none !important; color: var(--ll-ink-muted) !important; }
 html.ll-test .breadcrumbs { align-items: center !important; }
 html.ll-test .breadcrumbs a, html.ll-test .breadcrumbs > span:last-child span { display: inline-flex !important; align-items: center; padding: 0 !important; }
 html.ll-test .breadcrumbs a::after { --ll-icon: var(--ll-i-chev-right); position: static !important; left: auto !important; top: auto !important; width: 14px !important; height: 14px !important; margin: 0 6px !important; color: var(--ll-ink-muted) !important; }
@@ -1256,3 +1256,27 @@ html.ll-test .basic-description ul > li:last-child, html.ll-test .basic-descript
   html.ll-test body.type-index .ratings-block { margin-bottom: 0 !important; }
   html.ll-test body.type-index #footer { margin-top: calc(64px - 21px) !important; }
 }
+
+/* ---------- Homepage na počítači: odstupy sekcí po 80 px (space-20) ---------- */
+@media (min-width: 768px) {
+  /* Tečky pod řadou produktů přesahovaly blok o 10 px, Pro ni / Pro něj pak byly jen 30 px pod nimi; blok je teď zahrnuje */
+  html.ll-test .type-index .products-block:has(.swiper-pagination) { padding-bottom: 10px; }
+  /* Pro ni / Pro něj (bylo 40) a pruh značek pod karuselem (bylo 40) jako ostatní sekce */
+  html.ll-test .HpBanners, html.ll-test .ll-brands { margin-top: 80px !important; }
+  /* Pruh značek → Doporučujeme 80 px (bylo 100: obal sekcí měl navíc 20 px) */
+  html.ll-test .type-index .products-group { margin-top: 0 !important; }
+  /* K18 a ABC pod Lerdee po 24 px jako mezi sebou (bylo 40) */
+  html.ll-test .list-banner-2 { margin-bottom: 0 !important; }
+  html.ll-test .brand-banner-grid { margin-top: 24px !important; }
+  /* Recenze: Zobrazit všechna hodnocení hned pod kartami (sloupec se natahoval na výšku souhrnu a odkaz přetékal pod blok);
+     k newsletteru 80 px (bylo 104): patička 80 px bez 48 px okraje newsletteru a 1 px skrytého nadpisu */
+  html.ll-test .ratings-block .rating-block { align-items: flex-start !important; }
+  html.ll-test body.type-index .ratings-block { margin-bottom: 0 !important; }
+  html.ll-test body.type-index #footer { margin-top: calc(80px - 49px) !important; }
+}
+
+/* ---------- Blog na homepage: Číst článek u všech článků dole na stejné úrovni (BlogCard: ll-post__more margin-top auto) ---------- */
+html.ll-test .homepage-blog-wrapper .news-item { display: flex !important; flex-direction: column; }
+html.ll-test .homepage-blog-wrapper .news-item > a { display: flex !important; flex-direction: column; flex: 1 1 auto; }
+html.ll-test .homepage-blog-wrapper .news-item .text { display: flex !important; flex-direction: column; align-items: flex-start; flex: 1 1 auto; }
+html.ll-test .homepage-blog-wrapper .news-item .read-article { margin-top: auto !important; }
