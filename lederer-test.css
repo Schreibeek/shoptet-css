@@ -1457,7 +1457,7 @@ html.ll-test .cart-header__back:empty { display: none !important; }
   html.ll-test .cart-header-block { margin: 0 -20px !important; }
 }
 html.ll-test .cart-header__headline { margin: 0 !important; padding: 0 !important; }
-html.ll-test .cart-header__headline .h4 { margin: 0 !important; font-size: 32px !important; line-height: 40px !important; font-weight: 500 !important; letter-spacing: -0.015em !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test .cart-header__headline .h4 { display: block !important; margin: 0 !important; font-size: 32px !important; line-height: 40px !important; font-weight: 500 !important; letter-spacing: -0.015em !important; text-transform: none !important; color: var(--ll-ink) !important; }
 html.ll-test .cart-header__contact { display: none !important; }
 /* Kroky: číslo v kruhu 28 px (aktuální inkoustový, další s linkou line-strong), mezi kroky linka 40 px */
 html.ll-test #cart-wrapper ol.cart-header { position: absolute; top: 32px; right: 0; display: flex !important; align-items: center; height: 40px; margin: 0 !important; padding: 0 !important; list-style: none; background: transparent !important; border: 0 !important; box-shadow: none !important; }
@@ -1526,8 +1526,8 @@ html.ll-test #cart-wrapper .cart-table tr.removeable > td.p-price:has(.price-fin
 html.ll-test #cart-wrapper .cart-table td.p-price .price-final, html.ll-test #cart-wrapper .cart-table td.p-price .unit-value, html.ll-test #cart-wrapper .cart-table .p-price-content .price-final, html.ll-test #cart-wrapper .cart-table .p-price-content .unit-value { margin: 0 !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
 html.ll-test #cart-wrapper .cart-table td.p-total > strong.price-final { grid-column: 4; grid-row: 3; justify-self: end; margin: 0 !important; font-size: 17px !important; line-height: 24px !important; font-weight: 600 !important; color: var(--ll-ink) !important; font-variant-numeric: tabular-nums; white-space: nowrap; }
 /* Položka ve slevě: cena za kus bez tečkovaného podtržení (o kolik je sleva, řekne bublina při najetí), cena celkem karmínová jako akční cena */
-html.ll-test #cart-wrapper .cart-table td.p-price .acronym { border: 0 !important; text-decoration: none !important; cursor: help; }
-html.ll-test #cart-wrapper .cart-table tr.removeable:has(td.p-price .acronym) td.p-total > strong.price-final { color: var(--ll-sale) !important; }
+html.ll-test #cart-wrapper .cart-table .acronym { border: 0 !important; text-decoration: none !important; cursor: help; }
+html.ll-test #cart-wrapper .cart-table tr.removeable:has(.acronym) td.p-total > strong.price-final { color: var(--ll-sale) !important; }
 html.ll-test #cart-wrapper .cart-table td.p-total > form.inline { grid-column: 5; grid-row: 1 / -1; justify-self: end; margin: 0 !important; }
 html.ll-test #cart-wrapper .cart-table .remove-item { position: static !important; display: grid !important; place-items: center; width: 40px !important; height: 40px !important; margin: 0 !important; padding: 0 !important; color: var(--ll-ink-muted) !important; background: transparent !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
 html.ll-test #cart-wrapper .cart-table .remove-item:hover { color: var(--ll-sale) !important; background: var(--ll-tile) !important; }
@@ -1677,7 +1677,7 @@ html.ll-test #cart-wrapper .ll-cart-help a[href^="tel:"]::before { --ll-icon: va
   html.ll-test #cart-wrapper .cart-table tr.removeable > td.cart-p-image { grid-row: 1 / span 5; width: 72px !important; height: 72px !important; }
   html.ll-test #cart-wrapper .cart-table .main-link { grid-column: 2; grid-row: 1; font-size: 14px !important; line-height: 20px !important; }
   html.ll-test #cart-wrapper .cart-table td.p-total > form.inline { grid-column: 3; grid-row: 1; align-self: start; margin: -10px -10px 0 0 !important; }
-  html.ll-test #cart-wrapper .cart-table td.p-name > span.p-availability { grid-column: 2 / -1; grid-row: 2; margin: 4px 0 0 !important; }
+  html.ll-test #cart-wrapper .cart-table td.p-name > span.p-availability { grid-column: 2 / -1; grid-row: 2; margin: 4px 0 0 !important; padding: 0 !important; }
   html.ll-test #cart-wrapper .cart-table .show-related { grid-column: 2 / -1; grid-row: 3; }
   html.ll-test #cart-wrapper .cart-table td.p-name > form.quantity-form { grid-column: 2; grid-row: 4 / span 2; align-self: center; margin: 12px 0 0 !important; }
   html.ll-test #cart-wrapper .cart-table .quantity { height: 36px !important; }
@@ -1699,7 +1699,7 @@ html.ll-test #cart-wrapper .ll-cart-help a[href^="tel:"]::before { --ll-icon: va
   html.ll-test #cart-wrapper .cart-summary .summary-wrapper .box { position: fixed !important; right: 0; bottom: 0; left: 0; z-index: 1000; display: flex !important; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px calc(12px + env(safe-area-inset-bottom)) !important; background: var(--ll-paper) !important; border-top: 1px solid var(--ll-line) !important; }
   html.ll-test #cart-wrapper .cart-summary .price-wrapper { display: flex !important; flex-direction: column; align-items: flex-start; }
   html.ll-test #cart-wrapper .cart-summary .price-label.price-primary { font-size: 12px !important; line-height: 16px !important; color: var(--ll-ink-muted) !important; }
-  html.ll-test #cart-wrapper .cart-summary .price.price-primary { font-size: 20px !important; line-height: 26px !important; text-align: left; }
+  html.ll-test #cart-wrapper .cart-summary .price.price-primary { padding: 0 !important; font-size: 20px !important; line-height: 26px !important; text-align: left; }
   html.ll-test #cart-wrapper .cart-summary .price-secondary { display: none !important; }
   html.ll-test #cart-wrapper .cart-summary .next-step { flex: none; }
   html.ll-test #cart-wrapper .cart-summary .next-step-forward { width: auto !important; min-width: 160px; }
