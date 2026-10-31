@@ -2144,11 +2144,12 @@ html.ll-test #colorbox.colorbox--order #products .p .price-final, html.ll-test #
 /* Na mobilu šablona přesouvá cenu do .product-btn před formulář: obsah .product-btn rozložit do mřížky */
 html.ll-test #colorbox.colorbox--order #products .p .product-btn:not(:empty) { display: contents !important; }
 html.ll-test #colorbox.colorbox--order #products .p .product-btn > .price-final { grid-area: price; align-self: end; margin: 0 !important; padding: 0 !important; text-align: left !important; }
-html.ll-test #colorbox.colorbox--order #products .p .product-btn form { grid-area: buy; align-self: end; display: block !important; margin: 0 !important; padding: 0 !important; }
-html.ll-test #colorbox.colorbox--order #products .p .btn-cart { display: inline-flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: auto !important; min-width: 0 !important; height: auto !important; min-height: 36px !important; margin: 0 !important; padding: 0 14px !important; font-size: 13px !important; line-height: 18px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
-html.ll-test #colorbox.colorbox--order #products .p .btn-cart:hover { color: #fff !important; background: var(--ll-ink) !important; }
-html.ll-test #colorbox.colorbox--order #products .p .btn-cart::before, html.ll-test #colorbox.colorbox--order #products .p .btn-cart::after { content: none !important; display: none !important; }
-html.ll-test #colorbox.colorbox--order #products .p .btn-cart span { font-size: inherit !important; }
+html.ll-test #colorbox.colorbox--order #products .p .product-btn form, html.ll-test #colorbox.colorbox--order #products .p .product-btn > .btn { grid-area: buy; align-self: end; justify-self: end; }
+html.ll-test #colorbox.colorbox--order #products .p .product-btn form { display: block !important; margin: 0 !important; padding: 0 !important; }
+html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn { display: inline-flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: auto !important; min-width: 0 !important; height: auto !important; min-height: 36px !important; margin: 0 !important; padding: 0 14px !important; font-size: 13px !important; line-height: 18px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn:hover { color: #fff !important; background: var(--ll-ink) !important; }
+html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn::before, html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn::after { content: none !important; display: none !important; }
+html.ll-test #colorbox.colorbox--order #products .p .product-btn .btn span { font-size: inherit !important; }
 @media (max-width: 767px) {
   /* Titulek na jeden řádek i na 375 px */
   html.ll-test #colorbox.colorbox--order .advanced-order > .h1:not(.advanced-order-suggestion) { font-size: 16px !important; line-height: 24px !important; }
