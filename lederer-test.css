@@ -952,7 +952,14 @@ html.ll-test #login input.form-control:-webkit-autofill, html.ll-test #rate-form
 @media (min-width: 992px) { html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { right: calc(50% - 450px) !important; } }
 @media (min-width: 1200px) { html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { right: calc(50% - 540px) !important; } }
 @media (min-width: 1440px) { html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { right: calc(50% - 670px) !important; } }
-html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { margin-top: 8px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; box-shadow: 0 12px 28px -14px rgba(32, 31, 31, 0.24) !important; }
+html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { background: var(--ll-paper) !important; }
+@media (min-width: 768px) {
+  html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { margin-top: 8px !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; box-shadow: 0 12px 28px -14px rgba(32, 31, 31, 0.24) !important; }
+}
+/* Na mobilu je přihlášení list přes celou šířku hned pod hlavičkou: bez mezery, rohů a stínu, jen linka nahoře */
+@media (max-width: 767px) {
+  html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { margin-top: 0 !important; border: 0 !important; border-top: 1px solid var(--ll-line) !important; border-radius: 0 !important; box-shadow: none !important; }
+}
 
 /* Přihlášení: pole podle Field, hlavní tlačítko inkoustové (šablona zlaté), registrace obrysová, zapomenuté heslo jako odkaz, sociální sítě jemná tlačítka */
 html.ll-test #login .popup-widget-inner { padding: 24px !important; }
