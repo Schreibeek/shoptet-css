@@ -1052,9 +1052,11 @@ html.ll-test #login input.form-control:-webkit-autofill, html.ll-test #rate-form
   html.ll-test #header .top-nav-button-login { background: transparent !important; }
   html.ll-test #header .top-nav-button-login:hover, html.ll-test body.login-window-visible #header .top-nav-button-login,
   html.ll-test #header .click-cart .btn:hover, html.ll-test body.cart-window-visible #header .click-cart .btn { background: var(--ll-tile) !important; }
-  /* Počítadlo na pravém horním rohu tašky (DS: 7 px nad, 9 px přes okraj), částka 12 px od ikony */
-  html.ll-test #header .click-cart .btn.cart-count::before { margin-right: 12px !important; }
-  html.ll-test #header .click-cart a.btn.cart-count i { top: 4px !important; left: 25px !important; right: auto !important; }
+  /* Taška 20 px jako ikona Přihlášení, počítadlo na jejím pravém horním rohu (DS: 7 px nad, 9 px přes okraj), částka 12 px od ikony */
+  html.ll-test #header .click-cart .btn.cart-count::before { width: 20px !important; height: 20px !important; margin-right: 12px !important; }
+  html.ll-test #header .click-cart a.btn.cart-count i { top: 5px !important; left: 23px !important; right: auto !important; }
+  /* Částka 14 px jako Přihlášení (DS ll-cart), řez 600 a tabulkové číslice */
+  html.ll-test #header .click-cart .cart-price { font-size: 14px !important; letter-spacing: normal !important; font-variant-numeric: tabular-nums; }
   /* Obě okna zarovnaná s pravým okrajem obsahu hlavičky (konec tlačítka Košík); kontejner šablony má 747 / 940 / 1120 / 1380 px a 20 px odsazení */
   html.ll-test #login.popup-widget, html.ll-test #cart-widget.popup-widget { left: auto !important; right: calc(50% - 353.5px) !important; margin-left: 0 !important; }
 }
