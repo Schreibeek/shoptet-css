@@ -1394,9 +1394,19 @@ html.ll-test .benefitBanner.position--benefitProduct { margin-top: 48px !importa
    Šablona značky a parametry schovávala za odkaz Rozbalit filtr (#category-filter-hover se ukáže až s třídou visible).
    Sidebar je od 992 px; na mobilu zůstává filtr za tlačítkem. */
 @media (min-width: 992px) {
-  html.ll-test #category-filter-hover { display: block !important; }
+  html.ll-test #category-filter-hover { display: flex !important; }
   html.ll-test #filters .filter-section.filter-section-button { display: none !important; }
 }
+
+/* ---------- Kategorie: pořadí skupin filtru (DS Filters, MobileFilters) ----------
+   Cena a dostupnost nahoře beze změny, pak Typ produktu, Typ vlasů, Účinek a nakonec Značky. Počet výsledků (na mobilu patička listu) zůstává poslední.
+   Šablona dává značky v #category-filter-hover před parametry, proto flex a order. Flex jen tam, kde šablona blok ukazuje:
+   na počítači výše, na tabletu ve filtru v obsahu (.category-content-wrapper), s třídou visible a na mobilu do 767 px. */
+html.ll-test .category-content-wrapper #category-filter-hover, html.ll-test #category-filter-hover.visible { display: flex !important; }
+@media (max-width: 767px) { html.ll-test #category-filter-hover { display: flex !important; } }
+html.ll-test #category-filter-hover { flex-direction: column; }
+html.ll-test #category-filter-hover > .filter-section-manufacturer { order: 1; }
+html.ll-test #category-filter-hover > .filter-section-count { order: 2; }
 
 /* ---------- Detail: šipky galerie jako šipky karuselů ----------
    Šablona je lepila na kraj fotky jako záložku 30 × 50 px se zaoblením jen vlevo (vypadala useknutá). Teď 44 px, rohy 4 px, linka line-strong,
