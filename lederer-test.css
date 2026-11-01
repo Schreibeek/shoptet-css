@@ -2611,6 +2611,7 @@ html.ll-test #footer .footer-bottom #signature { order: 1; display: inline-flex 
 html.ll-test #footer .footer-bottom a { font-size: 13px !important; color: var(--ll-ink-muted) !important; text-decoration: none !important; }
 html.ll-test #footer .footer-bottom a:hover { color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
 html.ll-test #footer .footer-bottom .ll-footer-privacy { display: inline !important; }
+html.ll-test #footer .footer-bottom .copyright a { white-space: nowrap; }
 html.ll-test #footer .footer-bottom .ll-footer-privacy::before, html.ll-test #footer .footer-bottom .cookies-settings::before { content: '·'; display: inline-block; margin: 0 6px; color: var(--ll-ink-muted); text-decoration: none; }
 /* Logo šablony Apollo je bílé, na světlém podkladu by zmizelo */
 html.ll-test #footer #signature .apollo img { filter: brightness(0); opacity: 0.5; }
@@ -2632,4 +2633,7 @@ html.ll-test #footer #signature .apollo img { filter: brightness(0); opacity: 0.
   html.ll-test #footer .ll-footer-col--buy, html.ll-test #footer .ll-footer-col--info, html.ll-test #footer .custom-footer__banner9 { margin-top: 32px !important; }
   html.ll-test #footer .footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 16px; padding: 20px !important; }
   html.ll-test #footer .footer-bottom .copyright, html.ll-test #footer .footer-bottom #signature { text-align: left !important; }
+  /* Odkazy právního řádku na mobilu každý na svém řádku, bez teček */
+  html.ll-test #footer .footer-bottom .ll-footer-privacy, html.ll-test #footer .footer-bottom .cookies-settings { display: block !important; width: fit-content; margin-top: 4px !important; }
+  html.ll-test #footer .footer-bottom .ll-footer-privacy::before, html.ll-test #footer .footer-bottom .cookies-settings::before { display: none !important; }
 }
