@@ -2583,7 +2583,7 @@ html.ll-test #footer .ll-footer-col { display: block !important; }
 html.ll-test #footer .ll-footer-col--buy { grid-area: buy; }
 html.ll-test #footer .ll-footer-col--info { grid-area: info; }
 html.ll-test #footer .ll-footer-col h4, html.ll-test #footer .ll-footer-social-title { display: block !important; margin: 0 0 16px !important; padding: 0 !important; font-size: 11px !important; line-height: 16px !important; font-weight: 600 !important; letter-spacing: 0.16em !important; text-transform: uppercase !important; color: var(--ll-ink) !important; }
-html.ll-test #footer .ll-footer-col ul, html.ll-test #footer .list-icon.bottom { display: grid !important; justify-items: start; gap: 8px !important; margin: 0 !important; padding: 0 !important; list-style: none; }
+html.ll-test #footer .ll-footer-col ul, html.ll-test #footer .list-icon.bottom { display: grid !important; grid-template-columns: minmax(0, 1fr) !important; grid-auto-flow: row !important; justify-items: start; gap: 8px !important; margin: 0 !important; padding: 0 !important; list-style: none; }
 html.ll-test #footer .ll-footer-col li { margin: 0 !important; padding: 0 !important; }
 html.ll-test #footer .ll-footer-col a, html.ll-test #footer .list-icon.bottom a { font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; }
 
@@ -2603,15 +2603,15 @@ html.ll-test #footer .list-icon.bottom a[href*="heureka"] img { display: block !
 /* Lišta: štítky plateb a dopravy přes celou šířku, pod nimi copyright, Ochrana osobních údajů a cookies vlevo, Vytvořil Shoptet vpravo */
 html.ll-test #footer .footer-bottom { flex-direction: row !important; flex-wrap: wrap; justify-content: space-between !important; align-items: center !important; gap: 16px 24px; padding-top: 20px !important; padding-bottom: 20px !important; }
 html.ll-test #footer .footer-bottom::before, html.ll-test #footer .footer-bottom::after { display: none !important; }
-html.ll-test #footer .ll-footer-paybar { order: -1; display: flex !important; flex: 1 1 100%; flex-wrap: wrap; gap: 8px; }
+html.ll-test #footer .ll-footer-paybar { order: -1; position: relative; z-index: 2; display: flex !important; flex: 1 1 100%; flex-wrap: wrap; gap: 8px; }
 html.ll-test #footer .ll-footer-chip { display: inline-flex; align-items: center; box-sizing: border-box; height: 28px; padding: 0 10px; font-size: 12px; line-height: 16px; font-weight: 500; white-space: nowrap; color: var(--ll-ink-soft); background: var(--ll-paper); border: 1px solid var(--ll-line); border-radius: var(--ll-r-xs); }
 html.ll-test #footer .footer-bottom .copyright { order: 0; flex: 0 1 auto !important; margin: 0 !important; font-size: 13px !important; line-height: 20px !important; }
 html.ll-test #footer .footer-bottom .copyright strong { font-weight: 400 !important; }
 html.ll-test #footer .footer-bottom #signature { order: 1; display: inline-flex !important; align-items: center; gap: 6px; flex: 0 0 auto !important; margin: 0 !important; font-size: 13px !important; line-height: 20px !important; }
-html.ll-test #footer .footer-bottom a { font-size: 13px !important; color: var(--ll-ink-muted) !important; }
+html.ll-test #footer .footer-bottom a { font-size: 13px !important; color: var(--ll-ink-muted) !important; text-decoration: none !important; }
+html.ll-test #footer .footer-bottom a:hover { color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
 html.ll-test #footer .footer-bottom .ll-footer-privacy { display: inline !important; }
 html.ll-test #footer .footer-bottom .ll-footer-privacy::before, html.ll-test #footer .footer-bottom .cookies-settings::before { content: '·'; display: inline-block; margin: 0 6px; color: var(--ll-ink-muted); text-decoration: none; }
-html.ll-test #footer .footer-bottom .cookies-settings { text-decoration: none !important; }
 /* Logo šablony Apollo je bílé, na světlém podkladu by zmizelo */
 html.ll-test #footer #signature .apollo img { filter: brightness(0); opacity: 0.5; }
 
