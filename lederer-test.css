@@ -709,15 +709,11 @@ html.ll-test .ratings-block .add-comment { position: static !important; left: au
 html.ll-test .ratings-block .add-comment:hover { background: var(--ll-ink) !important; }
 html.ll-test .ratings-block .rating-more-btn { position: static !important; left: auto !important; bottom: auto !important; transform: none !important; display: inline-block; margin: 24px 0 0 4px; }
 
-/* Newsletter: dva vyvážené sloupce přes celou šířku, větší titulek a text */
-html.ll-test #footer .custom-footer__newsletter { display: grid !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); align-items: center; gap: 24px 64px; }
+/* Newsletter: box přes celou šířku jako mřížka (sloupce, titulek a text v sekci Patička podle DS Footer) */
+html.ll-test #footer .custom-footer__newsletter { display: grid !important; align-items: center; }
 html.ll-test #footer .custom-footer__newsletter .newsletter-header, html.ll-test #footer .custom-footer__newsletter form { width: auto !important; max-width: none !important; height: auto !important; margin: 0 !important; flex: none !important; }
-html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-test #footer .custom-footer__newsletter .pageElement__heading span { margin: 0 !important; font-size: 30px !important; line-height: 1.2 !important; }
-html.ll-test #footer .custom-footer__newsletter .newsletter-header p { margin: 12px 0 0 !important; max-width: 440px; font-size: 16px !important; line-height: 26px !important; }
 @media (max-width: 767px) {
   html.ll-test .homepage-box.before-carousel { padding-top: 16px; }
-  html.ll-test #footer .custom-footer__newsletter { grid-template-columns: minmax(0, 1fr); }
-  html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-test #footer .custom-footer__newsletter .pageElement__heading span { font-size: 24px !important; }
 }
 /* Recenze: tlačítko pod rozložením hodnocení, hvězdička v tlačítku */
 html.ll-test .ratings-block .rate-wrap { display: flex !important; flex-direction: column; align-items: stretch; }
@@ -2540,13 +2536,14 @@ html.ll-test #footer .footer-rows {
 }
 html.ll-test #footer .footer-rows::before, html.ll-test #footer .footer-rows::after { display: none !important; }
 html.ll-test #footer .custom-footer, html.ll-test #footer .custom-footer-left-panel { display: contents !important; }
-html.ll-test #footer .footer-rows .footer-item:not(.custom-footer__newsletter), html.ll-test #footer .footer-rows > .site-name {
+html.ll-test #footer :where(.footer-rows .footer-item:not(.custom-footer__newsletter), .footer-rows > .site-name) {
   box-sizing: border-box; width: auto !important; min-width: 0; max-width: none !important; flex: none !important; margin: 0 !important; padding: 0 !important; border: 0 !important;
 }
 html.ll-test #footer .banner, html.ll-test #footer .banner-wrapper { margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; }
 
 /* Newsletter: box champagne, vlevo nadpis a text, vpravo popisek nad polem, pole s tlačítkem vedle sebe a pod nimi souhlas */
-html.ll-test #footer .custom-footer__newsletter { grid-area: news; max-width: none !important; margin: 48px 0 !important; padding: 32px 40px !important; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; gap: 32px !important; }
+html.ll-test #footer .custom-footer__newsletter { grid-area: news; max-width: none !important; margin: 48px 0 !important; padding: 32px 40px !important; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr) !important; gap: 32px !important; }
+html.ll-test #footer .custom-footer__newsletter .newsletter-header { padding: 0 !important; }
 html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-test #footer .custom-footer__newsletter .pageElement__heading span { margin: 0 0 4px !important; font-size: 22px !important; line-height: 1.3 !important; }
 html.ll-test #footer .custom-footer__newsletter .newsletter-header p { margin: 0 !important; max-width: 480px; font-size: 15px !important; line-height: 24px !important; }
 html.ll-test #footer #formNewsletterWidget > fieldset:not(.box) { display: grid !important; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "label label" "input button" "consent consent"; align-items: center; gap: 8px; margin: 0 !important; padding: 0 !important; }
@@ -2556,7 +2553,7 @@ html.ll-test #footer #formNewsletterWidget > fieldset:not(.box) > .smart-label-w
 html.ll-test #footer #formNewsletterWidget input.form-control { height: 48px !important; padding: 0 16px !important; font-size: 15px !important; }
 html.ll-test #footer #formNewsletterWidget > fieldset:not(.box) > .consents { grid-area: consent; margin: 0 !important; padding: 0 !important; }
 html.ll-test #footer #formNewsletterWidget > fieldset:not(.box) > .consents p { margin: 0 !important; font-size: 13px !important; line-height: 20px !important; }
-html.ll-test #footer #formNewsletterWidget > fieldset:not(.box) > .btn { grid-area: button; height: 48px !important; min-height: 48px !important; margin: 0 !important; padding: 0 24px !important; white-space: nowrap; }
+html.ll-test #footer #formNewsletterWidget > fieldset:not(.box) > .btn { grid-area: button; width: auto !important; min-width: 0 !important; height: 48px !important; min-height: 48px !important; margin: 0 !important; padding: 0 24px !important; white-space: nowrap; }
 
 /* Značka: logo 52 px, krátký text, adresa, telefon a e-mail se zlatými ikonami, Kontaktní formulář jako odkaz se šipkou */
 html.ll-test #footer .footer-rows > .site-name { grid-area: logo; display: block !important; position: static !important; text-align: left !important; }
@@ -2579,14 +2576,14 @@ html.ll-test #footer .contact-box .mail a, html.ll-test #footer .contact-box .te
 html.ll-test #footer .contact-box .mail a::before, html.ll-test #footer .contact-box .tel a::before { content: ''; flex: none; width: 18px; height: 18px; background: var(--ll-gold-deep); -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat; }
 html.ll-test #footer .contact-box .mail a::before { --ll-icon: var(--ll-i-mail); }
 html.ll-test #footer .contact-box .tel a::before { --ll-icon: var(--ll-i-phone); }
-html.ll-test #footer .contact-box > .btn { display: inline-flex !important; align-items: center; gap: 6px; width: auto !important; height: auto !important; min-height: 0 !important; margin: 16px 0 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; text-decoration: underline !important; text-decoration-thickness: 1px !important; text-underline-offset: 3px; }
+html.ll-test #footer .contact-box > .btn { display: inline-flex !important; justify-content: flex-start !important; align-items: center; gap: 6px; width: auto !important; min-width: 0 !important; height: auto !important; min-height: 0 !important; margin: 16px 0 0 !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; text-decoration: underline !important; text-decoration-thickness: 1px !important; text-underline-offset: 3px; }
 html.ll-test #footer .contact-box > .btn::after { content: ''; flex: none; width: 16px; height: 16px; background: currentColor; -webkit-mask: var(--ll-i-arrow-right) center / contain no-repeat; mask: var(--ll-i-arrow-right) center / contain no-repeat; }
 
 /* Sítě a odznak Heureka v řadě pod kontaktem: ikony inkoustem 20 px s názvem účtu, odznak v originále 56 px */
-html.ll-test #footer .custom-footer__banner9 { grid-area: social; padding-top: 24px !important; }
-html.ll-test #footer .list-icon.bottom { display: flex !important; flex-wrap: wrap; align-items: center; justify-content: flex-start !important; gap: 12px 20px; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; border: 0 !important; }
+html.ll-test #footer .custom-footer__banner9 { grid-area: social; }
+html.ll-test #footer .list-icon.bottom { display: flex !important; flex-wrap: wrap; align-items: center; justify-content: flex-start !important; gap: 12px 20px !important; width: auto !important; max-width: none !important; margin: 24px 0 0 !important; padding: 0 !important; border: 0 !important; }
 html.ll-test #footer .list-icon.bottom .list-icon-detail { display: block !important; width: auto !important; min-height: 0 !important; margin: 0 !important; padding: 0 !important; border: 0 !important; text-align: left !important; }
-html.ll-test #footer .list-icon.bottom a { display: inline-flex !important; align-items: center; gap: 8px; font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-soft) !important; }
+html.ll-test #footer .list-icon.bottom a { display: inline-flex !important; flex-direction: row !important; align-items: center; gap: 8px; font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-soft) !important; }
 html.ll-test #footer .list-icon.bottom a br { display: none; }
 html.ll-test #footer .list-icon.bottom a[href*="facebook.com"] img, html.ll-test #footer .list-icon.bottom a[href*="instagram.com"] img { display: none !important; }
 html.ll-test #footer .list-icon.bottom a[href*="facebook.com"]::before, html.ll-test #footer .list-icon.bottom a[href*="instagram.com"]::before { content: ''; flex: none; width: 20px; height: 20px; background: var(--ll-ink); -webkit-mask: var(--ll-icon) center / contain no-repeat; mask: var(--ll-icon) center / contain no-repeat; }
@@ -2609,7 +2606,7 @@ html.ll-test #footer .ll-footer-chips { display: flex !important; flex-wrap: wra
 html.ll-test #footer .ll-footer-chip { display: inline-flex; align-items: center; box-sizing: border-box; height: 28px; padding: 0 10px; font-size: 12px; line-height: 16px; font-weight: 500; white-space: nowrap; color: var(--ll-ink-soft); background: var(--ll-paper); border: 1px solid var(--ll-line); border-radius: var(--ll-r-xs); }
 
 /* Spodní řádek: copyright a nastavení cookies vlevo, Vytvořil Shoptet vpravo */
-html.ll-test #footer .footer-bottom { flex-wrap: wrap; justify-content: space-between !important; align-items: center !important; gap: 8px 24px; padding-top: 20px !important; padding-bottom: 20px !important; }
+html.ll-test #footer .footer-bottom { flex-direction: row !important; flex-wrap: wrap; justify-content: space-between !important; align-items: center !important; gap: 8px 24px; padding-top: 20px !important; padding-bottom: 20px !important; }
 html.ll-test #footer .footer-bottom::before, html.ll-test #footer .footer-bottom::after { display: none !important; }
 html.ll-test #footer .footer-bottom .copyright { order: 0; flex: 0 1 auto !important; margin: 0 !important; font-size: 13px !important; line-height: 20px !important; }
 html.ll-test #footer .footer-bottom .copyright strong { font-weight: 400 !important; }
