@@ -2543,7 +2543,7 @@ html.ll-test #footer .banner, html.ll-test #footer .banner-wrapper { margin: 0 !
 
 /* Newsletter: box champagne, vlevo nadpis a text, vpravo popisek nad polem, pole s tlačítkem vedle sebe a pod nimi souhlas */
 html.ll-test #footer .custom-footer__newsletter { grid-area: news; max-width: none !important; margin: 48px 0 !important; padding: 32px 40px !important; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr) !important; gap: 32px !important; }
-html.ll-test #footer .custom-footer__newsletter .newsletter-header { padding: 0 !important; }
+html.ll-test #footer .custom-footer__newsletter .newsletter-header, html.ll-test #footer .custom-footer__newsletter form.subscribe-form { padding-left: 0 !important; padding-right: 0 !important; }
 html.ll-test #footer .custom-footer__newsletter .pageElement__heading, html.ll-test #footer .custom-footer__newsletter .pageElement__heading span { margin: 0 0 4px !important; font-size: 22px !important; line-height: 1.3 !important; }
 html.ll-test #footer .custom-footer__newsletter .newsletter-header p { margin: 0 !important; max-width: 480px; font-size: 15px !important; line-height: 24px !important; }
 html.ll-test #footer #formNewsletterWidget > fieldset:not(.box) { display: grid !important; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "label label" "input button" "consent consent"; align-items: center; gap: 8px; margin: 0 !important; padding: 0 !important; }
@@ -2613,6 +2613,8 @@ html.ll-test #footer .footer-bottom .copyright strong { font-weight: 400 !import
 html.ll-test #footer .footer-bottom #signature { order: 1; display: inline-flex !important; align-items: center; gap: 6px; flex: 0 0 auto !important; margin: 0 !important; font-size: 13px !important; line-height: 20px !important; }
 html.ll-test #footer .footer-bottom a { font-size: 13px !important; color: var(--ll-ink-muted) !important; }
 html.ll-test #footer .footer-bottom .cookies-settings { margin-left: 4px; text-decoration: underline; text-underline-offset: 3px; }
+/* Logo šablony Apollo je bílé, na světlém podkladu by zmizelo */
+html.ll-test #footer #signature .apollo img { filter: brightness(0); opacity: 0.5; }
 
 /* Tablet: dva sloupce (značka | informace, pod nimi platby | doprava) */
 @media (max-width: 991px) {
@@ -2630,4 +2632,5 @@ html.ll-test #footer .footer-bottom .cookies-settings { margin-left: 4px; text-d
   html.ll-test #footer #formNewsletterWidget > fieldset:not(.box) > .consents { margin: 4px 0 0 !important; }
   html.ll-test #footer .custom-footer__banner8, html.ll-test #footer .custom-footer__banner5, html.ll-test #footer .custom-footer__banner7 { margin-top: 32px !important; }
   html.ll-test #footer .footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 12px; padding: 20px !important; }
+  html.ll-test #footer .footer-bottom .copyright, html.ll-test #footer .footer-bottom #signature { text-align: left !important; }
 }
