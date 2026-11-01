@@ -2446,3 +2446,40 @@ html.ll-test #header .search-whisperer .search-whisperer-empty::before { content
    a s textem splývaly. Po najetí zlatě i v článku a na textových stránkách (DS Article, PageText). */
 html.ll-test #description .basic-description a:not(.btn):not([style*="background"]) { color: var(--ll-ink) !important; text-decoration: underline !important; text-decoration-thickness: 1px !important; text-underline-offset: 3px; }
 html.ll-test #description .basic-description a:not(.btn):not([style*="background"]):hover, html.ll-test body.type-post .news-item-detail .text a:not([style*="background"]):hover, html.ll-test body.type-page .pageArticleDetail [itemprop="about"] a:hover { color: var(--ll-gold-text) !important; }
+
+/* ---------- Okno košíku v hlavičce: položky při odebírání, prázdný stav (DS CartPopover) ----------
+   Šablona kreslí prázdný stav podle chybějící třídy full, kterou Shoptet sebere už na začátku odebírání: přes ještě
+   zobrazenou položku pak vyskočila obří ikona vozíku a název se zúžil do sloupce. Položky (data-micro="cartItem") si teď
+   drží vzhled, prázdný stav je jen u hlášky (data-testid="cartTitle"). Hlavička a patička během načítání nemizí.
+   Šablona přesouvá blok dopravy zdarma do patičky a ten v obsahu schovává; testovací vzhled ho omylem ukazoval dvakrát. */
+html.ll-test {
+  --ll-img-bag-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b58127' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 10a4 4 0 0 1-8 0' /%3E %3Cpath d='M3.103 6.034h17.794' /%3E %3Cpath d='M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z' /%3E%3C/svg%3E");
+  --ll-img-check-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5' /%3E%3C/svg%3E");
+  --ll-img-x-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18' /%3E %3Cpath d='m6 6 12 12' /%3E%3C/svg%3E");
+  --ll-img-info-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d9ad4c' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10' /%3E %3Cpath d='M12 16v-4' /%3E %3Cpath d='M12 8h.01' /%3E%3C/svg%3E");
+}
+html.ll-test #cart-widget .popup-widget-inner .cart-free-shipping { display: none !important; }
+html.ll-test #cart-widget .cart-widget-product[data-micro="cartItem"] { font-size: 14px !important; font-weight: 400 !important; text-align: left !important; color: var(--ll-ink) !important; }
+html.ll-test #cart-widget .cart-widget-product[data-micro="cartItem"]::before, html.ll-test #cart-widget .cart-widget-product[data-micro="cartItem"]::after { content: none !important; display: none !important; }
+html.ll-test #cart-widget:has(.cart-widget-product[data-micro="cartItem"]) .cart-widget-title, html.ll-test #cart-widget:has(.cart-widget-product[data-micro="cartItem"]) .cart-widget-button { display: block !important; }
+html.ll-test #cart-widget:has(.cart-widget-product[data-testid="cartTitle"]) .cart-widget-title, html.ll-test #cart-widget:has(.cart-widget-product[data-testid="cartTitle"]) .cart-widget-button { display: none !important; }
+html.ll-test #cart-widget .cart-widget-product[data-testid="cartTitle"] { display: block !important; margin: 0 !important; padding: 32px 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; text-align: center !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; }
+html.ll-test #cart-widget .cart-widget-product[data-testid="cartTitle"]::first-line { font-size: 16px; line-height: 26px; font-weight: 500; color: var(--ll-ink); }
+html.ll-test #cart-widget .cart-widget-product[data-testid="cartTitle"]::before { content: '' !important; display: block !important; box-sizing: border-box; width: 56px !important; height: 56px !important; margin: 0 auto 16px !important; font-size: 0 !important; line-height: 0 !important; background: var(--ll-paper) var(--ll-img-bag-gold) center / 22px no-repeat !important; border: 1px solid var(--ll-gold-line) !important; border-radius: 50% !important; }
+
+/* ---------- Oznámení (DS Toast) ----------
+   Místo zeleného, oranžového a červeného pruhu šablony inkoustový pruh vpravo dole s ikonou stavu: úspěch fajfka v zeleném
+   kruhu, chyba křížek v červeném, upozornění a informace zlatá ikona info. Na mobilu dole přes šířku. */
+@keyframes ll-toast-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+html.ll-test .messages, html.ll-test .msg-wrapper { left: auto !important; top: auto !important; right: 24px !important; bottom: 24px !important; display: grid; justify-items: end; gap: 8px; width: auto !important; max-width: min(400px, calc(100vw - 40px)); pointer-events: none; }
+html.ll-test .messages .msg, html.ll-test .msg-wrapper .msg { position: relative !important; display: flex !important; align-items: center; gap: 12px; box-sizing: border-box; width: max-content !important; max-width: 100%; margin: 0 !important; padding: 12px 18px 12px 12px !important; font-size: 14px !important; line-height: 20px !important; font-weight: 500 !important; text-align: left !important; color: #fff !important; background: var(--ll-ink) !important; border: 0 !important; border-radius: var(--ll-r-md) !important; box-shadow: 0 24px 60px -20px rgba(32, 31, 31, 0.3) !important; pointer-events: auto; animation: ll-toast-in 220ms var(--ll-ease); }
+html.ll-test .messages .msg::before, html.ll-test .msg-wrapper .msg::before { content: ''; flex: none; width: 24px; height: 24px; border-radius: 50%; background: var(--ll-success) var(--ll-img-check-white) center / 14px no-repeat; }
+html.ll-test .messages .msg.msg-error::before, html.ll-test .msg-wrapper .msg.msg-error::before { background: #b42318 var(--ll-img-x-white) center / 14px no-repeat; }
+html.ll-test .messages .msg.msg-warning::before, html.ll-test .messages .msg.msg-info::before, html.ll-test .msg-wrapper .msg.msg-warning::before, html.ll-test .msg-wrapper .msg.msg-info::before { border-radius: 0; background: transparent var(--ll-img-info-gold) center / 24px no-repeat; }
+html.ll-test .messages .msg .container, html.ll-test .msg-wrapper .msg .container { width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+html.ll-test .messages .msg .container::before, html.ll-test .messages .msg .container::after, html.ll-test .msg-wrapper .msg .container::before, html.ll-test .msg-wrapper .msg .container::after { content: none !important; display: none !important; }
+html.ll-test .messages .msg a, html.ll-test .msg-wrapper .msg a { color: inherit !important; text-decoration: underline !important; text-underline-offset: 3px; }
+@media (max-width: 767px) {
+  html.ll-test .messages, html.ll-test .msg-wrapper { right: 20px !important; bottom: 16px !important; left: 20px !important; justify-items: stretch; max-width: none; }
+  html.ll-test .messages .msg, html.ll-test .msg-wrapper .msg { width: auto !important; }
+}
