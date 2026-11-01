@@ -208,7 +208,8 @@ body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
 html:not(.ll-test) .products .product .availability {display:none !important;}
 
 /* FILTRY V KATEGORII: parametry (Typ produktu, Typ vlasů, Účinek) před značkami, cena a dostupnost beze změny (DS Filters, 1. 11. 2026).
-   Flex jen u rozbaleného filtru (třída .visible po kliknutí na Rozbalit filtr) a v testovacím vzhledu, kde je filtr rozbalený vždy. Sbalený filtr na ostré verzi zůstává schovaný. */
-#filters #category-filter-hover.visible,html.ll-test #filters #category-filter-hover{display:flex!important;flex-direction:column}
+   Flex jen tam, kde šablona blok s parametry a značkami ukazuje: rozbalený filtr (.visible po kliknutí na Rozbalit filtr), filtr v obsahu na tabletu (.category-content-wrapper), mobil do 767 px a testovací vzhled. Sbalený filtr na počítači zůstává schovaný. */
+#filters #category-filter-hover.visible,.category-content-wrapper #filters #category-filter-hover,html.ll-test #filters #category-filter-hover{display:flex!important;flex-direction:column}
+@media (max-width:767px){#filters #category-filter-hover{display:flex!important;flex-direction:column}}
 #filters #category-filter-hover>.filter-section-manufacturer{order:1}
 #filters #category-filter-hover>.filter-section-count{order:2}
