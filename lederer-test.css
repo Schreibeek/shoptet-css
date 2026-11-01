@@ -2483,4 +2483,6 @@ html.ll-test .messages .msg a, html.ll-test .msg-wrapper .msg a { color: inherit
 @media (max-width: 767px) {
   html.ll-test .messages, html.ll-test .msg-wrapper { right: 20px !important; bottom: 16px !important; left: 20px !important; justify-items: stretch; max-width: none; }
   html.ll-test .messages .msg, html.ll-test .msg-wrapper .msg { width: auto !important; }
+  /* Jen v testovacím vzhledu: lišta Testovací vzhled je na mobilu dole přes šířku, oznámení nad ní */
+  html.ll-test body:has(.ll-test-badge) .messages, html.ll-test body:has(.ll-test-badge) .msg-wrapper { bottom: 66px !important; }
 }
