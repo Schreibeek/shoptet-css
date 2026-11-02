@@ -2721,6 +2721,25 @@ html.ll-test .content-wrapper-in:has(.client-center-box) table.table td.p-name .
 html.ll-test .content-wrapper-in:has(.client-center-box) table.table td.p-name .p-name__codeLabel { display: block !important; margin-top: 2px; }
 html.ll-test .content-wrapper-in:has(.client-center-box) table.table td.p-name .p-name__codeLabel ~ .p-name__code { display: inline !important; }
 html.ll-test .content-wrapper-in:has(.client-center-box) table.table tr.row-summary td { padding-top: 20px !important; font-size: 16px !important; text-align: right !important; color: var(--ll-ink) !important; border-bottom: 0 !important; }
+/* Detail objednávky: adresy ve dvou sloupcích s nadpisem 14 px, položky se zalamovaným záhlavím, souhrn vpravo */
+html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > .row { margin-bottom: 8px !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > .row > div { font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > .row h4 { margin: 0 0 8px !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > .row a { color: var(--ll-ink-soft) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > div > p { margin: 0 !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table-order-details th { white-space: normal; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table-order-details th, html.ll-test .content-wrapper-in:has(.client-center-box) table.table-order-details td { padding-right: 12px !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table-order-details .cell--price { padding-right: 20px !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table-order-details td.p-name { min-width: 200px; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table-order-details tr.row-summary td { padding: 20px 0 0 !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .list-summary { display: grid !important; grid-template-columns: auto auto; justify-content: end; column-gap: 24px; row-gap: 4px; margin: 0 !important; font-size: 14px !important; line-height: 22px !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .list-summary dt { margin: 0 !important; padding: 0 !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; text-align: left; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .list-summary dd { margin: 0 !important; padding: 0 !important; color: var(--ll-ink) !important; text-align: right; font-variant-numeric: tabular-nums; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .list-summary dt:first-of-type, html.ll-test .content-wrapper-in:has(.client-center-box) .list-summary dd:first-of-type { font-size: 16px !important; line-height: 24px !important; font-weight: 600 !important; color: var(--ll-ink) !important; }
+/* Stránkování: s jedinou stránkou nic, jinak čísla vlevo a počet položek vpravo */
+html.ll-test .content-wrapper-in:has(.client-center-box) .pagination-wrapper { display: flex !important; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin: 0 !important; padding: 0 !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .pagination-wrapper:has(.pagination > .current:only-child) { display: none !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .pagination-total { margin: 0 !important; font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-muted) !important; }
 /* Moje slevy: řádky jako ll-details (popisek ink-muted, hodnota řez 600) */
 html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 { max-width: 560px; }
 html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 td:first-child { width: 220px; font-size: 13px !important; color: var(--ll-ink-muted) !important; }
