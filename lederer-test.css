@@ -2743,7 +2743,7 @@ html.ll-test .content-wrapper-in:has(.client-center-box) .pagination-total { mar
 /* Moje slevy: řádky jako ll-details (popisek ink-muted, hodnota řez 600) */
 html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 { max-width: 560px; }
 html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 td:first-child { width: 220px; font-size: 13px !important; color: var(--ll-ink-muted) !important; }
-html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 + p, html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 + p em { font-size: 13px !important; line-height: 20px !important; font-style: normal !important; color: var(--ll-ink-muted) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .table-responsive:has(> table.table-md-50) + p, html.ll-test .content-wrapper-in:has(.client-center-box) .table-responsive:has(> table.table-md-50) + p em { font-size: 13px !important; line-height: 20px !important; font-style: normal !important; color: var(--ll-ink-muted) !important; }
 
 /* Moje osobní údaje (Nastavení mého účtu): formulář jako krok Osobní údaje (Field), oddíly bez rámečku s linkou mezi sebou,
    popisky 13 px nad poli 48 px, jeden sloupec do 560 px, Uložit jako hlavní tlačítko */
