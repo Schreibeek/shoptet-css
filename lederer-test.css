@@ -2649,14 +2649,14 @@ html.ll-test {
   --ll-i-log-out: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m16 17 5-5-5-5'/%3E%3Cpath d='M21 12H9'/%3E%3Cpath d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/%3E%3C/svg%3E");
   --ll-img-user-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b58127' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/svg%3E");
 }
-/* Hlavička po přihlášení: Můj účet jako Přihlášení (ikona user 20 px, text 14 px řez 500, tlačítko 44 px, hover na dlaždici) */
-html.ll-test #header .top-nav-button-account { display: inline-flex !important; align-items: center; text-decoration: none !important; }
-html.ll-test #header .top-nav-button-account span { display: inline !important; text-transform: none !important; font-size: 14px !important; line-height: 22px !important; font-weight: 500 !important; letter-spacing: 0 !important; color: var(--ll-ink) !important; }
-html.ll-test #header .top-nav-button-account::before { content: '' !important; display: inline-block; flex: none; width: 20px !important; height: 20px !important; margin-right: 8px !important; font-size: 0 !important; line-height: 0 !important; background-color: var(--ll-ink); -webkit-mask: var(--ll-i-user) center / contain no-repeat; mask: var(--ll-i-user) center / contain no-repeat; }
-html.ll-test #header .top-nav-button-account::after { display: none !important; }
+/* Hlavička po přihlášení (od 768 px, na mobilu je účet ikonou v řádku nástrojů): Můj účet jako Přihlášení
+   (ikona user 20 px, text 14 px řez 500, tlačítko 44 px, hover na dlaždici) */
 @media (min-width: 768px) {
-  html.ll-test #header .top-nav-button-account { height: 44px !important; min-height: 0 !important; padding: 0 12px !important; background: transparent !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: background-color 150ms var(--ll-ease) !important; }
+  html.ll-test #header .top-nav-button-account { display: inline-flex !important; align-items: center; height: 44px !important; min-height: 0 !important; padding: 0 12px !important; text-decoration: none !important; background: transparent !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: background-color 150ms var(--ll-ease) !important; }
   html.ll-test #header .top-nav-button-account:hover { background: var(--ll-tile) !important; }
+  html.ll-test #header .top-nav-button-account span { display: inline !important; text-transform: none !important; font-size: 14px !important; line-height: 22px !important; font-weight: 500 !important; letter-spacing: 0 !important; color: var(--ll-ink) !important; }
+  html.ll-test #header .top-nav-button-account::before { content: '' !important; display: inline-block; flex: none; width: 20px !important; height: 20px !important; margin-right: 8px !important; font-size: 0 !important; line-height: 0 !important; background-color: var(--ll-ink); -webkit-mask: var(--ll-i-user) center / contain no-repeat; mask: var(--ll-i-user) center / contain no-repeat; }
+  html.ll-test #header .top-nav-button-account::after { display: none !important; }
 }
 
 /* Titulek centra jako ostatní stránky (40 px), drobečky nad ním nechává šablona */
@@ -2803,12 +2803,13 @@ html.ll-test body.in-nastaveni .shipping-addresses p { margin: 0 0 8px !importan
   html.ll-test .client-title { margin-bottom: 24px !important; font-size: 30px !important; line-height: 1.15 !important; }
   /* Tabulky jako karty: každý údaj na řádku, popisek 13 px ve sloupci 132 px */
   html.ll-test .content-wrapper-in:has(.client-center-box) .table-responsive { overflow: visible; }
-  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched, html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody, html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tr { display: block !important; width: auto !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched, html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody, html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tr { display: block !important; width: auto !important; min-width: 0 !important; max-width: none !important; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched thead { display: none !important; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody tr { padding: 4px 16px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md); }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody tr + tr { margin-top: 12px; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td { display: grid !important; grid-template-columns: 132px minmax(0, 1fr); column-gap: 16px; align-items: start; width: auto !important; padding: 10px 0 !important; text-align: left !important; white-space: normal !important; border-bottom: 1px solid var(--ll-line) !important; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td:last-child { border-bottom: 0 !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td.cell--price { padding-right: 0 !important; text-align: left !important; white-space: normal !important; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td:empty { display: none !important; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched .client-table-heading { display: block !important; font-size: 13px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td.p-name { display: block !important; }
