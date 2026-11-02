@@ -2787,7 +2787,6 @@ html.ll-test body.in-nastaveni .shipping-addresses p { margin: 0 0 8px !importan
   html.ll-test .content-wrapper-in:has(.client-center-box) > .sidebar { order: 2; display: block !important; width: auto !important; max-width: none !important; margin: 40px 0 0 !important; padding: 0 !important; }
   html.ll-test .sidebar .client-center-box ul { gap: 0; padding: 0 16px !important; background: var(--ll-paper); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); }
   html.ll-test .sidebar .client-center-box li + li { border-top: 1px solid var(--ll-line); }
-  html.ll-test .sidebar .client-center-box li.logout + li { border-top: 0; }
   html.ll-test .sidebar .client-center-box li a { min-height: 52px; padding: 8px 0 !important; font-size: 15px !important; border-radius: 0; }
   html.ll-test .sidebar .client-center-box li a:hover, html.ll-test .sidebar .client-center-box li.active > a { background: transparent; }
   html.ll-test .sidebar .client-center-box li:first-child { margin: 0 !important; padding: 0 !important; border-bottom: 0; }
