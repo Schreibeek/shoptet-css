@@ -2640,3 +2640,121 @@ html.ll-test #footer #signature .apollo img { filter: brightness(0); opacity: 0.
   html.ll-test #footer .footer-bottom .cookies-settings { display: block !important; width: fit-content; margin-top: 4px !important; }
   html.ll-test #footer .footer-bottom .cookies-settings::before { display: none !important; }
 }
+
+/* ---------- Klientské centrum podle DS PageClient a MobileClient ----------
+   Šablona: titulek centra .client-title nad .content-wrapper-in, v něm aside.sidebar (menu .client-center-box, pod ním
+   .client-logout-btn-block) a main.content (h1 podstránky, na přehledu skrytý, a obsah). Tabulky table-mobile-enriched mají
+   v buňkách popisky span.client-table-heading, na mobilu z nich jsou karty. Stránky se poznají podle .client-center-box. */
+html.ll-test {
+  --ll-i-log-out: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m16 17 5-5-5-5'/%3E%3Cpath d='M21 12H9'/%3E%3Cpath d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/%3E%3C/svg%3E");
+  --ll-img-user-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b58127' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/svg%3E");
+}
+/* Hlavička po přihlášení: Můj účet jako Přihlášení (ikona user 20 px, text 14 px řez 500, tlačítko 44 px, hover na dlaždici) */
+html.ll-test #header .top-nav-button-account { display: inline-flex !important; align-items: center; text-decoration: none !important; }
+html.ll-test #header .top-nav-button-account span { display: inline !important; text-transform: none !important; font-size: 14px !important; line-height: 22px !important; font-weight: 500 !important; letter-spacing: 0 !important; color: var(--ll-ink) !important; }
+html.ll-test #header .top-nav-button-account::before { content: '' !important; display: inline-block; flex: none; width: 20px !important; height: 20px !important; margin-right: 8px !important; font-size: 0 !important; line-height: 0 !important; background-color: var(--ll-ink); -webkit-mask: var(--ll-i-user) center / contain no-repeat; mask: var(--ll-i-user) center / contain no-repeat; }
+html.ll-test #header .top-nav-button-account::after { display: none !important; }
+@media (min-width: 768px) {
+  html.ll-test #header .top-nav-button-account { height: 44px !important; min-height: 0 !important; padding: 0 12px !important; background: transparent !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: background-color 150ms var(--ll-ease) !important; }
+  html.ll-test #header .top-nav-button-account:hover { background: var(--ll-tile) !important; }
+}
+
+/* Titulek centra jako ostatní stránky (40 px), drobečky nad ním nechává šablona */
+html.ll-test .client-title { margin: 0 0 32px !important; padding: 0 !important; font-size: 40px !important; line-height: 1.12 !important; font-weight: 500 !important; letter-spacing: -0.02em !important; text-transform: none !important; color: var(--ll-ink) !important; }
+@media (min-width: 992px) {
+  html.ll-test .content-wrapper-in:has(.client-center-box) { display: grid !important; grid-template-columns: 260px minmax(0, 1fr); column-gap: 48px; align-items: start; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) > .sidebar, html.ll-test .content-wrapper-in:has(.client-center-box) > main.content { width: auto !important; max-width: none !important; min-width: 0; margin: 0 !important; padding: 0 !important; flex: none !important; }
+}
+
+/* Menu účtu: řádky 40 px bez teček, hover a aktivní stránka na dlaždici, první řádek jméno s kolečkem */
+html.ll-test .sidebar .client-center-box { margin: 0 !important; padding: 0 !important; }
+html.ll-test .sidebar .client-center-box ul { display: grid !important; gap: 2px; margin: 0 !important; padding: 0 !important; list-style: none !important; }
+html.ll-test .sidebar .client-center-box li { margin: 0 !important; padding: 0 !important; list-style: none !important; border: 0; }
+html.ll-test .sidebar .client-center-box li::before { display: none !important; }
+html.ll-test .sidebar .client-center-box li.logout { display: none !important; }
+html.ll-test .sidebar .client-center-box li a { position: relative; display: flex !important; align-items: center; gap: 12px; box-sizing: border-box; min-height: 40px; padding: 8px 12px !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; text-decoration: none !important; background: transparent; border-radius: var(--ll-r-sm); transition: background-color 150ms var(--ll-ease), color 150ms var(--ll-ease); }
+html.ll-test .sidebar .client-center-box li a::before { display: none !important; }
+html.ll-test .sidebar .client-center-box li a:hover { color: var(--ll-ink) !important; background: var(--ll-tile); }
+html.ll-test .sidebar .client-center-box li.active > a { color: var(--ll-ink) !important; font-weight: 500 !important; background: var(--ll-tile); }
+html.ll-test .sidebar .client-center-box li:first-child { margin-bottom: 8px !important; padding-bottom: 8px !important; border-bottom: 1px solid var(--ll-line); }
+html.ll-test .sidebar .client-center-box li:first-child > a { min-height: 52px; padding-left: 8px !important; font-size: 15px !important; color: var(--ll-ink) !important; }
+html.ll-test .sidebar .client-center-box li:first-child > a strong { font-weight: 600 !important; color: inherit !important; }
+html.ll-test .sidebar .client-center-box li:first-child > a::before { content: '' !important; position: static !important; display: block !important; flex: none; width: 36px !important; height: 36px !important; margin: 0 !important; background: var(--ll-champagne) var(--ll-img-user-gold) center / 18px 18px no-repeat !important; border: 0 !important; border-radius: 50% !important; }
+
+/* Odhlásit se: tichý řádek s ikonou pod linkou na konci menu (šablona ho táhne -15 px nahoru přes poslední odkaz) */
+html.ll-test .sidebar .client-logout-btn-block { position: static !important; display: block !important; width: auto !important; margin: 8px 0 0 !important; padding: 0 !important; border-top: 1px solid var(--ll-line); }
+html.ll-test .sidebar .client-logout-btn-block .client-logout-btn { display: flex !important; align-items: center; justify-content: flex-start; gap: 12px; box-sizing: border-box; width: auto !important; min-width: 0 !important; height: auto !important; min-height: 44px; margin: 0 !important; padding: 8px 12px !important; font-size: 14px !important; line-height: 22px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html.ll-test .sidebar .client-logout-btn-block .client-logout-btn::before { content: '' !important; display: block !important; flex: none; width: 18px; height: 18px; background-color: var(--ll-ink-muted); -webkit-mask: var(--ll-i-log-out) center / contain no-repeat; mask: var(--ll-i-log-out) center / contain no-repeat; }
+html.ll-test .sidebar .client-logout-btn-block .client-logout-btn::after { display: none !important; }
+html.ll-test .sidebar .client-logout-btn-block .client-logout-btn:hover { color: var(--ll-ink) !important; }
+html.ll-test .sidebar .client-logout-btn-block .client-logout-btn:hover::before { background-color: var(--ll-ink); }
+
+/* Obsah: název podstránky 24/32 (na přehledu Poslední objednávka), další nadpisy 18 px, upozornění v panelu ivory */
+html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > h1, html.ll-test body.in-klient .content-inner > h2:first-of-type { margin: 0 0 20px !important; padding: 0 !important; font-size: 24px !important; line-height: 32px !important; font-weight: 500 !important; letter-spacing: -0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > h2:not(:first-of-type), html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > h2.spaced-big, html.ll-test body:not(.in-klient) .content-wrapper-in:has(.client-center-box) .content-inner > h2 { margin: 32px 0 16px !important; padding: 0 !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > h1 + h2, html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > .client-link + h2 { margin-top: 0 !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .client-link { margin: 0 0 24px !important; padding: 16px 20px !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; background: var(--ll-ivory); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); }
+html.ll-test .content-wrapper-in:has(.client-center-box) .client-link strong { font-weight: 400 !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .client-link a { font-weight: 500 !important; color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+/* Prázdné stavy (doklady, platby, hodnocení, diskuze) v panelu ivory */
+html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > h4, html.ll-test body.in-klient-platby .content-inner > h2 + p, html.ll-test body.in-klient-hodnoceni .content-inner > p, html.ll-test body.in-klient-diskuze .content-inner > p { margin: 0 !important; padding: 24px !important; font-size: 15px !important; line-height: 24px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; background: var(--ll-ivory); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); }
+
+/* Tabulky: záhlaví 13 px ink-muted bez zalamování s linkou line-strong, řádky 14/22 po 16 px s linkou, ceny vpravo */
+html.ll-test .content-wrapper-in:has(.client-center-box) .table-responsive { margin: 0 0 24px !important; padding: 0 !important; border: 0 !important; overflow-x: auto; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table { width: 100% !important; margin: 0 0 24px !important; border-collapse: collapse !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; font-variant-numeric: tabular-nums; background: transparent !important; border: 0 !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .table-responsive > table.table { margin: 0 !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table th { padding: 0 16px 12px 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; text-align: left !important; white-space: nowrap; vertical-align: bottom !important; color: var(--ll-ink-muted) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-line-strong) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table td { padding: 16px 16px 16px 0 !important; font-size: 14px !important; line-height: 22px !important; vertical-align: middle !important; color: var(--ll-ink-soft) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table th:last-child, html.ll-test .content-wrapper-in:has(.client-center-box) table.table td:last-child { padding-right: 0 !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table .cell--price { padding-right: 32px !important; text-align: right !important; white-space: nowrap; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table td a { font-weight: 600 !important; color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table td strong { font-weight: 600 !important; color: var(--ll-ink) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .client-table-heading { display: none !important; }
+/* Položky objednávky: název produktu bez podtržení, kód pod ním, souhrn vpravo */
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table td.p-name a { font-weight: 500 !important; text-decoration: none !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table td.p-name a:hover { text-decoration: underline !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table td.p-name .p-name__codeLabel, html.ll-test .content-wrapper-in:has(.client-center-box) table.table td.p-name .p-name__code { display: inline !important; font-size: 12px !important; line-height: 18px !important; font-style: normal !important; color: var(--ll-ink-muted) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table td.p-name .p-name__codeLabel { display: block !important; margin-top: 2px; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table td.p-name .p-name__codeLabel ~ .p-name__code { display: inline !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table tr.row-summary td { padding-top: 20px !important; font-size: 16px !important; text-align: right !important; color: var(--ll-ink) !important; border-bottom: 0 !important; }
+/* Moje slevy: řádky jako ll-details (popisek ink-muted, hodnota řez 600) */
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 { max-width: 560px; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 td:first-child { width: 220px; font-size: 13px !important; color: var(--ll-ink-muted) !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 + p, html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 + p em { font-size: 13px !important; line-height: 20px !important; font-style: normal !important; color: var(--ll-ink-muted) !important; }
+
+/* Do 991 px: obsah nahoře, menu pod ním jako seznam v rámečku, Odhlásit se pod ním na střed */
+@media (max-width: 991px) {
+  html.ll-test .content-wrapper-in:has(.client-center-box) { display: flex !important; flex-direction: column; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) > main.content { order: 1; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) > .sidebar { order: 2; display: block !important; width: auto !important; max-width: none !important; margin: 40px 0 0 !important; padding: 0 !important; }
+  html.ll-test .sidebar .client-center-box ul { gap: 0; padding: 0 16px !important; background: var(--ll-paper); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); }
+  html.ll-test .sidebar .client-center-box li + li { border-top: 1px solid var(--ll-line); }
+  html.ll-test .sidebar .client-center-box li.logout + li { border-top: 0; }
+  html.ll-test .sidebar .client-center-box li a { min-height: 52px; padding: 8px 0 !important; font-size: 15px !important; border-radius: 0; }
+  html.ll-test .sidebar .client-center-box li a:hover, html.ll-test .sidebar .client-center-box li.active > a { background: transparent; }
+  html.ll-test .sidebar .client-center-box li:first-child { margin: 0 !important; padding: 0 !important; border-bottom: 0; }
+  html.ll-test .sidebar .client-center-box li:first-child > a { min-height: 64px; padding-left: 0 !important; }
+  html.ll-test .sidebar .client-logout-btn-block { border-top: 0; }
+  html.ll-test .sidebar .client-logout-btn-block .client-logout-btn { justify-content: center; min-height: 48px; }
+  /* Podstránky: místo titulku centra odkaz zpět v drobečcích a titulek podstránky 30 px */
+  html.ll-test body:not(.in-klient) .content-wrapper:has(.client-center-box) > .client-title { display: none !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > h1 { font-size: 30px !important; line-height: 1.15 !important; letter-spacing: -0.02em !important; }
+  html.ll-test body.in-klient .content-inner > h2:first-of-type { font-size: 20px !important; line-height: 28px !important; }
+}
+@media (max-width: 767px) {
+  html.ll-test .client-title { margin-bottom: 24px !important; font-size: 30px !important; line-height: 1.15 !important; }
+  /* Tabulky jako karty: každý údaj na řádku, popisek 13 px ve sloupci 132 px */
+  html.ll-test .content-wrapper-in:has(.client-center-box) .table-responsive { overflow: visible; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched, html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody, html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tr { display: block !important; width: auto !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched thead { display: none !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody tr { padding: 4px 16px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md); }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody tr + tr { margin-top: 12px; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td { display: grid !important; grid-template-columns: 132px minmax(0, 1fr); column-gap: 16px; align-items: start; width: auto !important; padding: 10px 0 !important; text-align: left !important; white-space: normal !important; border-bottom: 1px solid var(--ll-line) !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td:last-child { border-bottom: 0 !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td:empty { display: none !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched .client-table-heading { display: block !important; font-size: 13px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td.p-name { display: block !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tr.row-summary { background: transparent !important; border: 0 !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tr.row-summary td { display: block !important; padding: 16px 0 0 !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-md-50 td:first-child { width: auto; }
+}
