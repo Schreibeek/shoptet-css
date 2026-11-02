@@ -2807,8 +2807,10 @@ html.ll-test body.in-nastaveni .shipping-addresses p { margin: 0 0 8px !importan
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched thead { display: none !important; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody tr { padding: 4px 16px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md); }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody tr + tr { margin-top: 12px; }
-  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td { display: grid !important; grid-template-columns: 132px minmax(0, 1fr); column-gap: 16px; align-items: start; width: auto !important; padding: 10px 0 !important; text-align: left !important; white-space: normal !important; border-bottom: 1px solid var(--ll-line) !important; }
-  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td:last-child { border-bottom: 0 !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td { display: grid !important; grid-template-columns: 132px minmax(0, 1fr); column-gap: 16px; align-items: start; width: auto !important; padding: 10px 0 !important; text-align: left !important; white-space: normal !important; border: 0 !important; }
+  /* Linka nad každým dalším údajem (ne pod), skrytá prázdná buňka na konci tak nenechá linku navíc */
+  html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td + td { border-top: 1px solid var(--ll-line) !important; }
+  html.ll-test .content-wrapper-in:has(.client-center-box) .table-responsive { margin-bottom: 0 !important; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td.cell--price { padding-right: 0 !important; text-align: left !important; white-space: normal !important; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td:empty { display: none !important; }
   html.ll-test .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched .client-table-heading { display: block !important; font-size: 13px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
