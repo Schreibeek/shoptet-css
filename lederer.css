@@ -210,6 +210,7 @@ html:not(.ll-test) .products .product .availability {display:none !important;}
 /* PATIČKA: bannery F-1 až F-5 podle DS Footer (2. 11. 2026). F-1 je krátký text pod logem, ten má jen nový vzhled (ostrá patička logo nemá).
    F-4 jsou štítky plateb a dopravy místo šedých log. */
 html:not(.ll-test) #footer .custom-footer__banner4 {display:none !important;}
-html:not(.ll-test) #footer .pay-chips {display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; list-style:none;}
+html:not(.ll-test) #footer .pay-chips {display:flex; flex-wrap:wrap; gap:6px; margin:0 0 19px; padding:0; list-style:none;}
 html:not(.ll-test) #footer .pay-chips li {margin:0; padding:3px 9px; font-size:12px; line-height:18px; color:#514c46; background:#fff; border:1px solid #e9e6e1; border-radius:2px;}
 html:not(.ll-test) #footer .pay-chips li::before {display:none !important;}
+html:not(.ll-test) #footer .custom-footer__banner9 h4 {text-align:center;}
