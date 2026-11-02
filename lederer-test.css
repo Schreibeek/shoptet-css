@@ -2668,6 +2668,7 @@ html.ll-test .client-title { margin: 0 0 32px !important; padding: 0 !important;
 
 /* Menu účtu: řádky 40 px bez teček, hover a aktivní stránka na dlaždici, první řádek jméno s kolečkem */
 html.ll-test .sidebar .client-center-box { margin: 0 !important; padding: 0 !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) .sidebar-inner { width: auto !important; margin: 0 !important; padding: 0 !important; }
 html.ll-test .sidebar .client-center-box ul { display: grid !important; gap: 2px; margin: 0 !important; padding: 0 !important; list-style: none !important; }
 html.ll-test .sidebar .client-center-box li { margin: 0 !important; padding: 0 !important; list-style: none !important; border: 0; }
 html.ll-test .sidebar .client-center-box li::before { display: none !important; }
@@ -2679,6 +2680,8 @@ html.ll-test .sidebar .client-center-box li.active > a { color: var(--ll-ink) !i
 html.ll-test .sidebar .client-center-box li:first-child { margin-bottom: 8px !important; padding-bottom: 8px !important; border-bottom: 1px solid var(--ll-line); }
 html.ll-test .sidebar .client-center-box li:first-child > a { min-height: 52px; padding-left: 8px !important; font-size: 15px !important; color: var(--ll-ink) !important; }
 html.ll-test .sidebar .client-center-box li:first-child > a strong { font-weight: 600 !important; color: inherit !important; }
+/* Řádek se jménem je hlavička menu: bez podkladu i na přehledu (kolečko champagne by na dlaždici zmizelo) */
+html.ll-test .sidebar .client-center-box li:first-child > a:hover, html.ll-test .sidebar .client-center-box li.active:first-child > a { background: transparent; }
 html.ll-test .sidebar .client-center-box li:first-child > a::before { content: '' !important; position: static !important; display: block !important; flex: none; width: 36px !important; height: 36px !important; margin: 0 !important; background: var(--ll-champagne) var(--ll-img-user-gold) center / 18px 18px no-repeat !important; border: 0 !important; border-radius: 50% !important; }
 
 /* Odhlásit se: tichý řádek s ikonou pod linkou na konci menu (šablona ho táhne -15 px nahoru přes poslední odkaz) */
@@ -2701,7 +2704,7 @@ html.ll-test .content-wrapper-in:has(.client-center-box) .content-inner > h4, ht
 
 /* Tabulky: záhlaví 13 px ink-muted bez zalamování s linkou line-strong, řádky 14/22 po 16 px s linkou, ceny vpravo */
 html.ll-test .content-wrapper-in:has(.client-center-box) .table-responsive { margin: 0 0 24px !important; padding: 0 !important; border: 0 !important; overflow-x: auto; }
-html.ll-test .content-wrapper-in:has(.client-center-box) table.table { width: 100% !important; margin: 0 0 24px !important; border-collapse: collapse !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; font-variant-numeric: tabular-nums; background: transparent !important; border: 0 !important; }
+html.ll-test .content-wrapper-in:has(.client-center-box) table.table { width: 100% !important; margin: 0 0 24px !important; padding: 0 !important; border-collapse: separate !important; border-spacing: 0 !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; font-variant-numeric: tabular-nums; background: transparent !important; border: 0 !important; }
 html.ll-test .content-wrapper-in:has(.client-center-box) .table-responsive > table.table { margin: 0 !important; }
 html.ll-test .content-wrapper-in:has(.client-center-box) table.table th { padding: 0 16px 12px 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; text-align: left !important; white-space: nowrap; vertical-align: bottom !important; color: var(--ll-ink-muted) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-line-strong) !important; }
 html.ll-test .content-wrapper-in:has(.client-center-box) table.table td { padding: 16px 16px 16px 0 !important; font-size: 14px !important; line-height: 22px !important; vertical-align: middle !important; color: var(--ll-ink-soft) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
