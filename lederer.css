@@ -3124,6 +3124,8 @@ html:root .quantity-discounts:has(.quantity-discounts__item:first-child.quantity
    Rámeček 520 px na středu je .content-inner (titulek h1 a form#register-form uvnitř). Pole, zaškrtávátko a tlačítko sdílí pravidla
    s formulářem Moje osobní údaje výš; nadpisy oddílů šablona skrývá, nadpis sociálních sítí je oddělovač s linkami. */
 html:root :is(body.in-registrace, body.in-login) .breadcrumbs-wrapper .breadcrumbs { max-width: none; margin-left: 0 !important; margin-right: 0 !important; }
+/* Šablona dává obsahu vpravo odsazení 20 px, rámeček by byl o 10 px vlevo od středu stránky */
+html:root :is(body.in-registrace, body.in-login) main#content { padding-right: 0 !important; }
 html:root :is(body.in-registrace, body.in-login) main .content-inner { box-sizing: border-box; width: auto !important; max-width: 520px !important; margin: 32px auto 64px !important; padding: 40px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; }
 html:root :is(body.in-registrace, body.in-login) main .content-inner > h1 { margin: 0 0 24px !important; padding: 0 !important; font-size: 32px !important; line-height: 40px !important; font-weight: 500 !important; letter-spacing: -0.015em !important; text-align: left !important; text-transform: none !important; color: var(--ll-ink) !important; }
 html:root body.in-registrace #register-form { display: grid !important; gap: 20px; width: auto !important; max-width: none !important; }
