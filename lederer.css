@@ -750,6 +750,44 @@ html:root .p-detail-tabs-wrapper .tab-pane, html:root .p-detail-tabs-wrapper .ta
 /* Jen popis produktu užší kvůli délce řádků; Parametry, Hodnocení a Diskuze přes celou šířku */
 html:root .p-detail-tabs-wrapper #description.tab-pane { max-width: 1000px; }
 
+/* ---------- Parametry produktu podle DS ProductParams ----------
+   Shoptet posílá parametry v popisu (#description .description-inner > .extended-description > table.detail-parameters, první řádek
+   Kategorie s odkazem, nadpis „Doplňkové parametry"). Šablona je skriptem přesune do záložky Parametry (#productParameter), nadpis
+   přepíše na „Parametry produktu" a Kategorii převede na odkaz pod tabulkou. Řádky pod sebou: název 13/20 ink-muted, hodnota
+   15/22 řez 500 ink, linka mezi nimi. Kategorie se neukazuje (je v drobečkách). Pod 1200 px v záložce jen řádky do 480 px bez nadpisu,
+   od 1200 px panel 300 px na ivory vpravo vedle popisu a záložka Parametry se neukazuje. Jen CSS, nic se nenačítá.
+   Tabulka .detail-parameters je i v nákupním panelu, proto vše jen v .p-detail-tabs-wrapper. */
+html:root .p-detail-tabs-wrapper .extended-description:has(table.detail-parameters tr) > h4, html:root .p-detail-tabs-wrapper .extended-description:has(table.detail-parameters tr) > .category-link { display: none !important; }
+html:root .p-detail-tabs-wrapper .extended-description { box-sizing: border-box; max-width: 480px; margin: 0 !important; padding: 0 !important; }
+html:root .p-detail-tabs-wrapper .extended-description > h3 { display: none !important; }
+html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters, html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters :is(tbody, tr, th, td) { display: block !important; width: auto !important; max-width: none !important; height: auto !important; margin: 0 !important; padding: 0 !important; text-align: left !important; background: none !important; border: 0 !important; }
+html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters tr { padding: 12px 0 !important; }
+html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters tr + tr { border-top: 1px solid var(--ll-line) !important; }
+html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters tr:first-child { padding-top: 0 !important; }
+html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters tr:last-child { padding-bottom: 0 !important; }
+html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters th, html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters th * { font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-muted) !important; }
+html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters .row-header-label-colon { display: none !important; }
+html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters td { margin-top: 2px !important; font-size: 15px !important; line-height: 22px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+@media (min-width: 1200px) {
+  /* Popis | parametry: po skriptu šablony mřížka na #tab-content (parametry jsou v #productParameter, ukázané i bez .active) */
+  html:root #tab-content:has(> #description.active):has(> #productParameter table.detail-parameters tr) { display: grid !important; grid-template-columns: minmax(0, 1fr) 300px; column-gap: 64px; align-items: start; }
+  html:root #tab-content:has(> #description.active):has(> #productParameter table.detail-parameters tr) > #description { grid-column: 1; grid-row: 1; min-width: 0; }
+  html:root #tab-content:has(> #description.active):has(> #productParameter table.detail-parameters tr) > #productParameter { display: block !important; grid-column: 2; grid-row: 1; min-width: 0; opacity: 1 !important; }
+  html:root .p-detail-tabs-wrapper:has(#productParameter table.detail-parameters tr) .shp-tabs > li:has(> a[href="#productParameter"]) { display: none !important; }
+  /* Před skriptem šablony je tabulka v popisu: mřížka na .description-inner, panel stojí na stejném místě, nadpis
+     „Doplňkové parametry" neviditelný (drží místo, skript ho přepíše) a řádek Kategorie schovaný */
+  html:root .p-detail-tabs-wrapper #description.tab-pane:has(> .description-inner > .extended-description tr:nth-child(2)) { max-width: none; }
+  html:root #description > .description-inner:has(> .extended-description tr:nth-child(2)) { display: grid !important; grid-template-columns: minmax(0, 1fr) 300px; column-gap: 64px; align-items: start; }
+  html:root #description > .description-inner:has(> .extended-description tr:nth-child(2)) > .basic-description { grid-column: 1; grid-row: 1; min-width: 0; max-width: 1000px; }
+  html:root #description > .description-inner > .extended-description { grid-column: 2; grid-row: 1; }
+  html:root #description > .description-inner > .extended-description > h3 { visibility: hidden; }
+  html:root #description > .description-inner > .extended-description tr:first-child:has(> td > a) { display: none !important; }
+  /* Panel: ivory, rohy 6 px, nadpis 12/16 verzálkami jako titulky filtrů, první řádek 20 px pod ním */
+  html:root .p-detail-tabs-wrapper .extended-description { max-width: none; padding: 20px 24px !important; background: var(--ll-ivory) !important; border-radius: var(--ll-r-md) !important; }
+  html:root .p-detail-tabs-wrapper .extended-description > h3 { display: block !important; margin: 0 0 8px !important; padding: 0 !important; font-size: 12px !important; line-height: 16px !important; font-weight: 600 !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; color: var(--ll-ink) !important; }
+  html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters tr:first-child, html:root #description .extended-description tr:first-child:has(> td > a) + tr { padding-top: 12px !important; border-top: 0 !important; }
+}
+
 /* ---------- Bannery na homepage ---------- */
 html:root .carousel, html:root .carousel-inner, html:root .banner-wrapper img, html:root .banners-top-block img { border-radius: var(--ll-r-lg); }
 
