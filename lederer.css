@@ -1267,6 +1267,34 @@ html:root #login input.form-control:-webkit-autofill, html:root #rate-form .form
 @media (min-width: 992px) { html:root #login.popup-widget, html:root #cart-widget.popup-widget { right: calc(50% - 450px) !important; } }
 @media (min-width: 1200px) { html:root #login.popup-widget, html:root #cart-widget.popup-widget { right: calc(50% - 540px) !important; } }
 @media (min-width: 1440px) { html:root #login.popup-widget, html:root #cart-widget.popup-widget { right: calc(50% - 670px) !important; } }
+
+/* ---------- Hlavička před skriptem šablony ----------
+   Apollo až po vykreslení stránky (tsRepositionHeader v app.min.js) přesune Přihlášení z horní lišty ke košíku, obalí košík
+   do .click-cart, prázdnému košíku přepíše „Prázdný košík“ na „0,00 Kč“ a ukáže kontakty v liště. Do té doby se kreslilo HTML
+   ze serveru, blok vpravo byl jinak široký a vyhledávání při každém načtení stránky poskočilo. Hlavička se proto už před
+   skriptem kreslí stejně jako po něm (ověřeno na 768, 820, 1024, 1280 a 1728 px). */
+@media (min-width: 768px) {
+  /* Pevný základ šířky bloku vpravo (Přihlášení 121 + 10 + košík s 0,00 Kč 108 px): poloha vyhledávání nezávisí na tom, co v bloku zrovna je,
+     ani na částce v košíku nebo na Můj účet po přihlášení */
+  html:root #header .navigation-buttons { flex: 1 1 239px !important; }
+  /* Košík před obalením do .click-cart stejně jako po něm: tlačítko 44 px, taška 20 px, částka 14 px */
+  html:root #header .navigation-buttons > a.cart-count { height: 44px !important; min-height: 0 !important; padding: 0 12px !important; border: 0 !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+  html:root #header .navigation-buttons > a.cart-count::before { width: 20px !important; height: 20px !important; margin-right: 12px !important; color: var(--ll-ink) !important; -webkit-text-fill-color: var(--ll-ink) !important; }
+  html:root #header .navigation-buttons > a.cart-count i { top: 5px !important; left: 23px !important; right: auto !important; }
+  html:root #header .navigation-buttons > a.cart-count .cart-price { font-size: 14px !important; letter-spacing: normal !important; font-variant-numeric: tabular-nums; }
+  /* Prázdný košík: místo textu ze serveru rovnou 0,00 Kč, které tam dá skript */
+  html:root #header .navigation-buttons > a.cart-count:not(.full) .cart-price { font-size: 0 !important; }
+  html:root #header .navigation-buttons > a.cart-count:not(.full) .cart-price::after { content: '0,00 Kč'; font-size: 14px; line-height: 1.2; }
+  /* Přihlášení je do přesunu schované v horní liště: na jeho místě u košíku stejně vypadající zástupce (bez akce), zmizí s přesunem */
+  html:root body:has(.top-navigation-tools .top-nav-button-login) #header .navigation-buttons::before {
+    content: 'Přihlášení'; display: flex; flex: none; align-items: center; box-sizing: border-box; height: 44px; margin: 0 10px 0 0; padding: 0 12px 0 40px;
+    font-family: Poppins, sans-serif; font-size: 14px; font-weight: 500; letter-spacing: 0; text-transform: none; white-space: nowrap; color: var(--ll-ink);
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23201f1f' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/svg%3E") no-repeat 12px center / 20px 20px;
+    pointer-events: none;
+  }
+  /* Kontakty v liště ukazuje šablona až skriptem (body.is-visible-header-contact), tady hned */
+  html:root .top-navigation-bar .container > .top-navigation-contacts { display: flex !important; }
+}
 html:root #login.popup-widget, html:root #cart-widget.popup-widget { background: var(--ll-paper) !important; }
 @media (min-width: 768px) {
   html:root #login.popup-widget, html:root #cart-widget.popup-widget { margin-top: 8px !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; box-shadow: 0 12px 28px -14px rgba(32, 31, 31, 0.24) !important; }
