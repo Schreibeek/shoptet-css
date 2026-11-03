@@ -2652,7 +2652,7 @@ html:root body.in-vernostni-program .pageArticleDetail [itemprop="about"] .vp-ct
   html:root body.in-vernostni-program .pageArticleDetail [itemprop="about"] .vp-table tbody { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   html:root body.in-vernostni-program .pageArticleDetail [itemprop="about"] .vp-table tbody tr { min-height: 92px; }
   html:root body.in-vernostni-program .pageArticleDetail [itemprop="about"] .vp-table tbody td.vp-discount { font-size: 28px !important; line-height: 32px !important; }
-  html:root body.in-vernostni-program .pageArticleDetail [itemprop="about"] .vp-cta a { display: flex !important; width: 100%; }
+  html:root body.in-vernostni-program .pageArticleDetail [itemprop="about"] .vp-cta a { display: flex !important; width: 100%; padding: 0 16px !important; text-align: center; }
 }
 
 /* ---------- Hodnocení obchodu (DS PageShopReviews, MobileShopReviews) ----------
