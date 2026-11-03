@@ -464,6 +464,24 @@ html:root .sidebar .box, html:root .sidebar .box.box-bg-variant, html:root .side
 html:root .sidebar-inner > .box + .box, html:root .sidebar .box > .box + .box { margin-top: 32px !important; padding-top: 24px !important; border-top: 1px solid var(--ll-line) !important; }
 html:root .sidebar-inner > .banner { margin: 32px 0 0 !important; }
 html:root .sidebar .banner img { display: block; width: 100%; height: auto; border-radius: var(--ll-r-md); }
+/* Lepicí panel (DS Filters, verze 52): od 992 px, kde šablona ukazuje levý sloupec, se panel při posunu drží 24 px pod horním okrajem okna,
+   a když šablona ukáže lepicí hlavičku (body.is-header-hidden.is-header-scrolling, hlavička 117 px), 24 px pod ní; posouvá se spolu s ní (0,45 s).
+   Je nejvýš na výšku okna, zbytek (dlouhé filtry, banner, hodnocení obchodu) se posouvá uvnitř tenkým posuvníkem; posun uvnitř drží i po filtrování.
+   Obsah má pevnou šířku jako dřív (252 px, do 1199 px 276 px), posuvník leží v mezeře k výpisu. Okraje 4 px kolem obsahu jsou kvůli obrysu focusu. */
+@media (min-width: 992px) {
+  html:root body.type-category aside.sidebar-left .sidebar-inner {
+    position: sticky; top: 20px; max-height: calc(100vh - 40px); box-sizing: border-box;
+    margin: -4px 12px -4px -4px !important; padding: 4px 36px 4px 4px !important;
+    overflow-x: hidden; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--ll-line-strong) transparent; scrollbar-gutter: stable;
+    transition: top .45s ease-out, max-height .45s ease-out;
+  }
+  html:root body.type-category.is-header-hidden.is-header-scrolling aside.sidebar-left .sidebar-inner { top: 137px; max-height: calc(100vh - 157px); }
+  html:root body.type-category aside.sidebar-left .sidebar-inner > * { width: 252px !important; max-width: none !important; }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  html:root body.type-category aside.sidebar-left .sidebar-inner { margin-right: 6px !important; padding-right: 18px !important; }
+  html:root body.type-category aside.sidebar-left .sidebar-inner > * { width: 276px !important; }
+}
 html:root .sidebar .pageElement__heading, html:root #filters h4 { margin: 0 0 14px !important; padding: 0 !important; font-size: 12px !important; line-height: 16px !important; font-weight: 600 !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; color: var(--ll-ink) !important; background: transparent !important; border: 0 !important; }
 html:root .sidebar .pageElement__heading span, html:root #filters h4 span { font: inherit !important; letter-spacing: inherit !important; text-transform: inherit !important; color: inherit !important; }
 @media (min-width: 768px) { html:root .box-filters > h4 { display: none !important; } }
