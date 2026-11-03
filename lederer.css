@@ -779,9 +779,10 @@ html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters t
   /* Před skriptem šablony je tabulka v popisu: mřížka na .description-inner, panel stojí na stejném místě, nadpis
      „Doplňkové parametry" neviditelný (drží místo, skript ho přepíše) a řádek Kategorie schovaný */
   html:root .p-detail-tabs-wrapper #description.tab-pane:has(> .description-inner > .extended-description tr:nth-child(2)) { max-width: none; }
-  html:root #description > .description-inner:has(> .extended-description tr:nth-child(2)) { display: grid !important; grid-template-columns: minmax(0, 1fr) 300px; column-gap: 64px; align-items: start; }
-  html:root #description > .description-inner:has(> .extended-description tr:nth-child(2)) > .basic-description { grid-column: 1; grid-row: 1; min-width: 0; max-width: 1000px; }
-  html:root #description > .description-inner > .extended-description { grid-column: 2; grid-row: 1; }
+  html:root #description > .description-inner:has(> .extended-description tr:nth-child(2)) { display: grid !important; grid-template-columns: minmax(0, 1fr) 300px; column-gap: 64px; align-items: start; width: auto !important; margin: 0 !important; }
+  /* Šablona tu má sloupce 60 : 40 % s odsazením 60 px (obal -60 px), v mřížce zrušené */
+  html:root #description > .description-inner:has(> .extended-description tr:nth-child(2)) > .basic-description { grid-column: 1; grid-row: 1; width: auto !important; min-width: 0; max-width: 1000px; padding: 0 !important; }
+  html:root #description > .description-inner > .extended-description { grid-column: 2; grid-row: 1; width: auto !important; }
   html:root #description > .description-inner > .extended-description > h3 { visibility: hidden; }
   html:root #description > .description-inner > .extended-description tr:first-child:has(> td > a) { display: none !important; }
   /* Panel: ivory, rohy 6 px, nadpis 12/16 verzálkami jako titulky filtrů, první řádek 20 px pod ním */
