@@ -2977,13 +2977,13 @@ html:root {
 /* Titulek centra jako ostatní stránky (40 px), drobečky nad ním nechává šablona */
 html:root .client-title { margin: 0 0 32px !important; padding: 0 !important; font-size: 40px !important; line-height: 1.12 !important; font-weight: 500 !important; letter-spacing: -0.02em !important; text-transform: none !important; color: var(--ll-ink) !important; }
 @media (min-width: 992px) {
-  html:root .content-wrapper-in:has(.client-center-box) { display: grid !important; grid-template-columns: 260px minmax(0, 1fr); column-gap: 48px; align-items: start; }
-  html:root .content-wrapper-in:has(.client-center-box) > .sidebar, html:root .content-wrapper-in:has(.client-center-box) > main.content { width: auto !important; max-width: none !important; min-width: 0; margin: 0 !important; padding: 0 !important; flex: none !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) { display: grid !important; grid-template-columns: 260px minmax(0, 1fr); column-gap: 48px; align-items: start; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) > .sidebar, html:root .content-wrapper-in:has(.client-center-box li + li) > main.content { width: auto !important; max-width: none !important; min-width: 0; margin: 0 !important; padding: 0 !important; flex: none !important; }
 }
 
 /* Menu účtu: řádky 40 px bez teček, hover a aktivní stránka na dlaždici, první řádek jméno s kolečkem */
 html:root .sidebar .client-center-box { margin: 0 !important; padding: 0 !important; }
-html:root .content-wrapper-in:has(.client-center-box) .sidebar-inner { width: auto !important; margin: 0 !important; padding: 0 !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .sidebar-inner { width: auto !important; margin: 0 !important; padding: 0 !important; }
 html:root .sidebar .client-center-box ul { display: grid !important; gap: 2px; margin: 0 !important; padding: 0 !important; list-style: none !important; }
 html:root .sidebar .client-center-box li { margin: 0 !important; padding: 0 !important; list-style: none !important; border: 0; }
 html:root .sidebar .client-center-box li::before { display: none !important; }
@@ -3008,57 +3008,57 @@ html:root .sidebar .client-logout-btn-block .client-logout-btn:hover { color: va
 html:root .sidebar .client-logout-btn-block .client-logout-btn:hover::before { background-color: var(--ll-ink); }
 
 /* Obsah: název podstránky 24/32 (na přehledu Poslední objednávka), další nadpisy 18 px, upozornění v panelu ivory */
-html:root .content-wrapper-in:has(.client-center-box) .content-inner > h1, html:root body.in-klient .content-inner > h2:first-of-type { margin: 0 0 20px !important; padding: 0 !important; font-size: 24px !important; line-height: 32px !important; font-weight: 500 !important; letter-spacing: -0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; }
-html:root .content-wrapper-in:has(.client-center-box) .content-inner > h2:not(:first-of-type), html:root .content-wrapper-in:has(.client-center-box) .content-inner > h2.spaced-big, html:root body:not(.in-klient) .content-wrapper-in:has(.client-center-box) .content-inner > h2 { margin: 32px 0 16px !important; padding: 0 !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
-html:root .content-wrapper-in:has(.client-center-box) .content-inner > h1 + h2, html:root .content-wrapper-in:has(.client-center-box) .content-inner > .client-link + h2 { margin-top: 0 !important; }
-html:root .content-wrapper-in:has(.client-center-box) .client-link { margin: 0 0 24px !important; padding: 16px 20px !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; background: var(--ll-ivory); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); }
-html:root .content-wrapper-in:has(.client-center-box) .client-link strong { font-weight: 400 !important; }
-html:root .content-wrapper-in:has(.client-center-box) .client-link a { font-weight: 500 !important; color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > h1, html:root body.in-klient .content-inner > h2:first-of-type { margin: 0 0 20px !important; padding: 0 !important; font-size: 24px !important; line-height: 32px !important; font-weight: 500 !important; letter-spacing: -0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > h2:not(:first-of-type), html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > h2.spaced-big, html:root body:not(.in-klient) .content-wrapper-in:has(.client-center-box li + li) .content-inner > h2 { margin: 32px 0 16px !important; padding: 0 !important; font-size: 18px !important; line-height: 26px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > h1 + h2, html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > .client-link + h2 { margin-top: 0 !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .client-link { margin: 0 0 24px !important; padding: 16px 20px !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; background: var(--ll-ivory); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); }
+html:root .content-wrapper-in:has(.client-center-box li + li) .client-link strong { font-weight: 400 !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .client-link a { font-weight: 500 !important; color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
 /* Prázdné stavy (doklady, platby, hodnocení, diskuze) v panelu ivory */
-html:root .content-wrapper-in:has(.client-center-box) .content-inner > h4, html:root body.in-klient-platby .content-inner > h2 + p, html:root body.in-klient-hodnoceni .content-inner > p, html:root body.in-klient-diskuze .content-inner > p { margin: 0 !important; padding: 24px !important; font-size: 15px !important; line-height: 24px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; background: var(--ll-ivory); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); }
+html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > h4, html:root body.in-klient-platby .content-inner > h2 + p, html:root body.in-klient-hodnoceni .content-inner > p, html:root body.in-klient-diskuze .content-inner > p { margin: 0 !important; padding: 24px !important; font-size: 15px !important; line-height: 24px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-soft) !important; background: var(--ll-ivory); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); }
 
 /* Tabulky: záhlaví 13 px ink-muted bez zalamování s linkou line-strong, řádky 14/22 po 16 px s linkou, ceny vpravo */
 /* Obal se posouvá o 4 px doleva s odsazením zpět: posuvník obalu jinak ořízne dřík prvního písmene v záhlaví (K v Kód) */
-html:root .content-wrapper-in:has(.client-center-box) .table-responsive { margin: 0 0 24px -4px !important; padding: 0 0 0 4px !important; border: 0 !important; overflow-x: auto; }
-html:root .content-wrapper-in:has(.client-center-box) table.table { width: 100% !important; margin: 0 0 24px !important; padding: 0 !important; border-collapse: separate !important; border-spacing: 0 !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; font-variant-numeric: tabular-nums; background: transparent !important; border: 0 !important; }
-html:root .content-wrapper-in:has(.client-center-box) .table-responsive > table.table { margin: 0 !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table th { padding: 0 16px 12px 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; text-align: left !important; white-space: nowrap; vertical-align: bottom !important; color: var(--ll-ink-muted) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-line-strong) !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table td { padding: 16px 16px 16px 0 !important; font-size: 14px !important; line-height: 22px !important; vertical-align: middle !important; color: var(--ll-ink-soft) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table th:last-child, html:root .content-wrapper-in:has(.client-center-box) table.table td:last-child { padding-right: 0 !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table .cell--price { padding-right: 32px !important; text-align: right !important; white-space: nowrap; }
-html:root .content-wrapper-in:has(.client-center-box) table.table td a { font-weight: 600 !important; color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
-html:root .content-wrapper-in:has(.client-center-box) table.table td strong { font-weight: 600 !important; color: var(--ll-ink) !important; }
-html:root .content-wrapper-in:has(.client-center-box) .client-table-heading { display: none !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .table-responsive { margin: 0 0 24px -4px !important; padding: 0 0 0 4px !important; border: 0 !important; overflow-x: auto; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table { width: 100% !important; margin: 0 0 24px !important; padding: 0 !important; border-collapse: separate !important; border-spacing: 0 !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; font-variant-numeric: tabular-nums; background: transparent !important; border: 0 !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .table-responsive > table.table { margin: 0 !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table th { padding: 0 16px 12px 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; text-align: left !important; white-space: nowrap; vertical-align: bottom !important; color: var(--ll-ink-muted) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-line-strong) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table td { padding: 16px 16px 16px 0 !important; font-size: 14px !important; line-height: 22px !important; vertical-align: middle !important; color: var(--ll-ink-soft) !important; background: transparent !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table th:last-child, html:root .content-wrapper-in:has(.client-center-box li + li) table.table td:last-child { padding-right: 0 !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table .cell--price { padding-right: 32px !important; text-align: right !important; white-space: nowrap; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table td a { font-weight: 600 !important; color: var(--ll-ink) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table td strong { font-weight: 600 !important; color: var(--ll-ink) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .client-table-heading { display: none !important; }
 /* Položky objednávky: název produktu bez podtržení, kód pod ním, souhrn vpravo */
-html:root .content-wrapper-in:has(.client-center-box) table.table td.p-name a { font-weight: 500 !important; text-decoration: none !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table td.p-name a:hover { text-decoration: underline !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table td.p-name .p-name__codeLabel, html:root .content-wrapper-in:has(.client-center-box) table.table td.p-name .p-name__code { display: inline !important; font-size: 12px !important; line-height: 18px !important; font-style: normal !important; color: var(--ll-ink-muted) !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table td.p-name .p-name__codeLabel { display: block !important; margin-top: 2px; }
-html:root .content-wrapper-in:has(.client-center-box) table.table td.p-name .p-name__codeLabel ~ .p-name__code { display: inline !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table tr.row-summary td { padding-top: 20px !important; font-size: 16px !important; text-align: right !important; color: var(--ll-ink) !important; border-bottom: 0 !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table td.p-name a { font-weight: 500 !important; text-decoration: none !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table td.p-name a:hover { text-decoration: underline !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table td.p-name .p-name__codeLabel, html:root .content-wrapper-in:has(.client-center-box li + li) table.table td.p-name .p-name__code { display: inline !important; font-size: 12px !important; line-height: 18px !important; font-style: normal !important; color: var(--ll-ink-muted) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table td.p-name .p-name__codeLabel { display: block !important; margin-top: 2px; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table td.p-name .p-name__codeLabel ~ .p-name__code { display: inline !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table tr.row-summary td { padding-top: 20px !important; font-size: 16px !important; text-align: right !important; color: var(--ll-ink) !important; border-bottom: 0 !important; }
 /* Detail objednávky: adresy ve dvou sloupcích s nadpisem 14 px, položky se zalamovaným záhlavím, souhrn vpravo */
-html:root .content-wrapper-in:has(.client-center-box) .content-inner > .row { margin-bottom: 8px !important; }
-html:root .content-wrapper-in:has(.client-center-box) .content-inner > .row > div { font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; }
-html:root .content-wrapper-in:has(.client-center-box) .content-inner > .row h4 { margin: 0 0 8px !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
-html:root .content-wrapper-in:has(.client-center-box) .content-inner > .row a { color: var(--ll-ink-soft) !important; }
-html:root .content-wrapper-in:has(.client-center-box) .content-inner > div > p { margin: 0 !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table-order-details th { white-space: normal !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table-order-details th, html:root .content-wrapper-in:has(.client-center-box) table.table-order-details td { padding-right: 12px !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table-order-details .cell--price { padding-right: 20px !important; }
-html:root .content-wrapper-in:has(.client-center-box) table.table-order-details td.p-name { min-width: 200px; }
-html:root .content-wrapper-in:has(.client-center-box) table.table-order-details tr.row-summary td { padding: 20px 0 0 !important; }
-html:root .content-wrapper-in:has(.client-center-box) .list-summary { display: grid !important; grid-template-columns: auto auto; justify-content: end; width: 100% !important; max-width: none !important; float: none !important; column-gap: 24px; row-gap: 4px; margin: 0 !important; font-size: 14px !important; line-height: 22px !important; }
-html:root .content-wrapper-in:has(.client-center-box) .list-summary dt { margin: 0 !important; padding: 0 !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; text-align: left; }
-html:root .content-wrapper-in:has(.client-center-box) .list-summary dd { margin: 0 !important; padding: 0 !important; color: var(--ll-ink) !important; text-align: right; font-variant-numeric: tabular-nums; }
-html:root .content-wrapper-in:has(.client-center-box) .list-summary dt:first-of-type, html:root .content-wrapper-in:has(.client-center-box) .list-summary dd:first-of-type { font-size: 16px !important; line-height: 24px !important; font-weight: 600 !important; color: var(--ll-ink) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > .row { margin-bottom: 8px !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > .row > div { font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > .row h4 { margin: 0 0 8px !important; padding: 0 !important; font-size: 14px !important; line-height: 22px !important; font-weight: 600 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > .row a { color: var(--ll-ink-soft) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > div > p { margin: 0 !important; font-size: 14px !important; line-height: 22px !important; color: var(--ll-ink-soft) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table-order-details th { white-space: normal !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table-order-details th, html:root .content-wrapper-in:has(.client-center-box li + li) table.table-order-details td { padding-right: 12px !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table-order-details .cell--price { padding-right: 20px !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table-order-details td.p-name { min-width: 200px; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table-order-details tr.row-summary td { padding: 20px 0 0 !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .list-summary { display: grid !important; grid-template-columns: auto auto; justify-content: end; width: 100% !important; max-width: none !important; float: none !important; column-gap: 24px; row-gap: 4px; margin: 0 !important; font-size: 14px !important; line-height: 22px !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .list-summary dt { margin: 0 !important; padding: 0 !important; font-weight: 400 !important; color: var(--ll-ink-soft) !important; text-align: left; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .list-summary dd { margin: 0 !important; padding: 0 !important; color: var(--ll-ink) !important; text-align: right; font-variant-numeric: tabular-nums; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .list-summary dt:first-of-type, html:root .content-wrapper-in:has(.client-center-box li + li) .list-summary dd:first-of-type { font-size: 16px !important; line-height: 24px !important; font-weight: 600 !important; color: var(--ll-ink) !important; }
 /* Stránkování: s jedinou stránkou nic, jinak čísla vlevo a počet položek vpravo */
-html:root .content-wrapper-in:has(.client-center-box) .pagination-wrapper { display: flex !important; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin: 0 !important; padding: 0 !important; }
-html:root .content-wrapper-in:has(.client-center-box) .pagination-wrapper:has(.pagination > .current:only-child) { display: none !important; }
-html:root .content-wrapper-in:has(.client-center-box) .pagination-total { margin: 0 !important; font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-muted) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .pagination-wrapper { display: flex !important; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 24px; margin: 0 !important; padding: 0 !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .pagination-wrapper:has(.pagination > .current:only-child) { display: none !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .pagination-total { margin: 0 !important; font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-muted) !important; }
 /* Moje slevy: řádky jako ll-details (popisek ink-muted, hodnota řez 600) */
-html:root .content-wrapper-in:has(.client-center-box) table.table-md-50 { max-width: 560px; }
-html:root .content-wrapper-in:has(.client-center-box) table.table-md-50 td:first-child { width: 220px; font-size: 13px !important; color: var(--ll-ink-muted) !important; }
-html:root .content-wrapper-in:has(.client-center-box) .table-responsive:has(> table.table-md-50) + p, html:root .content-wrapper-in:has(.client-center-box) .table-responsive:has(> table.table-md-50) + p em { font-size: 13px !important; line-height: 20px !important; font-style: normal !important; color: var(--ll-ink-muted) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table-md-50 { max-width: 560px; }
+html:root .content-wrapper-in:has(.client-center-box li + li) table.table-md-50 td:first-child { width: 220px; font-size: 13px !important; color: var(--ll-ink-muted) !important; }
+html:root .content-wrapper-in:has(.client-center-box li + li) .table-responsive:has(> table.table-md-50) + p, html:root .content-wrapper-in:has(.client-center-box li + li) .table-responsive:has(> table.table-md-50) + p em { font-size: 13px !important; line-height: 20px !important; font-style: normal !important; color: var(--ll-ink-muted) !important; }
 
 /* Moje osobní údaje (Nastavení mého účtu) a Registrace: formulář jako krok Osobní údaje (Field), oddíly bez rámečku s linkou mezi sebou,
    popisky 13 px nad poli 48 px, jeden sloupec do 560 px, Uložit jako hlavní tlačítko. Pole sdílí i stránka Přihlášení (form#formLogin). */
@@ -3071,14 +3071,14 @@ html:root :is(body.in-nastaveni, body.in-registrace) .registration-form h2, html
 html:root :is(body.in-nastaveni, body.in-registrace) form.registration-form > h2 { margin: 32px 0 16px !important; padding-top: 32px !important; border-top: 1px solid var(--ll-line) !important; }
 html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .submit-wrapper { margin: 0 !important; padding: 0 !important; text-align: left !important; }
 html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-legend { margin: -12px 0 0 !important; font-size: 13px !important; line-height: 20px !important; color: var(--ll-ink-muted) !important; }
-html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-group, html:root body.in-login #formLogin .form-group { display: block !important; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
-html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-group > label:not(.whole-width), html:root body.in-login #formLogin .form-group > label { position: static !important; display: block !important; margin: 0 0 8px !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; transform: none !important; }
-html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-group > label span, html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .required-asterisk, html:root body.in-login #formLogin .form-group > label span { font: inherit !important; letter-spacing: 0 !important; text-transform: none !important; color: inherit !important; }
-html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .required-asterisk::after, html:root body.in-login #formLogin .required-asterisk::after { position: static !important; margin: 0 0 0 2px !important; padding: 0 !important; font-weight: 400; color: var(--ll-ink-muted) !important; }
-html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-control-wrapper, html:root body.in-login #formLogin .form-control-wrapper { position: relative; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
-html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-control, html:root body.in-login #formLogin .form-control { box-sizing: border-box; width: 100% !important; max-width: none !important; height: 48px !important; min-height: 48px; margin: 0 !important; padding: 0 16px !important; font-size: 15px !important; line-height: 22px !important; color: var(--ll-ink) !important; background-color: var(--ll-paper) !important; border: 1px solid var(--ll-line-control) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
-html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-control:hover, html:root body.in-login #formLogin .form-control:hover { border-color: var(--ll-ink-soft) !important; }
-html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-control:focus, html:root body.in-login #formLogin .form-control:focus { border-color: var(--ll-ink) !important; outline: none; }
+html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-group, html:root body.in-login #formLogin .form-group, html:root body.in-zapomenute-heslo #formForgottenPassword .form-group { display: block !important; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-group > label:not(.whole-width), html:root body.in-login #formLogin .form-group > label, html:root body.in-zapomenute-heslo #formForgottenPassword .form-group > label { position: static !important; display: block !important; margin: 0 0 8px !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink) !important; transform: none !important; }
+html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-group > label span, html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .required-asterisk, html:root body.in-login #formLogin .form-group > label span, html:root body.in-zapomenute-heslo #formForgottenPassword .form-group > label span { font: inherit !important; letter-spacing: 0 !important; text-transform: none !important; color: inherit !important; }
+html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .required-asterisk::after, html:root body.in-login #formLogin .required-asterisk::after, html:root body.in-zapomenute-heslo #formForgottenPassword .required-asterisk::after { position: static !important; margin: 0 0 0 2px !important; padding: 0 !important; font-weight: 400; color: var(--ll-ink-muted) !important; }
+html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-control-wrapper, html:root body.in-login #formLogin .form-control-wrapper, html:root body.in-zapomenute-heslo #formForgottenPassword .form-control-wrapper { position: relative; width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-control, html:root body.in-login #formLogin .form-control, html:root body.in-zapomenute-heslo #formForgottenPassword .form-control { box-sizing: border-box; width: 100% !important; max-width: none !important; height: 48px !important; min-height: 48px; margin: 0 !important; padding: 0 16px !important; font-size: 15px !important; line-height: 22px !important; color: var(--ll-ink) !important; background-color: var(--ll-paper) !important; border: 1px solid var(--ll-line-control) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-control:hover, html:root body.in-login #formLogin .form-control:hover, html:root body.in-zapomenute-heslo #formForgottenPassword .form-control:hover { border-color: var(--ll-ink-soft) !important; }
+html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .form-control:focus, html:root body.in-login #formLogin .form-control:focus, html:root body.in-zapomenute-heslo #formForgottenPassword .form-control:focus { border-color: var(--ll-ink) !important; outline: none; }
 html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .phone-combined-input { position: relative; display: flex !important; align-items: stretch; width: 100% !important; margin: 0 !important; }
 html:root :is(body.in-nastaveni, body.in-registrace) .registration-form .phone-combined-input .country-flags { top: 0 !important; height: 48px !important; }
 /* Telefon: místo pro vlajku s předvolbou (78 px) vlevo v poli */
@@ -3097,9 +3097,9 @@ html:root body.in-nastaveni .shipping-addresses p { margin: 0 0 8px !important; 
 
 /* Do 991 px: obsah nahoře, menu pod ním jako seznam v rámečku, Odhlásit se pod ním na střed */
 @media (max-width: 991px) {
-  html:root .content-wrapper-in:has(.client-center-box) { display: flex !important; flex-direction: column; }
-  html:root .content-wrapper-in:has(.client-center-box) > main.content { order: 1; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
-  html:root .content-wrapper-in:has(.client-center-box) > .sidebar { order: 2; display: block !important; width: auto !important; max-width: none !important; margin: 40px 0 0 !important; padding: 0 !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) { display: flex !important; flex-direction: column; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) > main.content { order: 1; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) > .sidebar { order: 2; display: block !important; width: auto !important; max-width: none !important; margin: 40px 0 0 !important; padding: 0 !important; }
   html:root .sidebar .client-center-box ul { gap: 0; padding: 0 16px !important; background: var(--ll-paper); border: 1px solid var(--ll-line); border-radius: var(--ll-r-md); }
   html:root .sidebar .client-center-box li + li { border-top: 1px solid var(--ll-line); }
   html:root .sidebar .client-center-box li a { min-height: 52px; padding: 8px 0 !important; font-size: 15px !important; border-radius: 0; }
@@ -3109,29 +3109,29 @@ html:root body.in-nastaveni .shipping-addresses p { margin: 0 0 8px !important; 
   html:root .sidebar .client-logout-btn-block { border-top: 0; }
   html:root .sidebar .client-logout-btn-block .client-logout-btn { justify-content: center; min-height: 48px; }
   /* Podstránky: místo titulku centra odkaz zpět v drobečcích a titulek podstránky 30 px */
-  html:root body:not(.in-klient) .content-wrapper:has(.client-center-box) > .client-title { display: none !important; }
-  html:root .content-wrapper-in:has(.client-center-box) .content-inner > h1 { font-size: 30px !important; line-height: 1.15 !important; letter-spacing: -0.02em !important; }
+  html:root body:not(.in-klient) .content-wrapper:has(.client-center-box li + li) > .client-title { display: none !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) .content-inner > h1 { font-size: 30px !important; line-height: 1.15 !important; letter-spacing: -0.02em !important; }
   html:root body.in-klient .content-inner > h2:first-of-type { font-size: 20px !important; line-height: 28px !important; }
 }
 @media (max-width: 767px) {
   html:root .client-title { margin-bottom: 24px !important; font-size: 30px !important; line-height: 1.15 !important; }
   /* Tabulky jako karty: každý údaj na řádku, popisek 13 px ve sloupci 132 px */
-  html:root .content-wrapper-in:has(.client-center-box) .table-responsive { overflow: visible; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched, html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody, html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tr { display: block !important; width: auto !important; min-width: 0 !important; max-width: none !important; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched thead { display: none !important; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody tr { padding: 4px 16px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md); }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tbody tr + tr { margin-top: 12px; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td { display: grid !important; grid-template-columns: 132px minmax(0, 1fr); column-gap: 16px; align-items: start; width: auto !important; padding: 10px 0 !important; text-align: left !important; white-space: normal !important; border: 0 !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) .table-responsive { overflow: visible; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched, html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched tbody, html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched tr { display: block !important; width: auto !important; min-width: 0 !important; max-width: none !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched thead { display: none !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched tbody tr { padding: 4px 16px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md); }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched tbody tr + tr { margin-top: 12px; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched td { display: grid !important; grid-template-columns: 132px minmax(0, 1fr); column-gap: 16px; align-items: start; width: auto !important; padding: 10px 0 !important; text-align: left !important; white-space: normal !important; border: 0 !important; }
   /* Linka nad každým dalším údajem (ne pod), skrytá prázdná buňka na konci tak nenechá linku navíc */
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td + td { border-top: 1px solid var(--ll-line) !important; }
-  html:root .content-wrapper-in:has(.client-center-box) .table-responsive { margin-bottom: 0 !important; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td.cell--price { padding-right: 0 !important; text-align: left !important; white-space: normal !important; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td:empty { display: none !important; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched .client-table-heading { display: block !important; font-size: 13px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched td.p-name { display: block !important; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tr.row-summary { background: transparent !important; border: 0 !important; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-mobile-enriched tr.row-summary td { display: block !important; padding: 16px 0 0 !important; }
-  html:root .content-wrapper-in:has(.client-center-box) table.table-md-50 td:first-child { width: auto; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched td + td { border-top: 1px solid var(--ll-line) !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) .table-responsive { margin-bottom: 0 !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched td.cell--price { padding-right: 0 !important; text-align: left !important; white-space: normal !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched td:empty { display: none !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched .client-table-heading { display: block !important; font-size: 13px !important; line-height: 22px !important; font-weight: 400 !important; color: var(--ll-ink-muted) !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched td.p-name { display: block !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched tr.row-summary { background: transparent !important; border: 0 !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-mobile-enriched tr.row-summary td { display: block !important; padding: 16px 0 0 !important; }
+  html:root .content-wrapper-in:has(.client-center-box li + li) table.table-md-50 td:first-child { width: auto; }
 }
 
 /* ---------- Množstevní sleva na detailu podle DS QuantityDiscount ----------
@@ -3164,11 +3164,11 @@ html:root .quantity-discounts:has(.quantity-discounts__item:first-child.quantity
 /* ---------- Registrace podle DS PageRegister a MobileRegister ----------
    Rámeček 520 px na středu je .content-inner (titulek h1 a form#register-form uvnitř). Pole, zaškrtávátko a tlačítko sdílí pravidla
    s formulářem Moje osobní údaje výš; nadpisy oddílů šablona skrývá, nadpis sociálních sítí je oddělovač s linkami. */
-html:root :is(body.in-registrace, body.in-login) .breadcrumbs-wrapper .breadcrumbs { max-width: none; margin-left: 0 !important; margin-right: 0 !important; }
+html:root :is(body.in-registrace, body.in-login, body.in-zapomenute-heslo) .breadcrumbs-wrapper .breadcrumbs { max-width: none; margin-left: 0 !important; margin-right: 0 !important; }
 /* Šablona dává obsahu vpravo odsazení 20 px, rámeček by byl o 10 px vlevo od středu stránky */
-html:root :is(body.in-registrace, body.in-login) main#content { padding-right: 0 !important; }
-html:root :is(body.in-registrace, body.in-login) main .content-inner { box-sizing: border-box; width: auto !important; max-width: 520px !important; margin: 32px auto 64px !important; padding: 40px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; }
-html:root :is(body.in-registrace, body.in-login) main .content-inner > h1 { margin: 0 0 24px !important; padding: 0 !important; font-size: 32px !important; line-height: 40px !important; font-weight: 500 !important; letter-spacing: -0.015em !important; text-align: left !important; text-transform: none !important; color: var(--ll-ink) !important; }
+html:root :is(body.in-registrace, body.in-login, body.in-zapomenute-heslo) main#content { padding-right: 0 !important; }
+html:root :is(body.in-registrace, body.in-login, body.in-zapomenute-heslo) main .content-inner { box-sizing: border-box; width: auto !important; max-width: 520px !important; margin: 32px auto 64px !important; padding: 40px !important; background: var(--ll-paper) !important; border: 1px solid var(--ll-line) !important; border-radius: var(--ll-r-md) !important; }
+html:root :is(body.in-registrace, body.in-login, body.in-zapomenute-heslo) main .content-inner > h1 { margin: 0 0 24px !important; padding: 0 !important; font-size: 32px !important; line-height: 40px !important; font-weight: 500 !important; letter-spacing: -0.015em !important; text-align: left !important; text-transform: none !important; color: var(--ll-ink) !important; }
 html:root body.in-registrace #register-form { display: grid !important; gap: 20px; width: auto !important; max-width: none !important; }
 html:root body.in-registrace #register-form .co-box, html:root body.in-registrace #register-form fieldset { width: auto !important; max-width: none !important; }
 /* Souhlas s podmínkami 13/20 ink-soft, odkazy podtržené */
@@ -3188,8 +3188,8 @@ html:root body.in-registrace #register-form .social-login a.login-btn > span, ht
 html:root body.in-registrace #register-form .social-login a.login-btn > span::before, html:root body.in-login #formLogin .social-login-buttons a.login-btn > span::before { position: static !important; display: block !important; width: 18px !important; height: 18px !important; margin: 0 !important; transform: none !important; background-size: contain !important; }
 html:root body.in-registrace #register-form .social-login a.login-btn strong, html:root body.in-login #formLogin .social-login-buttons a.login-btn strong { width: auto !important; max-width: none !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: var(--ll-ink) !important; }
 @media (max-width: 767px) {
-  html:root :is(body.in-registrace, body.in-login) main .content-inner { margin: 8px 0 48px !important; padding: 0 !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; }
-  html:root :is(body.in-registrace, body.in-login) main .content-inner > h1 { margin-bottom: 20px !important; font-size: 30px !important; line-height: 1.15 !important; }
+  html:root :is(body.in-registrace, body.in-login, body.in-zapomenute-heslo) main .content-inner { margin: 8px 0 48px !important; padding: 0 !important; background: transparent !important; border: 0 !important; border-radius: 0 !important; }
+  html:root :is(body.in-registrace, body.in-login, body.in-zapomenute-heslo) main .content-inner > h1 { margin-bottom: 20px !important; font-size: 30px !important; line-height: 1.15 !important; }
 }
 
 /* ---------- Přihlášení podle DS PageLogin a MobileLogin ----------
@@ -3197,10 +3197,10 @@ html:root body.in-registrace #register-form .social-login a.login-btn strong, ht
    Přihlásit se inkoustové přes celou šířku 54 px (šablona zlaté), Nová registrace obrysová (šablona černá do kulata se stínem),
    Zapomenuté heslo jako odkaz se zlatou linkou (šablona verzálkami), oddělovač „nebo" mezi linkami (šablona ho skrývá) */
 html:root body.in-login #formLogin { display: grid !important; gap: 20px; box-sizing: border-box; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
-html:root body.in-login #formLogin .submit-wrapper { display: block !important; margin: 0 !important; padding: 0 !important; }
-html:root body.in-login #formLogin .submit-wrapper .btn-primary { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: 100% !important; min-width: 0 !important; height: 54px !important; min-height: 54px !important; margin: 0 !important; padding: 0 30px !important; font-size: 16px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
-html:root body.in-login #formLogin .submit-wrapper .btn-primary:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
-html:root body.in-login #formLogin .submit-wrapper .btn-primary::before, html:root body.in-login #formLogin .submit-wrapper .btn-primary::after { content: none !important; display: none !important; }
+html:root body.in-login #formLogin .submit-wrapper, html:root body.in-zapomenute-heslo #formForgottenPassword .submit-wrapper { display: block !important; margin: 0 !important; padding: 0 !important; }
+html:root body.in-login #formLogin .submit-wrapper .btn-primary, html:root body.in-zapomenute-heslo #formForgottenPassword .submit-wrapper .btn-primary { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: 100% !important; min-width: 0 !important; height: 54px !important; min-height: 54px !important; margin: 0 !important; padding: 0 30px !important; font-size: 16px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; color: #fff !important; background: var(--ll-ink) !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; }
+html:root body.in-login #formLogin .submit-wrapper .btn-primary:hover, html:root body.in-zapomenute-heslo #formForgottenPassword .submit-wrapper .btn-primary:hover { background: var(--ll-ink-hover) !important; border-color: var(--ll-ink-hover) !important; }
+html:root body.in-login #formLogin .submit-wrapper .btn-primary::before, html:root body.in-login #formLogin .submit-wrapper .btn-primary::after, html:root body.in-zapomenute-heslo #formForgottenPassword .submit-wrapper .btn-primary::before, html:root body.in-zapomenute-heslo #formForgottenPassword .submit-wrapper .btn-primary::after { content: none !important; display: none !important; }
 html:root body.in-login #formLogin .alternative-links { display: flex !important; flex-direction: column; align-items: center; gap: 16px; margin: 0 !important; padding: 0 !important; text-align: center !important; }
 html:root body.in-login #formLogin .alternative-links a[href*="registrace"] { display: flex !important; align-items: center; justify-content: center; box-sizing: border-box; width: 100% !important; height: 48px !important; min-height: 0 !important; margin: 0 !important; padding: 0 24px !important; font-size: 15px !important; line-height: 20px !important; font-weight: 500 !important; letter-spacing: 0.01em !important; text-transform: none !important; text-decoration: none !important; color: var(--ll-ink) !important; background: transparent !important; border: 1px solid var(--ll-ink) !important; border-radius: var(--ll-r-sm) !important; box-shadow: none !important; transition: background-color 150ms var(--ll-ease), color 150ms var(--ll-ease); }
 html:root body.in-login #formLogin .alternative-links a[href*="registrace"]:hover { color: #fff !important; background: var(--ll-ink) !important; }
@@ -3210,3 +3210,10 @@ html:root body.in-login #formLogin .social-login-buttons { display: grid !import
 html:root body.in-login #formLogin .social-login-buttons-divider { display: flex !important; align-items: center; gap: 12px; margin: 0 0 12px !important; padding: 0 !important; }
 html:root body.in-login #formLogin .social-login-buttons-divider::before, html:root body.in-login #formLogin .social-login-buttons-divider::after { content: '' !important; display: block !important; flex: 1; width: auto !important; height: 1px !important; margin: 0 !important; background: var(--ll-line) !important; }
 html:root body.in-login #formLogin .social-login-buttons-divider span { display: block !important; margin: 0 !important; padding: 0 !important; font-size: 13px !important; line-height: 20px !important; font-weight: 400 !important; letter-spacing: 0 !important; text-transform: none !important; color: var(--ll-ink-muted) !important; background: none !important; }
+
+/* ---------- Zapomenuté heslo podle DS PageForgotPassword a MobileForgotPassword ----------
+   Rámeček, titulek, pole a Odeslat sdílí s přihlášením (výš). Stránka patří pod klientské centrum, ale nepřihlášený zákazník má
+   menu jen s jednou položkou (šablona ho skrývá), pravidla centra proto platí jen s menu přihlášeného (.client-center-box li + li). */
+html:root body.in-zapomenute-heslo main .content-inner > p { margin: -12px 0 24px !important; padding: 0 !important; font-size: 15px !important; line-height: 24px !important; font-weight: 400 !important; text-align: left !important; color: var(--ll-ink-soft) !important; }
+html:root body.in-zapomenute-heslo #formForgottenPassword { width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; border-radius: 0 !important; box-shadow: none !important; }
+html:root body.in-zapomenute-heslo #formForgottenPassword fieldset { display: grid !important; gap: 20px; min-width: 0; width: auto !important; max-width: none !important; margin: 0 !important; padding: 0 !important; background: none !important; border: 0 !important; }
