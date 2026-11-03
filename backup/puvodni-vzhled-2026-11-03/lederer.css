@@ -1,0 +1,216 @@
+/* OBECNE */
+body.id-1921 header[itemprop="headline"] {display: none !important;}
+.siteCookies__link {border-radius:50px;} .siteCookies__button {border-radius:50px;background:#e2b171;}
+.sidebar-inner > div.no-b {padding: 30px 30px;}
+.category-perex a {text-decoration:underline;}
+.category-perex a:hover {text-decoration:none;}
+
+/* MENU */
+.navigation-in ul li a b {text-transform:uppercase;}
+.menu-level-1 .appended-category {display:none!important;}
+@media (max-width: 767px) {.navigation-in > ul > li.ext > ul > li > a.menu-image {height: auto;display: block;}.in-kosik .overall-wrapper{padding-top:60px;}}
+@media (min-width: 768px) {.navigation-in .menu-level-1 > li > a {letter-spacing:1px;}.navigation-in > ul > li > a {padding-left:20px;}.navigation-in>ul>li.ext>a:after {right:2px;}}
+.social-login-buttons .form-group, .register-soc .form-group {}
+@media (max-width: 767px) {.overall-wrapper {padding-top: 50px;}}
+
+/* FLAG */
+.flag {letter-spacing:0;font-weight:600;max-width:17em;font-size:12px;}
+.flag-bestseller {color:#7341a3;}
+.flag-kupon-sleva {color:#fff!important;}
+.flag-black-friday {background:linear-gradient(130deg,rgba(43, 56, 80, 1) 0%, rgba(84, 105, 167, 1) 100%);color:#F5DAB1;}
+.flag-new {box-shadow:0px 2px 20px 0px rgba(114,226,113,0.75);}
+@media (max-width: 767px) {[class*="homepage-products-"] .flag {font-size: 10px;padding: 5px 7px;}}
+
+/* CAT */
+.products-inline.products-top>div .p {padding:10px;}
+.products-inline.products-top>div .p .image {border-radius:10px;overflow:hidden;}
+.products-inline>div .p .p-in .p-in-in .name {line-height:1.2;font-weight:600;margin-bottom:-4px;}
+@media (min-width: 1200px) {.col-xl-3 {width: 33.3%;}}
+.subcategories.with-image li a .image img,.navigation-in>ul>li.ext>ul>li>a img {border-radius:6px;}
+#content .filters-unveil-button-wrapper .btn.unveil-button {background:#f2edefa6;}
+.pagination-appendix {display:none;}
+.category-header .listSorting__controls button.listSorting__control.listSorting__control--current {background:var(--color-secondary);}
+#content .filters-unveil-button-wrapper .btn.unveil-button {min-height: 50px;}
+@media (min-width: 768px) {.products-block.products .p .name {font-size: 16px;}}
+.columns-mobile-2 .products-block .flag {font-size: 11px;}
+.related-sm-screen-show .product .p {border-radius:0;}
+.advanced-order .products .product .p a.image img {border-radius:8px;}
+
+/* TEST */
+.custom-discount-info {font-size: 16px;color: #fff;margin-top: -10px;margin-bottom:20px;padding: 12px 20px;background: linear-gradient(136deg, #3F2B96 0%, #A8C0FF 100%); border-radius: 10px;text-align:center;}
+.custom-discount-black {font-size: 16px;color: #e9d7ae;margin-top: -10px;margin-bottom:20px;padding: 12px 20px;background: linear-gradient(136deg, #383838 0%, #18181a 100%); border-radius: 10px;text-align:center;border: 3px dashed #caab71;}
+
+/* Kuponovy stitek s cenou po slevě (JS pridava .coupon-banner) – barvy zamerne pruhledne,
+   aby stitek fungoval na kazdem gradientu, ktery mu prave nastavuje kampanove CSS v adminu */
+.coupon-banner {display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 14px;line-height:1.35;}
+.coupon-banner .cdi-price {display:inline-flex;align-items:baseline;flex-wrap:wrap;justify-content:center;gap:4px 8px;padding:5px 12px;border-radius:8px;background:rgba(255,255,255,.2);}
+.custom-discount-black.coupon-banner .cdi-price {background:rgba(233,215,174,.12);}
+.coupon-banner .cdi-price-label {font-size:13px;opacity:.85;}
+.coupon-banner .cdi-price-old {font-size:13px;opacity:.75;}
+.coupon-banner .cdi-price-new {font-size:19px;font-weight:700;white-space:nowrap;}
+@media (max-width: 575px) {.coupon-banner {flex-direction:column;gap:8px;}.coupon-banner .cdi-price-new {font-size:18px;}}
+.coupon-banner--clickable {cursor:pointer;transition:filter .15s ease, transform .15s ease;}
+.coupon-banner--clickable:hover {filter:brightness(1.06);}
+.coupon-banner--clickable:active {transform:translateY(1px);}
+.coupon-banner--clickable:focus-visible {outline:2px solid #fff;outline-offset:2px;}
+.coupon-banner.is-applied {cursor:default;}
+
+/* Cena po kuponu na karte ve vypisu (JS pridava .p-coupon-price a barvu z flagu) */
+.p-coupon-price {display:inline-block;width:fit-content;align-self:flex-start;margin-top:5px;padding:3px 9px;border-radius:7px;font-size:12.5px;font-weight:600;line-height:1.35;color:#444;background:rgba(0,0,0,.06);}
+.products-block .p-coupon-price, .products .p-coupon-price {max-width:100%;}
+
+/* PROD */
+.product .p {box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);}
+.delivery-time-block {text-align:right;margin-top:0px;}
+.delivery-time-block th {display:block;width:300px;}
+@media (max-width: 767px) {.benefitBanner__content {margin-top:0;padding:0 5px;}.benefitBanner__picture{height:auto;}.benefitBanner__item{margin-bottom:25px;}.type-detail .position--benefitProduct{margin-bottom:20px;}
+.shp-tabs-wrapper .tab-pane.active .detail-tab-item+.detail-tab-content {padding:20px;} .p-image #wrap {width:initial;left:initial;}.container.breadcrumbs-wrapper{background:#f1eced85;border:0;}}
+.p-info-grid .detail-availability-block .delivery-time-label {text-transform:none;font-weight:600;}
+.p-info-grid .detail-availability-block .delivery-time {font-weight:600;padding:3px 8px 2px;border-radius:6px;}
+
+/* 2 SLOUP */
+@media (max-width: 767px) {.product .p{padding:20px 10px 65px;}.products-block.products>div {padding:5px;}.products-block {margin: 0 -5px;}.products-block.products .p .name {font-size:14px;font-weight:600;letter-spacing:-0.2px;-webkit-line-clamp:4;}.products-block .p .flags-default{left:-4px;}}
+
+/* POPIS */
+.video-embed{max-width:640px;width:100%}
+.video-embed iframe{aspect-ratio:16/9.05;width:100%;height:auto;border:1px solid #ccc;display:block;border-radius:1.5rem;}
+.lederer-header-wrapper { display: flex; flex-wrap: wrap; gap: 15px; align-items: center; background: #f2edef75; padding: 30px; border-radius: 15px; margin-bottom: 40px; max-width: 1000px; }
+.lederer-header-left { flex: 0 0 140px; text-align: center; }
+.lederer-header-left img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; }
+.lederer-header-right { flex: 1; max-width: 700px; }
+.lederer-header-right h3 { margin: 0 0 10px 0; }
+.lederer-header-right .signature { text-align: left; margin-top: 5px; }
+@media (max-width: 768px) { .lederer-header-wrapper { flex-direction: column; text-align: center; padding: 15px;} .lederer-header-left { margin-bottom: 10px; } .lederer-header-right { max-width: 100%; text-align: center; } .lederer-header-right .signature { text-align: center; } }
+
+.lederer-tips-wrapper { display: flex; flex-wrap: wrap; gap: 15px; background: #f2edef75; padding: 30px; border-radius: 15px; margin-bottom:40px;}
+.lederer-step { flex: 1; min-width: 260px; }
+.lederer-step h3 { font-size: 1.1em; color: #6d6d6d; margin: 0 0 8px 0; font-weight: bold;}
+.lederer-step-number { font-size: 1.5em; font-weight: bold; color: #3eb56f; margin-right: 5px; display: inline-block; vertical-align: baseline;}
+@media (max-width: 768px) { .lederer-tips-wrapper { flex-direction: column; padding: 15px;}}
+
+.lederer-bullets { list-style: none; padding: 0; max-width: 1000px; }
+.lederer-bullets li { position: relative; padding-left: 28px; }
+.lederer-bullets li::before { content: "✔"; position: absolute; left: 0; top: 0; color: #3eb56f; font-weight: bold; }
+
+/* LOGIN */
+.id--7 .content-inner form, .in-login .content-inner form, .in-registration-login.in-affiliate-login .content-inner form, .in-registration-login:not(.is-logged) .content-inner form {}
+
+/* IKONA */
+.sidebar-inner .banner {border:0;}
+@media (min-width: 768px) {#navigation {height: 39px;}}
+
+/* Stránky a blog */
+body.type-page:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
+body.type-post:not(.id-1921) .content-inner{max-width:1000px;margin:0 auto}
+.type-page h1,.type-post h1{text-align:center}
+.type-page .content-inner img,.type-post .content-inner img{border-radius:15px}
+.type-post .content-inner .text h2{margin-top:30px}
+@media (max-width: 768px) {.type-page .content-inner article p {font-size:15px;}}
+
+/* FOOTER */
+.pays {display: grid;grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));gap: 10px;justify-content: center;}
+.pays img {max-height: 42px;}
+
+/* BLOG */
+.blok{display:flex;align-items:stretch;justify-content:space-between;margin:2rem 0;flex-wrap:wrap}
+.obrazek,.textovy-blok{width:50%;box-sizing:border-box}
+.obrazek{background-image:url('https://cdn.myshoptet.com/usr/www.lukaslederer.cz/user/documents/upload/banner-blog-lerdee_gradient.jpg');background-size:cover;background-position:center;min-height:100%}
+.textovy-blok{background:#F8F7F5;padding:4rem 3rem 4rem 3rem;display:flex;flex-direction:column;justify-content:space-between}
+.textovy-blok h3{margin-top:0 !important}
+.btn-vic{display:inline-block;margin-top:1rem;padding:0.8rem 1.4rem;background:#E2B171;color:#fff !important;text-decoration:none !important;border:none;border-radius:0;font-weight:normal;max-width:max-content}
+.btn-vic:hover{background:#cc9a59}
+.obrazek-vpravo{flex-direction:row-reverse}
+@media (max-width:768px){.blok{flex-direction:column}.obrazek,.textovy-blok{width:100%}.obrazek{min-height:250px !important;order:0}.textovy-blok{padding:2rem}.obrazek-vpravo .obrazek{order:0}.obrazek-vpravo .textovy-blok{order:1}}
+
+/* LISTA */
+:root{--color-header-banner-info-bg:#cb3dd421;--color-header-banner-info-text-color:#a72baf;}
+.header-info-banner {background:linear-gradient(136deg, #2B3850 0%, #5469a7 100%);}
+.header-info-banner__text,.header-info-banner__text a {color:#F5DAB1;}
+.list-icon.bottom {display: flex;justify-content: center;gap: 30px;flex-wrap: wrap;text-align: center;}
+
+/* PRE-CART */
+@media (min-width: 768px) {.advanced-order .extras-wrap {flex-direction: row;gap: 20px;}}
+.advanced-order .extras-wrap .extra-content {padding: 10px;}
+@media(max-width:768px) {.shipping-options-popup .products .p-in, .advanced-order .products .p-in {flex-direction: column;margin-bottom: 10px;}
+.shipping-options-popup .products .product-btn .btn, .advanced-order .products .product-btn .btn {max-width: 85%;min-width: auto;min-height: 34px;padding: 0 20px;}
+.advanced-order .products .product-btn {margin-bottom:10px;}
+}
+
+/* HP BANNERY */
+.list-banner-2{display:block;text-align:left;margin-bottom:4rem;}
+.list-banner-3{display:block;text-align:left;margin-bottom:4rem;}
+.brand-banner{border-radius:20px;overflow:hidden;}
+.brand-banner--lerdee{border:1px solid #c99c615c;background:#f4efe9;}
+.brand-banner--lerdee .brand-banner__inner{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);align-items:stretch;background:#f4efe9;}
+.brand-banner__image{position:relative;width:100%;height:auto;aspect-ratio:2000/1166;display:block;overflow:hidden;}
+.brand-banner__image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 250ms ease-out;will-change:transform;}
+.brand-banner__image:hover img{transform:scale(1.02);}
+.brand-banner__content{padding:2.5rem 2.75rem;display:flex;flex-direction:column;justify-content:center;gap:1.5rem;}
+.brand-banner--lerdee .brand-banner__content{padding:4rem;align-items:center;text-align:center;background:#f4efe9;}
+.brand-banner__eyebrow{font-size:1.4rem;letter-spacing:1px;text-transform:uppercase;color:#c99c61;margin:0;}
+.brand-banner__title{font-size:2.4rem;line-height:1.1;margin:0;font-weight:600;letter-spacing:1px;}
+.brand-banner__text{font-size:1.6rem;line-height:1.6;color:#555;margin:0;}
+.brand-banner__btn{margin-top:1.4rem;align-self:center;padding:1rem 2rem;border-radius:999px;border:1px solid #c99c61;font-size:1.4rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:#c99c61;background:#fff;transition:background .2s ease,color .2s ease;}
+.brand-banner__btn:hover{background:#c99c61;color:#fff;}
+.brand-banner-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;}
+.brand-banner--small{background:#f2f2f2;display:flex;flex-direction:column;}
+.brand-banner--small .brand-banner__image{aspect-ratio:2000/1166;height:auto;}
+.brand-banner__content--small{padding:1.6rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.brand-banner__title-small{font-size:2rem;letter-spacing:1px;margin:0;font-weight:600;}
+.brand-banner__link{font-size:1.4rem;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:#c99c61;white-space:nowrap;}
+@media(min-width:768px){.brand-banner--lerdee .brand-banner__image{border-right:1px solid #c99c615c;}}
+@media(max-width:767px){
+.list-banner-2{margin-bottom:2rem;}
+.brand-banner--lerdee .brand-banner__inner{grid-template-columns:1fr;}
+.brand-banner-grid{grid-template-columns:1fr;}
+.brand-banner__content{padding:2rem 1.6rem;gap:1rem;}
+.brand-banner--lerdee .brand-banner__content{padding:2.5rem 1.8rem;align-items:center;text-align:center;background:#f4efe9;}
+.brand-banner--lerdee .brand-banner__image{border-right:0;border-bottom:1px solid #c99c615c;}
+.brand-banner__title{font-size:2rem;}
+.brand-banner__text{font-size:1.4rem;}
+.brand-banner__title-small{font-size:1.8rem;}
+}
+
+/* === DETAIL PRODUKTU – badge přes hlavní fotku === */
+.gallery-new #main-slider{position:relative;}
+.gallery-new #main-slider img.js-product-badge--detail{position:absolute;right:12px;bottom:12px;z-index:4;width:110px;max-width:none;height:auto;pointer-events:none;user-select:none;}
+@media (max-width:768px){.gallery-new #main-slider img.js-product-badge--detail{right:10px;bottom:10px;width:84px;}}
+
+/* DETAIL BLOG */
+.blog-card { max-width: 1000px; background: rgba(62, 181, 111, 0.1); border: 0px solid #3eb56f; border-radius: 15px; padding: 20px 24px; margin: 24px 0; }
+.blog-card__content { display: flex; flex-direction: column; gap: 6px; }
+.blog-card__label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #3eb56f; }
+.blog-card__title { font-size: 17px; font-weight: 700; margin: 0; line-height: 1.3; }
+.blog-card__text { font-size: 14px; color: #4a4a4a; margin: 0 !important; line-height: 1.5; }
+.blog-card__btn { display: inline-block; margin-top: 6px; padding: 8px 18px; background: #3eb56f; color: #fff; font-size: 14px; font-weight: 600; border-radius: 6px; text-decoration: none; transition: background 0.2s ease; width: fit-content; }
+.blog-card__btn:hover { background: #3cac6a; color: #fff !important; }
+
+/* === KATEGORIE – badge přes fotku, korekce jen vpravo === */
+.p a.image{position:relative;display:block;--imgPadX:30px;}
+.p a.image img.js-product-badge--cat{position:absolute!important;right:calc(10px - var(--imgPadX))!important;bottom:10px!important;z-index:50!important;width:56px!important;max-width:none!important;height:auto!important;pointer-events:none;user-select:none;}
+@media (max-width:768px){.p a.image{--imgPadX:14px;}.p a.image img.js-product-badge--cat{right:calc(8px - var(--imgPadX))!important;bottom:8px!important;width:58px!important;}}
+
+/* ACCA KAPPA */
+.description-inner.ak-two-cols{display:flex;flex-wrap:nowrap;align-items:flex-start;gap:0;padding-right:60px;}
+.description-inner.ak-two-cols .basic-description{flex:1 1 auto;min-width:0;}
+.ak-brand-box{flex:0 0 380px;max-width:400px;font-size:.95em;line-height:1.6;border-left:1px solid #e0e0e0;padding-left:30px;}
+.ak-brand-title{font-size:20px;font-weight:700;margin:0 0 1.5rem;}
+.ak-brand-text{font-size:14px;margin:0;text-align:justify;}
+.ak-brand-img{width:100%;height:auto;margin:0 0 1.5rem;display:block;border-radius:10px;}
+.ak-brand-btn{margin-top:1.5rem;display:inline-block;}
+@media (max-width:767px){.description-inner.ak-two-cols{display:block;padding-right:0;}.ak-brand-box{max-width:none;border-left:0;border-top:1px solid #e0e0e0;padding-left:0;padding-top:3rem;margin-top:3rem;}}
+
+/* CART 
+@media (max-width:768px) {.shipping-billing-table.radio-wrapper input[type="radio"]+label {padding: 8px 20px 8px 50px;}}
+*/
+
+/* PRODUKTOVÉ KARTY: dostupnost (Skladem) je v adminu zapnutá kvůli testovacímu vzhledu, na ostré verzi ji zatím schovat (není nastylovaná) */
+html:not(.ll-test) .products .product .availability {display:none !important;}
+
+/* PATIČKA: bannery F-1 až F-5 podle DS Footer (2. 11. 2026). F-1 je krátký text pod logem, ten má jen nový vzhled (ostrá patička logo nemá).
+   F-4 jsou štítky plateb a dopravy místo šedých log. */
+html:not(.ll-test) #footer .custom-footer__banner4 {display:none !important;}
+html:not(.ll-test) #footer .pay-chips {display:flex; flex-wrap:wrap; gap:6px; margin:0 0 19px; padding:0; list-style:none;}
+html:not(.ll-test) #footer .pay-chips li {margin:0; padding:3px 9px; font-size:12px; line-height:18px; color:#514c46; background:#fff; border:1px solid #e9e6e1; border-radius:2px;}
+html:not(.ll-test) #footer .pay-chips li::before {display:none !important;}
+html:not(.ll-test) #footer .custom-footer__banner9 h4 {text-align:center;}
