@@ -471,6 +471,30 @@ html:root #filters .slider-wrapper { margin: 0 !important; padding: 0 0 20px !im
 html:root #filters .filter-section { margin: 0 !important; padding: 20px 0 !important; border: 0 !important; border-top: 1px solid var(--ll-line) !important; }
 html:root #filters .filter-section.filter-section-button { padding: 0 0 20px !important; border-top: 0 !important; text-align: left !important; }
 html:root #filters .filter-section.filter-section-count { padding: 16px 0 0 !important; }
+/* Skupiny filtrů jako akordeon i na počítači (DS Filters, verze 53): řádek 48 px s nadpisem a šipkou, obsah jen u otevřené skupiny (is-active).
+   Otevřené jsou skupiny s vybranou volbou (šablona, initFilterActiveStates) a ty, které zákazník otevřel (lederer.js, drží i po filtrování).
+   Jen s třídou ll-acc od lederer.js: bez skriptu (nebo se starou verzí v mezipaměti) zůstanou skupiny rozbalené jako dřív. */
+@media (min-width: 992px) {
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .slider-wrapper, html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section-boolean,
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section-manufacturer, html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section-parametric { padding: 0 !important; }
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .slider-wrapper.is-active, html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section-boolean.is-active,
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section-manufacturer.is-active, html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section-parametric.is-active { padding-bottom: 20px !important; }
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .slider-wrapper > h4, html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section > h4 {
+    position: relative; display: flex !important; align-items: center; box-sizing: border-box; min-height: 48px; margin: 0 !important; padding: 0 28px 0 0 !important; cursor: pointer; -webkit-user-select: none; user-select: none;
+  }
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .slider-wrapper > h4::after, html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section > h4::after {
+    content: '' !important; position: absolute; top: 50%; right: 0; width: 16px; height: 16px; transform: translateY(-50%); background-color: var(--ll-ink);
+    -webkit-mask: var(--ll-i-chev-down) center / contain no-repeat; mask: var(--ll-i-chev-down) center / contain no-repeat; transition: transform 150ms var(--ll-ease);
+  }
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .is-active > h4::after { transform: translateY(-50%) rotate(180deg); }
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .slider-wrapper:not(.is-active) > :not(h4),
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section-boolean:not(.is-active) > :not(h4),
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section-manufacturer:not(.is-active) > :not(h4),
+  html:root.ll-acc body.type-category aside.sidebar-left #filters .filter-section-parametric:not(.is-active) > :not(h4) { display: none !important; }
+  /* Panel lepicí bez posuvníku uvnitř: position sticky, top počítá lederer.js (vejde-li se do okna, 24 px pod okrajem; vyšší jede se stránkou a zastaví se na krajích) */
+  html:root body.type-category aside.sidebar-left .sidebar-inner.ll-float { position: sticky; top: var(--ll-float-top, 24px); }
+  html:root body.type-category aside.sidebar-left .sidebar-inner.ll-float--ease { transition: top .45s ease-out; }
+}
 html:root #filters fieldset { margin: 0; padding: 0; border: 0; }
 html:root #filters fieldset > div { margin: 0 0 8px !important; }
 html:root #filters fieldset > div:last-of-type { margin-bottom: 0 !important; }
