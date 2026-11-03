@@ -759,6 +759,8 @@ html:root .p-detail-tabs-wrapper #description.tab-pane { max-width: 1000px; }
    Tabulka .detail-parameters je i v nákupním panelu, proto vše jen v .p-detail-tabs-wrapper. */
 html:root .p-detail-tabs-wrapper .extended-description:has(table.detail-parameters tr) > h4, html:root .p-detail-tabs-wrapper .extended-description:has(table.detail-parameters tr) > .category-link { display: none !important; }
 html:root .p-detail-tabs-wrapper .extended-description { box-sizing: border-box; max-width: 480px; margin: 0 !important; padding: 0 !important; }
+/* Obal záložky (.description-inner--full) má od šablony okraje -60 px a flex, panel by přetékal ze sloupce */
+html:root .p-detail-tabs-wrapper #productParameter .description-inner { display: block !important; width: auto !important; margin: 0 !important; padding: 0 !important; }
 html:root .p-detail-tabs-wrapper .extended-description > h3 { display: none !important; }
 html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters, html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters :is(tbody, tr, th, td) { display: block !important; width: auto !important; max-width: none !important; height: auto !important; margin: 0 !important; padding: 0 !important; text-align: left !important; background: none !important; border: 0 !important; }
 html:root .p-detail-tabs-wrapper .extended-description table.detail-parameters tr { padding: 12px 0 !important; }
