@@ -2760,6 +2760,16 @@ html:root .p-info-wrapper:not(:has(> .add-to-cart)):not(:has(> .loyalty-box-wrap
   html:root .p-info-wrapper:not(:has(> .add-to-cart)) > .loyalty-box-wrapper, html:root .p-info-wrapper:not(:has(> .add-to-cart)):not(:has(> .loyalty-box-wrapper)) > .p-info-grid { padding-bottom: 16px !important; }
 }
 
+/* ---------- Upozornění na delší doručení (DS DeliveryNotice, varianta A) ----------
+   Vkládá ho lederer.js (deliveryNotice) na konec .p-info-grid: celý řádek pod cenou a dostupností (ty mají order 2 a 3), nad věrnostní slevou.
+   Dočasně od 4. 11. 2026 jen GelaVis Dual Hyaluronate (body.in-gelavis, dodavatel pro český trh má potíže s dodávkami). */
+html:root .p-info-grid > .ll-notice { flex: 1 0 100% !important; order: 10; box-sizing: border-box; display: grid; grid-template-columns: 32px minmax(0, 1fr); column-gap: 12px; align-items: start; width: 100%; margin: 0 !important; padding: 14px 16px !important; font-size: 13px; line-height: 20px; font-weight: 400; text-align: left; color: var(--ll-ink-soft); background: var(--ll-champagne); border: 0; border-radius: var(--ll-r-sm); box-shadow: inset 0 0 0 1px var(--ll-gold-line); }
+html:root .ll-notice__icon { display: grid; place-items: center; width: 32px; height: 32px; color: var(--ll-gold-text); background: var(--ll-paper); border-radius: 50%; }
+html:root .ll-notice__icon svg { display: block; width: 18px; height: 18px; }
+html:root .ll-notice__body { padding-top: 6px; }
+html:root .ll-notice__title { display: block; font-size: 14px; line-height: 20px; font-weight: 600; color: var(--ll-ink); }
+html:root .ll-notice__text { display: block; margin-top: 2px; }
+
 /* ---------- Našeptávač (DS SearchSuggest, MobileSearch) ----------
    Pole zůstává jako bez hledání (šablona z formuláře dělá bílý box a poli bere levé odsazení). Panel 8 px pod polem, široký
    jako pole a aspoň 520 px, na střed pod polem (u úzkého pole na tabletu by zarovnaný vlevo přečníval), nejvýš 640 px a do výšky okna, uvnitř se posouvá. Produkty nahoře (5), pak kategorie a ostatní
