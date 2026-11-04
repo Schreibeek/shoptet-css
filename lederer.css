@@ -1638,6 +1638,10 @@ html:root .basic-description ul > li::before { content: '' !important; position:
 html:root .basic-description ol { margin: 0 0 20px !important; padding: 0 0 0 26px !important; }
 html:root .basic-description ol > li { margin: 0 0 8px !important; padding: 0 0 0 4px !important; }
 html:root .basic-description ul > li:last-child, html:root .basic-description ol > li:last-child { margin-bottom: 0 !important; }
+/* Video v popisu produktu (DS ProductDetail, ll-video): YouTube na celou šířku textu popisu, 16 : 9, rohy radius-md, bez rámečku, podklad tile, 32 px nad a pod.
+   Platí i pro starý obal .video-embed (dřív nejvýš 640 px s šedou linkou). */
+html:root #description .basic-description .video-embed { max-width: none !important; }
+html:root #description .basic-description iframe[src*="youtube"] { display: block; width: 100% !important; max-width: 100%; height: auto !important; aspect-ratio: 16 / 9; margin: 32px 0 !important; border: 0 !important; border-radius: var(--ll-r-md) !important; background: var(--ll-tile); }
 
 /* ---------- Homepage na mobilu podle DS (MobileHome) ----------
    Velké fotky a bloky (úvodní karusel, bannery Pro ni / Pro něj, Lerdee, newsletter) mají na mobilu zaoblení 6 px jako dlaždice produktů a panely
