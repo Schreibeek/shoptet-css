@@ -1649,6 +1649,8 @@ html:root #description .basic-description table { width: 100% !important; max-wi
 html:root #description .basic-description table :is(th, td) { padding: 10px 14px !important; font-size: 15px !important; line-height: 23px !important; font-weight: 400; text-align: left !important; vertical-align: top !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
 html:root #description .basic-description table th { font-weight: 600 !important; color: var(--ll-ink) !important; background: var(--ll-tile) !important; }
 html:root #description .basic-description table tbody > tr:last-child > :is(th, td) { border-bottom: 0 !important; }
+/* Zvýraznění v textu popisu (DS ProductDetail): řez 500 v ink jako hodnoty v parametrech, ne 600 jako jinde na webu */
+html:root #description .basic-description :is(strong, b) { font-weight: 500; color: var(--ll-ink); }
 
 /* ---------- Homepage na mobilu podle DS (MobileHome) ----------
    Velké fotky a bloky (úvodní karusel, bannery Pro ni / Pro něj, Lerdee, newsletter) mají na mobilu zaoblení 6 px jako dlaždice produktů a panely
