@@ -1643,6 +1643,12 @@ html:root .basic-description ul > li:last-child, html:root .basic-description ol
    Platí i pro starý obal .video-embed (dřív nejvýš 640 px s šedou linkou). */
 html:root #description .basic-description .video-embed { max-width: none !important; }
 html:root #description .basic-description iframe[src*="youtube"] { display: block; width: 100% !important; max-width: 720px !important; height: auto !important; aspect-ratio: 16 / 9; margin: 32px 0 !important; border: 0 !important; border-radius: var(--ll-r-md) !important; background: var(--ll-tile); }
+/* Tabulka v popisu produktu (DS DescriptionTable, jako ll-table), hlavně složení doplňků stravy: rámeček s linkou, rohy radius-md, hlavička na tile, linky mezi řádky.
+   Platí i pro starší tabulky s třídami table table-bordered (Bootstrap ze šablony dával bílé rámečky a odsazení 15 px). */
+html:root #description .basic-description table { width: 100% !important; max-width: 100%; margin: 24px 0 16px !important; border: 1px solid var(--ll-line) !important; border-collapse: separate !important; border-spacing: 0 !important; border-radius: var(--ll-r-md); overflow: hidden; background: none !important; }
+html:root #description .basic-description table :is(th, td) { padding: 10px 14px !important; font-size: 15px !important; line-height: 23px !important; font-weight: 400; text-align: left !important; vertical-align: top !important; color: var(--ll-ink-soft) !important; background: none !important; border: 0 !important; border-bottom: 1px solid var(--ll-line) !important; }
+html:root #description .basic-description table th { font-weight: 600 !important; color: var(--ll-ink) !important; background: var(--ll-tile) !important; }
+html:root #description .basic-description table tbody > tr:last-child > :is(th, td) { border-bottom: 0 !important; }
 
 /* ---------- Homepage na mobilu podle DS (MobileHome) ----------
    Velké fotky a bloky (úvodní karusel, bannery Pro ni / Pro něj, Lerdee, newsletter) mají na mobilu zaoblení 6 px jako dlaždice produktů a panely
